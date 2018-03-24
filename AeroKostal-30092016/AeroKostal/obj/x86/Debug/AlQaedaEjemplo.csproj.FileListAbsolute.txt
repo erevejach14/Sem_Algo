@@ -1,0 +1,24 @@
+C:\Users\cgutierg\AppData\Local\Temporary Projects\AlQaedaEjemplo\bin\Debug\AlQaedaEjemplo.exe
+C:\Users\cgutierg\AppData\Local\Temporary Projects\AlQaedaEjemplo\bin\Debug\AlQaedaEjemplo.pdb
+C:\Users\cgutierg\AppData\Local\Temporary Projects\AlQaedaEjemplo\obj\x86\Debug\AlQaedaEjemplo.Properties.Resources.resources
+C:\Users\cgutierg\AppData\Local\Temporary Projects\AlQaedaEjemplo\obj\x86\Debug\AlQaedaEjemplo.csproj.GenerateResource.Cache
+C:\Users\cgutierg\AppData\Local\Temporary Projects\AlQaedaEjemplo\obj\x86\Debug\AlQaedaEjemplo.exe
+C:\Users\cgutierg\AppData\Local\Temporary Projects\AlQaedaEjemplo\obj\x86\Debug\AlQaedaEjemplo.pdb
+C:\Users\cgutierg\AppData\Local\Temporary Projects\AlQaedaEjemplo\obj\x86\Debug\AlQaedaEjemplo.frmPrincipal.resources
+C:\Users\cgutierg\AppData\Local\Temporary Projects\AlQaedaEjemplo\obj\x86\Debug\AlQaedaEjemplo.frmVuelos.resources
+C:\Users\cgutierg\Documents\Alexis\Cucei\TercerSemestre\AlQaedaEjemplo\AlQaedaEjemplo\obj\x86\Debug\AlQaedaEjemplo.exe
+C:\Users\cgutierg\Documents\Alexis\Cucei\TercerSemestre\AlQaedaEjemplo\AlQaedaEjemplo\obj\x86\Debug\AlQaedaEjemplo.pdb
+C:\Users\cgutierg\Documents\Alexis\Cucei\TercerSemestre\Seminario Algoritmia\AlQaedaEjemplo\AlQaedaEjemplo\obj\x86\Debug\AlQaedaEjemplo.exe
+C:\Users\cgutierg\Documents\Alexis\Cucei\TercerSemestre\Seminario Algoritmia\AlQaedaEjemplo\AlQaedaEjemplo\obj\x86\Debug\AlQaedaEjemplo.pdb
+C:\Users\cgutierg\Documents\Alexis\Cucei\TercerSemestre\Seminario Algoritmia\AlQaedaEjemplo\AlQaedaEjemplo\obj\x86\Debug\AlQaedaEjemplo.frmPrincipal.resources
+C:\Users\cgutierg\Documents\Alexis\Cucei\TercerSemestre\Seminario Algoritmia\AlQaedaEjemplo\AlQaedaEjemplo\obj\x86\Debug\AlQaedaEjemplo.frmVuelos.resources
+C:\Users\cgutierg\Documents\Alexis\Cucei\TercerSemestre\Seminario Algoritmia\AlQaedaEjemplo\AlQaedaEjemplo\obj\x86\Debug\AlQaedaEjemplo.Properties.Resources.resources
+C:\Users\cgutierg\Documents\Alexis\Cucei\TercerSemestre\Seminario Algoritmia\AlQaedaEjemplo\AlQaedaEjemplo\obj\x86\Debug\AlQaedaEjemplo.csproj.GenerateResource.Cache
+C:\Users\cgutierg\Documents\Alexis\Cucei\TercerSemestre\Seminario Algoritmia\AlQaedaEjemplo\AlQaedaEjemplo\bin\Debug\AlQaedaEjemplo.exe
+C:\Users\cgutierg\Documents\Alexis\Cucei\TercerSemestre\Seminario Algoritmia\AlQaedaEjemplo\AlQaedaEjemplo\bin\Debug\AlQaedaEjemplo.pdb
+C:\Users\cgutierg\Documents\Alexis\Cucei\TercerSemestre\Seminario Algoritmia\AlQaedaEjemplo\AlQaedaEjemplo\obj\x86\Debug\AlQaedaEjemplo.csprojResolveAssemblyReference.cache
+C:\Users\cgutierg\Documents\Alexis\Cucei\TercerSemestre\Seminario Algoritmia\AlQaedaEjemplo\AlQaedaEjemplo\obj\x86\Debug\AlQaedaEjemplo.Form1.resources
+C:\Users\cgutierg\Documents\Alexis\Cucei\TercerSemestre\Seminario Algoritmia\AlQaedaEjemplo\AlQaedaEjemplo\obj\x86\Debug\AlQaedaEjemplo.FrmAsientos.resources
+C:\Users\cgutierg\Documents\Alexis\Cucei\TercerSemestre\Seminario Algoritmia\AlQaedaEjemplo\AlQaedaEjemplo\obj\x86\Debug\AlQaedaEjemplo.FrmAsientosPrueba.resources
+F:\AlQaedaEjemplo\AlQaedaEjemplo\obj\x86\Debug\AlQaedaEjemplo.exe
+F:\AlQaedaEjemplo\AlQaedaEjemplo\obj\x86\Debug\AlQaedaEjemplo.pdb

@@ -1,0 +1,89 @@
+F:\AlQaedaEjemplo\AlQaedaEjemplo\obj\x86\Debug\AlQaedaEjemplo.FrmAsientos.resources
+F:\AlQaedaEjemplo\AlQaedaEjemplo\obj\x86\Debug\AlQaedaEjemplo.Form1.resources
+F:\AlQaedaEjemplo\AlQaedaEjemplo\obj\x86\Debug\AlQaedaEjemplo.frmPrincipal.resources
+F:\AlQaedaEjemplo\AlQaedaEjemplo\obj\x86\Debug\AlQaedaEjemplo.frmVuelos.resources
+F:\AlQaedaEjemplo\AlQaedaEjemplo\obj\x86\Debug\AlQaedaEjemplo.Properties.Resources.resources
+F:\AlQaedaEjemplo\AlQaedaEjemplo\obj\x86\Debug\AeroKostal.csproj.GenerateResource.Cache
+F:\AlQaedaEjemplo\AlQaedaEjemplo\obj\x86\Debug\AlQaedaEjemplo.exe
+F:\AlQaedaEjemplo\AlQaedaEjemplo\bin\Debug\AlQaedaEjemplo.exe
+F:\AlQaedaEjemplo\AlQaedaEjemplo\bin\Debug\AlQaedaEjemplo.pdb
+F:\AlQaedaEjemplo\AlQaedaEjemplo\obj\x86\Debug\AlQaedaEjemplo.pdb
+F:\AeroKostal\AeroKostal\obj\x86\Debug\AeroKostal.csproj.GenerateResource.Cache
+F:\AeroKostal\AeroKostal\obj\x86\Debug\AeroKostal.csprojResolveAssemblyReference.cache
+D:\AeroKostal\AeroKostal\obj\x86\Debug\AlQaedaEjemplo.exe
+D:\AeroKostal\AeroKostal\obj\x86\Debug\AlQaedaEjemplo.pdb
+I:\AeroKostal\AeroKostal\obj\x86\Debug\AlQaedaEjemplo.exe
+I:\AeroKostal\AeroKostal\obj\x86\Debug\AlQaedaEjemplo.pdb
+I:\AeroKostal\AeroKostal\bin\Debug\AlQaedaEjemplo.exe
+I:\AeroKostal\AeroKostal\bin\Debug\AlQaedaEjemplo.pdb
+I:\AeroKostal\AeroKostal\obj\x86\Debug\AeroKostal.csprojResolveAssemblyReference.cache
+I:\AeroKostal\AeroKostal\obj\x86\Debug\AlQaedaEjemplo.FrmAsientos.resources
+I:\AeroKostal\AeroKostal\obj\x86\Debug\AlQaedaEjemplo.Form1.resources
+I:\AeroKostal\AeroKostal\obj\x86\Debug\AlQaedaEjemplo.frmPrincipal.resources
+I:\AeroKostal\AeroKostal\obj\x86\Debug\AlQaedaEjemplo.frmVuelos.resources
+I:\AeroKostal\AeroKostal\obj\x86\Debug\AlQaedaEjemplo.Properties.Resources.resources
+I:\AeroKostal\AeroKostal\obj\x86\Debug\AeroKostal.csproj.GenerateResource.Cache
+E:\AeroKostal\AeroKostal\obj\x86\Debug\AeroKostal.csprojResolveAssemblyReference.cache
+E:\AeroKostal\AeroKostal\obj\x86\Debug\AeroKostal.FrmAsientos.resources
+E:\AeroKostal\AeroKostal\obj\x86\Debug\AeroKostal.Form1.resources
+E:\AeroKostal\AeroKostal\obj\x86\Debug\AeroKostal.frmPrincipal.resources
+E:\AeroKostal\AeroKostal\obj\x86\Debug\AeroKostal.frmVuelos.resources
+E:\AeroKostal\AeroKostal\obj\x86\Debug\AeroKostal.csproj.GenerateResource.Cache
+E:\AeroKostal\AeroKostal\obj\x86\Debug\AeroKostal.Properties.Resources.resources
+E:\AeroKostal\AeroKostal\bin\Debug\AeroKostal.exe
+E:\AeroKostal\AeroKostal\bin\Debug\AeroKostal.pdb
+E:\AeroKostal\AeroKostal\obj\x86\Debug\AeroKostal.exe
+E:\AeroKostal\AeroKostal\obj\x86\Debug\AeroKostal.pdb
+E:\AeroKostal\AeroKostal\obj\x86\Debug\AeroKostal.FormPasajeros.resources
+C:\Users\Alexander\Documents\Visual Studio 2010\Projects\AeroKostal\AeroKostal\obj\x86\Debug\AeroKostal.exe
+C:\Users\Alexander\Documents\Visual Studio 2010\Projects\AeroKostal\AeroKostal\obj\x86\Debug\AeroKostal.pdb
+C:\Users\Alexander\Documents\Visual Studio 2010\Projects\AeroKostal\AeroKostal\bin\Debug\AeroKostal.exe
+C:\Users\Alexander\Documents\Visual Studio 2010\Projects\AeroKostal\AeroKostal\bin\Debug\AeroKostal.pdb
+C:\Users\Alexander\Documents\Visual Studio 2010\Projects\AeroKostal\AeroKostal\obj\x86\Debug\AeroKostal.csprojResolveAssemblyReference.cache
+C:\Users\Alexander\Documents\Visual Studio 2010\Projects\AeroKostal\AeroKostal\obj\x86\Debug\AeroKostal.FormPasajeros.resources
+C:\Users\Alexander\Documents\Visual Studio 2010\Projects\AeroKostal\AeroKostal\obj\x86\Debug\AeroKostal.FormAsientos.resources
+C:\Users\Alexander\Documents\Visual Studio 2010\Projects\AeroKostal\AeroKostal\obj\x86\Debug\AeroKostal.Form1.resources
+C:\Users\Alexander\Documents\Visual Studio 2010\Projects\AeroKostal\AeroKostal\obj\x86\Debug\AeroKostal.FormPrincipal.resources
+C:\Users\Alexander\Documents\Visual Studio 2010\Projects\AeroKostal\AeroKostal\obj\x86\Debug\AeroKostal.FormVuelos.resources
+C:\Users\Alexander\Documents\Visual Studio 2010\Projects\AeroKostal\AeroKostal\obj\x86\Debug\AeroKostal.Properties.Resources.resources
+C:\Users\Alexander\Documents\Visual Studio 2010\Projects\AeroKostal\AeroKostal\obj\x86\Debug\AeroKostal.csproj.GenerateResource.Cache
+D:\usb sem 3\AeroKostal\AeroKostal\obj\x86\Debug\AeroKostal.exe
+D:\usb sem 3\AeroKostal\AeroKostal\obj\x86\Debug\AeroKostal.pdb
+F:\usb sem 3\AeroKostal\AeroKostal\obj\x86\Debug\AeroKostal.exe
+F:\usb sem 3\AeroKostal\AeroKostal\obj\x86\Debug\AeroKostal.pdb
+C:\Users\danie\Desktop\AeroKostal\AeroKostal\obj\x86\Debug\AeroKostal.exe
+C:\Users\danie\Desktop\AeroKostal\AeroKostal\obj\x86\Debug\AeroKostal.pdb
+C:\Users\danie\Desktop\AeroKostal\AeroKostal\obj\x86\Debug\AeroKostal.csprojResolveAssemblyReference.cache
+C:\Users\danie\Desktop\AeroKostal\AeroKostal\obj\x86\Debug\AeroKostal.FormPasajeros.resources
+C:\Users\danie\Desktop\AeroKostal\AeroKostal\obj\x86\Debug\AeroKostal.FormAsientos.resources
+C:\Users\danie\Desktop\AeroKostal\AeroKostal\obj\x86\Debug\AeroKostal.Form1.resources
+C:\Users\danie\Desktop\AeroKostal\AeroKostal\obj\x86\Debug\AeroKostal.FormPrincipal.resources
+C:\Users\danie\Desktop\AeroKostal\AeroKostal\obj\x86\Debug\AeroKostal.FormVuelos.resources
+C:\Users\danie\Desktop\AeroKostal\AeroKostal\obj\x86\Debug\AeroKostal.Properties.Resources.resources
+C:\Users\danie\Desktop\AeroKostal\AeroKostal\obj\x86\Debug\AeroKostal.csproj.GenerateResource.Cache
+C:\Users\danie\Desktop\AeroKostal\AeroKostal\bin\Debug\AeroKostal.exe
+C:\Users\danie\Desktop\AeroKostal\AeroKostal\bin\Debug\AeroKostal.pdb
+F:\AeroKostal\AeroKostal\obj\x86\Debug\AeroKostal.exe
+F:\AeroKostal\AeroKostal\obj\x86\Debug\AeroKostal.pdb
+F:\AeroKostal\AeroKostal\bin\Debug\AeroKostal.exe
+F:\AeroKostal\AeroKostal\bin\Debug\AeroKostal.pdb
+F:\AeroKostal\AeroKostal\obj\x86\Debug\AeroKostal.FormAuctVuelos.resources
+F:\AeroKostal\AeroKostal\obj\x86\Debug\AeroKostal.FormPasajeros.resources
+F:\AeroKostal\AeroKostal\obj\x86\Debug\AeroKostal.FormAsientos.resources
+F:\AeroKostal\AeroKostal\obj\x86\Debug\AeroKostal.Form1.resources
+F:\AeroKostal\AeroKostal\obj\x86\Debug\AeroKostal.FormPrincipal.resources
+F:\AeroKostal\AeroKostal\obj\x86\Debug\AeroKostal.FormVuelos.resources
+F:\AeroKostal\AeroKostal\obj\x86\Debug\AeroKostal.Properties.Resources.resources
+C:\Users\Juan Ramon\Desktop\AeroKostal\AeroKostal\obj\x86\Debug\AeroKostal.exe
+C:\Users\Juan Ramon\Desktop\AeroKostal\AeroKostal\obj\x86\Debug\AeroKostal.pdb
+C:\Users\Juan Ramon\Desktop\AeroKostal\AeroKostal\bin\Debug\AeroKostal.exe
+C:\Users\Juan Ramon\Desktop\AeroKostal\AeroKostal\bin\Debug\AeroKostal.pdb
+C:\Users\Juan Ramon\Desktop\AeroKostal\AeroKostal\obj\x86\Debug\AeroKostal.csprojResolveAssemblyReference.cache
+C:\Users\Juan Ramon\Desktop\AeroKostal\AeroKostal\obj\x86\Debug\AeroKostal.FormAuctVuelos.resources
+C:\Users\Juan Ramon\Desktop\AeroKostal\AeroKostal\obj\x86\Debug\AeroKostal.FormPasajeros.resources
+C:\Users\Juan Ramon\Desktop\AeroKostal\AeroKostal\obj\x86\Debug\AeroKostal.FormAsientos.resources
+C:\Users\Juan Ramon\Desktop\AeroKostal\AeroKostal\obj\x86\Debug\AeroKostal.Form1.resources
+C:\Users\Juan Ramon\Desktop\AeroKostal\AeroKostal\obj\x86\Debug\AeroKostal.FormPrincipal.resources
+C:\Users\Juan Ramon\Desktop\AeroKostal\AeroKostal\obj\x86\Debug\AeroKostal.FormVuelos.resources
+C:\Users\Juan Ramon\Desktop\AeroKostal\AeroKostal\obj\x86\Debug\AeroKostal.Properties.Resources.resources
+C:\Users\Juan Ramon\Desktop\AeroKostal\AeroKostal\obj\x86\Debug\AeroKostal.csproj.GenerateResource.Cache
