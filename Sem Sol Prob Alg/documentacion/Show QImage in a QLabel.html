@@ -1,0 +1,2134 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html dir="ltr" xmlns="http://www.w3.org/1999/xhtml" xmlns:b="http://www.google.com/2005/gml/b" xmlns:data="http://www.google.com/2005/gml/data" xmlns:expr="http://www.google.com/2005/gml/expr"><head><script src="Show%20QImage%20in%20a%20QLabel_files/async-ads.js" async=""></script><script src="Show%20QImage%20in%20a%20QLabel_files/analytics.js" async="" type="text/javascript"></script><script async="" src="Show%20QImage%20in%20a%20QLabel_files/cbgapi.loaded_2"></script><script async="" src="Show%20QImage%20in%20a%20QLabel_files/cbgapi.loaded_1"></script><script src="Show%20QImage%20in%20a%20QLabel_files/gtm.js" async=""></script>
+<link href="Show%20QImage%20in%20a%20QLabel_files/css.css" rel="stylesheet" type="text/css">
+<script src="Show%20QImage%20in%20a%20QLabel_files/map.js" async="" type="text/javascript"></script><script src="Show%20QImage%20in%20a%20QLabel_files/cse.js" async="" type="text/javascript"></script><script async="" src="Show%20QImage%20in%20a%20QLabel_files/cbgapi.loaded_0"></script><script gapi_processed="true" src="Show%20QImage%20in%20a%20QLabel_files/plusone_002.js" type="text/javascript">
+ {lang: 'en-US'} </script>
+<script src="Show%20QImage%20in%20a%20QLabel_files/simpletricks.js"></script>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+<meta content="blogger" name="generator">
+<link href="http://tufangorel.blogspot.mx/favicon.ico" rel="icon" type="image/x-icon">
+<link href="http://tufangorel.blogspot.com/2011/06/show-qimage-in-a-qlabel.html" rel="canonical">
+<link rel="alternate" type="application/atom+xml" title="Tufan Görel - Atom" href="http://tufangorel.blogspot.com/feeds/posts/default">
+<link rel="alternate" type="application/rss+xml" title="Tufan Görel - RSS" href="http://tufangorel.blogspot.com/feeds/posts/default?alt=rss">
+<link rel="service.post" type="application/atom+xml" title="Tufan Görel - Atom" href="https://www.blogger.com/feeds/1629739459234463496/posts/default">
+
+<link rel="alternate" type="application/atom+xml" title="Tufan Görel - Atom" href="http://tufangorel.blogspot.com/feeds/2344070852462766886/comments/default">
+<link href="Show%20QImage%20in%20a%20QLabel_files/project_structure.png" rel="image_src">
+<meta content="http://tufangorel.blogspot.com/2011/06/show-qimage-in-a-qlabel.html" property="og:url">
+<meta content="Show QImage in a QLabel" property="og:title">
+<meta content="QImage  enables to construct images from file paths on the disk. Constructed QImages can be displayed in a QLabel. By setting the pixmap val..." property="og:description">
+<meta content="http://3.bp.blogspot.com/-nW049dMWehc/Te5xB4TL-5I/AAAAAAAAADc/hcjETadMtjI/w1200-h630-p-nu/project_structure.png" property="og:image">
+<!--[if IE]> <script> (function() { var html5 = ("abbr,article,aside,audio,canvas,datalist,details," + "figure,footer,header,hgroup,mark,menu,meter,nav,output," + "progress,section,time,video").split(','); for (var i = 0; i < html5.length; i++) { document.createElement(html5[i]); } try { document.execCommand('BackgroundImageCache', false, true); } catch(e) {} })(); </script> <![endif]-->
+<title>Show QImage in a QLabel</title>
+<link type="text/css" rel="stylesheet" href="Show%20QImage%20in%20a%20QLabel_files/2272499489-widget_css_bundle.css">
+<link type="text/css" rel="stylesheet" href="Show%20QImage%20in%20a%20QLabel_files/authorization.css">
+<style id="page-skin-1" type="text/css"><!--
+/*
+-----------------------------------------------
+Blogger Template Style
+Name:     Stretch Denim
+Designer: Darren Delaye
+URL:      www.DarrenDelaye.com
+Date:     11 Jul 2006
+-----------------------------------------------
+*/
+/* Variable definitions
+====================
+<Variable name="bgColor" description="Page Background Color"
+type="color" default="#efefef">
+<Variable name="textColor" description="Text Color"
+type="color" default="#333333">
+<Variable name="linkColor" description="Link Color"
+type="color" default="#336699">
+<Variable name="headerBgColor" description="Page Header Background Color"
+type="color" default="#336699">
+<Variable name="headerTextColor" description="Page Header Text Color"
+type="color" default="#ffffff">
+<Variable name="headerCornersColor" description="Page Header Corners Color"
+type="color" default="#528bc5">
+<Variable name="mainBgColor" description="Main Background Color"
+type="color" default="#ffffff">
+<Variable name="borderColor" description="Border Color"
+type="color" default="#cccccc">
+<Variable name="dateHeaderColor" description="Date Header Color"
+type="color" default="#999999">
+<Variable name="sidebarTitleBgColor" description="Sidebar Title Background Color"
+type="color" default="#ffd595">
+<Variable name="sidebarTitleTextColor" description="Sidebar Title Text Color"
+type="color" default="#333333">
+<Variable name="bodyFont" description="Text Font"
+type="font" default="normal normal 100% Verdana, Arial, Sans-serif;">
+<Variable name="headerFont" description="Page Header Font"
+type="font" default="normal normal 210% Verdana, Arial, Sans-serif;">
+<Variable name="startSide" description="Start side in blog language"
+type="automatic" default="left">
+<Variable name="endSide" description="End side in blog language"
+type="automatic" default="right">
+*/
+body {
+background: #efefef;
+margin: 0;
+padding: 0px;
+font: x-small Verdana, Arial;
+text-align: center;
+color: #333333;
+font-size/* */:/**/small;
+font-size: /**/small;
+}
+a:link {
+color: #336699;
+}
+a:visited {
+color: #336699;
+}
+a img {
+border-width: 0;
+}
+#outer-wrapper {
+font: normal normal 100% Verdana, Arial, Sans-serif;;
+}
+/* Header
+----------------------------------------------- */
+#header-wrapper {
+margin:0;
+padding: 0;
+background-color: #528bc5;
+text-align: left;
+}
+#header {
+margin: 0 2%;
+background-color: #336699;
+color: #ffffff;
+padding: 0;
+font: normal normal 210% Verdana, Arial, Sans-serif;;
+position: relative;
+}
+h1.title {
+padding-top: 38px;
+margin: 0 1% .1em;
+line-height: 1.2em;
+font-size: 100%;
+}
+h1.title a, h1.title a:visited {
+color: #ffffff;
+text-decoration: none;
+}
+#header .description {
+display: block;
+margin: 0 1%;
+padding: 0 0 40px;
+line-height: 1.4em;
+font-size: 50%;
+}
+/* Content
+----------------------------------------------- */
+.clear {
+clear: both;
+}
+#content-wrapper {
+margin: 0 2%;
+padding: 0 0 15px;
+text-align: left;
+background-color: #ffffff;
+border: 1px solid #cccccc;
+border-top: 0;
+}
+#main-wrapper {
+margin-left: 1%;
+width: 64%;
+float: left;
+background-color: #ffffff;
+display: inline;       /* fix for doubling margin in IE */
+word-wrap: break-word; /* fix for long text breaking sidebar float in IE */
+overflow: hidden;      /* fix for long non-text content breaking IE sidebar float */
+}
+#sidebar-wrapper {
+margin-right: 1%;
+width: 29%;
+float: right;
+background-color: #ffffff;
+display: inline;       /* fix for doubling margin in IE */
+word-wrap: break-word; /* fix for long text breaking sidebar float in IE */
+overflow: hidden;      /* fix for long non-text content breaking IE sidebar float */
+}
+/* Headings
+----------------------------------------------- */
+h2, h3 {
+margin: 0;
+}
+/* Posts
+----------------------------------------------- */
+.date-header {
+margin: 1.5em 0 0;
+font-weight: normal;
+color: #999999;
+font-size: 100%;
+}
+.post {
+margin: 0 0 1.5em;
+padding-bottom: 1.5em;
+}
+.post-title {
+margin: 0;
+padding: 0;
+font-size: 125%;
+font-weight: bold;
+line-height: 1.1em;
+}
+.post-title a, .post-title a:visited, .post-title strong {
+text-decoration: none;
+color: #333333;
+font-weight: bold;
+}
+.post div {
+margin: 0 0 .75em;
+line-height: 1.3em;
+}
+.post-footer {
+margin: -.25em 0 0;
+color: #333333;
+font-size: 87%;
+}
+.post-footer .span {
+margin-right: .3em;
+}
+.post img {
+padding: 4px;
+border: 1px solid #cccccc;
+}
+.post blockquote {
+margin: 1em 20px;
+}
+.post blockquote p {
+margin: .75em 0;
+}
+/* Comments
+----------------------------------------------- */
+#comments h4 {
+margin: 1em 0;
+color: #999999;
+}
+#comments h4 strong {
+font-size: 110%;
+}
+#comments-block {
+margin: 1em 0 1.5em;
+line-height: 1.3em;
+}
+#comments-block dt {
+margin: .5em 0;
+}
+#comments-block dd {
+margin: .25em 0 0;
+}
+#comments-block dd.comment-footer {
+margin: -.25em 0 2em;
+line-height: 1.4em;
+font-size: 78%;
+}
+#comments-block dd p {
+margin: 0 0 .75em;
+}
+.deleted-comment {
+font-style:italic;
+color:gray;
+}
+.feed-links {
+clear: both;
+line-height: 2.5em;
+}
+#blog-pager-newer-link {
+float: left;
+}
+#blog-pager-older-link {
+float: right;
+}
+#blog-pager {
+text-align: center;
+}
+/* Sidebar Content
+----------------------------------------------- */
+.sidebar h2 {
+margin: 1.6em 0 .5em;
+padding: 4px 5px;
+background-color: #ffd595;
+font-size: 100%;
+color: #333333;
+}
+.sidebar ul {
+margin: 0;
+padding: 0;
+list-style: none;
+}
+.sidebar li {
+margin: 0;
+padding-top: 0;
+padding-right: 0;
+padding-bottom: .5em;
+padding-left: 15px;
+text-indent: -15px;
+line-height: 1.5em;
+}
+.sidebar {
+color: #333333;
+line-height:1.3em;
+}
+.sidebar .widget {
+margin-bottom: 1em;
+}
+.sidebar .widget-content {
+margin: 0 5px;
+}
+/* Profile
+----------------------------------------------- */
+.profile-img {
+float: left;
+margin-top: 0;
+margin-right: 5px;
+margin-bottom: 5px;
+margin-left: 0;
+padding: 4px;
+border: 1px solid #cccccc;
+}
+.profile-data {
+margin:0;
+text-transform:uppercase;
+letter-spacing:.1em;
+font-weight: bold;
+line-height: 1.6em;
+font-size: 78%;
+}
+.profile-datablock {
+margin:.5em 0 .5em;
+}
+.profile-textblock {
+margin: 0.5em 0;
+line-height: 1.6em;
+}
+/* Footer
+----------------------------------------------- */
+#footer {
+clear: both;
+text-align: center;
+color: #333333;
+}
+#footer .widget {
+margin:.5em;
+padding-top: 20px;
+font-size: 85%;
+line-height: 1.5em;
+text-align: left;
+}
+/** Page structure tweaks for layout editor wireframe */
+body#layout #header {
+width: 750px;
+}
+/** Paginator related css */
+.showpageArea a {
+text-decoration:underline;
+}
+.showpageNum a {
+text-decoration:none;
+border: 1px solid #ccc;
+margin:0 3px;
+padding:3px;
+}
+.showpageNum a:hover {
+border: 1px solid #ccc;
+background-color:#ccc;
+}
+.showpagePoint {
+color:#333;
+text-decoration:none;
+border: 1px solid #ccc;
+background: #ccc;
+margin:0 3px;
+padding:3px;
+}
+.showpageOf {
+text-decoration:none;
+padding:3px;
+margin: 0 3px 0 0;
+}
+.showpage a {
+text-decoration:none;
+border: 1px solid #ccc;
+padding:3px;
+}
+.showpage a:hover {
+text-decoration:none;
+}
+.showpageNum a:link,.showpage a:link {
+text-decoration:none;
+color:#333;
+}
+/* Label Cloud Styles
+----------------------------------------------- */
+#labelCloud {text-align:center;font-family:arial,sans-serif;}
+#labelCloud .label-cloud li{display:inline;background-image:none !important;padding:0 5px;margin:0;vertical-align:baseline !important;border:0 !important;}
+#labelCloud ul{list-style-type:none;margin:0 auto;padding:0;}
+#labelCloud a img{border:0;display:inline;margin:0 0 0 3px;padding:0}
+#labelCloud a{text-decoration:none}
+#labelCloud a:hover{text-decoration:underline}
+#labelCloud li a{}
+#labelCloud .label-cloud {}
+#labelCloud .label-count {padding-left:0.2em;font-size:9px;color:#000}
+#labelCloud .label-cloud li:before{content:"" !important}
+
+--></style>
+<script type="text/javascript">
+// Label Cloud User Variables
+var cloudMin = 1;
+var maxFontSize = 20;
+var maxColor = [0,0,255];
+var minFontSize = 10;
+var minColor = [0,0,0];
+var lcShowCount = false;
+</script>
+<!-- Style to implement "Read more on this Article" link in all the posts (Start) -->
+<!-- Style to implement "Read more on this Article" link in all the posts (End) -->
+<meta content="ydkjWImPstFTDnDc0X10Po4XhnZ33gTo1YwUtkvUhQs=" name="verify-v1">
+<meta content="ACFB4D244B27F65F259C2FA08DC6E41C" name="msvalidate.01">
+<meta content="L8kge2aFaaYw1qB-pauYPEjkPJ0" name="alexaVerifyID">
+<meta content="5e2ffd05fed1ac11" name="yandex-verification">
+<meta content="en-US" http-equiv="content-language">
+<!--Related Posts with thumbnails Scripts and Styles Start-->
+<style type="text/css">
+#related-posts{float:left;width:auto;}
+#related-posts a{border-right: 1px dotted #eaeaea;}
+#related-posts a:hover{background: #EEEEEE;}
+#related-posts h2{margin-top: 10px;background:none;font:18px Oswald;padding:3px;color:#999999; text-transform:uppercase;}
+#related-posts .related_img {margin:5px;border:2px solid #f2f2f2;object-fit: cover;width:110px;height:100px;transition:all 300ms ease-in-out;-webkit-transition:all 300ms ease-in-out;-moz-transition:all 300ms ease-in-out;-o-transition:all 300ms ease-in-out;-ms-transition:all 300ms ease-in-out;-webkit-border-radius: 5px;  -moz-border-radius: 5px; border-radius: 5px; }
+#related-title {color:#666;text-align:center;padding: 0px 5px 10px;font-size:12px;width:110px; height: 40px;}
+#related-posts .related_img:hover{border:2px solid #E8E8E8;opacity:.7;filter:alpha(opacity=70);-moz-opacity:.7;-khtml-opacity:.7}</style>
+<script src="Show%20QImage%20in%20a%20QLabel_files/relatedposts.htm" type="text/javascript"></script>
+<!--Related Posts with thumbnails Scripts and Styles End-->
+<style type="text/css">
+.sidebar .PopularPosts ul {
+counter-reset: popularcount;
+margin: 0;
+padding: 0;
+}
+.sidebar .PopularPosts ul li {
+float: left;
+max-height: 130px;
+min-width: 250px;
+position: relative;
+}
+.sidebar .PopularPosts .item-thumbnail::after {
+color: rgba(255,255,255, 0.63);
+content: counter(popularcount, decimal);
+counter-increment: popularcount;
+font: 70px 'Oswald', sans-serif;
+list-style-type: none;
+position: absolute;
+left: 5px;
+top: -5px;
+z-index: 4;
+}
+.sidebar .PopularPosts .item-thumbnail::before {
+background: rgba(0, 0, 0, 0.3);
+bottom: 0px;
+content: "";
+height: 100px;
+width: 100px;
+left: 0px;
+right: 0px;
+margin: 0px auto;
+position: absolute;
+z-index: 3;
+}
+.sidebar .PopularPosts .item-thumbnail a {
+clip: auto;
+display: block;
+height: auto;
+overflow: hidden;
+}
+.sidebar .PopularPosts .item-thumbnail {
+width: 100px;
+height: 100px;
+margin: 0px 10px 0px 0px !important;
+position: relative;
+}
+.sidebar .PopularPosts .item-thumbnail:hover:before {
+display: none;
+}
+.sidebar .PopularPosts .item-thumbnail img {
+position: relative;
+padding-right: 0px !important;
+height: 100%;
+width: 100%;
+object-fit: cover;
+}
+.sidebar .PopularPosts .item-title {
+font: 13px 'Oswald', sans-serif;
+text-transform: uppercase;
+padding: 0px 5px 10px;
+}
+.sidebar .PopularPosts .item-title a {
+color: #000;
+text-decoration: none;
+}
+.sidebar .PopularPosts .item-snippet {
+font: 13px "Times New Roman",Times,FreeSerif,serif;
+}
+.sidebar .PopularPosts .widget-content ul li {
+padding: 0px 5px 0px 0px !important;
+}
+.sidebar .PopularPosts .item-content {
+padding: 5px 0px;
+border-bottom: 1px dotted #dedede;
+overflow: hidden;
+height: 100px;
+position: relative;
+}
+</style>
+<script type="text/javascript">function a(){var b=window.location.href,c=b.split("?");switch(c.length){case 1:return b+"?m=1";case 2:return 0<=c[1].search("(^|&)m=")?null:b+"&m=1";default:return null}}var d=navigator.userAgent;if(-1!=d.indexOf("Mobile")&&-1!=d.indexOf("WebKit")&&-1==d.indexOf("iPad")||-1!=d.indexOf("Opera Mini")||-1!=d.indexOf("IEMobile")){var e=a();e&&window.location.replace(e)};
+</script><link media="screen" href="Show%20QImage%20in%20a%20QLabel_files/inj_tf.css" rel="stylesheet" type="text/css"><script src="Show%20QImage%20in%20a%20QLabel_files/a" type="text/javascript" charset="utf-8"></script><script type="text/javascript" src="Show%20QImage%20in%20a%20QLabel_files/jsapi"></script><script src="Show%20QImage%20in%20a%20QLabel_files/jquery-1.js" type="text/javascript"></script><link rel="stylesheet" href="Show%20QImage%20in%20a%20QLabel_files/defaulten.css" type="text/css"><link rel="stylesheet" href="Show%20QImage%20in%20a%20QLabel_files/default.css" type="text/css"><script src="Show%20QImage%20in%20a%20QLabel_files/defaulten.js" type="text/javascript"></script><style type="text/css">
+.gsc-control-cse {
+font-family: Arial, sans-serif;
+border-color: #FFFFFF;
+background-color: #FFFFFF;
+}
+.gsc-control-cse .gsc-table-result {
+font-family: Arial, sans-serif;
+}
+input.gsc-input, .gsc-input-box, .gsc-input-box-hover, .gsc-input-box-focus {
+border-color: #D9D9D9;
+}
+input.gsc-search-button, input.gsc-search-button:hover, input.gsc-search-button:focus {
+border-color: #666666;
+background-color: #CECECE;
+background-image: none;
+filter: none;
+}
+.gsc-tabHeader.gsc-tabhInactive {
+border-color: #E9E9E9;
+background-color: #E9E9E9;
+}
+.gsc-tabHeader.gsc-tabhActive {
+border-color: #FF9900;
+border-bottom-color: #FFFFFF;
+background-color: #FFFFFF;
+}
+.gsc-tabsArea {
+border-color: #FF9900;
+}
+.gsc-webResult.gsc-result,
+.gsc-results .gsc-imageResult {
+border-color: #FFFFFF;
+background-color: #FFFFFF;
+}
+.gsc-webResult.gsc-result:hover,
+.gsc-imageResult:hover {
+border-color: #FFFFFF;
+background-color: #FFFFFF;
+}
+.gs-webResult.gs-result a.gs-title:link,
+.gs-webResult.gs-result a.gs-title:link b,
+.gs-imageResult a.gs-title:link,
+.gs-imageResult a.gs-title:link b {
+color: #0000CC;
+}
+.gs-webResult.gs-result a.gs-title:visited,
+.gs-webResult.gs-result a.gs-title:visited b,
+.gs-imageResult a.gs-title:visited,
+.gs-imageResult a.gs-title:visited b {
+color: #0000CC;
+}
+.gs-webResult.gs-result a.gs-title:hover,
+.gs-webResult.gs-result a.gs-title:hover b,
+.gs-imageResult a.gs-title:hover,
+.gs-imageResult a.gs-title:hover b {
+color: #0000CC;
+}
+.gs-webResult.gs-result a.gs-title:active,
+.gs-webResult.gs-result a.gs-title:active b,
+.gs-imageResult a.gs-title:active,
+.gs-imageResult a.gs-title:active b {
+color: #0000CC;
+}
+.gsc-cursor-page {
+color: #0000CC;
+}
+a.gsc-trailing-more-results:link {
+color: #0000CC;
+}
+.gs-webResult .gs-snippet,
+.gs-imageResult .gs-snippet,
+.gs-fileFormatType {
+color: #000000;
+}
+.gs-webResult div.gs-visibleUrl,
+.gs-imageResult div.gs-visibleUrl {
+color: #008000;
+}
+.gs-webResult div.gs-visibleUrl-short {
+color: #008000;
+}
+.gs-webResult div.gs-visibleUrl-short {
+display: none;
+}
+.gs-webResult div.gs-visibleUrl-long {
+display: block;
+}
+.gs-promotion div.gs-visibleUrl-short {
+display: none;
+}
+.gs-promotion div.gs-visibleUrl-long {
+display: block;
+}
+.gsc-cursor-box {
+border-color: #FFFFFF;
+}
+.gsc-results .gsc-cursor-box .gsc-cursor-page {
+border-color: #E9E9E9;
+background-color: #FFFFFF;
+color: #0000CC;
+}
+.gsc-results .gsc-cursor-box .gsc-cursor-current-page {
+border-color: #FF9900;
+background-color: #FFFFFF;
+color: #0000CC;
+}
+.gsc-webResult.gsc-result.gsc-promotion {
+border-color: #336699;
+background-color: #FFFFFF;
+}
+.gsc-completion-title {
+color: #0000CC;
+}
+.gsc-completion-snippet {
+color: #000000;
+}
+.gs-promotion a.gs-title:link,
+.gs-promotion a.gs-title:link *,
+.gs-promotion .gs-snippet a:link {
+color: #0000CC;
+}
+.gs-promotion a.gs-title:visited,
+.gs-promotion a.gs-title:visited *,
+.gs-promotion .gs-snippet a:visited {
+color: #0000CC;
+}
+.gs-promotion a.gs-title:hover,
+.gs-promotion a.gs-title:hover *,
+.gs-promotion .gs-snippet a:hover {
+color: #0000CC;
+}
+.gs-promotion a.gs-title:active,
+.gs-promotion a.gs-title:active *,
+.gs-promotion .gs-snippet a:active {
+color: #0000CC;
+}
+.gs-promotion .gs-snippet,
+.gs-promotion .gs-title .gs-promotion-title-right,
+.gs-promotion .gs-title .gs-promotion-title-right * {
+color: #000000;
+}
+.gs-promotion .gs-visibleUrl,
+.gs-promotion .gs-visibleUrl-short {
+color: #008000;
+}</style><style type="text/css">.gscb_a{display:inline-block;font:27px/13px arial,sans-serif}.gsst_a .gscb_a{color:#a1b9ed;cursor:pointer}.gsst_a:hover .gscb_a,.gsst_a:focus .gscb_a{color:#36c}.gsst_a{display:inline-block}.gsst_a{cursor:pointer;padding:0 4px}.gsst_a:hover{text-decoration:none!important}.gsst_b{font-size:16px;padding:0 2px;position:relative;user-select:none;-moz-user-select:none;white-space:nowrap}.gsst_e{opacity:0.55;}.gsst_a:hover .gsst_e,.gsst_a:focus .gsst_e{opacity:0.72;}.gsst_a:active .gsst_e{opacity:1;}.gsst_f{background:white;text-align:left}.gsst_g{background-color:white;border:1px solid #ccc;border-top-color:#d9d9d9;box-shadow:0 2px 4px rgba(0,0,0,0.2);-moz-box-shadow:0 2px 4px rgba(0,0,0,0.2);margin:-1px -3px;padding:0 6px}.gsst_h{background-color:white;height:1px;margin-bottom:-1px;position:relative;top:-1px}.gsib_a{width:100%;padding:4px 6px 0}.gsib_a,.gsib_b{vertical-align:top}.gssb_c{border:0;position:absolute;z-index:989}.gssb_e{border:1px solid #ccc;border-top-color:#d9d9d9;box-shadow:0 2px 4px rgba(0,0,0,0.2);-moz-box-shadow:0 2px 4px rgba(0,0,0,0.2);cursor:default}.gssb_f{visibility:hidden;white-space:nowrap}.gssb_k{border:0;display:block;position:absolute;top:0;z-index:988}.gsdd_a{border:none!important}.gsq_a{padding:0}.gsq_a{padding:0}.gscsep_a{display:none}.gssb_a{padding:0 7px}.gssb_a,.gssb_a td{white-space:nowrap;overflow:hidden;line-height:22px}#gssb_b{font-size:11px;color:#36c;text-decoration:none}#gssb_b:hover{font-size:11px;color:#36c;text-decoration:underline}.gssb_g{text-align:center;padding:8px 0 7px;position:relative}.gssb_h{font-size:15px;height:28px;margin:0.2em}.gssb_i{background:#eee}.gss_ifl{visibility:hidden;padding-left:5px}.gssb_i .gss_ifl{visibility:visible}a.gssb_j{font-size:13px;color:#36c;text-decoration:none;line-height:100%}a.gssb_j:hover{text-decoration:underline}.gssb_l{height:1px;background-color:#e5e5e5}.gssb_m{color:#000;background:#fff}.gsfe_a{border:1px solid #b9b9b9;border-top-color:#a0a0a0;box-shadow:inset 0px 1px 2px rgba(0,0,0,0.1);-moz-box-shadow:inset 0px 1px 2px rgba(0,0,0,0.1);-webkit-box-shadow:inset 0px 1px 2px rgba(0,0,0,0.1);}.gsfe_b{border:1px solid #4d90fe;outline:none;box-shadow:inset 0px 1px 2px rgba(0,0,0,0.3);-moz-box-shadow:inset 0px 1px 2px rgba(0,0,0,0.3);-webkit-box-shadow:inset 0px 1px 2px rgba(0,0,0,0.3);}.gssb_a{padding:0 9px}.gsib_a{padding-right:8px;padding-left:8px}.gsst_a{padding-top:3px}.gssb_e{border:0}.gssb_l{margin:5px 0}.gssb_c .gsc-completion-container{position:static}.gssb_c{z-index:5000}.gsc-completion-container table{background:transparent;font-size:inherit;font-family:inherit}.gssb_c > tbody > tr,.gssb_c > tbody > tr > td,.gssb_d,.gssb_d > tbody > tr,.gssb_d > tbody > tr > td,.gssb_e,.gssb_e > tbody > tr,.gssb_e > tbody > tr > td{padding:0;margin:0;border:0}.gssb_a table,.gssb_a table tr,.gssb_a table tr td{padding:0;margin:0;border:0}</style></head>
+<body>
+<div class="navbar no-items section" id="navbar">
+</div>
+<div id="outer-wrapper"><div id="wrap2">
+<!-- skip links for text browsers -->
+<span id="skiplinks" style="display:none;">
+<a href="#main">skip to main </a> |
+      <a href="#sidebar">skip to sidebar</a>
+</span>
+<div id="header-wrapper">
+<div class="header section" id="header"><div class="widget Header" data-version="1" id="Header1">
+<div id="header-inner">
+<div class="titlewrapper">
+<h1 class="title">
+<a href="http://tufangorel.blogspot.mx/">Tufan Görel</a>
+</h1>
+</div>
+<div class="descriptionwrapper">
+<p class="description"><span>
+</span></p>
+</div>
+</div>
+</div></div>
+</div>
+<div id="content-wrapper">
+<div id="crosscol-wrapper" style="text-align:center">
+<div class="crosscol no-items section" id="crosscol"></div>
+</div>
+<div id="main-wrapper">
+<div class="main section" id="main"><div class="widget Blog" data-version="1" id="Blog1">
+<div class="blog-posts hfeed">
+
+          <div class="date-outer">
+        
+<h2 class="date-header"><span>Tuesday, June 7, 2011</span></h2>
+
+          <div class="date-posts">
+        
+<div class="post-outer">
+<div class="post hentry uncustomized-post-template">
+<a name="2344070852462766886"></a>
+<h3 class="post-title entry-title">
+<a href="http://tufangorel.blogspot.mx/2011/06/show-qimage-in-a-qlabel.html">Show QImage in a QLabel</a>
+</h3>
+<div class="post-header-line-1"></div>
+<div class="post-body entry-content">
+<span style="font-weight: bold;">QImage</span> enables to construct 
+images from file paths on the disk. Constructed QImages can be displayed
+ in a QLabel. By setting the pixmap value of QLabel from <span style="font-weight: bold;">setPixmap</span> function, <span style="font-weight: bold;">QLabel</span> displays content of <span style="font-weight: bold;">QImage</span>.<br>
+Sample project started as a QT Gui Application and contains main.cpp, ShowQImageDialog.h and ShowQImageDialog.cpp files.<br>
+<span style="font-weight: bold;">ShowQImageDialog</span> constructor creates a QGridLayout instance that is containing a QScrollArea inside it and displays the image in this area.<br>
+Project Directory Structure in <span style="font-weight: bold;">Qt Creator IDE</span> :<br>
+<a href="http://3.bp.blogspot.com/-nW049dMWehc/Te5xB4TL-5I/AAAAAAAAADc/hcjETadMtjI/s1600/project_structure.png" onblur="try {parent.deselectBloggerImageGracefully();} catch(e) {}"><img alt="" id="BLOGGER_PHOTO_ID_5615550062484257682" src="Show%20QImage%20in%20a%20QLabel_files/project_structure.png" style="cursor: hand; cursor: pointer; display: block; height: 144px; margin: 0px auto 10px; text-align: center; width: 282px;" border="0"></a><br>
+<br>
+ShowQImageDialog.pro is the project configuration file and contains:<br>
+<div><div id="highlighter_637976" class="syntaxhighlighter  cpp"><div class="toolbar"><span><a href="#" class="toolbar_item command_help help">?</a></span></div><table cellpadding="0" cellspacing="0" border="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div><div class="line number3 index2 alt2">3</div><div class="line number4 index3 alt1">4</div><div class="line number5 index4 alt2">5</div><div class="line number6 index5 alt1">6</div><div class="line number7 index6 alt2">7</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="cpp plain">TARGET = ShowQImageDialog</code></div><div class="line number2 index1 alt1"><code class="cpp plain">CONFIG&nbsp;&nbsp; += core gui</code></div><div class="line number3 index2 alt2"><code class="cpp plain">TEMPLATE = app</code></div><div class="line number4 index3 alt1"><code class="cpp plain">SOURCES += main.cpp \</code></div><div class="line number5 index4 alt2"><code class="cpp spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="cpp plain">ShowQImageDialog.cpp</code></div><div class="line number6 index5 alt1"><code class="cpp plain">HEADERS += \</code></div><div class="line number7 index6 alt2"><code class="cpp spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="cpp plain">ShowQImageDialog.h</code></div></div></td></tr></tbody></table></div></div>
+<br>
+main.cpp file contains the <span style="font-weight: bold;">custom QDialog</span> instance and shows it.<br>
+<div><div id="highlighter_773491" class="syntaxhighlighter  cpp"><div class="toolbar"><span><a href="#" class="toolbar_item command_help help">?</a></span></div><table cellpadding="0" cellspacing="0" border="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div><div class="line number3 index2 alt2">3</div><div class="line number4 index3 alt1">4</div><div class="line number5 index4 alt2">5</div><div class="line number6 index5 alt1">6</div><div class="line number7 index6 alt2">7</div><div class="line number8 index7 alt1">8</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="cpp preprocessor">#include &lt;QApplication&gt;</code></div><div class="line number2 index1 alt1"><code class="cpp preprocessor">#include "ShowQImageDialog.h"</code></div><div class="line number3 index2 alt2"><code class="cpp color1 bold">int</code> <code class="cpp plain">main(</code><code class="cpp color1 bold">int</code> <code class="cpp plain">argc, </code><code class="cpp color1 bold">char</code> <code class="cpp plain">*argv[]) {</code></div><div class="line number4 index3 alt1"><code class="cpp spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="cpp plain">QApplication a(argc, argv);</code></div><div class="line number5 index4 alt2"><code class="cpp spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="cpp plain">ShowQImageDialog w;</code></div><div class="line number6 index5 alt1"><code class="cpp spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="cpp plain">w.show();</code></div><div class="line number7 index6 alt2"><code class="cpp spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="cpp keyword bold">return</code> <code class="cpp plain">a.exec();</code></div><div class="line number8 index7 alt1"><code class="cpp plain">}</code></div></div></td></tr></tbody></table></div></div>
+<br>
+ShowQImageDialog.h file is the extended QDialog class header file.<br>
+<div><div id="highlighter_974130" class="syntaxhighlighter  cpp "><div class="toolbar"><span><a href="#" class="toolbar_item command_help help">?</a></span></div><table cellpadding="0" cellspacing="0" border="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div><div class="line number3 index2 alt2">3</div><div class="line number4 index3 alt1">4</div><div class="line number5 index4 alt2">5</div><div class="line number6 index5 alt1">6</div><div class="line number7 index6 alt2">7</div><div class="line number8 index7 alt1">8</div><div class="line number9 index8 alt2">9</div><div class="line number10 index9 alt1">10</div><div class="line number11 index10 alt2">11</div><div class="line number12 index11 alt1">12</div><div class="line number13 index12 alt2">13</div><div class="line number14 index13 alt1">14</div><div class="line number15 index14 alt2">15</div><div class="line number16 index15 alt1">16</div><div class="line number17 index16 alt2">17</div><div class="line number18 index17 alt1">18</div><div class="line number19 index18 alt2">19</div><div class="line number20 index19 alt1">20</div><div class="line number21 index20 alt2">21</div><div class="line number22 index21 alt1">22</div><div class="line number23 index22 alt2">23</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="cpp preprocessor">#ifndef SHOWQIMAGEDIALOG_H</code></div><div class="line number2 index1 alt1"><code class="cpp preprocessor">#define SHOWQIMAGEDIALOG_H</code></div><div class="line number3 index2 alt2"><code class="cpp preprocessor">#include &lt;QDialog&gt;</code></div><div class="line number4 index3 alt1"><code class="cpp preprocessor">#include &lt;QGridLayout&gt;</code></div><div class="line number5 index4 alt2"><code class="cpp preprocessor">#include &lt;QScrollArea&gt;</code></div><div class="line number6 index5 alt1"><code class="cpp preprocessor">#include &lt;QLabel&gt;</code></div><div class="line number7 index6 alt2"><code class="cpp preprocessor">#include &lt;QImage&gt;</code></div><div class="line number8 index7 alt1">&nbsp;</div><div class="line number9 index8 alt2"><code class="cpp keyword bold">class</code> <code class="cpp plain">ShowQImageDialog : </code><code class="cpp keyword bold">public</code> <code class="cpp plain">QDialog</code></div><div class="line number10 index9 alt1"><code class="cpp plain">{</code></div><div class="line number11 index10 alt2"><code class="cpp spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="cpp plain">Q_OBJECT</code></div><div class="line number12 index11 alt1">&nbsp;</div><div class="line number13 index12 alt2"><code class="cpp keyword bold">public</code><code class="cpp plain">:</code></div><div class="line number14 index13 alt1"><code class="cpp spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="cpp plain">ShowQImageDialog(QWidget *parent = 0);</code></div><div class="line number15 index14 alt2"><code class="cpp spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="cpp plain">~ShowQImageDialog();</code></div><div class="line number16 index15 alt1"><code class="cpp keyword bold">private</code><code class="cpp plain">:</code></div><div class="line number17 index16 alt2"><code class="cpp spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="cpp plain">QGridLayout* gridLayout;</code></div><div class="line number18 index17 alt1"><code class="cpp spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="cpp plain">QImage* inputImg;</code></div><div class="line number19 index18 alt2"><code class="cpp spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="cpp plain">QLabel* imgDisplayLabel;</code></div><div class="line number20 index19 alt1"><code class="cpp spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="cpp plain">QScrollArea* scrollArea;</code></div><div class="line number21 index20 alt2"><code class="cpp plain">};</code></div><div class="line number22 index21 alt1">&nbsp;</div><div class="line number23 index22 alt2"><code class="cpp preprocessor">#endif // SHOWQIMAGEDIALOG_H</code></div></div></td></tr></tbody></table></div></div>
+<br>
+ShowQImageDialog.cpp file contains implementation details for extended QDialog class.<br>
+<div><div id="highlighter_236064" class="syntaxhighlighter  cpp"><div class="toolbar"><span><a href="#" class="toolbar_item command_help help">?</a></span></div><table cellpadding="0" cellspacing="0" border="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div><div class="line number3 index2 alt2">3</div><div class="line number4 index3 alt1">4</div><div class="line number5 index4 alt2">5</div><div class="line number6 index5 alt1">6</div><div class="line number7 index6 alt2">7</div><div class="line number8 index7 alt1">8</div><div class="line number9 index8 alt2">9</div><div class="line number10 index9 alt1">10</div><div class="line number11 index10 alt2">11</div><div class="line number12 index11 alt1">12</div><div class="line number13 index12 alt2">13</div><div class="line number14 index13 alt1">14</div><div class="line number15 index14 alt2">15</div><div class="line number16 index15 alt1">16</div><div class="line number17 index16 alt2">17</div><div class="line number18 index17 alt1">18</div><div class="line number19 index18 alt2">19</div><div class="line number20 index19 alt1">20</div><div class="line number21 index20 alt2">21</div><div class="line number22 index21 alt1">22</div><div class="line number23 index22 alt2">23</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="cpp preprocessor">#include "ShowQImageDialog.h"</code></div><div class="line number2 index1 alt1"><code class="cpp plain">ShowQImageDialog::ShowQImageDialog(QWidget *parent) : QDialog(parent)</code></div><div class="line number3 index2 alt2"><code class="cpp plain">{</code></div><div class="line number4 index3 alt1"><code class="cpp spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="cpp plain">gridLayout = </code><code class="cpp keyword bold">new</code> <code class="cpp plain">QGridLayout();</code></div><div class="line number5 index4 alt2"><code class="cpp spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="cpp plain">inputImg = </code><code class="cpp keyword bold">new</code> <code class="cpp plain">QImage(</code><code class="cpp string">"/home/tufan/wallpaper.png"</code><code class="cpp plain">);</code></div><div class="line number6 index5 alt1"><code class="cpp spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="cpp plain">imgDisplayLabel = </code><code class="cpp keyword bold">new</code> <code class="cpp plain">QLabel(</code><code class="cpp string">""</code><code class="cpp plain">);</code></div><div class="line number7 index6 alt2"><code class="cpp spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="cpp plain">imgDisplayLabel-&gt;setPixmap(QPixmap::fromImage(*inputImg));</code></div><div class="line number8 index7 alt1"><code class="cpp spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="cpp plain">imgDisplayLabel-&gt;adjustSize();</code></div><div class="line number9 index8 alt2"><code class="cpp spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="cpp plain">scrollArea = </code><code class="cpp keyword bold">new</code> <code class="cpp plain">QScrollArea();</code></div><div class="line number10 index9 alt1"><code class="cpp spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="cpp plain">scrollArea-&gt;setWidget(imgDisplayLabel);</code></div><div class="line number11 index10 alt2"><code class="cpp spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="cpp plain">scrollArea-&gt;setMinimumSize(256,256);</code></div><div class="line number12 index11 alt1"><code class="cpp spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="cpp plain">scrollArea-&gt;setMaximumSize(512,512);</code></div><div class="line number13 index12 alt2"><code class="cpp spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="cpp plain">gridLayout-&gt;addWidget(scrollArea,0,0);</code></div><div class="line number14 index13 alt1"><code class="cpp spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="cpp plain">setLayout(gridLayout);</code></div><div class="line number15 index14 alt2"><code class="cpp plain">}</code></div><div class="line number16 index15 alt1">&nbsp;</div><div class="line number17 index16 alt2"><code class="cpp plain">ShowQImageDialog::~ShowQImageDialog()</code></div><div class="line number18 index17 alt1"><code class="cpp plain">{</code></div><div class="line number19 index18 alt2"><code class="cpp spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="cpp keyword bold">delete</code> <code class="cpp plain">inputImg;</code></div><div class="line number20 index19 alt1"><code class="cpp spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="cpp keyword bold">delete</code> <code class="cpp plain">imgDisplayLabel;</code></div><div class="line number21 index20 alt2"><code class="cpp spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="cpp keyword bold">delete</code> <code class="cpp plain">scrollArea;</code></div><div class="line number22 index21 alt1"><code class="cpp spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="cpp keyword bold">delete</code> <code class="cpp plain">gridLayout;</code></div><div class="line number23 index22 alt2"><code class="cpp plain">}</code></div></div></td></tr></tbody></table></div></div>
+<br>
+ShowQImageDialog:<br>
+<a href="http://4.bp.blogspot.com/-dQGPVg3IVzA/Te5zYFz_CkI/AAAAAAAAADk/zoWeIayvZG4/s1600/showQImageDialog.png" onblur="try {parent.deselectBloggerImageGracefully();} catch(e) {}"><img alt="" id="BLOGGER_PHOTO_ID_5615552643091860034" src="Show%20QImage%20in%20a%20QLabel_files/showQImageDialog.png" style="cursor: hand; cursor: pointer; display: block; height: 268px; margin: 0px auto 10px; text-align: center; width: 320px;" border="0"></a><br>
+Application created by QT Creator and uses Qt4.7 .
+<div style="clear: both;"></div>
+</div>
+<div id="related-posts">
+<script src="Show%20QImage%20in%20a%20QLabel_files/cplusplus" type="text/javascript"></script>
+<script src="Show%20QImage%20in%20a%20QLabel_files/QImage" type="text/javascript"></script>
+<script src="Show%20QImage%20in%20a%20QLabel_files/Qt" type="text/javascript"></script>
+<script type="text/javascript">
+var currentposturl="http://tufangorel.blogspot.mx/2011/06/show-qimage-in-a-qlabel.html";
+var maxresults=5;
+var relatedpoststitle="<b>Related Posts:</b>";
+removeRelatedDuplicates_thumbs();
+printRelatedLabels_thumbs();
+</script>
+</div><div class="clear"></div>
+<div class="post-footer">
+<div class="post-footer-line post-footer-line-1">
+<span class="post-author vcard">
+Posted by
+<span class="fn">Tufan Görel</span>
+</span>
+<span class="post-timestamp">
+at
+<a class="timestamp-link" href="http://tufangorel.blogspot.mx/2011/06/show-qimage-in-a-qlabel.html" rel="bookmark" title="permanent link"><abbr class="published" title="2011-06-07T21:17:00+03:00">6/07/2011 09:17:00 PM</abbr></a>
+</span>
+<span class="star-ratings">
+</span>
+<span class="post-comment-link">
+</span>
+<span class="post-backlinks post-comment-link">
+</span>
+<span class="post-icons">
+<span class="item-action">
+<a href="https://www.blogger.com/email-post.g?blogID=1629739459234463496&amp;postID=2344070852462766886" title="Email Post">
+<img alt="" class="icon-action" src="Show%20QImage%20in%20a%20QLabel_files/icon18_email.gif" height="13" width="18">
+</a>
+</span>
+<span class="item-control blog-admin pid-2088327817">
+<a href="https://www.blogger.com/post-edit.g?blogID=1629739459234463496&amp;postID=2344070852462766886&amp;from=pencil" title="Edit Post">
+<img alt="" class="icon-action" src="Show%20QImage%20in%20a%20QLabel_files/icon18_edit_allbkg.gif" height="18" width="18">
+</a>
+</span>
+</span>
+</div>
+<div class="post-footer-line post-footer-line-2">
+<span class="post-labels">
+Labels:
+<a href="http://tufangorel.blogspot.mx/search/label/cplusplus" rel="tag">cplusplus</a>,
+<a href="http://tufangorel.blogspot.mx/search/label/QImage" rel="tag">QImage</a>,
+<a href="http://tufangorel.blogspot.mx/search/label/Qt" rel="tag">Qt</a>
+</span>
+</div>
+<div class="post-footer-line post-footer-line-3">
+<span class="post-location">
+</span>
+</div>
+</div>
+</div>
+<div class="comments" id="comments">
+<a name="comments"></a>
+<h4>No comments:</h4>
+<div id="Blog1_comments-block-wrapper">
+<dl class="avatar-comment-indent" id="comments-block">
+</dl>
+</div>
+<p class="comment-footer">
+</p><div class="comment-form">
+<a name="comment-form"></a>
+<h4 id="comment-post-message">Post a Comment</h4>
+<p>
+</p>
+<a href="https://www.blogger.com/comment-iframe.g?blogID=1629739459234463496&amp;postID=2344070852462766886&amp;blogspotRpcToken=6737877" id="comment-editor-src"></a>
+<iframe data-resized="true" allowtransparency="true" class="blogger-iframe-colorize blogger-comment-from-post" id="comment-editor" name="comment-editor" src="Show%20QImage%20in%20a%20QLabel_files/comment-iframe.htm" frameborder="0" height="216px" width="100%"></iframe>
+<script type="text/javascript" src="Show%20QImage%20in%20a%20QLabel_files/3473463639-comment_from_post_iframe.js"></script>
+<script type="text/javascript">
+      BLOG_CMT_createIframe('https://www.blogger.com/rpc_relay.html');
+    </script>
+</div>
+<p></p>
+<div id="backlinks-container">
+<div id="Blog1_backlinks-container">
+</div>
+</div>
+</div>
+</div>
+
+        </div></div>
+      
+</div>
+<div class="blog-pager" id="blog-pager">
+<span id="blog-pager-newer-link">
+<a class="blog-pager-newer-link" href="http://tufangorel.blogspot.mx/2011/06/reimplementing-close-event-of-qdialog.html" id="Blog1_blog-pager-newer-link" title="Newer Post">Newer Post</a>
+</span>
+<span id="blog-pager-older-link">
+<a class="blog-pager-older-link" href="http://tufangorel.blogspot.mx/2011/06/check-for-valid-file-extension-provided-by-qfiledialog.html" id="Blog1_blog-pager-older-link" title="Older Post">Older Post</a>
+</span>
+<a class="home-link" href="http://tufangorel.blogspot.mx/">Home</a>
+</div>
+<div class="clear"></div>
+<div class="post-feeds">
+<div class="feed-links">
+Subscribe to:
+<a class="feed-link" href="http://tufangorel.blogspot.com/feeds/2344070852462766886/comments/default" target="_blank" type="application/atom+xml">Post Comments (Atom)</a>
+</div>
+</div>
+<script type="text/javascript">window.___gcfg = {'lang': 'en'};</script>
+</div></div>
+<script type="text/javascript">
+
+function showpageCount(json) {
+var thisUrl = location.href;
+var htmlMap = new Array();
+var isFirstPage = thisUrl.substring(thisUrl.length-5,thisUrl.length)==".com/";
+var isLablePage = thisUrl.indexOf("/search/label/")!=-1;
+var isPage = thisUrl.indexOf("/search?updated")!=-1;
+var thisLable = isLablePage ? thisUrl.substr(thisUrl.indexOf("/search/label/")+14,thisUrl.length) : "";
+thisLable = thisLable.indexOf("?")!=-1 ? thisLable.substr(0,thisLable.indexOf("?")) : thisLable;
+var thisNum = 1;
+var postNum=1;
+var itemCount = 0;
+var fFlag = 0;
+var eFlag = 0;
+var html= '';
+var upPageHtml ='';
+var downPageHtml ='';
+
+var pageCount = 5;
+var displayPageNum = 5;
+var upPageWord = 'Previous';
+var downPageWord = 'Next';
+
+
+
+var labelHtml = '<span class="showpageNum"><a href="/search/label/'+thisLable+'?&max-results='+pageCount+'">';
+
+for(var i=0, post; post = json.feed.entry[i]; i++) {
+var timestamp = post.published.$t.substr(0,10);
+var title = post.title.$t;
+if(isLablePage){
+if(title!=''){
+if(post.category){
+for(var c=0, post_category; post_category = post.category[c]; c++) {
+if(encodeURIComponent(post_category.term)==thisLable){
+if(itemCount==0 || (itemCount % pageCount ==(pageCount-1))){
+if(thisUrl.indexOf(timestamp)!=-1 ){
+thisNum = postNum;
+}
+
+postNum++;
+htmlMap[htmlMap.length] = '/search/label/'+thisLable+'?updated-max='+timestamp+'T00%3A00%3A00%2B08%3A00&max-results='+pageCount;
+}
+}
+}
+}//end if(post.category){
+
+itemCount++;
+}
+
+}else{
+if(title!=''){
+if(itemCount==0 || (itemCount % pageCount ==(pageCount-1))){
+if(thisUrl.indexOf(timestamp)!=-1 ){
+thisNum = postNum;
+}
+
+if(title!='') postNum++;
+htmlMap[htmlMap.length] = '/search?updated-max='+timestamp+'T00%3A00%3A00%2B08%3A00&max-results='+pageCount;
+}
+}
+itemCount++;
+}
+}
+
+for(var p =0;p< htmlMap.length;p++){
+if(p>=(thisNum-displayPageNum-1) && p<(thisNum+displayPageNum)){
+if(fFlag ==0 && p == thisNum-2){
+if(thisNum==2){
+if(isLablePage){
+upPageHtml = labelHtml + upPageWord +'</a></span>';
+}else{
+upPageHtml = '<span class="showpage"><a href="/">'+ upPageWord +'</a></span>';
+}
+}else{
+upPageHtml = '<span class="showpage"><a href="'+htmlMap[p]+'">'+ upPageWord +'</a></span>';
+}
+
+fFlag++;
+}
+
+if(p==(thisNum-1)){
+html += '<span class="showpagePoint">'+thisNum+'</span>';
+}else{
+if(p==0){
+if(isLablePage){
+html = labelHtml+'1</a></span>';
+}else{
+html += '<span class="showpageNum"><a href="/">1</a></span>';
+}
+}else{
+html += '<span class="showpageNum"><a href="'+htmlMap[p]+'">'+ (p+1) +'</a></span>';
+}
+}
+
+if(eFlag ==0 && p == thisNum){
+downPageHtml = '<span class="showpage"> <a href="'+htmlMap[p]+'">'+ downPageWord +'</a></span>';
+eFlag++;
+}
+}//end if(p>=(thisNum-displayPageNum-1) && p<(thisNum+displayPageNum)){
+}//end for(var p =0;p< htmlMap.length;p++){
+
+if(thisNum>1){
+if(!isLablePage){
+html = ''+upPageHtml+' '+html +' ';
+}else{
+html = ''+upPageHtml+' '+html +' ';
+}
+}
+
+html = '<div class="showpageArea"><span style="COLOR: #000;" class="showpageOf"> Pages ('+(postNum-1)+')</span>'+html;
+
+if(thisNum<(postNum-1)){
+html += downPageHtml;
+
+}
+
+if(postNum==1) postNum++;
+html += '</div>';
+
+if(isPage || isFirstPage || isLablePage){
+var pageArea = document.getElementsByName("pageArea");
+var blogPager = document.getElementById("blog-pager");
+
+if(postNum <= 2){
+html ='';
+}
+
+for(var p =0;p< pageArea.length;p++){
+pageArea[p].innerHTML = html;
+}
+
+if(pageArea&&pageArea.length>0){
+html ='';
+}
+
+if(blogPager){
+blogPager.innerHTML = html;
+}
+}
+
+}
+</script>
+
+<script src="Show%20QImage%20in%20a%20QLabel_files/summary" ;="" type="text/javascript"></script>
+
+
+      </div>
+<div id="sidebar-wrapper">
+<div class="sidebar section" id="sidebar"><div class="widget HTML" data-version="1" id="HTML2">
+<h2 class="title">Search Blog</h2>
+<div class="widget-content">
+<script>
+  (function() {
+    var cx = '005825673361334815182:b8oygbmjkxi';
+    var gcse = document.createElement('script');
+    gcse.type = 'text/javascript';
+    gcse.async = true;
+    gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+        '//cse.google.com/cse.js?cx=' + cx;
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(gcse, s);
+  })();
+</script>
+<div id="___gcse_0"><div class="gsc-control-cse gsc-control-cse-en"><div dir="ltr" class="gsc-control-wrapper-cse"><form accept-charset="utf-8" class="gsc-search-box gsc-search-box-tools"><table class="gsc-search-box" cellpadding="0" cellspacing="0"><tbody><tr><td class="gsc-input"><div id="gsc-iw-id1" class="gsc-input-box"><table class="gstl_50 " id="gs_id50" style="width: 100%; padding: 0px;" cellpadding="0" cellspacing="0"><tbody><tr><td class="gsib_a" id="gs_tti50"><input spellcheck="false" dir="ltr" x-webkit-grammar="builtin:search" x-webkit-speech="" id="gsc-i-id1" style="width: 100%; padding: 0px; border: medium none; margin: 0px; height: auto; outline: medium none; background: rgb(255, 255, 255) url(&quot;http://www.google.com/cse/static/en/google_custom_search_watermark.gif&quot;) no-repeat scroll left center;" title="search" name="search" class="gsc-input" size="10" autocomplete="off" lang="en" type="text"></td><td class="gsib_b"><div dir="ltr" id="gs_st50" class="gsst_b"><a style="display: none;" href="javascript:void(0)" class="gsst_a"><span id="gs_cb50" class="gscb_a">×</span></a></div></td></tr></tbody></table></div><input id="bgresponse" name="bgresponse" type="hidden"></td><td class="gsc-search-button"><input title="search" class="gsc-search-button gsc-search-button-v2" src="Show%20QImage%20in%20a%20QLabel_files/search_box_icon.png" type="image"></td><td class="gsc-clear-button"><div title="clear results" class="gsc-clear-button">&nbsp;</div></td></tr></tbody></table><table class="gsc-branding" cellpadding="0" cellspacing="0"><tbody><tr><td class="gsc-branding-user-defined"></td><td class="gsc-branding-text"><div class="gsc-branding-text">powered by</div></td><td class="gsc-branding-img"><img class="gsc-branding-img" src="Show%20QImage%20in%20a%20QLabel_files/small-logo.png"></td></tr></tbody></table></form><div class="gsc-results-wrapper-overlay"><div tabindex="0" class="gsc-results-close-btn"></div><div class="gsc-tabsAreaInvisible"><div class="gsc-tabHeader gsc-inline-block gsc-tabhActive">Custom Search</div><span class="gs-spacer"> </span></div><div class="gsc-tabsAreaInvisible"></div><div class="gsc-above-wrapper-area-invisible"><table class="gsc-above-wrapper-area-container" cellpadding="0" cellspacing="0"><tbody><tr><td class="gsc-result-info-container"><div class="gsc-result-info-invisible"></div></td><td class="gsc-orderby-container"><div class="gsc-orderby-invisible"><div class="gsc-orderby-label gsc-inline-block">Sort by:</div><div class="gsc-option-menu-container gsc-inline-block"><div class="gsc-selected-option-container gsc-inline-block"><div class="gsc-selected-option">Relevance</div><div class="gsc-option-selector"></div></div><div class="gsc-option-menu-invisible"><div class="gsc-option-menu-item gsc-option-menu-item-highlighted"><div class="gsc-option">Relevance</div></div><div class="gsc-option-menu-item"><div class="gsc-option">Date</div></div></div></div></div></td></tr></tbody></table></div><div class="gsc-adBlockInvisible"></div><div class="gsc-wrapper"><div class="gsc-adBlockInvisible"></div><div class="gsc-resultsbox-invisible"><div class="gsc-resultsRoot gsc-tabData gsc-tabdActive"><table class="gsc-resultsHeader" cellpadding="0" cellspacing="0"><tbody><tr><td class="gsc-twiddleRegionCell"><div class="gsc-twiddle"><div class="gsc-title">Web</div></div><div class="gsc-stats"></div><div class="gsc-results-selector gsc-all-results-active"><div title="show one result" class="gsc-result-selector gsc-one-result">&nbsp;</div><div title="show more results" class="gsc-result-selector gsc-more-results">&nbsp;</div><div title="show all results" class="gsc-result-selector gsc-all-results">&nbsp;</div></div></td><td class="gsc-configLabelCell"></td></tr></tbody></table><div><div class="gsc-expansionArea"></div></div></div></div></div></div><div tabindex="0" class="gsc-modal-background-image"></div></div></div></div>
+</div>
+<div class="clear"></div>
+<span class="widget-item-control">
+<span class="item-control blog-admin">
+<a class="quickedit" href="http://www.blogger.com/rearrange?blogID=1629739459234463496&amp;widgetType=HTML&amp;widgetId=HTML2&amp;action=editWidget&amp;sectionId=sidebar" onclick='return _WidgetManager._PopupConfig(document.getElementById("HTML2"));' target="configHTML2" title="Edit">
+<img alt="" src="Show%20QImage%20in%20a%20QLabel_files/icon18_wrench_allbkg.png" height="18" width="18">
+</a>
+</span>
+</span>
+<div class="clear"></div>
+</div><div class="widget BlogArchive" data-version="1" id="BlogArchive2">
+<h2>Blog Archive</h2>
+<div class="widget-content">
+<div id="ArchiveList">
+<div id="BlogArchive2_ArchiveList">
+<ul class="hierarchy">
+<li class="archivedate collapsed">
+<a class="toggle" href="javascript:void(0)">
+<span class="zippy">
+
+        ►&nbsp;
+      
+</span>
+</a>
+<a class="post-count-link" href="http://tufangorel.blogspot.mx/search?updated-min=2016-01-01T00:00:00%2B02:00&amp;updated-max=2017-01-01T00:00:00%2B02:00&amp;max-results=1">
+2016
+</a>
+<span class="post-count" dir="ltr">(1)</span>
+<ul class="hierarchy">
+<li class="archivedate collapsed">
+<a class="toggle" href="javascript:void(0)">
+<span class="zippy">
+
+        ►&nbsp;
+      
+</span>
+</a>
+<a class="post-count-link" href="http://tufangorel.blogspot.mx/2016_03_01_archive.html">
+March
+</a>
+<span class="post-count" dir="ltr">(1)</span>
+</li>
+</ul>
+</li>
+</ul>
+<ul class="hierarchy">
+<li class="archivedate collapsed">
+<a class="toggle" href="javascript:void(0)">
+<span class="zippy">
+
+        ►&nbsp;
+      
+</span>
+</a>
+<a class="post-count-link" href="http://tufangorel.blogspot.mx/search?updated-min=2015-01-01T00:00:00%2B02:00&amp;updated-max=2016-01-01T00:00:00%2B02:00&amp;max-results=50">
+2015
+</a>
+<span class="post-count" dir="ltr">(50)</span>
+<ul class="hierarchy">
+<li class="archivedate collapsed">
+<a class="toggle" href="javascript:void(0)">
+<span class="zippy">
+
+        ►&nbsp;
+      
+</span>
+</a>
+<a class="post-count-link" href="http://tufangorel.blogspot.mx/2015_11_01_archive.html">
+November
+</a>
+<span class="post-count" dir="ltr">(15)</span>
+</li>
+</ul>
+<ul class="hierarchy">
+<li class="archivedate collapsed">
+<a class="toggle" href="javascript:void(0)">
+<span class="zippy">
+
+        ►&nbsp;
+      
+</span>
+</a>
+<a class="post-count-link" href="http://tufangorel.blogspot.mx/2015_10_01_archive.html">
+October
+</a>
+<span class="post-count" dir="ltr">(11)</span>
+</li>
+</ul>
+<ul class="hierarchy">
+<li class="archivedate collapsed">
+<a class="toggle" href="javascript:void(0)">
+<span class="zippy">
+
+        ►&nbsp;
+      
+</span>
+</a>
+<a class="post-count-link" href="http://tufangorel.blogspot.mx/2015_09_01_archive.html">
+September
+</a>
+<span class="post-count" dir="ltr">(11)</span>
+</li>
+</ul>
+<ul class="hierarchy">
+<li class="archivedate collapsed">
+<a class="toggle" href="javascript:void(0)">
+<span class="zippy">
+
+        ►&nbsp;
+      
+</span>
+</a>
+<a class="post-count-link" href="http://tufangorel.blogspot.mx/2015_08_01_archive.html">
+August
+</a>
+<span class="post-count" dir="ltr">(5)</span>
+</li>
+</ul>
+<ul class="hierarchy">
+<li class="archivedate collapsed">
+<a class="toggle" href="javascript:void(0)">
+<span class="zippy">
+
+        ►&nbsp;
+      
+</span>
+</a>
+<a class="post-count-link" href="http://tufangorel.blogspot.mx/2015_07_01_archive.html">
+July
+</a>
+<span class="post-count" dir="ltr">(6)</span>
+</li>
+</ul>
+<ul class="hierarchy">
+<li class="archivedate collapsed">
+<a class="toggle" href="javascript:void(0)">
+<span class="zippy">
+
+        ►&nbsp;
+      
+</span>
+</a>
+<a class="post-count-link" href="http://tufangorel.blogspot.mx/2015_06_01_archive.html">
+June
+</a>
+<span class="post-count" dir="ltr">(1)</span>
+</li>
+</ul>
+<ul class="hierarchy">
+<li class="archivedate collapsed">
+<a class="toggle" href="javascript:void(0)">
+<span class="zippy">
+
+        ►&nbsp;
+      
+</span>
+</a>
+<a class="post-count-link" href="http://tufangorel.blogspot.mx/2015_03_01_archive.html">
+March
+</a>
+<span class="post-count" dir="ltr">(1)</span>
+</li>
+</ul>
+</li>
+</ul>
+<ul class="hierarchy">
+<li class="archivedate collapsed">
+<a class="toggle" href="javascript:void(0)">
+<span class="zippy">
+
+        ►&nbsp;
+      
+</span>
+</a>
+<a class="post-count-link" href="http://tufangorel.blogspot.mx/search?updated-min=2014-01-01T00:00:00%2B02:00&amp;updated-max=2015-01-01T00:00:00%2B02:00&amp;max-results=12">
+2014
+</a>
+<span class="post-count" dir="ltr">(12)</span>
+<ul class="hierarchy">
+<li class="archivedate collapsed">
+<a class="toggle" href="javascript:void(0)">
+<span class="zippy">
+
+        ►&nbsp;
+      
+</span>
+</a>
+<a class="post-count-link" href="http://tufangorel.blogspot.mx/2014_09_01_archive.html">
+September
+</a>
+<span class="post-count" dir="ltr">(1)</span>
+</li>
+</ul>
+<ul class="hierarchy">
+<li class="archivedate collapsed">
+<a class="toggle" href="javascript:void(0)">
+<span class="zippy">
+
+        ►&nbsp;
+      
+</span>
+</a>
+<a class="post-count-link" href="http://tufangorel.blogspot.mx/2014_08_01_archive.html">
+August
+</a>
+<span class="post-count" dir="ltr">(3)</span>
+</li>
+</ul>
+<ul class="hierarchy">
+<li class="archivedate collapsed">
+<a class="toggle" href="javascript:void(0)">
+<span class="zippy">
+
+        ►&nbsp;
+      
+</span>
+</a>
+<a class="post-count-link" href="http://tufangorel.blogspot.mx/2014_05_01_archive.html">
+May
+</a>
+<span class="post-count" dir="ltr">(1)</span>
+</li>
+</ul>
+<ul class="hierarchy">
+<li class="archivedate collapsed">
+<a class="toggle" href="javascript:void(0)">
+<span class="zippy">
+
+        ►&nbsp;
+      
+</span>
+</a>
+<a class="post-count-link" href="http://tufangorel.blogspot.mx/2014_03_01_archive.html">
+March
+</a>
+<span class="post-count" dir="ltr">(1)</span>
+</li>
+</ul>
+<ul class="hierarchy">
+<li class="archivedate collapsed">
+<a class="toggle" href="javascript:void(0)">
+<span class="zippy">
+
+        ►&nbsp;
+      
+</span>
+</a>
+<a class="post-count-link" href="http://tufangorel.blogspot.mx/2014_02_01_archive.html">
+February
+</a>
+<span class="post-count" dir="ltr">(5)</span>
+</li>
+</ul>
+<ul class="hierarchy">
+<li class="archivedate collapsed">
+<a class="toggle" href="javascript:void(0)">
+<span class="zippy">
+
+        ►&nbsp;
+      
+</span>
+</a>
+<a class="post-count-link" href="http://tufangorel.blogspot.mx/2014_01_01_archive.html">
+January
+</a>
+<span class="post-count" dir="ltr">(1)</span>
+</li>
+</ul>
+</li>
+</ul>
+<ul class="hierarchy">
+<li class="archivedate expanded">
+<a class="toggle" href="javascript:void(0)">
+<span class="zippy toggle-open">
+
+        ▼&nbsp;
+      
+</span>
+</a>
+<a class="post-count-link" href="http://tufangorel.blogspot.mx/search?updated-min=2011-01-01T00:00:00%2B02:00&amp;updated-max=2012-01-01T00:00:00%2B02:00&amp;max-results=13">
+2011
+</a>
+<span class="post-count" dir="ltr">(13)</span>
+<ul class="hierarchy">
+<li class="archivedate collapsed">
+<a class="toggle" href="javascript:void(0)">
+<span class="zippy">
+
+        ►&nbsp;
+      
+</span>
+</a>
+<a class="post-count-link" href="http://tufangorel.blogspot.mx/2011_11_01_archive.html">
+November
+</a>
+<span class="post-count" dir="ltr">(1)</span>
+</li>
+</ul>
+<ul class="hierarchy">
+<li class="archivedate collapsed">
+<a class="toggle" href="javascript:void(0)">
+<span class="zippy">
+
+        ►&nbsp;
+      
+</span>
+</a>
+<a class="post-count-link" href="http://tufangorel.blogspot.mx/2011_10_01_archive.html">
+October
+</a>
+<span class="post-count" dir="ltr">(2)</span>
+</li>
+</ul>
+<ul class="hierarchy">
+<li class="archivedate collapsed">
+<a class="toggle" href="javascript:void(0)">
+<span class="zippy">
+
+        ►&nbsp;
+      
+</span>
+</a>
+<a class="post-count-link" href="http://tufangorel.blogspot.mx/2011_08_01_archive.html">
+August
+</a>
+<span class="post-count" dir="ltr">(3)</span>
+</li>
+</ul>
+<ul class="hierarchy">
+<li class="archivedate collapsed">
+<a class="toggle" href="javascript:void(0)">
+<span class="zippy">
+
+        ►&nbsp;
+      
+</span>
+</a>
+<a class="post-count-link" href="http://tufangorel.blogspot.mx/2011_07_01_archive.html">
+July
+</a>
+<span class="post-count" dir="ltr">(2)</span>
+</li>
+</ul>
+<ul class="hierarchy">
+<li class="archivedate expanded">
+<a class="toggle" href="javascript:void(0)">
+<span class="zippy toggle-open">
+
+        ▼&nbsp;
+      
+</span>
+</a>
+<a class="post-count-link" href="http://tufangorel.blogspot.mx/2011_06_01_archive.html">
+June
+</a>
+<span class="post-count" dir="ltr">(4)</span>
+<ul class="posts">
+<li><a href="http://tufangorel.blogspot.mx/2011/06/serialize-qgraphicsscene-binary-data-by-using-qdatastream.html">Serialize QGraphicsScene Binary Data By Using QDat...</a></li>
+<li><a href="http://tufangorel.blogspot.mx/2011/06/reimplementing-close-event-of-qdialog.html">Reimplementing closeEvent of QDialog</a></li>
+<li><a href="http://tufangorel.blogspot.mx/2011/06/show-qimage-in-a-qlabel.html">Show QImage in a QLabel</a></li>
+<li><a href="http://tufangorel.blogspot.mx/2011/06/check-for-valid-file-extension-provided-by-qfiledialog.html">Check for valid file extension provided by QFileDi...</a></li>
+</ul>
+</li>
+</ul>
+<ul class="hierarchy">
+<li class="archivedate collapsed">
+<a class="toggle" href="javascript:void(0)">
+<span class="zippy">
+
+        ►&nbsp;
+      
+</span>
+</a>
+<a class="post-count-link" href="http://tufangorel.blogspot.mx/2011_05_01_archive.html">
+May
+</a>
+<span class="post-count" dir="ltr">(1)</span>
+</li>
+</ul>
+</li>
+</ul>
+<ul class="hierarchy">
+<li class="archivedate collapsed">
+<a class="toggle" href="javascript:void(0)">
+<span class="zippy">
+
+        ►&nbsp;
+      
+</span>
+</a>
+<a class="post-count-link" href="http://tufangorel.blogspot.mx/search?updated-min=2010-01-01T00:00:00%2B02:00&amp;updated-max=2011-01-01T00:00:00%2B02:00&amp;max-results=9">
+2010
+</a>
+<span class="post-count" dir="ltr">(9)</span>
+<ul class="hierarchy">
+<li class="archivedate collapsed">
+<a class="toggle" href="javascript:void(0)">
+<span class="zippy">
+
+        ►&nbsp;
+      
+</span>
+</a>
+<a class="post-count-link" href="http://tufangorel.blogspot.mx/2010_11_01_archive.html">
+November
+</a>
+<span class="post-count" dir="ltr">(1)</span>
+</li>
+</ul>
+<ul class="hierarchy">
+<li class="archivedate collapsed">
+<a class="toggle" href="javascript:void(0)">
+<span class="zippy">
+
+        ►&nbsp;
+      
+</span>
+</a>
+<a class="post-count-link" href="http://tufangorel.blogspot.mx/2010_10_01_archive.html">
+October
+</a>
+<span class="post-count" dir="ltr">(2)</span>
+</li>
+</ul>
+<ul class="hierarchy">
+<li class="archivedate collapsed">
+<a class="toggle" href="javascript:void(0)">
+<span class="zippy">
+
+        ►&nbsp;
+      
+</span>
+</a>
+<a class="post-count-link" href="http://tufangorel.blogspot.mx/2010_09_01_archive.html">
+September
+</a>
+<span class="post-count" dir="ltr">(2)</span>
+</li>
+</ul>
+<ul class="hierarchy">
+<li class="archivedate collapsed">
+<a class="toggle" href="javascript:void(0)">
+<span class="zippy">
+
+        ►&nbsp;
+      
+</span>
+</a>
+<a class="post-count-link" href="http://tufangorel.blogspot.mx/2010_07_01_archive.html">
+July
+</a>
+<span class="post-count" dir="ltr">(2)</span>
+</li>
+</ul>
+<ul class="hierarchy">
+<li class="archivedate collapsed">
+<a class="toggle" href="javascript:void(0)">
+<span class="zippy">
+
+        ►&nbsp;
+      
+</span>
+</a>
+<a class="post-count-link" href="http://tufangorel.blogspot.mx/2010_06_01_archive.html">
+June
+</a>
+<span class="post-count" dir="ltr">(1)</span>
+</li>
+</ul>
+<ul class="hierarchy">
+<li class="archivedate collapsed">
+<a class="toggle" href="javascript:void(0)">
+<span class="zippy">
+
+        ►&nbsp;
+      
+</span>
+</a>
+<a class="post-count-link" href="http://tufangorel.blogspot.mx/2010_04_01_archive.html">
+April
+</a>
+<span class="post-count" dir="ltr">(1)</span>
+</li>
+</ul>
+</li>
+</ul>
+<ul class="hierarchy">
+<li class="archivedate collapsed">
+<a class="toggle" href="javascript:void(0)">
+<span class="zippy">
+
+        ►&nbsp;
+      
+</span>
+</a>
+<a class="post-count-link" href="http://tufangorel.blogspot.mx/search?updated-min=2009-01-01T00:00:00%2B02:00&amp;updated-max=2010-01-01T00:00:00%2B02:00&amp;max-results=23">
+2009
+</a>
+<span class="post-count" dir="ltr">(23)</span>
+<ul class="hierarchy">
+<li class="archivedate collapsed">
+<a class="toggle" href="javascript:void(0)">
+<span class="zippy">
+
+        ►&nbsp;
+      
+</span>
+</a>
+<a class="post-count-link" href="http://tufangorel.blogspot.mx/2009_12_01_archive.html">
+December
+</a>
+<span class="post-count" dir="ltr">(1)</span>
+</li>
+</ul>
+<ul class="hierarchy">
+<li class="archivedate collapsed">
+<a class="toggle" href="javascript:void(0)">
+<span class="zippy">
+
+        ►&nbsp;
+      
+</span>
+</a>
+<a class="post-count-link" href="http://tufangorel.blogspot.mx/2009_11_01_archive.html">
+November
+</a>
+<span class="post-count" dir="ltr">(1)</span>
+</li>
+</ul>
+<ul class="hierarchy">
+<li class="archivedate collapsed">
+<a class="toggle" href="javascript:void(0)">
+<span class="zippy">
+
+        ►&nbsp;
+      
+</span>
+</a>
+<a class="post-count-link" href="http://tufangorel.blogspot.mx/2009_10_01_archive.html">
+October
+</a>
+<span class="post-count" dir="ltr">(1)</span>
+</li>
+</ul>
+<ul class="hierarchy">
+<li class="archivedate collapsed">
+<a class="toggle" href="javascript:void(0)">
+<span class="zippy">
+
+        ►&nbsp;
+      
+</span>
+</a>
+<a class="post-count-link" href="http://tufangorel.blogspot.mx/2009_09_01_archive.html">
+September
+</a>
+<span class="post-count" dir="ltr">(1)</span>
+</li>
+</ul>
+<ul class="hierarchy">
+<li class="archivedate collapsed">
+<a class="toggle" href="javascript:void(0)">
+<span class="zippy">
+
+        ►&nbsp;
+      
+</span>
+</a>
+<a class="post-count-link" href="http://tufangorel.blogspot.mx/2009_07_01_archive.html">
+July
+</a>
+<span class="post-count" dir="ltr">(4)</span>
+</li>
+</ul>
+<ul class="hierarchy">
+<li class="archivedate collapsed">
+<a class="toggle" href="javascript:void(0)">
+<span class="zippy">
+
+        ►&nbsp;
+      
+</span>
+</a>
+<a class="post-count-link" href="http://tufangorel.blogspot.mx/2009_06_01_archive.html">
+June
+</a>
+<span class="post-count" dir="ltr">(1)</span>
+</li>
+</ul>
+<ul class="hierarchy">
+<li class="archivedate collapsed">
+<a class="toggle" href="javascript:void(0)">
+<span class="zippy">
+
+        ►&nbsp;
+      
+</span>
+</a>
+<a class="post-count-link" href="http://tufangorel.blogspot.mx/2009_05_01_archive.html">
+May
+</a>
+<span class="post-count" dir="ltr">(6)</span>
+</li>
+</ul>
+<ul class="hierarchy">
+<li class="archivedate collapsed">
+<a class="toggle" href="javascript:void(0)">
+<span class="zippy">
+
+        ►&nbsp;
+      
+</span>
+</a>
+<a class="post-count-link" href="http://tufangorel.blogspot.mx/2009_04_01_archive.html">
+April
+</a>
+<span class="post-count" dir="ltr">(3)</span>
+</li>
+</ul>
+<ul class="hierarchy">
+<li class="archivedate collapsed">
+<a class="toggle" href="javascript:void(0)">
+<span class="zippy">
+
+        ►&nbsp;
+      
+</span>
+</a>
+<a class="post-count-link" href="http://tufangorel.blogspot.mx/2009_02_01_archive.html">
+February
+</a>
+<span class="post-count" dir="ltr">(4)</span>
+</li>
+</ul>
+<ul class="hierarchy">
+<li class="archivedate collapsed">
+<a class="toggle" href="javascript:void(0)">
+<span class="zippy">
+
+        ►&nbsp;
+      
+</span>
+</a>
+<a class="post-count-link" href="http://tufangorel.blogspot.mx/2009_01_01_archive.html">
+January
+</a>
+<span class="post-count" dir="ltr">(1)</span>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="clear"></div>
+<span class="widget-item-control">
+<span class="item-control blog-admin">
+<a class="quickedit" href="http://www.blogger.com/rearrange?blogID=1629739459234463496&amp;widgetType=BlogArchive&amp;widgetId=BlogArchive2&amp;action=editWidget&amp;sectionId=sidebar" onclick='return _WidgetManager._PopupConfig(document.getElementById("BlogArchive2"));' target="configBlogArchive2" title="Edit">
+<img alt="" src="Show%20QImage%20in%20a%20QLabel_files/icon18_wrench_allbkg.png" height="18" width="18">
+</a>
+</span>
+</span>
+<div class="clear"></div>
+</div>
+</div><div class="widget Stats" data-version="1" id="Stats1">
+<h2>Total Pageviews</h2>
+<div class="widget-content">
+<div id="Stats1_content" style="">
+<img src="Show%20QImage%20in%20a%20QLabel_files/chart.png" alt="Sparkline" id="Stats1_sparkline" height="30" width="75">
+<span class="counter-wrapper text-counter-wrapper" id="Stats1_totalCount">128,637</span>
+<div class="clear"></div>
+<span class="widget-item-control">
+<span class="item-control blog-admin">
+<a class="quickedit" href="http://www.blogger.com/rearrange?blogID=1629739459234463496&amp;widgetType=Stats&amp;widgetId=Stats1&amp;action=editWidget&amp;sectionId=sidebar" onclick='return _WidgetManager._PopupConfig(document.getElementById("Stats1"));' target="configStats1" title="Edit">
+<img alt="" src="Show%20QImage%20in%20a%20QLabel_files/icon18_wrench_allbkg.png" height="18" width="18">
+</a>
+</span>
+</span>
+<div class="clear"></div>
+</div>
+</div>
+</div><div class="widget Label" data-version="1" id="Label2">
+<h2>Labels</h2>
+<div class="widget-content list-label-widget-content">
+<ul>
+<li>
+<a dir="ltr" href="http://tufangorel.blogspot.mx/search/label/Java">Java</a>
+<span dir="ltr">(49)</span>
+</li>
+<li>
+<a dir="ltr" href="http://tufangorel.blogspot.mx/search/label/Algorithms">Algorithms</a>
+<span dir="ltr">(46)</span>
+</li>
+<li>
+<a dir="ltr" href="http://tufangorel.blogspot.mx/search/label/cplusplus">cplusplus</a>
+<span dir="ltr">(45)</span>
+</li>
+<li>
+<a dir="ltr" href="http://tufangorel.blogspot.mx/search/label/Qt">Qt</a>
+<span dir="ltr">(22)</span>
+</li>
+<li>
+<a dir="ltr" href="http://tufangorel.blogspot.mx/search/label/Recursion">Recursion</a>
+<span dir="ltr">(22)</span>
+</li>
+<li>
+<a dir="ltr" href="http://tufangorel.blogspot.mx/search/label/Generics">Generics</a>
+<span dir="ltr">(11)</span>
+</li>
+<li>
+<a dir="ltr" href="http://tufangorel.blogspot.mx/search/label/Data%20Structures">Data Structures</a>
+<span dir="ltr">(10)</span>
+</li>
+<li>
+<a dir="ltr" href="http://tufangorel.blogspot.mx/search/label/Binary%20Tree">Binary Tree</a>
+<span dir="ltr">(6)</span>
+</li>
+<li>
+<a dir="ltr" href="http://tufangorel.blogspot.mx/search/label/Binary%20search%20algorithm">Binary search algorithm</a>
+<span dir="ltr">(6)</span>
+</li>
+<li>
+<a dir="ltr" href="http://tufangorel.blogspot.mx/search/label/QGraphicsScene">QGraphicsScene</a>
+<span dir="ltr">(6)</span>
+</li>
+<li>
+<a dir="ltr" href="http://tufangorel.blogspot.mx/search/label/Ubuntu">Ubuntu</a>
+<span dir="ltr">(6)</span>
+</li>
+<li>
+<a dir="ltr" href="http://tufangorel.blogspot.mx/search/label/Boost">Boost</a>
+<span dir="ltr">(5)</span>
+</li>
+<li>
+<a dir="ltr" href="http://tufangorel.blogspot.mx/search/label/Pointer">Pointer</a>
+<span dir="ltr">(5)</span>
+</li>
+<li>
+<a dir="ltr" href="http://tufangorel.blogspot.mx/search/label/QGraphicsView">QGraphicsView</a>
+<span dir="ltr">(5)</span>
+</li>
+<li>
+<a dir="ltr" href="http://tufangorel.blogspot.mx/search/label/QDialog">QDialog</a>
+<span dir="ltr">(4)</span>
+</li>
+<li>
+<a dir="ltr" href="http://tufangorel.blogspot.mx/search/label/QGraphicsItem">QGraphicsItem</a>
+<span dir="ltr">(4)</span>
+</li>
+<li>
+<a dir="ltr" href="http://tufangorel.blogspot.mx/search/label/J2ME">J2ME</a>
+<span dir="ltr">(3)</span>
+</li>
+<li>
+<a dir="ltr" href="http://tufangorel.blogspot.mx/search/label/PL%2FSQL">PL/SQL</a>
+<span dir="ltr">(3)</span>
+</li>
+<li>
+<a dir="ltr" href="http://tufangorel.blogspot.mx/search/label/QString">QString</a>
+<span dir="ltr">(3)</span>
+</li>
+<li>
+<a dir="ltr" href="http://tufangorel.blogspot.mx/search/label/Serialization">Serialization</a>
+<span dir="ltr">(3)</span>
+</li>
+<li>
+<a dir="ltr" href="http://tufangorel.blogspot.mx/search/label/Apache%20POI">Apache POI</a>
+<span dir="ltr">(2)</span>
+</li>
+<li>
+<a dir="ltr" href="http://tufangorel.blogspot.mx/search/label/Header%20Files">Header Files</a>
+<span dir="ltr">(2)</span>
+</li>
+<li>
+<a dir="ltr" href="http://tufangorel.blogspot.mx/search/label/Maven2">Maven2</a>
+<span dir="ltr">(2)</span>
+</li>
+<li>
+<a dir="ltr" href="http://tufangorel.blogspot.mx/search/label/PostgreSQL">PostgreSQL</a>
+<span dir="ltr">(2)</span>
+</li>
+<li>
+<a dir="ltr" href="http://tufangorel.blogspot.mx/search/label/QDataStream">QDataStream</a>
+<span dir="ltr">(2)</span>
+</li>
+<li>
+<a dir="ltr" href="http://tufangorel.blogspot.mx/search/label/QSqlDatabase">QSqlDatabase</a>
+<span dir="ltr">(2)</span>
+</li>
+<li>
+<a dir="ltr" href="http://tufangorel.blogspot.mx/search/label/QSqlQuery">QSqlQuery</a>
+<span dir="ltr">(2)</span>
+</li>
+<li>
+<a dir="ltr" href="http://tufangorel.blogspot.mx/search/label/QtSql">QtSql</a>
+<span dir="ltr">(2)</span>
+</li>
+<li>
+<a dir="ltr" href="http://tufangorel.blogspot.mx/search/label/RpcGen">RpcGen</a>
+<span dir="ltr">(2)</span>
+</li>
+<li>
+<a dir="ltr" href="http://tufangorel.blogspot.mx/search/label/Ruby">Ruby</a>
+<span dir="ltr">(2)</span>
+</li>
+<li>
+<a dir="ltr" href="http://tufangorel.blogspot.mx/search/label/Ruby%20on%20Rails">Ruby on Rails</a>
+<span dir="ltr">(2)</span>
+</li>
+<li>
+<a dir="ltr" href="http://tufangorel.blogspot.mx/search/label/Software%20Engineering">Software Engineering</a>
+<span dir="ltr">(2)</span>
+</li>
+<li>
+<a dir="ltr" href="http://tufangorel.blogspot.mx/search/label/socket">socket</a>
+<span dir="ltr">(2)</span>
+</li>
+<li>
+<a dir="ltr" href="http://tufangorel.blogspot.mx/search/label/.Net%20Framework">.Net Framework</a>
+<span dir="ltr">(1)</span>
+</li>
+<li>
+<a dir="ltr" href="http://tufangorel.blogspot.mx/search/label/C%23">C#</a>
+<span dir="ltr">(1)</span>
+</li>
+<li>
+<a dir="ltr" href="http://tufangorel.blogspot.mx/search/label/Commons%20Net%20FtpClient">Commons Net FtpClient</a>
+<span dir="ltr">(1)</span>
+</li>
+<li>
+<a dir="ltr" href="http://tufangorel.blogspot.mx/search/label/Dictionary">Dictionary</a>
+<span dir="ltr">(1)</span>
+</li>
+<li>
+<a dir="ltr" href="http://tufangorel.blogspot.mx/search/label/Dynamic-link%20library">Dynamic-link library</a>
+<span dir="ltr">(1)</span>
+</li>
+<li>
+<a dir="ltr" href="http://tufangorel.blogspot.mx/search/label/Enumeration">Enumeration</a>
+<span dir="ltr">(1)</span>
+</li>
+<li>
+<a dir="ltr" href="http://tufangorel.blogspot.mx/search/label/Exceptions">Exceptions</a>
+<span dir="ltr">(1)</span>
+</li>
+<li>
+<a dir="ltr" href="http://tufangorel.blogspot.mx/search/label/Hibernate">Hibernate</a>
+<span dir="ltr">(1)</span>
+</li>
+<li>
+<a dir="ltr" href="http://tufangorel.blogspot.mx/search/label/Junit">Junit</a>
+<span dir="ltr">(1)</span>
+</li>
+<li>
+<a dir="ltr" href="http://tufangorel.blogspot.mx/search/label/Logger">Logger</a>
+<span dir="ltr">(1)</span>
+</li>
+<li>
+<a dir="ltr" href="http://tufangorel.blogspot.mx/search/label/MySQL">MySQL</a>
+<span dir="ltr">(1)</span>
+</li>
+<li>
+<a dir="ltr" href="http://tufangorel.blogspot.mx/search/label/QDebug">QDebug</a>
+<span dir="ltr">(1)</span>
+</li>
+<li>
+<a dir="ltr" href="http://tufangorel.blogspot.mx/search/label/QDir">QDir</a>
+<span dir="ltr">(1)</span>
+</li>
+<li>
+<a dir="ltr" href="http://tufangorel.blogspot.mx/search/label/QFileDialog">QFileDialog</a>
+<span dir="ltr">(1)</span>
+</li>
+<li>
+<a dir="ltr" href="http://tufangorel.blogspot.mx/search/label/QImage">QImage</a>
+<span dir="ltr">(1)</span>
+</li>
+<li>
+<a dir="ltr" href="http://tufangorel.blogspot.mx/search/label/QLayout">QLayout</a>
+<span dir="ltr">(1)</span>
+</li>
+<li>
+<a dir="ltr" href="http://tufangorel.blogspot.mx/search/label/QLibrary">QLibrary</a>
+<span dir="ltr">(1)</span>
+</li>
+<li>
+<a dir="ltr" href="http://tufangorel.blogspot.mx/search/label/QMutex">QMutex</a>
+<span dir="ltr">(1)</span>
+</li>
+<li>
+<a dir="ltr" href="http://tufangorel.blogspot.mx/search/label/QRegExp">QRegExp</a>
+<span dir="ltr">(1)</span>
+</li>
+<li>
+<a dir="ltr" href="http://tufangorel.blogspot.mx/search/label/QSqlError">QSqlError</a>
+<span dir="ltr">(1)</span>
+</li>
+<li>
+<a dir="ltr" href="http://tufangorel.blogspot.mx/search/label/QStringList">QStringList</a>
+<span dir="ltr">(1)</span>
+</li>
+<li>
+<a dir="ltr" href="http://tufangorel.blogspot.mx/search/label/QTest">QTest</a>
+<span dir="ltr">(1)</span>
+</li>
+<li>
+<a dir="ltr" href="http://tufangorel.blogspot.mx/search/label/QVariant">QVariant</a>
+<span dir="ltr">(1)</span>
+</li>
+<li>
+<a dir="ltr" href="http://tufangorel.blogspot.mx/search/label/QXMLStreamWriter">QXMLStreamWriter</a>
+<span dir="ltr">(1)</span>
+</li>
+<li>
+<a dir="ltr" href="http://tufangorel.blogspot.mx/search/label/Regex">Regex</a>
+<span dir="ltr">(1)</span>
+</li>
+<li>
+<a dir="ltr" href="http://tufangorel.blogspot.mx/search/label/Run-time%20type%20information">Run-time type information</a>
+<span dir="ltr">(1)</span>
+</li>
+<li>
+<a dir="ltr" href="http://tufangorel.blogspot.mx/search/label/Unicode">Unicode</a>
+<span dir="ltr">(1)</span>
+</li>
+<li>
+<a dir="ltr" href="http://tufangorel.blogspot.mx/search/label/Visual%20Studio%20IDE">Visual Studio IDE</a>
+<span dir="ltr">(1)</span>
+</li>
+</ul>
+<div class="clear"></div>
+<span class="widget-item-control">
+<span class="item-control blog-admin">
+<a class="quickedit" href="http://www.blogger.com/rearrange?blogID=1629739459234463496&amp;widgetType=Label&amp;widgetId=Label2&amp;action=editWidget&amp;sectionId=sidebar" onclick='return _WidgetManager._PopupConfig(document.getElementById("Label2"));' target="configLabel2" title="Edit">
+<img alt="" src="Show%20QImage%20in%20a%20QLabel_files/icon18_wrench_allbkg.png" height="18" width="18">
+</a>
+</span>
+</span>
+<div class="clear"></div>
+</div>
+</div><div class="widget PopularPosts" data-version="1" id="PopularPosts1">
+<h2>Popular Posts</h2>
+<div class="widget-content popular-posts">
+<ul>
+<li>
+<div class="item-content">
+<div class="item-thumbnail">
+<a href="http://tufangorel.blogspot.mx/2011/08/draw-grid-on-qgraphicsscene.html" target="_blank">
+<img alt="" src="Show%20QImage%20in%20a%20QLabel_files/project_file.png" border="0">
+</a>
+</div>
+<div class="item-title"><a href="http://tufangorel.blogspot.mx/2011/08/draw-grid-on-qgraphicsscene.html">Draw Grid on QGraphicsScene</a></div>
+<div class="item-snippet">Derived QGraphisScene class enables child 
+class to reimplement drawBackground() function of the parent class. By 
+reimplementing drawBackgrou...</div>
+</div>
+<div style="clear: both;"></div>
+</li>
+<li>
+<div class="item-content">
+<div class="item-thumbnail">
+<a href="http://tufangorel.blogspot.mx/2011/06/show-qimage-in-a-qlabel.html" target="_blank">
+<img alt="" src="Show%20QImage%20in%20a%20QLabel_files/project_structure_002.png" border="0">
+</a>
+</div>
+<div class="item-title"><a href="http://tufangorel.blogspot.mx/2011/06/show-qimage-in-a-qlabel.html">Show QImage in a QLabel</a></div>
+<div class="item-snippet">QImage  enables to construct images from file 
+paths on the disk. Constructed QImages can be displayed in a QLabel. By 
+setting the pixmap val...</div>
+</div>
+<div style="clear: both;"></div>
+</li>
+<li>
+<div class="item-content">
+<div class="item-thumbnail">
+<a href="http://tufangorel.blogspot.mx/2011/10/double-pointer-operations-in-c.html" target="_blank">
+<img alt="" src="Show%20QImage%20in%20a%20QLabel_files/pointeToInt.PNG" border="0">
+</a>
+</div>
+<div class="item-title"><a href="http://tufangorel.blogspot.mx/2011/10/double-pointer-operations-in-c.html">Double Pointer Operations in C++</a></div>
+<div class="item-snippet">When initialized properly double pointers can 
+be used as a 2 dimensional matrix. Sample qt-console application shows a
+ way to allocate , ini...</div>
+</div>
+<div style="clear: both;"></div>
+</li>
+<li>
+<div class="item-content">
+<div class="item-thumbnail">
+<a href="http://tufangorel.blogspot.mx/2009/07/unicode-characters-corresponding-to-turkish-characters.html" target="_blank">
+<img alt="" src="Show%20QImage%20in%20a%20QLabel_files/uni_code_turkish_characters.png" border="0">
+</a>
+</div>
+<div class="item-title"><a href="http://tufangorel.blogspot.mx/2009/07/unicode-characters-corresponding-to-turkish-characters.html">Unicode Characters Corresponding to Turkish Letters</a></div>
+<div class="item-snippet">In order to use Turkish characters/letters 
+ç,ğ,ı,ş,ö,ü,Ç,Ğ,İ,Ş,Ö,Ü in applications, their corresponding unicode 
+character codes can be helpf...</div>
+</div>
+<div style="clear: both;"></div>
+</li>
+<li>
+<div class="item-content">
+<div class="item-thumbnail">
+<a href="http://tufangorel.blogspot.mx/2011/05/create-custom-qdialogs-with-qlayout.html" target="_blank">
+<img alt="" src="Show%20QImage%20in%20a%20QLabel_files/dynamicDialog.PNG" border="0">
+</a>
+</div>
+<div class="item-title"><a href="http://tufangorel.blogspot.mx/2011/05/create-custom-qdialogs-with-qlayout.html">Create Custom QDialogs With QLayout Classes</a></div>
+<div class="item-snippet">Qt Designer is used to design user interfaces 
+for QT applications. In addition to using QT Designer to generate user 
+interfaces, you can pop...</div>
+</div>
+<div style="clear: both;"></div>
+</li>
+</ul>
+<div class="clear"></div>
+<span class="widget-item-control">
+<span class="item-control blog-admin">
+<a class="quickedit" href="http://www.blogger.com/rearrange?blogID=1629739459234463496&amp;widgetType=PopularPosts&amp;widgetId=PopularPosts1&amp;action=editWidget&amp;sectionId=sidebar" onclick='return _WidgetManager._PopupConfig(document.getElementById("PopularPosts1"));' target="configPopularPosts1" title="Edit">
+<img alt="" src="Show%20QImage%20in%20a%20QLabel_files/icon18_wrench_allbkg.png" height="18" width="18">
+</a>
+</span>
+</span>
+<div class="clear"></div>
+</div>
+</div><div class="widget HTML" data-version="1" id="HTML1">
+<h2 class="title">Visitor Map</h2>
+<div class="widget-content">
+<div id="clustrmaps-widget"></div><a class="clustrmaps-map-variation" target="_top" href="http://www.clustrmaps.com/map/tufangorel.blogspot.com?utm_source=widget&amp;utm_medium=js_widget_variation&amp;utm_campaign=widget_ctr" id="clustrmaps-widget-v2"><div class="clustrmaps-map-container"><div class="clustrmaps-visitors">395 visitors</div><div class="clustrmaps-date">Sep. 01st - Sep. 30th</div><div class="clustrmaps-logo"></div><div class="clustrmaps-connection clustrmaps-live">live</div><div class="clustrmaps-map liveDotsReady"><div style="background-color: transparent;" class="jvectormap-container"><svg height="100" width="180"><defs></defs><g transform="scale(0.16666666666666669) translate(89.9999999999999, 79.64684462793348)"></g><g></g><g style="visibility: visible;"><circle class="jvectormap-marker jvectormap-element" r="2" stroke-opacity="1" stroke-width="0.5" fill-opacity="0.7" stroke="#ffffff" fill="#FF0000" cy="48.02511446210414" cx="45.24795535540859" data-index="0"></circle><circle class="jvectormap-marker jvectormap-element" r="2" stroke-opacity="1" stroke-width="0.5" fill-opacity="0.7" stroke="#ffffff" fill="#FF0000" cy="41.44172971196498" cx="82.71962640610299" data-index="1"></circle><circle class="jvectormap-marker jvectormap-element" r="2" stroke-opacity="1" stroke-width="0.5" fill-opacity="0.7" stroke="#ffffff" fill="#FF0000" cy="40.30096608562877" cx="89.33922904935348" data-index="2"></circle><circle class="jvectormap-marker jvectormap-element" r="2" stroke-opacity="1" stroke-width="0.5" fill-opacity="0.7" stroke="#ffffff" fill="#FF0000" cy="79.043611512065" cx="158.1164477012727" data-index="3"></circle><circle class="jvectormap-marker jvectormap-element" r="2" stroke-opacity="1" stroke-width="0.5" fill-opacity="0.7" stroke="#ffffff" fill="#FF0000" cy="48.78958474095584" cx="50.83852832066754" data-index="4"></circle><circle class="jvectormap-marker jvectormap-element" r="2" stroke-opacity="1" stroke-width="0.5" fill-opacity="0.7" stroke="#ffffff" fill="#FF0000" cy="42.834932828858015" cx="54.10415444197832" data-index="5"></circle><circle class="jvectormap-marker jvectormap-element" r="2" stroke-opacity="1" stroke-width="0.5" fill-opacity="0.7" stroke="#ffffff" fill="#FF0000" cy="38.799380875363966" cx="88.67148865725937" data-index="6"></circle><circle class="jvectormap-marker jvectormap-element" r="2" stroke-opacity="1" stroke-width="0.5" fill-opacity="0.7" stroke="#ffffff" fill="#FF0000" cy="37.30432479266096" cx="88.18691780147157" data-index="7"></circle><circle class="jvectormap-marker jvectormap-element" r="2" stroke-opacity="1" stroke-width="0.5" fill-opacity="0.7" stroke="#ffffff" fill="#FF0000" cy="37.350327415668666" cx="92.2675210713332" data-index="8"></circle><circle class="jvectormap-marker jvectormap-element" r="2" stroke-opacity="1" stroke-width="0.5" fill-opacity="0.7" stroke="#ffffff" fill="#FF0000" cy="37.77158526276997" cx="86.63346151303912" data-index="9"></circle><circle class="jvectormap-marker jvectormap-element" r="2" stroke-opacity="1" stroke-width="0.5" fill-opacity="0.7" stroke="#ffffff" fill="#FF0000" cy="42.20279664149018" cx="48.579228704017105" data-index="10"></circle><circle class="jvectormap-marker jvectormap-element" r="2" stroke-opacity="1" stroke-width="0.5" fill-opacity="0.7" stroke="#ffffff" fill="#FF0000" cy="41.784226356381865" cx="94.88982105863579" data-index="11"></circle><circle class="jvectormap-marker jvectormap-element" r="2" stroke-opacity="1" stroke-width="0.5" fill-opacity="0.7" stroke="#ffffff" fill="#FF0000" cy="31.94252459403537" cx="95.57175093406192" data-index="12"></circle><circle class="jvectormap-marker jvectormap-element" r="2" stroke-opacity="1" stroke-width="0.5" fill-opacity="0.7" stroke="#ffffff" fill="#FF0000" cy="76.8792181229932" cx="158.07771875853126" data-index="13"></circle><circle class="jvectormap-marker jvectormap-element" r="2" stroke-opacity="1" stroke-width="0.5" fill-opacity="0.7" stroke="#ffffff" fill="#FF0000" cy="39.84188182884337" cx="97.98726006868787" data-index="14"></circle><circle class="jvectormap-marker jvectormap-element" r="2" stroke-opacity="1" stroke-width="0.5" fill-opacity="0.7" stroke="#ffffff" fill="#FF0000" cy="39.341579039292235" cx="89.22458637078583" data-index="15"></circle><circle class="jvectormap-marker jvectormap-element" r="2" stroke-opacity="1" stroke-width="0.5" fill-opacity="0.7" stroke="#ffffff" fill="#FF0000" cy="52.08916265599932" cx="43.03560623507727" data-index="16"></circle><circle class="jvectormap-marker jvectormap-element" r="2" stroke-opacity="1" stroke-width="0.5" fill-opacity="0.7" stroke="#ffffff" fill="#FF0000" cy="47.51718177038743" cx="117.20762471604837" data-index="17"></circle><circle class="jvectormap-marker jvectormap-element" r="2" stroke-opacity="1" stroke-width="0.5" fill-opacity="0.7" stroke="#ffffff" fill="#FF0000" cy="45.647793812844306" cx="48.979831205499075" data-index="18"></circle><circle class="jvectormap-marker jvectormap-element" r="2" stroke-opacity="1" stroke-width="0.5" fill-opacity="0.7" stroke="#ffffff" fill="#FF0000" cy="44.360307894198094" cx="34.16763822409689" data-index="19"></circle><circle class="jvectormap-marker jvectormap-element" r="2" stroke-opacity="1" stroke-width="0.5" fill-opacity="0.7" stroke="#ffffff" fill="#FF0000" cy="38.96518902474342" cx="91.36557073671209" data-index="20"></circle><circle class="jvectormap-marker jvectormap-element" r="2" stroke-opacity="1" stroke-width="0.5" fill-opacity="0.7" stroke="#ffffff" fill="#FF0000" cy="41.184073732954644" cx="89.42962440493324" data-index="21"></circle><circle class="jvectormap-marker jvectormap-element" r="2" stroke-opacity="1" stroke-width="0.5" fill-opacity="0.7" stroke="#ffffff" fill="#FF0000" cy="41.3453591766135" cx="44.80219690991126" data-index="22"></circle><circle class="jvectormap-marker jvectormap-element" r="2" stroke-opacity="1" stroke-width="0.5" fill-opacity="0.7" stroke="#ffffff" fill="#FF0000" cy="41.69878443825385" cx="49.215126226163235" data-index="23"></circle><circle class="jvectormap-marker jvectormap-element" r="2" stroke-opacity="1" stroke-width="0.5" fill-opacity="0.7" stroke="#ffffff" fill="#FF0000" cy="36.97159161603356" cx="85.42318205236855" data-index="24"></circle><circle class="jvectormap-marker jvectormap-element" r="2" stroke-opacity="1" stroke-width="0.5" fill-opacity="0.7" stroke="#ffffff" fill="#FF0000" cy="37.719542225549965" cx="86.37467037732814" data-index="25"></circle><circle class="jvectormap-marker jvectormap-element" r="2" stroke-opacity="1" stroke-width="0.5" fill-opacity="0.7" stroke="#ffffff" fill="#FF0000" cy="38.71899431950478" cx="88.39032821841323" data-index="26"></circle><circle class="jvectormap-marker jvectormap-element" r="2" stroke-opacity="1" stroke-width="0.5" fill-opacity="0.7" stroke="#ffffff" fill="#FF0000" cy="38.81719646439095" cx="83.28783174600056" data-index="27"></circle><circle class="jvectormap-marker jvectormap-element" r="2" stroke-opacity="1" stroke-width="0.5" fill-opacity="0.7" stroke="#ffffff" fill="#FF0000" cy="47.654461191381856" cx="45.2146935371274" data-index="28"></circle><circle class="jvectormap-marker jvectormap-element" r="2" stroke-opacity="1" stroke-width="0.5" fill-opacity="0.7" stroke="#ffffff" fill="#FF0000" cy="38.57093386433284" cx="86.13616185602703" data-index="29"></circle><circle class="jvectormap-marker jvectormap-element" r="2" stroke-opacity="1" stroke-width="0.5" fill-opacity="0.7" stroke="#ffffff" fill="#FF0000" cy="58.14416509149783" cx="53.62333962589605" data-index="30"></circle><circle class="jvectormap-marker jvectormap-element" r="2" stroke-opacity="1" stroke-width="0.5" fill-opacity="0.7" stroke="#ffffff" fill="#FF0000" cy="54.599851807831094" cx="135.64948753377615" data-index="31"></circle><circle class="jvectormap-marker jvectormap-element" r="2" stroke-opacity="1" stroke-width="0.5" fill-opacity="0.7" stroke="#ffffff" fill="#FF0000" cy="79.83305047786762" cx="146.62058737720594" data-index="32"></circle><circle class="jvectormap-marker jvectormap-element" r="2" stroke-opacity="1" stroke-width="0.5" fill-opacity="0.7" stroke="#ffffff" fill="#FF0000" cy="42.54973793048646" cx="45.07684687993447" data-index="33"></circle><circle class="jvectormap-marker jvectormap-element" r="2" stroke-opacity="1" stroke-width="0.5" fill-opacity="0.7" stroke="#ffffff" fill="#FF0000" cy="41.94459593054211" cx="55.153591935703226" data-index="34"></circle><circle class="jvectormap-marker jvectormap-element" r="2" stroke-opacity="1" stroke-width="0.5" fill-opacity="0.7" stroke="#ffffff" fill="#FF0000" cy="41.62549667282602" cx="51.2475610445997" data-index="35"></circle><circle class="jvectormap-marker jvectormap-element" r="2" stroke-opacity="1" stroke-width="0.5" fill-opacity="0.7" stroke="#ffffff" fill="#FF0000" cy="40.89426564570313" cx="96.05139720445801" data-index="36"></circle><circle class="jvectormap-marker jvectormap-element" r="2" stroke-opacity="1" stroke-width="0.5" fill-opacity="0.7" stroke="#ffffff" fill="#FF0000" cy="44.393344826438906" cx="34.19605892453539" data-index="37"></circle><circle class="jvectormap-marker jvectormap-element" r="2" stroke-opacity="1" stroke-width="0.5" fill-opacity="0.7" stroke="#ffffff" fill="#FF0000" cy="58.74631138177993" cx="53.56804237467575" data-index="38"></circle><circle class="jvectormap-marker jvectormap-element" r="2" stroke-opacity="1" stroke-width="0.5" fill-opacity="0.7" stroke="#ffffff" fill="#FF0000" cy="40.365222425361054" cx="54.46364917557198" data-index="39"></circle><circle class="jvectormap-marker jvectormap-element" r="2" stroke-opacity="1" stroke-width="0.5" fill-opacity="0.7" stroke="#ffffff" fill="#FF0000" cy="40.81444378574839" cx="99.1490448833826" data-index="40"></circle><circle class="jvectormap-marker jvectormap-element" r="2" stroke-opacity="1" stroke-width="0.5" fill-opacity="0.7" stroke="#ffffff" fill="#FF0000" cy="34.610408758832214" cx="100.94493266791974" data-index="41"></circle><circle class="jvectormap-marker jvectormap-element" r="2" stroke-opacity="1" stroke-width="0.5" fill-opacity="0.7" stroke="#ffffff" fill="#FF0000" cy="52.74330983637869" cx="115.55183721252749" data-index="42"></circle><circle class="jvectormap-marker jvectormap-element" r="2" stroke-opacity="1" stroke-width="0.5" fill-opacity="0.7" stroke="#ffffff" fill="#FF0000" cy="47.496204592849516" cx="117.1645137269838" data-index="43"></circle><circle class="jvectormap-marker jvectormap-element" r="2" stroke-opacity="1" stroke-width="0.5" fill-opacity="0.7" stroke="#ffffff" fill="#FF0000" cy="51.98758296158929" cx="42.006159219340674" data-index="44"></circle><circle class="jvectormap-marker jvectormap-element" r="2" stroke-opacity="1" stroke-width="0.5" fill-opacity="0.7" stroke="#ffffff" fill="#FF0000" cy="32.03161212332855" cx="95.56624207582715" data-index="45"></circle><circle class="jvectormap-marker jvectormap-element" r="2" stroke-opacity="1" stroke-width="0.5" fill-opacity="0.7" stroke="#ffffff" fill="#FF0000" cy="41.39110265923648" cx="87.34932094713851" data-index="46"></circle><circle class="jvectormap-marker jvectormap-element" r="2" stroke-opacity="1" stroke-width="0.5" fill-opacity="0.7" stroke="#ffffff" fill="#FF0000" cy="51.64594953229542" cx="51.7718624537171" data-index="47"></circle><circle class="jvectormap-marker jvectormap-element" r="2" stroke-opacity="1" stroke-width="0.5" fill-opacity="0.7" stroke="#ffffff" fill="#FF0000" cy="48.127001251397566" cx="115.07502883879778" data-index="48"></circle><circle class="jvectormap-marker jvectormap-element" r="2" stroke-opacity="1" stroke-width="0.5" fill-opacity="0.7" stroke="#ffffff" fill="#FF0000" cy="36.617656081627686" cx="92.2397263775123" data-index="49"></circle><circle class="jvectormap-marker jvectormap-element" r="2" stroke-opacity="1" stroke-width="0.5" fill-opacity="0.7" stroke="#ffffff" fill="#FF0000" cy="48.50383573866621" cx="117.42743650637084" data-index="50"></circle><circle class="jvectormap-marker jvectormap-element" r="2" stroke-opacity="1" stroke-width="0.5" fill-opacity="0.7" stroke="#ffffff" fill="#FF0000" cy="53.80162957775016" cx="118.80327385050624" data-index="51"></circle><circle class="jvectormap-marker jvectormap-element" r="2" stroke-opacity="1" stroke-width="0.5" fill-opacity="0.7" stroke="#ffffff" fill="#FF0000" cy="52.544565550282535" cx="43.784602286134344" data-index="52"></circle><circle class="jvectormap-marker jvectormap-element" r="2" stroke-opacity="1" stroke-width="0.5" fill-opacity="0.7" stroke="#ffffff" fill="#FF0000" cy="59.32157275022418" cx="53.223154462159144" data-index="53"></circle><circle class="jvectormap-marker jvectormap-element" r="2" stroke-opacity="1" stroke-width="0.5" fill-opacity="0.7" stroke="#ffffff" fill="#FF0000" cy="59.47238773050909" cx="127.58247412311262" data-index="54"></circle><circle class="jvectormap-marker jvectormap-element" r="2" stroke-opacity="1" stroke-width="0.5" fill-opacity="0.7" stroke="#ffffff" fill="#FF0000" cy="51.17752263492259" cx="122.03889338794728" data-index="55"></circle><circle class="jvectormap-marker jvectormap-element" r="2" stroke-opacity="1" stroke-width="0.5" fill-opacity="0.7" stroke="#ffffff" fill="#FF0000" cy="52.934153971129" cx="115.9862440713592" data-index="56"></circle><circle class="jvectormap-marker jvectormap-element" r="2" stroke-opacity="1" stroke-width="0.5" fill-opacity="0.7" stroke="#ffffff" fill="#FF0000" cy="38.77395674036973" cx="141.53820658410513" data-index="57"></circle><circle class="jvectormap-marker jvectormap-element" r="2" stroke-opacity="1" stroke-width="0.5" fill-opacity="0.7" stroke="#ffffff" fill="#FF0000" cy="35.68221578122192" cx="93.72820317903908" data-index="58"></circle><circle class="jvectormap-marker jvectormap-element" r="2" stroke-opacity="1" stroke-width="0.5" fill-opacity="0.7" stroke="#ffffff" fill="#FF0000" cy="55.00022322824541" cx="47.931061452166254" data-index="59"></circle><circle class="jvectormap-marker jvectormap-element" r="2" stroke-opacity="1" stroke-width="0.5" fill-opacity="0.7" stroke="#ffffff" fill="#FF0000" cy="40.326906682859125" cx="88.98449196605348" data-index="60"></circle><circle class="jvectormap-marker jvectormap-element" r="2" stroke-opacity="1" stroke-width="0.5" fill-opacity="0.7" stroke="#ffffff" fill="#FF0000" cy="43.80464886217047" cx="47.634459516752955" data-index="61"></circle><circle class="jvectormap-marker jvectormap-element" r="2" stroke-opacity="1" stroke-width="0.5" fill-opacity="0.7" stroke="#ffffff" fill="#FF0000" cy="42.79376423761438" cx="92.05977034184292" data-index="62"></circle><circle class="jvectormap-marker jvectormap-element" r="2" stroke-opacity="1" stroke-width="0.5" fill-opacity="0.7" stroke="#ffffff" fill="#FF0000" cy="63.77350798421296" cx="70.18342655115359" data-index="63"></circle><circle class="jvectormap-marker jvectormap-element" r="2" stroke-opacity="1" stroke-width="0.5" fill-opacity="0.7" stroke="#ffffff" fill="#FF0000" cy="42.01091937179865" cx="81.51861184337272" data-index="64"></circle><circle class="jvectormap-marker jvectormap-element" r="2" stroke-opacity="1" stroke-width="0.5" fill-opacity="0.7" stroke="#ffffff" fill="#FF0000" cy="60.2169082666118" cx="128.50182744170274" data-index="65"></circle><circle class="jvectormap-marker jvectormap-element" r="2" stroke-opacity="1" stroke-width="0.5" fill-opacity="0.7" stroke="#ffffff" fill="#FF0000" cy="41.0734774646964" cx="88.56018468065218" data-index="66"></circle><circle class="jvectormap-marker jvectormap-element" r="2" stroke-opacity="1" stroke-width="0.5" fill-opacity="0.7" stroke="#ffffff" fill="#FF0000" cy="34.64599373203138" cx="101.20180405000345" data-index="67"></circle><circle class="jvectormap-marker jvectormap-element" r="2" stroke-opacity="1" stroke-width="0.5" fill-opacity="0.7" stroke="#ffffff" fill="#FF0000" cy="42.92354985727068" cx="83.62170194204762" data-index="68"></circle><circle class="jvectormap-marker jvectormap-element" r="2" stroke-opacity="1" stroke-width="0.5" fill-opacity="0.7" stroke="#ffffff" fill="#FF0000" cy="47.85340815855437" cx="114.37252421254027" data-index="69"></circle><circle class="jvectormap-marker jvectormap-element" r="2" stroke-opacity="1" stroke-width="0.5" fill-opacity="0.7" stroke="#ffffff" fill="#FF0000" cy="43.0720501741226" cx="50.45244917271363" data-index="70"></circle><circle class="jvectormap-marker jvectormap-element" r="2" stroke-opacity="1" stroke-width="0.5" fill-opacity="0.7" stroke="#ffffff" fill="#FF0000" cy="63.33660508924532" cx="129.74282296040963" data-index="71"></circle><circle class="jvectormap-marker jvectormap-element" r="2" stroke-opacity="1" stroke-width="0.5" fill-opacity="0.7" stroke="#ffffff" fill="#FF0000" cy="43.06343004411231" cx="48.331580486099206" data-index="72"></circle><circle class="jvectormap-marker jvectormap-element" r="2" stroke-opacity="1" stroke-width="0.5" fill-opacity="0.7" stroke="#ffffff" fill="#FF0000" cy="43.59356164315143" cx="41.4649556315484" data-index="73"></circle><circle class="jvectormap-marker jvectormap-element" r="2" stroke-opacity="1" stroke-width="0.5" fill-opacity="0.7" stroke="#ffffff" fill="#FF0000" cy="43.8192839609221" cx="52.70507138544311" data-index="74"></circle><circle class="jvectormap-marker jvectormap-element" r="2" stroke-opacity="1" stroke-width="0.5" fill-opacity="0.7" stroke="#ffffff" fill="#FF0000" cy="46.02549563407127" cx="50.363347564143574" data-index="75"></circle><circle class="jvectormap-marker jvectormap-element" r="2" stroke-opacity="1" stroke-width="0.5" fill-opacity="0.7" stroke="#ffffff" fill="#FF0000" cy="48.460028073854744" cx="117.47472087288601" data-index="76"></circle><circle class="jvectormap-marker jvectormap-element" r="2" stroke-opacity="1" stroke-width="0.5" fill-opacity="0.7" stroke="#ffffff" fill="#FF0000" cy="35.906885891031756" cx="89.32528996866851" data-index="77"></circle><circle class="jvectormap-marker jvectormap-element" r="2" stroke-opacity="1" stroke-width="0.5" fill-opacity="0.7" stroke="#ffffff" fill="#FF0000" cy="41.6253955161804" cx="50.02880962770442" data-index="78"></circle><circle class="jvectormap-marker jvectormap-element" r="2" stroke-opacity="1" stroke-width="0.5" fill-opacity="0.7" stroke="#ffffff" fill="#FF0000" cy="55.26581779094481" cx="118.66413344630365" data-index="79"></circle><circle class="jvectormap-marker jvectormap-element" r="2" stroke-opacity="1" stroke-width="0.5" fill-opacity="0.7" stroke="#ffffff" fill="#FF0000" cy="57.41093042843151" cx="84.32420656830514" data-index="80"></circle><circle class="jvectormap-marker jvectormap-element" r="2" stroke-opacity="1" stroke-width="0.5" fill-opacity="0.7" stroke="#ffffff" fill="#FF0000" cy="43.59156059610218" cx="45.42469789044101" data-index="81"></circle><circle class="jvectormap-marker jvectormap-element" r="2" stroke-opacity="1" stroke-width="0.5" fill-opacity="0.7" stroke="#ffffff" fill="#FF0000" cy="71.94321575287992" cx="96.87910315423318" data-index="82"></circle><circle class="jvectormap-marker jvectormap-element" r="2" stroke-opacity="1" stroke-width="0.5" fill-opacity="0.7" stroke="#ffffff" fill="#FF0000" cy="34.70675986928881" cx="105.66406268772135" data-index="83"></circle><circle class="jvectormap-marker jvectormap-element" r="2" stroke-opacity="1" stroke-width="0.5" fill-opacity="0.7" stroke="#ffffff" fill="#FF0000" cy="37.121013276815276" cx="85.11961057661276" data-index="84"></circle><circle class="jvectormap-marker jvectormap-element" r="2" stroke-opacity="1" stroke-width="0.5" fill-opacity="0.7" stroke="#ffffff" fill="#FF0000" cy="39.61294651285606" cx="93.41519987024495" data-index="85"></circle><circle class="jvectormap-marker jvectormap-element" r="2" stroke-opacity="1" stroke-width="0.5" fill-opacity="0.7" stroke="#ffffff" fill="#FF0000" cy="44.290562219910996" cx="138.15171945182527" data-index="86"></circle><circle class="jvectormap-marker jvectormap-element" r="2" stroke-opacity="1" stroke-width="0.5" fill-opacity="0.7" stroke="#ffffff" fill="#FF0000" cy="43.7115495835238" cx="52.79993225489499" data-index="87"></circle><circle class="jvectormap-marker jvectormap-element" r="2" stroke-opacity="1" stroke-width="0.5" fill-opacity="0.7" stroke="#ffffff" fill="#FF0000" cy="43.63059288508743" cx="45.64488528473403" data-index="88"></circle><circle class="jvectormap-marker jvectormap-element" r="2" stroke-opacity="1" stroke-width="0.5" fill-opacity="0.7" stroke="#ffffff" fill="#FF0000" cy="37.716859134121144" cx="97.89465282305932" data-index="89"></circle><circle class="jvectormap-marker jvectormap-element" r="2" stroke-opacity="1" stroke-width="0.5" fill-opacity="0.7" stroke="#ffffff" fill="#FF0000" cy="37.26181535690155" cx="84.93172512378727" data-index="90"></circle><circle class="jvectormap-marker jvectormap-element" r="2" stroke-opacity="1" stroke-width="0.5" fill-opacity="0.7" stroke="#ffffff" fill="#FF0000" cy="43.58941305370261" cx="52.82042353817739" data-index="91"></circle><circle class="jvectormap-marker jvectormap-element" r="2" stroke-opacity="1" stroke-width="0.5" fill-opacity="0.7" stroke="#ffffff" fill="#FF0000" cy="38.646041742037276" cx="103.73116292148144" data-index="92"></circle><circle class="jvectormap-marker jvectormap-element" r="2" stroke-opacity="1" stroke-width="0.5" fill-opacity="0.7" stroke="#ffffff" fill="#FF0000" cy="34.36726934143667" cx="103.52487287409886" data-index="93"></circle><circle class="jvectormap-marker jvectormap-element" r="2" stroke-opacity="1" stroke-width="0.5" fill-opacity="0.7" stroke="#ffffff" fill="#FF0000" cy="34.04997816580186" cx="100.13842747559355" data-index="94"></circle><circle class="jvectormap-marker jvectormap-element" r="2" stroke-opacity="1" stroke-width="0.5" fill-opacity="0.7" stroke="#ffffff" fill="#FF0000" cy="45.177321482447695" cx="52.30442715018666" data-index="95"></circle><circle class="jvectormap-marker jvectormap-element" r="2" stroke-opacity="1" stroke-width="0.5" fill-opacity="0.7" stroke="#ffffff" fill="#FF0000" cy="44.43863266050261" cx="138.1644899868241" data-index="96"></circle><circle class="jvectormap-marker jvectormap-element" r="2" stroke-opacity="1" stroke-width="0.5" fill-opacity="0.7" stroke="#ffffff" fill="#FF0000" cy="38.672339021243715" cx="89.00427377516928" data-index="97"></circle><circle class="jvectormap-marker jvectormap-element" r="2" stroke-opacity="1" stroke-width="0.5" fill-opacity="0.7" stroke="#ffffff" fill="#FF0000" cy="38.01471657853224" cx="44.601707857185005" data-index="98"></circle><circle class="jvectormap-marker jvectormap-element" r="2" stroke-opacity="1" stroke-width="0.5" fill-opacity="0.7" stroke="#ffffff" fill="#FF0000" cy="44.3976777664661" cx="34.16747128899887" data-index="99"></circle><circle class="jvectormap-marker jvectormap-element" r="2" stroke-opacity="1" stroke-width="0.5" fill-opacity="0.7" stroke="#ffffff" fill="#FF0000" cy="43.06628714780074" cx="48.34664637869583" data-index="100"></circle><circle class="jvectormap-marker jvectormap-element" r="2" stroke-opacity="1" stroke-width="0.5" fill-opacity="0.7" stroke="#ffffff" fill="#FF0000" cy="50.89309657900355" cx="115.49236658385661" data-index="101"></circle><circle class="jvectormap-marker jvectormap-element" r="2" stroke-opacity="1" stroke-width="0.5" fill-opacity="0.7" stroke="#ffffff" fill="#FF0000" cy="43.096327216962266" cx="41.22285800563978" data-index="102"></circle><circle class="jvectormap-marker jvectormap-element" r="2" stroke-opacity="1" stroke-width="0.5" fill-opacity="0.7" stroke="#ffffff" fill="#FF0000" cy="44.15880127902169" cx="98.71593177156056" data-index="103"></circle><circle class="jvectormap-marker jvectormap-element" r="2" stroke-opacity="1" stroke-width="0.5" fill-opacity="0.7" stroke="#ffffff" fill="#FF0000" cy="46.10204810500585" cx="35.78836935703282" data-index="104"></circle><circle class="jvectormap-marker jvectormap-element" r="2" stroke-opacity="1" stroke-width="0.5" fill-opacity="0.7" stroke="#ffffff" fill="#FF0000" cy="48.76155796211778" cx="56.77991539442295" data-index="105"></circle><circle class="jvectormap-marker jvectormap-element" r="2" stroke-opacity="1" stroke-width="0.5" fill-opacity="0.7" stroke="#ffffff" fill="#FF0000" cy="35.9772901372257" cx="89.332259509011" data-index="106"></circle><circle class="jvectormap-marker jvectormap-element" r="2" stroke-opacity="1" stroke-width="0.5" fill-opacity="0.7" stroke="#ffffff" fill="#FF0000" cy="38.92405761196092" cx="91.98932373047701" data-index="107"></circle><circle class="jvectormap-marker jvectormap-element" r="2" stroke-opacity="1" stroke-width="0.5" fill-opacity="0.7" stroke="#ffffff" fill="#FF0000" cy="43.16417853202523" cx="98.86437880747798" data-index="108"></circle><circle class="jvectormap-marker jvectormap-element" r="2" stroke-opacity="1" stroke-width="0.5" fill-opacity="0.7" stroke="#ffffff" fill="#FF0000" cy="54.9349140566518" cx="127.1069177626181" data-index="109"></circle><circle class="jvectormap-marker jvectormap-element" r="2" stroke-opacity="1" stroke-width="0.5" fill-opacity="0.7" stroke="#ffffff" fill="#FF0000" cy="49.98983324977357" cx="108.23962084757738" data-index="110"></circle><circle class="jvectormap-marker jvectormap-element" r="2" stroke-opacity="1" stroke-width="0.5" fill-opacity="0.7" stroke="#ffffff" fill="#FF0000" cy="38.17185401706842" cx="92.67613645752029" data-index="111"></circle><circle class="jvectormap-marker jvectormap-element" r="2" stroke-opacity="1" stroke-width="0.5" fill-opacity="0.7" stroke="#ffffff" fill="#FF0000" cy="37.49730252205553" cx="93.78387603422993" data-index="112"></circle><circle class="jvectormap-marker jvectormap-element" r="2" stroke-opacity="1" stroke-width="0.5" fill-opacity="0.7" stroke="#ffffff" fill="#FF0000" cy="44.38983010058813" cx="138.1302682917293" data-index="113"></circle><circle class="jvectormap-marker jvectormap-element" r="2" stroke-opacity="1" stroke-width="0.5" fill-opacity="0.7" stroke="#ffffff" fill="#FF0000" cy="43.56207370138213" cx="45.68766240360256" data-index="114"></circle><circle class="jvectormap-marker jvectormap-element" r="2" stroke-opacity="1" stroke-width="0.5" fill-opacity="0.7" stroke="#ffffff" fill="#FF0000" cy="37.963980699124406" cx="100.28850212871671" data-index="115"></circle><circle class="jvectormap-marker jvectormap-element" r="2" stroke-opacity="1" stroke-width="0.5" fill-opacity="0.7" stroke="#ffffff" fill="#FF0000" cy="39.959584407302046" cx="91.1500157913892" data-index="116"></circle><circle class="jvectormap-marker jvectormap-element" r="2" stroke-opacity="1" stroke-width="0.5" fill-opacity="0.7" stroke="#ffffff" fill="#FF0000" cy="48.49024761484728" cx="117.37735597696378" data-index="117"></circle><circle class="jvectormap-marker jvectormap-element" r="2" stroke-opacity="1" stroke-width="0.5" fill-opacity="0.7" stroke="#ffffff" fill="#FF0000" cy="45.20645202442445" cx="143.48241620323614" data-index="118"></circle><circle class="jvectormap-marker jvectormap-element" r="2" stroke-opacity="1" stroke-width="0.5" fill-opacity="0.7" stroke="#ffffff" fill="#FF0000" cy="38.25398742788241" cx="88.3977985640498" data-index="119"></circle><circle class="jvectormap-marker jvectormap-element" r="2" stroke-opacity="1" stroke-width="0.5" fill-opacity="0.7" stroke="#ffffff" fill="#FF0000" cy="50.768285245132525" cx="135.65674921054017" data-index="120"></circle><circle class="jvectormap-marker jvectormap-element" r="2" stroke-opacity="1" stroke-width="0.5" fill-opacity="0.7" stroke="#ffffff" fill="#FF0000" cy="40.08425390573244" cx="95.59232568489331" data-index="121"></circle><circle class="jvectormap-marker jvectormap-element" r="2" stroke-opacity="1" stroke-width="0.5" fill-opacity="0.7" stroke="#ffffff" fill="#FF0000" cy="37.9109537635706" cx="88.67962674328801" data-index="122"></circle><circle class="jvectormap-marker jvectormap-element" r="2" stroke-opacity="1" stroke-width="0.5" fill-opacity="0.7" stroke="#ffffff" fill="#FF0000" cy="50.08716968370658" cx="135.87585152669607" data-index="123"></circle><circle class="jvectormap-marker jvectormap-element" r="2" stroke-opacity="1" stroke-width="0.5" fill-opacity="0.7" stroke="#ffffff" fill="#FF0000" cy="38.95073569771827" cx="89.99303036076265" data-index="124"></circle><circle class="jvectormap-marker jvectormap-element" r="2" stroke-opacity="1" stroke-width="0.5" fill-opacity="0.7" stroke="#ffffff" fill="#FF0000" cy="38.04022694257994" cx="95.1877167410588" data-index="125"></circle><circle class="jvectormap-marker jvectormap-element" r="2" stroke-opacity="1" stroke-width="0.5" fill-opacity="0.7" stroke="#ffffff" fill="#FF0000" cy="41.94791405049702" cx="55.506743135572" data-index="126"></circle><circle class="jvectormap-marker jvectormap-element" r="2" stroke-opacity="1" stroke-width="0.5" fill-opacity="0.7" stroke="#ffffff" fill="#FF0000" cy="48.31642415102986" cx="117.30085796829451" data-index="127"></circle><circle class="jvectormap-marker jvectormap-element" r="2" stroke-opacity="1" stroke-width="0.5" fill-opacity="0.7" stroke="#ffffff" fill="#FF0000" cy="44.09660932205033" cx="44.677120787717136" data-index="128"></circle><circle class="jvectormap-marker jvectormap-element" r="2" stroke-opacity="1" stroke-width="0.5" fill-opacity="0.7" stroke="#ffffff" fill="#FF0000" cy="36.64569710242199" cx="87.20383700921101" data-index="129"></circle><circle class="jvectormap-marker jvectormap-element" r="2" stroke-opacity="1" stroke-width="0.5" fill-opacity="0.7" stroke="#ffffff" fill="#FF0000" cy="38.57050372011914" cx="86.13962575931102" data-index="130"></circle><circle class="jvectormap-marker jvectormap-element" r="2" stroke-opacity="1" stroke-width="0.5" fill-opacity="0.7" stroke="#ffffff" fill="#FF0000" cy="58.814946228242626" cx="54.24968011368032" data-index="131"></circle><circle class="jvectormap-marker jvectormap-element" r="2" stroke-opacity="1" stroke-width="0.5" fill-opacity="0.7" stroke="#ffffff" fill="#FF0000" cy="42.61969748010426" cx="97.24289646660097" data-index="132"></circle><circle class="jvectormap-marker jvectormap-element" r="2" stroke-opacity="1" stroke-width="0.5" fill-opacity="0.7" stroke="#ffffff" fill="#FF0000" cy="32.20409079307682" cx="97.78927504243197" data-index="133"></circle><circle class="jvectormap-marker jvectormap-element" r="2" stroke-opacity="1" stroke-width="0.5" fill-opacity="0.7" stroke="#ffffff" fill="#FF0000" cy="42.523131952860254" cx="45.04508747753549" data-index="134"></circle><circle class="jvectormap-marker jvectormap-element" r="2" stroke-opacity="1" stroke-width="0.5" fill-opacity="0.7" stroke="#ffffff" fill="#FF0000" cy="29.980839604122067" cx="94.9593495269626" data-index="135"></circle><circle class="jvectormap-marker jvectormap-element" r="2" stroke-opacity="1" stroke-width="0.5" fill-opacity="0.7" stroke="#ffffff" fill="#FF0000" cy="38.49963792568289" cx="85.95587195016162" data-index="136"></circle><circle class="jvectormap-marker jvectormap-element" r="2" stroke-opacity="1" stroke-width="0.5" fill-opacity="0.7" stroke="#ffffff" fill="#FF0000" cy="36.68430887318145" cx="128.68570645217562" data-index="137"></circle><circle class="jvectormap-marker jvectormap-element" r="2" stroke-opacity="1" stroke-width="0.5" fill-opacity="0.7" stroke="#ffffff" fill="#FF0000" cy="56.597700908352905" cx="117.75992948785918" data-index="138"></circle><circle class="jvectormap-marker jvectormap-element" r="2" stroke-opacity="1" stroke-width="0.5" fill-opacity="0.7" stroke="#ffffff" fill="#FF0000" cy="37.12900114688548" cx="85.10462815156514" data-index="139"></circle><circle class="jvectormap-marker jvectormap-element" r="2" stroke-opacity="1" stroke-width="0.5" fill-opacity="0.7" stroke="#ffffff" fill="#FF0000" cy="75.44568429487408" cx="148.26101685170863" data-index="140"></circle><circle class="jvectormap-marker jvectormap-element" r="2" stroke-opacity="1" stroke-width="0.5" fill-opacity="0.7" stroke="#ffffff" fill="#FF0000" cy="39.43561768473438" cx="101.73299153191431" data-index="141"></circle><circle class="jvectormap-marker jvectormap-element" r="2" stroke-opacity="1" stroke-width="0.5" fill-opacity="0.7" stroke="#ffffff" fill="#FF0000" cy="42.66337716643473" cx="54.63442378085005" data-index="142"></circle><circle class="jvectormap-marker jvectormap-element" r="2" stroke-opacity="1" stroke-width="0.5" fill-opacity="0.7" stroke="#ffffff" fill="#FF0000" cy="39.7016336004355" cx="36.25541202752815" data-index="143"></circle><circle class="jvectormap-marker jvectormap-element" r="2" stroke-opacity="1" stroke-width="0.5" fill-opacity="0.7" stroke="#ffffff" fill="#FF0000" cy="36.89404686495183" cx="87.02822128609026" data-index="144"></circle><circle class="jvectormap-marker jvectormap-element" r="2" stroke-opacity="1" stroke-width="0.5" fill-opacity="0.7" stroke="#ffffff" fill="#FF0000" cy="52.299195224250774" cx="117.29388842795203" data-index="145"></circle><circle class="jvectormap-marker jvectormap-element" r="2" stroke-opacity="1" stroke-width="0.5" fill-opacity="0.7" stroke="#ffffff" fill="#FF0000" cy="46.535035409975826" cx="36.24385177199001" data-index="146"></circle><circle class="jvectormap-marker jvectormap-element" r="2" stroke-opacity="1" stroke-width="0.5" fill-opacity="0.7" stroke="#ffffff" fill="#FF0000" cy="47.170058625992034" cx="116.19570588560424" data-index="147"></circle><circle class="jvectormap-marker jvectormap-element" r="2" stroke-opacity="1" stroke-width="0.5" fill-opacity="0.7" stroke="#ffffff" fill="#FF0000" cy="51.30315748926338" cx="132.79798565688725" data-index="148"></circle><circle class="jvectormap-marker jvectormap-element" r="2" stroke-opacity="1" stroke-width="0.5" fill-opacity="0.7" stroke="#ffffff" fill="#FF0000" cy="33.96935483681834" cx="102.25779374632577" data-index="149"></circle><circle class="jvectormap-marker jvectormap-element" r="2" stroke-opacity="1" stroke-width="0.5" fill-opacity="0.7" stroke="#ffffff" fill="#FF0000" cy="78.88674381922074" cx="157.77564969865767" data-index="150"></circle><circle class="jvectormap-marker jvectormap-element" r="2" stroke-opacity="1" stroke-width="0.5" fill-opacity="0.7" stroke="#ffffff" fill="#FF0000" cy="42.796486659820744" cx="54.27255022210956" data-index="151"></circle><circle class="jvectormap-marker jvectormap-element" r="2" stroke-opacity="1" stroke-width="0.5" fill-opacity="0.7" stroke="#ffffff" fill="#FF0000" cy="46.26030860907406" cx="38.386171618700466" data-index="152"></circle><circle class="jvectormap-marker jvectormap-element" r="2" stroke-opacity="1" stroke-width="0.5" fill-opacity="0.7" stroke="#ffffff" fill="#FF0000" cy="35.86382442879965" cx="89.19003080549496" data-index="153"></circle><circle class="jvectormap-marker jvectormap-element" r="2" stroke-opacity="1" stroke-width="0.5" fill-opacity="0.7" stroke="#ffffff" fill="#FF0000" cy="42.75434841841447" cx="54.27513771612892" data-index="154"></circle><circle class="jvectormap-marker jvectormap-element" r="2" stroke-opacity="1" stroke-width="0.5" fill-opacity="0.7" stroke="#ffffff" fill="#FF0000" cy="34.63671867342374" cx="101.0119153760017" data-index="155"></circle><circle class="jvectormap-marker jvectormap-element" r="2" stroke-opacity="1" stroke-width="0.5" fill-opacity="0.7" stroke="#ffffff" fill="#FF0000" cy="44.30430571708921" cx="138.1524289259919" data-index="156"></circle><circle class="jvectormap-marker jvectormap-element" r="2" stroke-opacity="1" stroke-width="0.5" fill-opacity="0.7" stroke="#ffffff" fill="#FF0000" cy="55.308252271352146" cx="117.53732153464483" data-index="157"></circle><circle class="jvectormap-marker jvectormap-element" r="2" stroke-opacity="1" stroke-width="0.5" fill-opacity="0.7" stroke="#ffffff" fill="#FF0000" cy="45.93297885701666" cx="35.8549347273697" data-index="158"></circle><circle class="jvectormap-marker jvectormap-element" r="2" stroke-opacity="1" stroke-width="0.5" fill-opacity="0.7" stroke="#ffffff" fill="#FF0000" cy="36.56152123145218" cx="90.75120784221099" data-index="159"></circle><circle class="jvectormap-marker jvectormap-element" r="2" stroke-opacity="1" stroke-width="0.5" fill-opacity="0.7" stroke="#ffffff" fill="#FF0000" cy="36.71107660299335" cx="93.92297470465803" data-index="160"></circle><circle class="jvectormap-marker jvectormap-element" r="2" stroke-opacity="1" stroke-width="0.5" fill-opacity="0.7" stroke="#ffffff" fill="#FF0000" cy="37.2028777806785" cx="90.32690055680969" data-index="161"></circle><circle class="jvectormap-marker jvectormap-element" r="2" stroke-opacity="1" stroke-width="0.5" fill-opacity="0.7" stroke="#ffffff" fill="#FF0000" cy="34.70675986928881" cx="100.85770907920245" data-index="162"></circle><circle class="jvectormap-marker jvectormap-element" r="2" stroke-opacity="1" stroke-width="0.5" fill-opacity="0.7" stroke="#ffffff" fill="#FF0000" cy="37.40549152438604" cx="88.91492176395218" data-index="163"></circle><circle class="jvectormap-marker jvectormap-element" r="3" stroke-opacity="1" stroke-width="0.5" fill-opacity="0.7" stroke="#ffffff" fill="#FF0000" cy="44.376973114299176" cx="34.219721974680226" data-index="164"></circle><circle class="jvectormap-marker jvectormap-element" r="2" stroke-opacity="1" stroke-width="0.5" fill-opacity="0.7" stroke="#ffffff" fill="#FF0000" cy="38.490967474189056" cx="88.67282413804355" data-index="165"></circle><circle class="jvectormap-marker jvectormap-element" r="2" stroke-opacity="1" stroke-width="0.5" fill-opacity="0.7" stroke="#ffffff" fill="#FF0000" cy="39.56029989935821" cx="88.49758401889335" data-index="166"></circle><circle class="jvectormap-marker jvectormap-element" r="2" stroke-opacity="1" stroke-width="0.5" fill-opacity="0.7" stroke="#ffffff" fill="#FF0000" cy="53.43303111038833" cx="117.90921119926674" data-index="167"></circle><circle class="jvectormap-marker jvectormap-element" r="2" stroke-opacity="1" stroke-width="0.5" fill-opacity="0.7" stroke="#ffffff" fill="#FF0000" cy="44.80378304932118" cx="82.53186615460103" data-index="168"></circle><circle class="jvectormap-marker jvectormap-element" r="2" stroke-opacity="1" stroke-width="0.5" fill-opacity="0.7" stroke="#ffffff" fill="#FF0000" cy="46.90302064618978" cx="99.66833823955932" data-index="169"></circle><circle class="jvectormap-marker jvectormap-element" r="2" stroke-opacity="1" stroke-width="0.5" fill-opacity="0.7" stroke="#ffffff" fill="#FF0000" cy="37.26629481256875" cx="84.85418377075536" data-index="170"></circle><circle class="jvectormap-marker jvectormap-element" r="2" stroke-opacity="1" stroke-width="0.5" fill-opacity="0.7" stroke="#ffffff" fill="#FF0000" cy="46.08930336656574" cx="35.997079963336745" data-index="171"></circle><circle class="jvectormap-marker jvectormap-element" r="2" stroke-opacity="1" stroke-width="0.5" fill-opacity="0.7" stroke="#ffffff" fill="#FF0000" cy="36.64160420866411" cx="87.19953843043692" data-index="172"></circle><circle class="jvectormap-marker jvectormap-element" r="4" stroke-opacity="1" stroke-width="0.5" fill-opacity="0.7" stroke="#ffffff" fill="#FF0000" cy="34.705470370188515" cx="100.85729174145737" data-index="173"></circle><circle class="jvectormap-marker jvectormap-element" r="2" stroke-opacity="1" stroke-width="0.5" fill-opacity="0.7" stroke="#ffffff" fill="#FF0000" cy="53.79451318047487" cx="119.18580562762716" data-index="174"></circle><circle class="jvectormap-marker jvectormap-element" r="2" stroke-opacity="1" stroke-width="0.5" fill-opacity="0.7" stroke="#ffffff" fill="#FF0000" cy="39.56029989935821" cx="88.49758401889335" data-index="175"></circle><circle class="jvectormap-marker jvectormap-element" r="2" stroke-opacity="1" stroke-width="0.5" fill-opacity="0.7" stroke="#ffffff" fill="#FF0000" cy="44.1026089084139" cx="52.352546192191944" data-index="176"></circle><circle class="jvectormap-marker jvectormap-element" r="2" stroke-opacity="1" stroke-width="0.5" fill-opacity="0.7" stroke="#ffffff" fill="#FF0000" cy="45.204076469066095" cx="143.45679166568948" data-index="177"></circle><circle class="jvectormap-marker jvectormap-element" r="2" stroke-opacity="1" stroke-width="0.5" fill-opacity="0.7" stroke="#ffffff" fill="#FF0000" cy="38.02325785024575" cx="88.76818581278951" data-index="178"></circle><circle class="jvectormap-marker jvectormap-element" r="2" stroke-opacity="1" stroke-width="0.5" fill-opacity="0.7" stroke="#ffffff" fill="#FF0000" cy="42.64451972248976" cx="97.1893520339099" data-index="179"></circle><circle class="jvectormap-marker jvectormap-element" r="2" stroke-opacity="1" stroke-width="0.5" fill-opacity="0.7" stroke="#ffffff" fill="#FF0000" cy="33.11393838765951" cx="91.67632042168289" data-index="180"></circle><circle class="jvectormap-marker jvectormap-element" r="2" stroke-opacity="1" stroke-width="0.5" fill-opacity="0.7" stroke="#ffffff" fill="#FF0000" cy="43.69084597354916" cx="52.883024199936195" data-index="181"></circle><circle class="jvectormap-marker jvectormap-element" r="2" stroke-opacity="1" stroke-width="0.5" fill-opacity="0.7" stroke="#ffffff" fill="#FF0000" cy="41.298303328245964" cx="52.02760702388914" data-index="182"></circle><circle class="jvectormap-marker jvectormap-element" r="3" stroke-opacity="1" stroke-width="0.4" fill-opacity="1" stroke="#FFFFFF" fill="#F8A400" cy="52.544565550282535" cx="43.784602286134344" data-index="247398031"></circle></g><g></g></svg><div class="jvectormap-legend-cnt jvectormap-legend-cnt-h"></div><div class="jvectormap-legend-cnt jvectormap-legend-cnt-v"></div></div></div></div><div class="clustrmaps-bottom-text">Click to see details</div><div class="clustrmaps-bottom-text variation">Click to Enlarge Map</div><div class=""></div></a><style type="text/css">.jvectormap-container {    width: 100%;    height: 100%;    position: relative;    overflow: hidden;}.jvectormap-tip {    position: absolute;    display: none;    border: solid 1px #CDCDCD;    border-radius: 3px;    background: #292929;    color: white;    font-family: Arial, Helvetica, sans-serif;    padding: 3px;    z-index: 999;    font-size: 11px;    line-height: 13px;}.jvectormap-zoomin, .jvectormap-zoomout, .jvectormap-goback {    background: #ffffff none repeat scroll 0 0;    border: 1px solid #bebebe;    border-radius: 2px;    box-sizing: content-box;    color: #838383;    cursor: pointer;    font-weight: bold;    left: 10px;    padding: 3px;    position: absolute;    text-align: center;    z-index: 1;}.jvectormap-zoomin, .jvectormap-zoomout {    padding: 2px 10px;}.jvectormap-zoomin {    top: 10px;}.jvectormap-zoomout {    top: 37px;}.jvectormap-goback {    bottom: 10px;    z-index: 1000;    padding: 6px;}.jvectormap-spinner {    position: absolute;    left: 0;    top: 0;    right: 0;    bottom: 0;    background: center no-repeat url(data:image/gif;base64,R0lGODlhIAAgAPMAAP///wAAAMbGxoSEhLa2tpqamjY2NlZWVtjY2OTk5Ly8vB4eHgQEBAAAAAAAAAAAACH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCgAAACwAAAAAIAAgAAAE5xDISWlhperN52JLhSSdRgwVo1ICQZRUsiwHpTJT4iowNS8vyW2icCF6k8HMMBkCEDskxTBDAZwuAkkqIfxIQyhBQBFvAQSDITM5VDW6XNE4KagNh6Bgwe60smQUB3d4Rz1ZBApnFASDd0hihh12BkE9kjAJVlycXIg7CQIFA6SlnJ87paqbSKiKoqusnbMdmDC2tXQlkUhziYtyWTxIfy6BE8WJt5YJvpJivxNaGmLHT0VnOgSYf0dZXS7APdpB309RnHOG5gDqXGLDaC457D1zZ/V/nmOM82XiHRLYKhKP1oZmADdEAAAh+QQJCgAAACwAAAAAIAAgAAAE6hDISWlZpOrNp1lGNRSdRpDUolIGw5RUYhhHukqFu8DsrEyqnWThGvAmhVlteBvojpTDDBUEIFwMFBRAmBkSgOrBFZogCASwBDEY/CZSg7GSE0gSCjQBMVG023xWBhklAnoEdhQEfyNqMIcKjhRsjEdnezB+A4k8gTwJhFuiW4dokXiloUepBAp5qaKpp6+Ho7aWW54wl7obvEe0kRuoplCGepwSx2jJvqHEmGt6whJpGpfJCHmOoNHKaHx61WiSR92E4lbFoq+B6QDtuetcaBPnW6+O7wDHpIiK9SaVK5GgV543tzjgGcghAgAh+QQJCgAAACwAAAAAIAAgAAAE7hDISSkxpOrN5zFHNWRdhSiVoVLHspRUMoyUakyEe8PTPCATW9A14E0UvuAKMNAZKYUZCiBMuBakSQKG8G2FzUWox2AUtAQFcBKlVQoLgQReZhQlCIJesQXI5B0CBnUMOxMCenoCfTCEWBsJColTMANldx15BGs8B5wlCZ9Po6OJkwmRpnqkqnuSrayqfKmqpLajoiW5HJq7FL1Gr2mMMcKUMIiJgIemy7xZtJsTmsM4xHiKv5KMCXqfyUCJEonXPN2rAOIAmsfB3uPoAK++G+w48edZPK+M6hLJpQg484enXIdQFSS1u6UhksENEQAAIfkECQoAAAAsAAAAACAAIAAABOcQyEmpGKLqzWcZRVUQnZYg1aBSh2GUVEIQ2aQOE+G+cD4ntpWkZQj1JIiZIogDFFyHI0UxQwFugMSOFIPJftfVAEoZLBbcLEFhlQiqGp1Vd140AUklUN3eCA51C1EWMzMCezCBBmkxVIVHBWd3HHl9JQOIJSdSnJ0TDKChCwUJjoWMPaGqDKannasMo6WnM562R5YluZRwur0wpgqZE7NKUm+FNRPIhjBJxKZteWuIBMN4zRMIVIhffcgojwCF117i4nlLnY5ztRLsnOk+aV+oJY7V7m76PdkS4trKcdg0Zc0tTcKkRAAAIfkECQoAAAAsAAAAACAAIAAABO4QyEkpKqjqzScpRaVkXZWQEximw1BSCUEIlDohrft6cpKCk5xid5MNJTaAIkekKGQkWyKHkvhKsR7ARmitkAYDYRIbUQRQjWBwJRzChi9CRlBcY1UN4g0/VNB0AlcvcAYHRyZPdEQFYV8ccwR5HWxEJ02YmRMLnJ1xCYp0Y5idpQuhopmmC2KgojKasUQDk5BNAwwMOh2RtRq5uQuPZKGIJQIGwAwGf6I0JXMpC8C7kXWDBINFMxS4DKMAWVWAGYsAdNqW5uaRxkSKJOZKaU3tPOBZ4DuK2LATgJhkPJMgTwKCdFjyPHEnKxFCDhEAACH5BAkKAAAALAAAAAAgACAAAATzEMhJaVKp6s2nIkolIJ2WkBShpkVRWqqQrhLSEu9MZJKK9y1ZrqYK9WiClmvoUaF8gIQSNeF1Er4MNFn4SRSDARWroAIETg1iVwuHjYB1kYc1mwruwXKC9gmsJXliGxc+XiUCby9ydh1sOSdMkpMTBpaXBzsfhoc5l58Gm5yToAaZhaOUqjkDgCWNHAULCwOLaTmzswadEqggQwgHuQsHIoZCHQMMQgQGubVEcxOPFAcMDAYUA85eWARmfSRQCdcMe0zeP1AAygwLlJtPNAAL19DARdPzBOWSm1brJBi45soRAWQAAkrQIykShQ9wVhHCwCQCACH5BAkKAAAALAAAAAAgACAAAATrEMhJaVKp6s2nIkqFZF2VIBWhUsJaTokqUCoBq+E71SRQeyqUToLA7VxF0JDyIQh/MVVPMt1ECZlfcjZJ9mIKoaTl1MRIl5o4CUKXOwmyrCInCKqcWtvadL2SYhyASyNDJ0uIiRMDjI0Fd30/iI2UA5GSS5UDj2l6NoqgOgN4gksEBgYFf0FDqKgHnyZ9OX8HrgYHdHpcHQULXAS2qKpENRg7eAMLC7kTBaixUYFkKAzWAAnLC7FLVxLWDBLKCwaKTULgEwbLA4hJtOkSBNqITT3xEgfLpBtzE/jiuL04RGEBgwWhShRgQExHBAAh+QQJCgAAACwAAAAAIAAgAAAE7xDISWlSqerNpyJKhWRdlSAVoVLCWk6JKlAqAavhO9UkUHsqlE6CwO1cRdCQ8iEIfzFVTzLdRAmZX3I2SfZiCqGk5dTESJeaOAlClzsJsqwiJwiqnFrb2nS9kmIcgEsjQydLiIlHehhpejaIjzh9eomSjZR+ipslWIRLAgMDOR2DOqKogTB9pCUJBagDBXR6XB0EBkIIsaRsGGMMAxoDBgYHTKJiUYEGDAzHC9EACcUGkIgFzgwZ0QsSBcXHiQvOwgDdEwfFs0sDzt4S6BK4xYjkDOzn0unFeBzOBijIm1Dgmg5YFQwsCMjp1oJ8LyIAACH5BAkKAAAALAAAAAAgACAAAATwEMhJaVKp6s2nIkqFZF2VIBWhUsJaTokqUCoBq+E71SRQeyqUToLA7VxF0JDyIQh/MVVPMt1ECZlfcjZJ9mIKoaTl1MRIl5o4CUKXOwmyrCInCKqcWtvadL2SYhyASyNDJ0uIiUd6GGl6NoiPOH16iZKNlH6KmyWFOggHhEEvAwwMA0N9GBsEC6amhnVcEwavDAazGwIDaH1ipaYLBUTCGgQDA8NdHz0FpqgTBwsLqAbWAAnIA4FWKdMLGdYGEgraigbT0OITBcg5QwPT4xLrROZL6AuQAPUS7bxLpoWidY0JtxLHKhwwMJBTHgPKdEQAACH5BAkKAAAALAAAAAAgACAAAATrEMhJaVKp6s2nIkqFZF2VIBWhUsJaTokqUCoBq+E71SRQeyqUToLA7VxF0JDyIQh/MVVPMt1ECZlfcjZJ9mIKoaTl1MRIl5o4CUKXOwmyrCInCKqcWtvadL2SYhyASyNDJ0uIiUd6GAULDJCRiXo1CpGXDJOUjY+Yip9DhToJA4RBLwMLCwVDfRgbBAaqqoZ1XBMHswsHtxtFaH1iqaoGNgAIxRpbFAgfPQSqpbgGBqUD1wBXeCYp1AYZ19JJOYgH1KwA4UBvQwXUBxPqVD9L3sbp2BNk2xvvFPJd+MFCN6HAAIKgNggY0KtEBAAh+QQJCgAAACwAAAAAIAAgAAAE6BDISWlSqerNpyJKhWRdlSAVoVLCWk6JKlAqAavhO9UkUHsqlE6CwO1cRdCQ8iEIfzFVTzLdRAmZX3I2SfYIDMaAFdTESJeaEDAIMxYFqrOUaNW4E4ObYcCXaiBVEgULe0NJaxxtYksjh2NLkZISgDgJhHthkpU4mW6blRiYmZOlh4JWkDqILwUGBnE6TYEbCgevr0N1gH4At7gHiRpFaLNrrq8HNgAJA70AWxQIH1+vsYMDAzZQPC9VCNkDWUhGkuE5PxJNwiUK4UfLzOlD4WvzAHaoG9nxPi5d+jYUqfAhhykOFwJWiAAAIfkECQoAAAAsAAAAACAAIAAABPAQyElpUqnqzaciSoVkXVUMFaFSwlpOCcMYlErAavhOMnNLNo8KsZsMZItJEIDIFSkLGQoQTNhIsFehRww2CQLKF0tYGKYSg+ygsZIuNqJksKgbfgIGepNo2cIUB3V1B3IvNiBYNQaDSTtfhhx0CwVPI0UJe0+bm4g5VgcGoqOcnjmjqDSdnhgEoamcsZuXO1aWQy8KAwOAuTYYGwi7w5h+Kr0SJ8MFihpNbx+4Erq7BYBuzsdiH1jCAzoSfl0rVirNbRXlBBlLX+BP0XJLAPGzTkAuAOqb0WT5AH7OcdCm5B8TgRwSRKIHQtaLCwg1RAAAOwAAAAAAAAAAAA==);}.jvectormap-legend-title {    font-weight: bold;    font-size: 14px;    text-align: center;}.jvectormap-legend-cnt {    position: absolute;}.jvectormap-legend-cnt-h {    bottom: 0;    right: 0;}.jvectormap-legend-cnt-v {    top: 0;    right: 0;}.jvectormap-legend {    background: black;    color: white;    border-radius: 3px;}.jvectormap-legend-cnt-h .jvectormap-legend {    float: left;    margin: 0 10px 10px 0;    padding: 3px 3px 1px 3px;}.jvectormap-legend-cnt-h .jvectormap-legend .jvectormap-legend-tick {    float: left;}.jvectormap-legend-cnt-v .jvectormap-legend {    margin: 10px 10px 0 0;    padding: 3px;}.jvectormap-legend-cnt-h .jvectormap-legend-tick {    width: 40px;}.jvectormap-legend-cnt-h .jvectormap-legend-tick-sample {    height: 15px;}.jvectormap-legend-cnt-v .jvectormap-legend-tick-sample {    height: 20px;    width: 20px;    display: inline-block;    vertical-align: middle;}.jvectormap-legend-tick-text {    font-size: 12px;}.jvectormap-legend-cnt-h .jvectormap-legend-tick-text {    text-align: center;}.jvectormap-legend-cnt-v .jvectormap-legend-tick-text {    display: inline-block;    vertical-align: middle;    line-height: 20px;    padding-left: 3px;}</style><style type="text/css">a#clustrmaps-widget-v2, #clustrmaps-widget-v2 {    color: #ffffff;    display: block;    font-size: 11px;    line-height: 13px;    margin: 0 auto;    padding: 0;    position: relative;    text-align: center;    width: 180px;    min-height: 139px;    text-decoration: none;    text-shadow: 1px 1px 0 #01324f;    border: 0 none;}#clustrmaps-widget-v2 > .clustrmaps-map-container {    background-color: #2875ab;    background-position: 0 0;    background-repeat: no-repeat;    height: 122px;    position: relative;}#clustrmaps-widget-v2 > .clustrmaps-map-container > .clustrmaps-map {    width: 100%;    height: 100px;}#clustrmaps-widget-v2 > .clustrmaps-map-container > .clustrmaps-date {    position: absolute;    text-align: center;    top: 12px;    width: 100%;    z-index: 10;}#clustrmaps-widget-v2 > .clustrmaps-map-container > .clustrmaps-logo {    position: absolute;    background-image: url("//cdn.clustrmaps.com/assets/clustrmaps/img/logo4-small.png");    bottom: 0px;    background-repeat: no-repeat;    background-position: center center;    z-index: 1;    width: 100px;    height: 31px;    left: 0px;}#clustrmaps-widget-v2 > .clustrmaps-map-container > .clustrmaps-connection {    background-position: center center;    background-repeat: no-repeat;    bottom: 0;    color: rgba(255, 255, 255, 0.5);    padding: 4px 4px;    position: absolute;    right: 0;    z-index: 1;    font-variant: small-caps;}#clustrmaps-widget-v2 > .clustrmaps-bottom-text {    letter-spacing: 0px;    background: #FFFFFF;    color: #000000;    text-shadow: none;}#clustrmaps-widget-v2 > .clustrmaps-cursor-click {    background-position: center center;    background-repeat: no-repeat;    display: block;    height: 29px;    position: absolute;    right: 0;    top: 56px;    width: 30px;}#clustrmaps-widget-v2 > .clustrmaps-map-container > .clustrmaps-connection.clustrmaps-failed {    color: rgba(255, 0, 0, 0.8);}#clustrmaps-widget-v2 > .clustrmaps-map-container {    background-image: url("//cdn.clustrmaps.com/images/map_v2_loading.png");}#clustrmaps-widget-v2 > .clustrmaps-cursor-click {    background-image: url("//cdn.clustrmaps.com/assets/clustrmaps/img/cursor_click.png");}#clustrmaps-widget-v2 > .clustrmaps-bottom-text.variation {    display: none;}/* CONTROL */#clustrmaps-widget-v2.clustrmaps-map-control > .clustrmaps-map-container {    background-image: url("//cdn.clustrmaps.com/images/map_v2-control.png");}#clustrmaps-widget-v2.clustrmaps-map-control > .clustrmaps-bottom-text {    -webkit-border-radius: 3px;    -moz-border-radius: 3px;    border-radius: 3px;    border: 1px solid #999;    background: #F24D58;    background: -moz-linear-gradient(top, #FF636D 50%, #DD2929 50%);    background: -webkit-gradient(linear, left top, left bottom, color-stop(50%,#f83737), color-stop(50%,#f83737));    background: linear-gradient(to bottom, #FF636D 50%,#DD2929 51%);    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#FF636D", endColorstr="#f83737",GradientType=0 );    display: block;    margin: 2px auto 0;    padding: 3px 14px;    color: #FFFFFF;    text-shadow: 1px 1px 0px #5B0000;    font-weight: 600;}#clustrmaps-widget-v2.clustrmaps-map-control  > .clustrmaps-bottom-text:hover {    border: 1px solid #888;    background: #a3f5a2;    background: -moz-linear-gradient(top,  #ed8b92 50%, #D76666 50%);    background: -webkit-gradient(linear, left top, left bottom, color-stop(50%,#ed8b92), color-stop(50%,#D76666));    background: linear-gradient(to bottom, #ed8b92 50%,#D76666 51%);    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#ed8b92", endColorstr="#D76666",GradientType=0 );}#clustrmaps-widget-v2.clustrmaps-map-control > .clustrmaps-bottom-text.variation {    display: none;}/* VARIATION */#clustrmaps-widget-v2.clustrmaps-map-variation > .clustrmaps-map-container {    background-image: url("//cdn.clustrmaps.com/images/map_v2-control.png");}#clustrmaps-widget-v2.clustrmaps-map-variation > .clustrmaps-bottom-text {    -webkit-border-radius: 3px;    -moz-border-radius: 3px;    border-radius: 3px;    border: 1px solid #999;    background: #F24D58;    background: -moz-linear-gradient(top, #FF636D 50%, #DD2929 50%);    background: -webkit-gradient(linear, left top, left bottom, color-stop(50%,#f83737), color-stop(50%,#f83737));    background: linear-gradient(to bottom, #FF636D 50%,#DD2929 51%);    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#FF636D", endColorstr="#f83737",GradientType=0 );    display: block;    margin: 2px auto 0;    padding: 3px 14px;    color: #FFFFFF;    text-shadow: 1px 1px 0px #5B0000;    font-weight: 600;}#clustrmaps-widget-v2.clustrmaps-map-variation > .clustrmaps-bottom-text {    display: none;}#clustrmaps-widget-v2.clustrmaps-map-variation > .clustrmaps-bottom-text.variation {    display: block;}#clustrmaps-widget-v2.clustrmaps-map-variation  > .clustrmaps-bottom-text:hover {    border: 1px solid #888;    background: #a3f5a2;    background: -moz-linear-gradient(top,  #ed8b92 50%, #D76666 50%);    background: -webkit-gradient(linear, left top, left bottom, color-stop(50%,#ed8b92), color-stop(50%,#D76666));    background: linear-gradient(to bottom, #ed8b92 50%,#D76666 51%);    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#ed8b92", endColorstr="#D76666",GradientType=0 );}.clustrmaps-visitors, .clustrmaps-date, .clustrmaps-bottom-text {    font-family: Arial, Helvetica, sans-serif;    font-size: 11px;    line-height: 13px;    text-align: center;    font-weight: normal;    color: white;}.clustrmaps-bottom-text {    font-size: 12px;}</style><script type="text/javascript">var _clustrmaps = {'url' : 'http://tufangorel.blogspot.com', 'user' : 1164113, 'server' : '3', 'id' : 'clustrmaps-widget', 'version' : 1, 'date' : '2015-03-27', 'lang' : 'en', 'corners' : 'square' };(function (){ var s = document.createElement('script'); s.type = 'text/javascript'; s.async = true; s.src = 'http://www3.clustrmaps.com/counter/map.js'; var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x);})();</script><noscript><a href="http://www3.clustrmaps.com/user/98e11c351"><img src="http://www3.clustrmaps.com/stats/maps-no_clusters/tufangorel.blogspot.com-thumb.jpg" alt="Locations of visitors to this page" /></a></noscript>
+</div>
+<div class="clear"></div>
+<span class="widget-item-control">
+<span class="item-control blog-admin">
+<a class="quickedit" href="http://www.blogger.com/rearrange?blogID=1629739459234463496&amp;widgetType=HTML&amp;widgetId=HTML1&amp;action=editWidget&amp;sectionId=sidebar" onclick='return _WidgetManager._PopupConfig(document.getElementById("HTML1"));' target="configHTML1" title="Edit">
+<img alt="" src="Show%20QImage%20in%20a%20QLabel_files/icon18_wrench_allbkg.png" height="18" width="18">
+</a>
+</span>
+</span>
+<div class="clear"></div>
+</div><div class="widget HTML" data-version="1" id="HTML3">
+<h2 class="title">Real-time Visitors</h2>
+<div class="widget-content">
+<script type="text/javascript" src="Show%20QImage%20in%20a%20QLabel_files/a.js"></script><style type="text/css">a.fjfcl74:visited {color: #FCC; font-size: 1px; font-family: Arial, sans-serif;} a.fjfcl74:link {color: #CCC; font-size: 1px; font-family: Arial, sans-serif;}</style><div id="FJ_TF_Cont" style="position: relative; padding: 0; margin: 0; border-width: 0px; width: 200px;"><iframe marginheight="0" marginwidth="0" scrolling="no" name="FJIframe" src="#fji1473906470393" style="width: 210px; border-width: 0px; z-index: 1;" frameborder="0" height="641" width="210"></iframe></div><noscript><a href="http://feedjit.com/">Feedjit Live Blog Stats</a></noscript>
+</div>
+<div class="clear"></div>
+<span class="widget-item-control">
+<span class="item-control blog-admin">
+<a class="quickedit" href="http://www.blogger.com/rearrange?blogID=1629739459234463496&amp;widgetType=HTML&amp;widgetId=HTML3&amp;action=editWidget&amp;sectionId=sidebar" onclick='return _WidgetManager._PopupConfig(document.getElementById("HTML3"));' target="configHTML3" title="Edit">
+<img alt="" src="Show%20QImage%20in%20a%20QLabel_files/icon18_wrench_allbkg.png" height="18" width="18">
+</a>
+</span>
+</span>
+<div class="clear"></div>
+</div><div class="widget Profile" data-version="1" id="Profile1">
+<h2>About Me</h2>
+<div class="widget-content">
+<a href="https://www.blogger.com/profile/02308107478813024690"><img alt="My photo" class="profile-img" src="Show%20QImage%20in%20a%20QLabel_files/profile_photo.jpg" height="78" width="81"></a>
+<dl class="profile-datablock">
+<dt class="profile-data">
+<a data-gapiattached="true" data-onload="true" data-gapiscan="true" class="profile-name-link g-profile" href="https://www.blogger.com/profile/02308107478813024690" rel="author" style="background-image: url(//www.blogger.com/img/logo-16.png);">
+Tufan Görel
+</a>
+</dt>
+</dl>
+<a class="profile-link" href="https://www.blogger.com/profile/02308107478813024690" rel="author">View my complete profile</a>
+<div class="clear"></div>
+<span class="widget-item-control">
+<span class="item-control blog-admin">
+<a class="quickedit" href="http://www.blogger.com/rearrange?blogID=1629739459234463496&amp;widgetType=Profile&amp;widgetId=Profile1&amp;action=editWidget&amp;sectionId=sidebar" onclick='return _WidgetManager._PopupConfig(document.getElementById("Profile1"));' target="configProfile1" title="Edit">
+<img alt="" src="Show%20QImage%20in%20a%20QLabel_files/icon18_wrench_allbkg.png" height="18" width="18">
+</a>
+</span>
+</span>
+<div class="clear"></div>
+</div>
+</div><div class="widget HTML" data-version="1" id="HTML4">
+<h2 class="title">Books</h2>
+<div class="widget-content">
+<script type="text/javascript">
+amzn_assoc_placement = "adunit0";
+amzn_assoc_tracking_id = "tufgor-20";
+amzn_assoc_ad_mode = "manual";
+amzn_assoc_ad_type = "smart";
+amzn_assoc_marketplace = "amazon";
+amzn_assoc_region = "US";
+amzn_assoc_linkid = "12d571f338a450d888dc9f15649c9f51";
+amzn_assoc_asins = "0262033844,0672324539,1118771338,0132576279,0132354160,0321635906,1590598318,0132826453";
+amzn_assoc_search_bar = "false";
+</script>
+<script src="Show%20QImage%20in%20a%20QLabel_files/onejs.js"></script>
+</div>
+<div class="clear"></div>
+<span class="widget-item-control">
+<span class="item-control blog-admin">
+<a class="quickedit" href="http://www.blogger.com/rearrange?blogID=1629739459234463496&amp;widgetType=HTML&amp;widgetId=HTML4&amp;action=editWidget&amp;sectionId=sidebar" onclick='return _WidgetManager._PopupConfig(document.getElementById("HTML4"));' target="configHTML4" title="Edit">
+<img alt="" src="Show%20QImage%20in%20a%20QLabel_files/icon18_wrench_allbkg.png" height="18" width="18">
+</a>
+</span>
+</span>
+<div class="clear"></div>
+</div></div>
+</div>
+<!-- spacer for skins that want sidebar and main to be the same height-->
+<div class="clear">&nbsp;</div>
+</div>
+<!-- end content-wrapper -->
+<div id="footer-wrapper">
+<div class="footer no-items section" id="footer"></div>
+</div>
+</div></div>
+<!-- end outer-wrapper -->
+<!-- Syntax Highlighter Additions START -->
+<link href="Show%20QImage%20in%20a%20QLabel_files/shCore.css" rel="stylesheet" type="text/css">
+<link href="Show%20QImage%20in%20a%20QLabel_files/shThemeDefault.css" rel="stylesheet" type="text/css">
+<script src="Show%20QImage%20in%20a%20QLabel_files/shCore.js" type="text/javascript"></script>
+<script src="Show%20QImage%20in%20a%20QLabel_files/shBrushCpp.js" type="text/javascript"></script>
+<script src="Show%20QImage%20in%20a%20QLabel_files/shBrushJava.js" type="text/javascript"></script>
+<script src="Show%20QImage%20in%20a%20QLabel_files/shBrushXml.js" type="text/javascript"></script>
+<script src="Show%20QImage%20in%20a%20QLabel_files/shBrushRuby.js" type="text/javascript"></script>
+<script src="Show%20QImage%20in%20a%20QLabel_files/shBrushSql.js" type="text/javascript"></script>
+<script language="javascript" type="text/javascript">
+ SyntaxHighlighter.config.bloggerMode = true;
+ SyntaxHighlighter.all();
+</script>
+<!-- Syntax Highlighter Additions END -->
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script><script src="Show%20QImage%20in%20a%20QLabel_files/ga.js" type="text/javascript"></script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-7272465-2");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+<!-- Google Tag Manager -->
+<noscript><iframe height='0' src='//www.googletagmanager.com/ns.html?id=GTM-W5H79Z' style='display:none;visibility:hidden' width='0'></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-W5H79Z');</script>
+<!-- End Google Tag Manager -->
+
+<script type="text/javascript" src="Show%20QImage%20in%20a%20QLabel_files/1494508888-widgets.js"></script>
+<script gapi_processed="true" type="text/javascript" src="Show%20QImage%20in%20a%20QLabel_files/plusone.js"></script>
+<script type="text/javascript">
+window['__wavt'] = 'AOuZoY4gAN5pFqc8VWWip7XCXLcFE-1iGg:1473906464321';_WidgetManager._Init('//www.blogger.com/rearrange?blogID\x3d1629739459234463496','//tufangorel.blogspot.mx/2011/06/show-qimage-in-a-qlabel.html','1629739459234463496');
+_WidgetManager._SetDataContext([{'name': 'blog', 'data': {'blogId': '1629739459234463496', 'bloggerUrl': 'https://www.blogger.com', 'title': 'Tufan Görel', 'pageType': 'item', 'postId': '2344070852462766886', 'url': 'http://tufangorel.blogspot.mx/2011/06/show-qimage-in-a-qlabel.html', 'canonicalUrl': 'http://tufangorel.blogspot.com/2011/06/show-qimage-in-a-qlabel.html', 'homepageUrl': 'http://tufangorel.blogspot.mx/', 'searchUrl': 'http://tufangorel.blogspot.mx/search', 'canonicalHomepageUrl': 'http://tufangorel.blogspot.com/', 'blogspotFaviconUrl': 'http://tufangorel.blogspot.mx/favicon.ico', 'enabledCommentProfileImages': true, 'adultContent': false, 'analyticsAccountNumber': 'UA-7272465-2', 'useUniversalAnalytics': false, 'pageName': 'Show QImage in a QLabel', 'pageTitle': 'Tufan Görel: Show QImage in a QLabel', 'metaDescription': '', 'encoding': 'UTF-8', 'locale': 'en', 'localeUnderscoreDelimited': 'en', 'isPrivate': false, 'isMobile': false, 'isMobileRequest': false, 'mobileClass': '', 'isPrivateBlog': false, 'languageDirection': 'ltr', 'feedLinks': '\x3clink rel\x3d\x22alternate\x22 type\x3d\x22application/atom+xml\x22 title\x3d\x22Tufan Görel - Atom\x22 href\x3d\x22http://tufangorel.blogspot.com/feeds/posts/default\x22 /\x3e\n\x3clink rel\x3d\x22alternate\x22 type\x3d\x22application/rss+xml\x22 title\x3d\x22Tufan Görel - RSS\x22 href\x3d\x22http://tufangorel.blogspot.com/feeds/posts/default?alt\x3drss\x22 /\x3e\n\x3clink rel\x3d\x22service.post\x22 type\x3d\x22application/atom+xml\x22 title\x3d\x22Tufan Görel - Atom\x22 href\x3d\x22https://www.blogger.com/feeds/1629739459234463496/posts/default\x22 /\x3e\n\n\x3clink rel\x3d\x22alternate\x22 type\x3d\x22application/atom+xml\x22 title\x3d\x22Tufan Görel - Atom\x22 href\x3d\x22http://tufangorel.blogspot.com/feeds/2344070852462766886/comments/default\x22 /\x3e\n', 'meTag': '', 'openIdOpTag': '', 'postImageThumbnailUrl': 'http://3.bp.blogspot.com/-nW049dMWehc/Te5xB4TL-5I/AAAAAAAAADc/hcjETadMtjI/s72-c/project_structure.png', 'postImageUrl': 'http://3.bp.blogspot.com/-nW049dMWehc/Te5xB4TL-5I/AAAAAAAAADc/hcjETadMtjI/s320/project_structure.png', 'mobileHeadScript': '', 'adsenseHostId': 'ca-host-pub-1556223355139109', 'view': '', 'dynamicViewsCommentsSrc': '//www.blogblog.com/dynamicviews/4224c15c4e7c9321/js/comments.js', 'dynamicViewsScriptSrc': '//www.blogblog.com/dynamicviews/b34e2896838feff1', 'plusOneApiSrc': 'https://apis.google.com/js/plusone.js', 'sharing': {'platforms': [{'name': 'Get link', 'key': 'link', 'shareMessage': 'Get link', 'target': ''}, {'name': 'Facebook', 'key': 'facebook', 'shareMessage': 'Share to Facebook', 'target': 'facebook'}, {'name': 'BlogThis!', 'key': 'blogThis', 'shareMessage': 'BlogThis!', 'target': 'blog'}, {'name': 'Twitter', 'key': 'twitter', 'shareMessage': 'Share to Twitter', 'target': 'twitter'}, {'name': 'Pinterest', 'key': 'pinterest', 'shareMessage': 'Share to Pinterest', 'target': 'pinterest'}, {'name': 'Google+', 'key': 'googlePlus', 'shareMessage': 'Share to Google+', 'target': 'googleplus'}, {'name': 'Email', 'key': 'email', 'shareMessage': 'Email', 'target': 'email'}], 'googlePlusShareButtonWidth': 300, 'googlePlusBootstrap': '\x3cscript type\x3d\x22text/javascript\x22\x3ewindow.___gcfg \x3d {\x27lang\x27: \x27en\x27};\x3c/script\x3e'}}}, {'name': 'features', 'data': {'widgetVisibility': true}}, {'name': 'messages', 'data': {'linkCopiedToClipboard': 'Link copied to clipboard!', 'postLink': 'Post Link'}}, {'name': 'template', 'data': {'name': 'custom', 'localizedName': 'Custom', 'isResponsive': false, 'isAlternateRendering': false, 'isCustom': true}}, {'name': 'view', 'data': {'classic': {'name': 'classic', 'url': '?view\x3dclassic'}, 'flipcard': {'name': 'flipcard', 'url': '?view\x3dflipcard'}, 'magazine': {'name': 'magazine', 'url': '?view\x3dmagazine'}, 'mosaic': {'name': 'mosaic', 'url': '?view\x3dmosaic'}, 'sidebar': {'name': 'sidebar', 'url': '?view\x3dsidebar'}, 'snapshot': {'name': 'snapshot', 'url': '?view\x3dsnapshot'}, 'timeslide': {'name': 'timeslide', 'url': '?view\x3dtimeslide'}, 'isMobile': false, 'title': 'Show QImage in a QLabel', 'description': 'QImage  enables to construct images from file paths on the disk. Constructed QImages can be displayed in a QLabel. By setting the pixmap val...', 'featuredImage': 'http://3.bp.blogspot.com/-nW049dMWehc/Te5xB4TL-5I/AAAAAAAAADc/hcjETadMtjI/s320/project_structure.png', 'url': 'http://tufangorel.blogspot.mx/2011/06/show-qimage-in-a-qlabel.html', 'type': 'item', 'isPage': false, 'isPost': true, 'isHomepage': false, 'isArchive': false, 'isSearch': false, 'postId': 2344070852462766886}}]);
+_WidgetManager._RegisterWidget('_HeaderView', new _WidgetInfo('Header1', 'header', null, document.getElementById('Header1'), {}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_BlogView', new _WidgetInfo('Blog1', 'main', null, document.getElementById('Blog1'), {'cmtInteractionsEnabled': false, 'lightboxEnabled': true, 'lightboxModuleUrl': 'https://www.blogger.com/static/v1/jsbin/3054294795-lbx.js', 'lightboxCssUrl': 'https://www.blogger.com/static/v1/v-css/368954415-lightbox_bundle.css'}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_HTMLView', new _WidgetInfo('HTML2', 'sidebar', null, document.getElementById('HTML2'), {}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_BlogArchiveView', new _WidgetInfo('BlogArchive2', 'sidebar', null, document.getElementById('BlogArchive2'), {'languageDirection': 'ltr', 'loadingMessage': 'Loading...'}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_StatsView', new _WidgetInfo('Stats1', 'sidebar', null, document.getElementById('Stats1'), {'title': 'Total Pageviews', 'showGraphicalCounter': false, 'showAnimatedCounter': false, 'showSparkline': true, 'statsUrl': '//tufangorel.blogspot.mx/b/stats?style\x3dBLACK_TRANSPARENT\x26timeRange\x3dALL_TIME\x26token\x3dQkpjLVcBAAA.QOTG7O4meRdYz6X8IZAUIhAjW1w1t9rvqRad3RkMx8E.nZJqXLhRInghSKGiyFGJLg'}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_LabelView', new _WidgetInfo('Label2', 'sidebar', null, document.getElementById('Label2'), {}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_PopularPostsView', new _WidgetInfo('PopularPosts1', 'sidebar', null, document.getElementById('PopularPosts1'), {}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_HTMLView', new _WidgetInfo('HTML1', 'sidebar', null, document.getElementById('HTML1'), {}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_HTMLView', new _WidgetInfo('HTML3', 'sidebar', null, document.getElementById('HTML3'), {}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_ProfileView', new _WidgetInfo('Profile1', 'sidebar', null, document.getElementById('Profile1'), {}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_HTMLView', new _WidgetInfo('HTML4', 'sidebar', null, document.getElementById('HTML4'), {}, 'displayModeFull'));
+</script>
+
+<table class="gstl_50 gssb_c" style="width: 230px; display: none; top: 212px; position: absolute; left: 893px;" cellpadding="0" cellspacing="0"><tbody><tr><td class="gssb_f"></td><td style="width: 100%;" class="gssb_e"></td></tr></tbody></table><div class="jvectormap-tip"></div><link href="Show%20QImage%20in%20a%20QLabel_files/368954415-lightbox_bundle.css" rel="stylesheet" type="text/css"><script src="Show%20QImage%20in%20a%20QLabel_files/3054294795-lbx.js" type="text/javascript"></script></body></html>

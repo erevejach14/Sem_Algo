@@ -1,0 +1,950 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html dir="ltr" xmlns="http://www.w3.org/1999/xhtml" xmlns:b="http://www.google.com/2005/gml/b" xmlns:data="http://www.google.com/2005/gml/data" xmlns:expr="http://www.google.com/2005/gml/expr"><head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+<meta content="blogger" name="generator">
+<link href="http://falsinsoft.blogspot.mx/favicon.ico" rel="icon" type="image/x-icon">
+<link href="http://falsinsoft.blogspot.com/2015/11/qt-snippet-qpushbutton-with-word-wrap.html" rel="canonical">
+<link rel="alternate" type="application/atom+xml" title="FalsinSoft - Atom" href="http://falsinsoft.blogspot.com/feeds/posts/default">
+<link rel="alternate" type="application/rss+xml" title="FalsinSoft - RSS" href="http://falsinsoft.blogspot.com/feeds/posts/default?alt=rss">
+<link rel="service.post" type="application/atom+xml" title="FalsinSoft - Atom" href="https://www.blogger.com/feeds/7893207765857027452/posts/default">
+
+<link rel="alternate" type="application/atom+xml" title="FalsinSoft - Atom" href="http://falsinsoft.blogspot.com/feeds/8809269071046184788/comments/default">
+<link href="Qt%20Snippet:%20QPushButton%20with%20word%20wrap%20feature%20%7C%20FalsinSoft_files/qt-icon.png" rel="image_src">
+<meta content="http://falsinsoft.blogspot.com/2015/11/qt-snippet-qpushbutton-with-word-wrap.html" property="og:url">
+<meta content="Qt Snippet: QPushButton with word wrap feature" property="og:title">
+<meta content="   Qt have two main classes to use as button widget, QPushButton and QToolButton. These classes made the job in a very good way but both mis..." property="og:description">
+<meta content="http://3.bp.blogspot.com/-MsUwcQXbHLU/Vi8wLlYTWyI/AAAAAAAABZo/3fZnO8fPyQg/w1200-h630-p-nu/qt-icon.png" property="og:image">
+<script async="" src="Qt%20Snippet:%20QPushButton%20with%20word%20wrap%20feature%20%7C%20FalsinSoft_files/cbgapi.loaded_0"></script><script src="Qt%20Snippet:%20QPushButton%20with%20word%20wrap%20feature%20%7C%20FalsinSoft_files/analytics.js" async=""></script><script>
+(function() {
+  window['google_ad_modifications'] = window['google_ad_modifications'] || {};
+  var gam = window['google_ad_modifications'];
+  gam['loeids'] = gam['loeids'] || [];
+
+  gam['loeids'].push('26835109');
+
+  return;
+})();
+</script>
+<!--[if IE]> <script> (function() { var html5 = ("abbr,article,aside,audio,canvas,datalist,details," + "figure,footer,header,hgroup,mark,menu,meter,nav,output," + "progress,section,time,video").split(','); for (var i = 0; i < html5.length; i++) { document.createElement(html5[i]); } try { document.execCommand('BackgroundImageCache', false, true); } catch(e) {} })(); </script> <![endif]-->
+<title>Qt Snippet: QPushButton with word wrap feature | FalsinSoft</title>
+<meta content="" name="keywords">
+<link href="Qt%20Snippet:%20QPushButton%20with%20word%20wrap%20feature%20%7C%20FalsinSoft_files/css.css" rel="stylesheet" type="text/css">
+<script src="Qt%20Snippet:%20QPushButton%20with%20word%20wrap%20feature%20%7C%20FalsinSoft_files/jquery.js" type="text/javascript"></script>
+<link type="text/css" rel="stylesheet" href="Qt%20Snippet:%20QPushButton%20with%20word%20wrap%20feature%20%7C%20FalsinSoft_files/2272499489-widget_css_bundle.css">
+<link type="text/css" rel="stylesheet" href="Qt%20Snippet:%20QPushButton%20with%20word%20wrap%20feature%20%7C%20FalsinSoft_files/authorization.css">
+<style id="page-skin-1" type="text/css"><!--
+pre {
+background: none repeat scroll 0 0 #F9F9F9;
+border: 3px solid #EEEEEE;
+color: #222222;
+font-family: "Courier New",Courier,monospace;
+margin: 15px 0;
+max-height: 400px;
+overflow: auto;
+padding: 10px;
+width: 96%;
+}
+#ContactForm1{ display:none!important;}
+#navbar,.feed-links,body#layout #navigation,body#layout #home_slider,body#layout #social_counters
+body#layout #heading {height: 40px;}
+body,h1,h2,h3,h4,h5,p,ul,li,a,img{margin:0;padding:0;list-style:none;text-decoration:none;outline:none;vertical-align:baseline}
+a{color:#1c72b6}
+a:hover{color:#666}
+a img{border:none}
+h1,h2,h3,h4,h5{font-family:'Yanone Kaffeesatz','Arial Narrow','Lucida Grande','Lucida Sans Unicode',sans-serif;font-weight:normal;text-transform:uppercase}
+h3{font-size:40px;line-height:40px}
+h2,h4{font-size:22px;font-weight:600}
+h1{font-size:50px;line-height:40px}
+body{margin:0;color:#222;font-family:Helvetica,Arial,sans-serif;font-size:12px;background:#e9e9e9 url(http://lh6.googleusercontent.com/-Zp-nDfDwLMU/UdFzq45Z4dI/AAAAAAAAA84/4eZQxadPMyw/s800/musimag_site_bg.jpg) repeat-x;line-height:22px}
+#wrapper{background:url(http://lh4.googleusercontent.com/-Y8yZHDj6Vxo/UdFzr5svJYI/AAAAAAAAA9I/r_6_0-UqkwA/s1600/musimag_wrap_bg.jpg) no-repeat 50% top}
+#top_nav{height:30px;line-height:30px}
+#PageList1 li.selected a{color:#1c72b6;font-weight:normal}
+#PageList1 li a{text-transform:uppercase;font-size:11px;float:right;display:block;padding:0 15px;color:#fff}
+#PageList1 li a:hover{color:#1c72b6}
+#heading{height:131px}
+#header{width:600px;margin:0 auto;text-align:center}
+#header h3{padding:30px 0 10px 0;color:#fff;letter-spacing:5px;text-shadow:3px 3px 1px #00457c;text-transform: none;font-size: 70px;}
+#header a{color:#fff}
+#header img{margin:0 auto;max-width:600px;max-height:131px}
+p.description{font-family:'Yanone Kaffeesatz';font-weight:bold;font-size:22px;color:#003c6b;text-transform:uppercase;text-shadow:0 1px 0 #187ac7}
+#search_engine{display:block;position:absolute;top:175px;margin-left:770px;width:175px;height:40px;background:url(http://lh5.googleusercontent.com/-sAkk4BCz5T0/UdFzpNOXhPI/AAAAAAAAA8M/Zj_CBqhz9OE/s800/musimag_search_field.png) no-repeat left top;padding:0}
+#search_engine .field{float:left;display:inline;height:40px;width:135px}
+#search_engine .field input{color:#ccc;border:0;background:transparent;font-size:11px;margin:3px 0 0 10px;padding:4px;width:110px}
+#search_engine .button{float:left;display:inline;height:40px;width:39px;cursor:pointer;border:0;background:url(http://lh6.googleusercontent.com/-flIRZpHGIZA/UdFzo56pp0I/AAAAAAAAA78/Ig-GC6389xU/s800/musimag_search_button.png) no-repeat 0 0}
+#navigation{background:url(http://lh3.googleusercontent.com/-ctI45OHpLco/UdFznsHX8NI/AAAAAAAAA7Y/cvYXsk3AwuY/s1600/musimag_navigation_bg.png);display:block;height:63px;z-index:8000 !important}
+#navigation li{background:url(http://lh5.googleusercontent.com/-qeE_tjUlg70/UdFznLzXKoI/AAAAAAAAA9U/VIn2H7rYNSI/s800/musimag_menu_separator.png) no-repeat right top;display:block;float:left;line-height:15px;width:150px;height:63px;position:relative;z-index:8000 !important}
+#navigation li a{font-size:13px;color:#ccc;display:block;padding:15px 0 0 20px;text-transform:uppercase}
+#navigation li a:hover{color:#1c72b6}
+#navigation li a:hover span{color:#fff}
+#navigation li a span{color:#6c6c6c;clear:both;display:block;font-size:11px;text-transform:none;}
+#navigation .sub_menu{display:none;background:#000;position:absolute;top:62px;left:0;z-index:9000 !important;padding:0 15px 15px 15px}
+#navigation .sub_menu li{clear:both;background:none;height:auto}
+#navigation .sub_menu li a{display:block;margin:0;padding:5px;border-bottom:1px dotted #252525;text-transform:lowercase}
+#outside{margin:0 auto;width:960px}
+.content{padding:30px;background:#fff url(http://lh4.googleusercontent.com/-CM3yfNYZJPA/UdFzmn4059I/AAAAAAAAA7M/FiljZWw6Kmo/s800/musimag_gradient.png) repeat-x left top}
+#main-wrapper{float:left;width:600px}
+.post{background:#fff url(http://lh5.googleusercontent.com/-BK84B08WQE8/UdFzpbPCHJI/AAAAAAAAA8U/c9hyuQtNxv4/s800/musimag_shadow_600.png) no-repeat 50% bottom;display:block;margin:0 0 20px 0;padding:0 0 12px 0}
+.post .inside{background:#fff url(http://lh3.googleusercontent.com/-4ew0_OgkcbQ/UdFzqZKYXMI/AAAAAAAAA8g/1IlFWlr9xtY/s800/musimag_sidebar_bg.png) repeat-x left 1px;border:1px solid #e9e9e9;border-width:1px 1px 0 1px;padding:29px;width:540px}
+.post h1{border-bottom:9px solid #222;padding:0 0 3px}
+.post h3 a{color:#222}
+.post h3{display:block;background:none;margin-bottom:30px;padding:0;border:none;text-transform:none}
+.post-body{test-align:justify}
+.thumb,.no-thumb{float:left;margin:0 20px 0 0;width:180px;height:180px;overflow:hidden;position:related}
+.thumb img {display:block}
+.no-thumb{display:block;background:url(http://lh6.googleusercontent.com/-R4pik-KKKEE/UdFzoKc0J9I/AAAAAAAAA7s/7vIO5ebqBug/s800/musimag_no_image_yet.jpg) 0 0 no-repeat;}
+.post img{max-width:600px}
+.post blockquote{color:#666;border:1px dotted #b8b8b8;border-width:1px 0 0 0;border-bottom:9px solid #323232;overflow:hidden;background:url(http://lh3.googleusercontent.com/-4ew0_OgkcbQ/UdFzqZKYXMI/AAAAAAAAA8g/1IlFWlr9xtY/s800/musimag_sidebar_bg.png) repeat-x left 1px;margin:0;padding:6px 16px 8px;font:italic 14px/24px Georgia,"Times New Roman",Times,serif}
+.post-timestamp,.jump-link{font-family:'Yanone Kaffeesatz';display:block;font-size:24px;text-transform:uppercase}
+.jump-link{float:right;margin-left:30px}
+a.jump-link{color:#fff}
+.post-comment-link{display:block;float:right;padding:0 0 0 28px;background:url(http://lh5.googleusercontent.com/-iQ3_hieBwH4/UdFzm_rETuI/AAAAAAAAA7E/mwdVTDC7IpI/s800/musimag_icon_comments.png) no-repeat left 50%}
+.post-comment-link a{color:#fff}
+.post-footer{background:#222;color:#FFF;height:50px;line-height:50px;padding:0 20px 0 30px}
+#sidebar-wrapper{float:right;width:270px;margin:0 0 30px 0;background:#FFF url(http://lh6.googleusercontent.com/-pOvkzHPGZOQ/UdFzp3jp1iI/AAAAAAAAA8Q/xOtvMftp2KE/s800/musimag_shadow_sidebar.png) no-repeat 50% bottom;padding:0 0 13px 0}
+#sidebar-wrapper .inside{background:url(http://lh3.googleusercontent.com/-4ew0_OgkcbQ/UdFzqZKYXMI/AAAAAAAAA8g/1IlFWlr9xtY/s800/musimag_sidebar_bg.png) repeat-x left 1px;border:1px solid #e9e9e9;border-width:1px 1px 0 1px;padding:19px 19px 0 19px}
+#sidebar-wrapper .widget{padding-bottom:20px}
+#sidebar-wrapper h2{color:#222;margin-bottom:5px;border-top:5px solid #e9e9e9;border-bottom:9px solid #222;padding:18px 0 4px 0}
+#sidebar-wrapper li{padding:3px 6px;border-bottom:1px dotted #D8D8D8}
+#sidebar-wrapper li a{color:#666}
+#sidebar-wrapper li a:hover{color:#1c72b6}
+#social_counters{display:block;margin-bottom:10px;float:left}
+#social_counters .twitter_count{background:url(http://lh4.googleusercontent.com/-Frm3oe68x5w/UdFzrmIUyVI/AAAAAAAAA9Q/ZaX5rbM0_mQ/s800/musimag_twitter_32.png) no-repeat left 50%;display:block;float:left;width:74px;height:32px;padding:0 0 0 40px;font-size:18px;}
+#social_counters .rss_count{background:url(http://lh4.googleusercontent.com/-3g7sC7JNbng/UdFzoqQ0yAI/AAAAAAAAA74/_njjcSF7yX8/s800/musimag_rss_32.png) no-repeat left 50%;display:block;float:left;width:74px;height:32px;padding:0 0 0 40px;font-size:18px;}
+#footer{font-size:11px;background:url(http://lh6.googleusercontent.com/-aldYRKHilTw/UdFzkn4qtlI/AAAAAAAAA6U/ThnWuKsQ7mU/s800/musimag_footer_bg.jpg) repeat-x}
+.footer-wrap{width:960px;height:340px;margin:0 auto;padding:49px 0 0 0;background:url(http://lh6.googleusercontent.com/-hy1ZSYWzmXQ/UdFzkwRFtkI/AAAAAAAAA6Q/CdGm7egWV6s/s1600/musimag_footer_content.jpg) repeat-x left top}
+#footer-nav{display:block;float:left;height:60px;line-height:60px;padding:0 0 0 30px;width:435px}
+#footer-nav li{display:inline}
+#footer-nav li a{color:#ccc;font-size:11px;margin:0 15px 0 0}
+#footer-nav li a:hover{color:#1c72b6}
+.go-top{display:block;float:left;width:30px;height:60px;line-height:60px}
+.go-top a{background:url(http://lh3.googleusercontent.com/-diM0ruGpGJY/UdFzmBo9rOI/AAAAAAAAA6w/OW7VZiJYuJ8/s800/musimag_gotop.png) no-repeat 50% 50%;display:block;width:30px;height:60px}
+.copyright{color:#ccc;display:block;float:right;width:435px;height:60px;padding:0 30px 0 0;line-height:60px;text-align:right}
+.copyright a{color:#1c72b6}
+#leftcolumn{width:235px;display:block;float:left}
+#middlecolumn{width:360px;height:180px;margin:0 20px;display:block;float:left;padding:60px 0 0}
+#rightcolumn{width:235px;display:block;float:right}
+.column{padding:30px 20px 0 20px}
+.column h2{color:#fff}
+.column li a{color:#ccc;display:block;background:url(http://lh3.googleusercontent.com/-AvHTiYlJyPc/UdFzlWjMNuI/AAAAAAAAA6k/XskQ4M1MCVA/s800/musimag_footer_li_underline.png) repeat-x left bottom;padding:4px 0 6px 4px}
+.column li a:hover{color:#1c72b6}
+.comments h4{padding-bottom:5px;margin-bottom:10px;border-bottom:9px solid #222}
+.comments-block .comments-post{background:url(http://lh5.googleusercontent.com/-BK84B08WQE8/UdFzpbPCHJI/AAAAAAAAA8U/c9hyuQtNxv4/s800/musimag_shadow_600.png) no-repeat 50% bottom;height:100%;margin:0 0 20px 0;padding:0 0 12px 0}
+.comments-block .inside{background:#fff url(http://lh3.googleusercontent.com/-4ew0_OgkcbQ/UdFzqZKYXMI/AAAAAAAAA8g/1IlFWlr9xtY/s800/musimag_sidebar_bg.png) repeat-x left 1px;border:1px solid #e9e9e9;border-width:1px 1px 0 1px;padding:20px 29px;width:540px}
+.comments-meta{background:#222;font-family:'Yanone Kaffeesatz';font-size:24px;color:#fff;text-transform:uppercase;height:46px;line-height:46px;padding:0 20px 0 20px}
+.comments-meta a{color:#fff}
+.comments-author{float:left;display:block}
+.comments-timestamp{float:right;display:block}
+.comments-avatar{float:left;display:block}
+.comments-body{width:424px;float:right}
+.deleted-comment{text-decoration:line-through}
+.comment-form{background:#fff url(http://lh5.googleusercontent.com/-BK84B08WQE8/UdFzpbPCHJI/AAAAAAAAA8U/c9hyuQtNxv4/s800/musimag_shadow_600.png) no-repeat 50% bottom;display:block;margin:0;padding:0 0 12px 0;min-width:600px}
+.comment-form .inside{background:#fff url(http://lh3.googleusercontent.com/-4ew0_OgkcbQ/UdFzqZKYXMI/AAAAAAAAA8g/1IlFWlr9xtY/s800/musimag_sidebar_bg.png) repeat-x left 1px;border:1px solid #e9e9e9;padding:30px 0 0 0;width:598px}
+#comment-editor{width:545px;margin-left:35px}
+.avatar-image-container{border:1px solid #b8b8b8;height:80px !important;max-height:80px !important;width:80px !important;max-width:80px !important;padding:7px;background:#fff}
+.avatar-image-container img{background:url(http://lh5.googleusercontent.com/-aN2dXnqmYNQ/UdFzj2BQiAI/AAAAAAAAA58/U-_mAE1bmJY/s800/musimag_anonymous.png) no-repeat;width:80px;height:80px}
+.comments .avatar-image-container img {height:80px !important;max-height:80px !important;width:80px !important;max-width:80px !important;}
+#paginator{background:url(http://lh5.googleusercontent.com/-BK84B08WQE8/UdFzpbPCHJI/AAAAAAAAA8U/c9hyuQtNxv4/s800/musimag_shadow_600.png) no-repeat 50% bottom;display:block;height:50px;line-height:50px;padding:0 0 12px 0}
+.pagenavi{clear:both;text-align:center;background:#222;font-family:'Yanone Kaffeesatz';font-size:24px;text-transform:uppercase;padding:0 30px}
+.pagenavi span,.pagenavi a{color:#fff;margin:0 5px}
+.pagenavi a.first{float:left}
+.pagenavi a.end{float:right}
+.pagenavi a:hover,.pagenavi .current{color:#1c72b6}
+.pagenavi .pages{display:none}
+.pagenavi .next {float:right}
+.pagenavi .previous {float:left}
+#blog-pager-newer-link{float:left}
+#blog-pager-older-link{float:right}
+#blog-pager{text-align:center}
+.sharing{background:url(http://lh4.googleusercontent.com/-ZUriu8-_BKE/UdFzqEFCx8I/AAAAAAAAA8k/qi2ZmG1iGN8/s800/musimag_sharing_network.png);display:block;height:81px;margin:40px auto 0 auto;position:relative;width:102px}
+.sharing ul.share_left{height:30px;margin:0 auto;position:absolute;right:95px;top:30%;width:250px;z-index:80}
+.sharing ul.share_right{height:30px;left:98px;margin:0 auto;position:absolute;top:30%;width:250px;z-index:80}
+.sharing ul li{display:block;float:right;font-size:13px;height:30px;line-height:30px;margin:0 5px;width:40px}
+.sharing ul li a span{display:block;left:0;position:absolute;text-align:center;top:31px;width:250px}
+.PopularPosts img{padding:7px 0 0}
+.PopularPosts li a{float:right;width:165px}
+.CSS_LIGHTBOX { z-index: 9999 !important; }
+
+--></style>
+<style type="text/css">
+.post{background:none}
+.post .inside{width:600px;background:none;border:none;padding:0}
+.post .intro{background:url(http://lh5.googleusercontent.com/-BK84B08WQE8/UdFzpbPCHJI/AAAAAAAAA8U/c9hyuQtNxv4/s800/musimag_shadow_600.png) no-repeat 50% bottom;display:block;margin:0 0 18px 0;padding:0 0 12px 0}
+</style>
+<script type="text/javascript">function a(){var b=window.location.href,c=b.split("?");switch(c.length){case 1:return b+"?m=1";case 2:return 0<=c[1].search("(^|&)m=")?null:b+"&m=1";default:return null}}var d=navigator.userAgent;if(-1!=d.indexOf("Mobile")&&-1!=d.indexOf("WebKit")&&-1==d.indexOf("iPad")||-1!=d.indexOf("Opera Mini")||-1!=d.indexOf("IEMobile")){var e=a();e&&window.location.replace(e)};
+</script></head>
+<body>
+<div id="wrapper">
+<div id="outside">
+<div class="no-items section" id="top_nav"></div>
+<div id="heading">
+<div class="header section" id="header"><div class="widget Header" data-version="1" id="Header1">
+<div id="header-inner">
+<div class="titlewrapper">
+<h3 class="title">
+<a href="http://falsinsoft.blogspot.mx/">FalsinSoft</a>
+</h3>
+</div>
+<div class="descriptionwrapper">
+<p class="description">Wise man is he who knows he doesn't know</p>
+</div>
+</div>
+</div></div>
+</div>
+<div id="navigation">
+<ul>
+<li><a href="http://falsinsoft.blogspot.mx/">Home<span>Here start</span></a></li>
+<li class="drop"><a href="#">Projects<span>My Projects</span></a>
+<ul style="display: none;" class="sub_menu">
+<li><a href="http://falsinsoft-software.blogspot.com/" target="_blank"><span>Software</span></a></li>
+<li><a href="http://falsinsoft-joomla.blogspot.com/" target="_blank"><span>Joomla</span></a></li>
+</ul>
+</li>
+<li class="drop"><a href="#">About<span>Some info about me</span></a>
+<ul style="display: none;" class="sub_menu">
+<li><a href="http://falsinsoft.blogspot.com/p/about-me.html"><span>About Me</span></a></li>
+<li><a href="http://falsinsoft.blogspot.com/p/contact-me.html"><span>Contact Me</span></a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div id="search_engine">
+<form action="/search" id="searchthis" method="get">
+<div class="field"><input name="q" onblur='if (this.value == "") {this.value = "Search...";}' onfocus='if (this.value == "Search...") {this.value = "";}' value="Search..." type="text"></div>
+<input class="button" value="" type="submit">
+</form>
+</div>
+<div class="content">
+<div id="main-wrapper">
+<div class="main section" id="main"><div class="widget Blog" data-version="1" id="Blog1">
+<div class="post">
+<div class="inside">
+<div class="intro">
+<h1>Qt Snippet: QPushButton with word wrap feature
+</h1>
+</div>
+<div class="post-body">
+<center>
+<script language="JavaScript1.1" src="Qt%20Snippet:%20QPushButton%20with%20word%20wrap%20feature%20%7C%20FalsinSoft_files/BidVertiser_002.dbm" type="text/javascript"></script>
+<noscript><a href='http://www.bidvertiser.com/bdv/BidVertiser/bdv_advertiser.dbm'>internet marketing</a></noscript>
+</center><br>
+<div class="separator" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em; text-align: center;">
+<img src="Qt%20Snippet:%20QPushButton%20with%20word%20wrap%20feature%20%7C%20FalsinSoft_files/qt-icon.png" border="0"></div>
+<div style="text-align: justify;">
+Qt have two main classes to use as button widget, QPushButton and 
+QToolButton. These classes made the job in a very good way but both miss
+ the word wrap feature. If the button width is not enough for show the 
+entire button text the string is cutted out on sides and this is not a 
+good effect. Word wrap feature allow the control to automatically move 
+part of the text in a new line for allow full view.</div>
+<br>
+<a name="more"></a><div style="text-align: justify;">
+Unfortunately, as already said, the Qt button classes natively miss this
+ feature but it can be added by simply use a bit of code. The first 
+solution would be to develop a control delegate able to add this feature
+ by manage the button's content as requested. However here will be 
+proposed an alternative solution required minimal efforts. Basically is 
+necessary to assign to the button a new layout with inside a QLabel 
+control with set the WordWrap feature to true. The advantage of this 
+solution will be to make some combination with text only and icon with 
+text as following examples will show. The first example refer to a 
+button with text only:</div>
+<br>
+
+
+<pre>QHBoxLayout *pLayout = new QHBoxLayout();
+QLabel *pTextLabel = new QLabel();
+
+pTextLabel-&gt;setText("This is a very very very long text");
+pTextLabel-&gt;setAlignment(Qt::AlignCenter);
+pTextLabel-&gt;setWordWrap(true);
+pTextLabel-&gt;setTextInteractionFlags(Qt::NoTextInteraction);
+pTextLabel-&gt;setMouseTracking(false);
+pTextLabel-&gt;setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
+
+pLayout-&gt;addWidget(pTextLabel);
+pLayout-&gt;setSpacing(0);
+pLayout-&gt;setMargin(0);
+pLayout-&gt;setContentsMargins(5, 5, 5, 5);
+
+MyButton-&gt;setText("");
+MyButton-&gt;setLayout(pLayout);
+</pre>
+<br>
+<div style="text-align: justify;">
+Just some notes about the code. The layer is applied "over" the original
+ button text, this mean you have to "clean" the button text for avoid 
+the double text of both button text and label text. You can make it by 
+simply set the button text string to empty using <i>MyButton-&gt;setText("")</i>.
+ The QLabel control have an internal management of mouse events and this
+ will "interpose" with the button click "functionality". For avoid such 
+problem you need to disable the QLabel mouse and text interaction as 
+showed. Second example will create a button with icon on the left side 
+and text on other side. Please note that using this way you can make 
+some combinations regarding the text label by set the text with left or 
+centered alignment:</div>
+<br>
+
+
+<pre>QHBoxLayout *pLayout = new QHBoxLayout();
+QLabel *pIconLabel = new QLabel();
+QLabel *pTextLabel = new QLabel();
+
+pIconLabel-&gt;setPixmap(QPixmap(":/Img/qt_logo_icon.png"));
+pIconLabel-&gt;setAlignment(Qt::AlignCenter);
+pIconLabel-&gt;setMouseTracking(false);
+pIconLabel-&gt;setSizePolicy(QSizePolicy::Fixed, QSizePolicy::Fixed);
+
+pTextLabel-&gt;setText("This is a very very very long text");
+pTextLabel-&gt;setAlignment(Qt::AlignLeft | Qt::AlignVCenter);
+pTextLabel-&gt;setWordWrap(true);
+pTextLabel-&gt;setTextInteractionFlags(Qt::NoTextInteraction);
+pTextLabel-&gt;setMouseTracking(false);
+pTextLabel-&gt;setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
+
+pLayout-&gt;addWidget(pIconLabel);
+pLayout-&gt;addWidget(pTextLabel);
+pLayout-&gt;setSpacing(20);
+pLayout-&gt;setMargin(0);
+pLayout-&gt;setContentsMargins(5, 5, 5, 5);
+
+MyButton-&gt;setText("");
+MyButton-&gt;setLayout(pLayout);
+</pre>
+<br>
+<div style="text-align: justify;">
+Next example is similar to the previous but modify the layout for set 
+the icon on top of the text. Please note that also for QLabel containing
+ the icon the mouse text interaction has been disabled. Same advises for
+ the combination about the label text alignment:</div>
+&nbsp; <br>
+<pre>QVBoxLayout *pLayout = new QVBoxLayout();
+QLabel *pIconLabel = new QLabel();
+QLabel *pTextLabel = new QLabel();
+
+pIconLabel-&gt;setPixmap(QPixmap(":/Img/qt_logo_icon.png"));
+pIconLabel-&gt;setAlignment(Qt::AlignCenter);
+pIconLabel-&gt;setMouseTracking(false);
+pIconLabel-&gt;setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Fixed);
+
+pTextLabel-&gt;setText("This is a very very very long text");
+pTextLabel-&gt;setAlignment(Qt::AlignCenter);
+pTextLabel-&gt;setWordWrap(true);
+pTextLabel-&gt;setTextInteractionFlags(Qt::NoTextInteraction);
+pTextLabel-&gt;setMouseTracking(false);
+pTextLabel-&gt;setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
+
+pLayout-&gt;addWidget(pIconLabel);
+pLayout-&gt;addWidget(pTextLabel);
+pLayout-&gt;setSpacing(5);
+pLayout-&gt;setMargin(0);
+pLayout-&gt;setContentsMargins(5, 5, 5, 5);
+
+MyButton-&gt;setText("");
+MyButton-&gt;setLayout(pLayout);
+</pre>
+<br>
+The result of the examples is showed below:<br>
+<br>
+<div class="separator" style="clear: both; text-align: center;">
+<img src="Qt%20Snippet:%20QPushButton%20with%20word%20wrap%20feature%20%7C%20FalsinSoft_files/button_word_wrap.png" border="0"></div>
+<br>
+<div class="clear"></div></div>
+</div>
+<div class="post-footer-line-2">
+<div class="sharing">
+<ul style="opacity: 0;" class="share_left">
+<li><a href="http://www.facebook.com/sharer.php?u=http://falsinsoft.blogspot.mx/2015/11/qt-snippet-qpushbutton-with-word-wrap.html&amp;title=Qt%20Snippet:%20QPushButton%20with%20word%20wrap%20feature" rel="nofollow" target="_blank"><img src="Qt%20Snippet:%20QPushButton%20with%20word%20wrap%20feature%20%7C%20FalsinSoft_files/musimag_facebook_32.png"><span style="opacity: 0;">Share on Facebook</span></a></li>
+<li><a href="http://del.icio.us/post?url=http://falsinsoft.blogspot.mx/2015/11/qt-snippet-qpushbutton-with-word-wrap.html&amp;title=Qt%20Snippet:%20QPushButton%20with%20word%20wrap%20feature" rel="nofollow" target="_blank"><img src="Qt%20Snippet:%20QPushButton%20with%20word%20wrap%20feature%20%7C%20FalsinSoft_files/musimag_delicious_32.png"><span style="opacity: 0;">Bookmark on Delicious</span></a></li>
+<li><a href="http://twitthis.com/twit?url=http://falsinsoft.blogspot.mx/2015/11/qt-snippet-qpushbutton-with-word-wrap.html&amp;title=Qt%20Snippet:%20QPushButton%20with%20word%20wrap%20feature" rel="nofollow" target="_blank"><img src="Qt%20Snippet:%20QPushButton%20with%20word%20wrap%20feature%20%7C%20FalsinSoft_files/musimag_twitter_32.png"><span style="opacity: 0;">Tweet it!</span></a></li>
+<li><a href="http://digg.com/submit?url=http://falsinsoft.blogspot.mx/2015/11/qt-snippet-qpushbutton-with-word-wrap.html&amp;title=Qt%20Snippet:%20QPushButton%20with%20word%20wrap%20feature" rel="nofollow" target="_blank"><img src="Qt%20Snippet:%20QPushButton%20with%20word%20wrap%20feature%20%7C%20FalsinSoft_files/musimag_digg_32.png"><span style="opacity: 0;">Digg it!</span></a></li>
+<li><a href="http://technorati.com/faves?add=http://falsinsoft.blogspot.mx/2015/11/qt-snippet-qpushbutton-with-word-wrap.html&amp;title=Qt%20Snippet:%20QPushButton%20with%20word%20wrap%20feature" rel="nofollow" target="_blank"><img src="Qt%20Snippet:%20QPushButton%20with%20word%20wrap%20feature%20%7C%20FalsinSoft_files/musimag_technorati_32.png"><span style="opacity: 0;">Share this on Technorati</span></a></li></ul>
+<ul style="opacity: 0;" class="share_right">
+<li><a href="http://reddit.com/submit?&amp;url=http://falsinsoft.blogspot.mx/2015/11/qt-snippet-qpushbutton-with-word-wrap.html&amp;title=Qt%20Snippet:%20QPushButton%20with%20word%20wrap%20feature" rel="nofollow" target="_blank"><img src="Qt%20Snippet:%20QPushButton%20with%20word%20wrap%20feature%20%7C%20FalsinSoft_files/musimag_reddit_32.png"><span style="opacity: 0;">Share it on Reddit</span></a></li>
+<li><a href="http://friendfeed.com/?url=http://falsinsoft.blogspot.mx/2015/11/qt-snippet-qpushbutton-with-word-wrap.html&amp;title=Qt%20Snippet:%20QPushButton%20with%20word%20wrap%20feature" rel="nofollow" target="_blank"><img src="Qt%20Snippet:%20QPushButton%20with%20word%20wrap%20feature%20%7C%20FalsinSoft_files/musimag_friendfeed_32.png"><span style="opacity: 0;">Share on FriendFeed</span></a></li>
+<li><a href="http://www.google.com/reader/link?url=http://falsinsoft.blogspot.mx/2015/11/qt-snippet-qpushbutton-with-word-wrap.html&amp;title=Qt%20Snippet:%20QPushButton%20with%20word%20wrap%20feature" rel="nofollow" target="_blank"><img src="Qt%20Snippet:%20QPushButton%20with%20word%20wrap%20feature%20%7C%20FalsinSoft_files/musimag_google_32.png"><span style="opacity: 0;">Post on Google Reader</span></a></li>
+<li><a href="http://www.myspace.com/Modules/PostTo/Pages/?u=httphttp://falsinsoft.blogspot.mx/2015/11/qt-snippet-qpushbutton-with-word-wrap.html&amp;title=Qt%20Snippet:%20QPushButton%20with%20word%20wrap%20feature" rel="nofollow" target="_blank"><img src="Qt%20Snippet:%20QPushButton%20with%20word%20wrap%20feature%20%7C%20FalsinSoft_files/musimag_myspace_32.png"><span style="opacity: 0;">Share to MySpace</span></a></li>
+<li><a href="http://www.stumbleupon.com/submit?url=http://falsinsoft.blogspot.mx/2015/11/qt-snippet-qpushbutton-with-word-wrap.html&amp;title=Qt%20Snippet:%20QPushButton%20with%20word%20wrap%20feature" rel="nofollow" target="_blank"><img src="Qt%20Snippet:%20QPushButton%20with%20word%20wrap%20feature%20%7C%20FalsinSoft_files/musimag_stumbleupon_32.png"><span style="opacity: 0;">Share it on StumbleUpon</span></a></li>
+</ul>
+</div>
+</div>
+<div class="post-footer-line-3"></div>
+</div>
+<div class="comments" id="comments">
+<h4>
+0
+Comments:
+        
+</h4>
+<div class="comments-block">
+</div>
+<p class="comment-footer">
+</p><h4>Post a Comment</h4>
+<div class="comment-form">
+<div class="inside">
+<a name="comment-form"></a>
+<p>
+</p>
+<a href="https://www.blogger.com/comment-iframe.g?blogID=7893207765857027452&amp;postID=8809269071046184788&amp;blogspotRpcToken=6806500" id="comment-editor-src"></a>
+<iframe data-resized="true" src="Qt%20Snippet:%20QPushButton%20with%20word%20wrap%20feature%20%7C%20FalsinSoft_files/comment-iframe.htm" allowtransparency="true" class="blogger-iframe-colorize blogger-comment-from-post" id="comment-editor" name="comment-editor" scrolling="auto" frameborder="0" height="216px" width="100%"></iframe>
+<script type="text/javascript" src="Qt%20Snippet:%20QPushButton%20with%20word%20wrap%20feature%20%7C%20FalsinSoft_files/3473463639-comment_from_post_iframe.js"></script>
+<script type="text/javascript">
+      BLOG_CMT_createIframe('https://www.blogger.com/rpc_relay.html', '13234053912088707478');
+    </script>
+</div>
+</div>
+<p></p>
+<div id="backlinks-container">
+<div id="Blog1_backlinks-container">
+</div>
+</div>
+</div>
+<div class="blog-pager" id="blog-pager">
+<span id="blog-pager-newer-link">
+<a class="blog-pager-newer-link" href="http://falsinsoft.blogspot.mx/2015/11/qt-snippet-rounded-corners-qpushbutton.html" id="Blog1_blog-pager-newer-link" title="Newer Post">Newer Post</a>
+</span>
+<span id="blog-pager-older-link">
+<a class="blog-pager-older-link" href="http://falsinsoft.blogspot.mx/2015/10/qt-snippet-qlabel-with-text-shadow.html" id="Blog1_blog-pager-older-link" title="Older Post">Older Post</a>
+</span>
+<a class="home-link" href="http://falsinsoft.blogspot.mx/">Home</a>
+</div>
+<div class="clear"></div>
+<div class="post-feeds">
+<div class="feed-links">
+Subscribe to:
+<a class="feed-link" href="http://falsinsoft.blogspot.com/feeds/8809269071046184788/comments/default" target="_blank" type="application/atom+xml">Post Comments (Atom)</a>
+</div>
+</div>
+</div></div>
+</div>
+<div id="sidebar-wrapper">
+<div class="inside">
+<div id="social_counters">
+<a href="https://twitter.com/FalsinSoft%E2%80%8E" target="blank"><div class="twitter_count">Twitter</div></a>
+<a href="http://feeds.feedburner.com/falsinsoft/news" target="blank"><div class="rss_count">RSS</div></a>
+</div>
+<div class="clear"></div>
+<div class="sidebar section" id="sidebar">
+<div class="widget Label" data-version="1" id="Label1">
+<h2>Labels</h2>
+<div class="widget-content list-label-widget-content">
+<ul>
+<li>
+<a dir="ltr" href="http://falsinsoft.blogspot.mx/search/label/Android"><span>Android</span></a>
+<span dir="ltr">(18)</span>
+</li>
+<li>
+<a dir="ltr" href="http://falsinsoft.blogspot.mx/search/label/Blogger"><span>Blogger</span></a>
+<span dir="ltr">(1)</span>
+</li>
+<li>
+<a dir="ltr" href="http://falsinsoft.blogspot.mx/search/label/C"><span>C</span></a>
+<span dir="ltr">(24)</span>
+</li>
+<li>
+<a dir="ltr" href="http://falsinsoft.blogspot.mx/search/label/C%2B%2B"><span>C++</span></a>
+<span dir="ltr">(41)</span>
+</li>
+<li>
+<a dir="ltr" href="http://falsinsoft.blogspot.mx/search/label/Eclipse"><span>Eclipse</span></a>
+<span dir="ltr">(2)</span>
+</li>
+<li>
+<a dir="ltr" href="http://falsinsoft.blogspot.mx/search/label/External%20Resources"><span>External Resources</span></a>
+<span dir="ltr">(2)</span>
+</li>
+<li>
+<a dir="ltr" href="http://falsinsoft.blogspot.mx/search/label/Google%20Maps"><span>Google Maps</span></a>
+<span dir="ltr">(1)</span>
+</li>
+<li>
+<a dir="ltr" href="http://falsinsoft.blogspot.mx/search/label/Google%20Sites"><span>Google Sites</span></a>
+<span dir="ltr">(1)</span>
+</li>
+<li>
+<a dir="ltr" href="http://falsinsoft.blogspot.mx/search/label/Graphics"><span>Graphics</span></a>
+<span dir="ltr">(2)</span>
+</li>
+<li>
+<a dir="ltr" href="http://falsinsoft.blogspot.mx/search/label/Java"><span>Java</span></a>
+<span dir="ltr">(5)</span>
+</li>
+<li>
+<a dir="ltr" href="http://falsinsoft.blogspot.mx/search/label/Javascript"><span>Javascript</span></a>
+<span dir="ltr">(2)</span>
+</li>
+<li>
+<a dir="ltr" href="http://falsinsoft.blogspot.mx/search/label/Joomla"><span>Joomla</span></a>
+<span dir="ltr">(1)</span>
+</li>
+<li>
+<a dir="ltr" href="http://falsinsoft.blogspot.mx/search/label/Linux"><span>Linux</span></a>
+<span dir="ltr">(17)</span>
+</li>
+<li>
+<a dir="ltr" href="http://falsinsoft.blogspot.mx/search/label/MS-DOS"><span>MS-DOS</span></a>
+<span dir="ltr">(1)</span>
+</li>
+<li>
+<a dir="ltr" href="http://falsinsoft.blogspot.mx/search/label/PHP"><span>PHP</span></a>
+<span dir="ltr">(1)</span>
+</li>
+<li>
+<a dir="ltr" href="http://falsinsoft.blogspot.mx/search/label/QML"><span>QML</span></a>
+<span dir="ltr">(1)</span>
+</li>
+<li>
+<a dir="ltr" href="http://falsinsoft.blogspot.mx/search/label/Qt"><span>Qt</span></a>
+<span dir="ltr">(31)</span>
+</li>
+<li>
+<a dir="ltr" href="http://falsinsoft.blogspot.mx/search/label/Snippet"><span>Snippet</span></a>
+<span dir="ltr">(30)</span>
+</li>
+<li>
+<a dir="ltr" href="http://falsinsoft.blogspot.mx/search/label/SQL"><span>SQL</span></a>
+<span dir="ltr">(1)</span>
+</li>
+<li>
+<a dir="ltr" href="http://falsinsoft.blogspot.mx/search/label/Tips%20and%20Tricks"><span>Tips and Tricks</span></a>
+<span dir="ltr">(5)</span>
+</li>
+<li>
+<a dir="ltr" href="http://falsinsoft.blogspot.mx/search/label/Tutorial"><span>Tutorial</span></a>
+<span dir="ltr">(15)</span>
+</li>
+<li>
+<a dir="ltr" href="http://falsinsoft.blogspot.mx/search/label/Visual%20Studio"><span>Visual Studio</span></a>
+<span dir="ltr">(2)</span>
+</li>
+<li>
+<a dir="ltr" href="http://falsinsoft.blogspot.mx/search/label/Windows"><span>Windows</span></a>
+<span dir="ltr">(8)</span>
+</li>
+</ul>
+<div class="clear"></div>
+<span class="widget-item-control">
+<span class="item-control blog-admin">
+<a class="quickedit" href="http://www.blogger.com/rearrange?blogID=7893207765857027452&amp;widgetType=Label&amp;widgetId=Label1&amp;action=editWidget&amp;sectionId=sidebar" onclick='return _WidgetManager._PopupConfig(document.getElementById("Label1"));' target="configLabel1" title="Edit">
+<img alt="" src="Qt%20Snippet:%20QPushButton%20with%20word%20wrap%20feature%20%7C%20FalsinSoft_files/icon18_wrench_allbkg.png" height="18" width="18">
+</a>
+</span>
+</span>
+<div class="clear"></div>
+</div>
+</div><div class="widget HTML" data-version="1" id="HTML1">
+<div class="widget-content">
+<center>
+<!-- Begin BidVertiser code -->
+<script language="JavaScript1.1" src="Qt%20Snippet:%20QPushButton%20with%20word%20wrap%20feature%20%7C%20FalsinSoft_files/BidVertiser.dbm" type="text/javascript"></script>
+<noscript><a href="http://www.bidvertiser.com/bdv/BidVertiser/bdv_advertiser.dbm">internet marketing</a></noscript>
+<!-- End BidVertiser code -->
+</center>
+</div>
+<div class="clear"></div>
+<span class="widget-item-control">
+<span class="item-control blog-admin">
+<a class="quickedit" href="http://www.blogger.com/rearrange?blogID=7893207765857027452&amp;widgetType=HTML&amp;widgetId=HTML1&amp;action=editWidget&amp;sectionId=sidebar" onclick='return _WidgetManager._PopupConfig(document.getElementById("HTML1"));' target="configHTML1" title="Edit">
+<img alt="" src="Qt%20Snippet:%20QPushButton%20with%20word%20wrap%20feature%20%7C%20FalsinSoft_files/icon18_wrench_allbkg.png" height="18" width="18">
+</a>
+</span>
+</span>
+<div class="clear"></div>
+</div><div class="widget HTML" data-version="1" id="HTML2">
+<div class="widget-content">
+<a href="http://www.freedomain.co.nr/" target="_blank" title="Free Domain Name .co.nr"><img src="Qt%20Snippet:%20QPushButton%20with%20word%20wrap%20feature%20%7C%20FalsinSoft_files/but1.gif" alt="Free Domain Name .co.nr" border="0" height="31" width="88"></a>
+</div>
+<div class="clear"></div>
+<span class="widget-item-control">
+<span class="item-control blog-admin">
+<a class="quickedit" href="http://www.blogger.com/rearrange?blogID=7893207765857027452&amp;widgetType=HTML&amp;widgetId=HTML2&amp;action=editWidget&amp;sectionId=sidebar" onclick='return _WidgetManager._PopupConfig(document.getElementById("HTML2"));' target="configHTML2" title="Edit">
+<img alt="" src="Qt%20Snippet:%20QPushButton%20with%20word%20wrap%20feature%20%7C%20FalsinSoft_files/icon18_wrench_allbkg.png" height="18" width="18">
+</a>
+</span>
+</span>
+<div class="clear"></div>
+</div><div class="widget ContactForm" data-version="1" id="ContactForm1">
+<h2 class="title">Contact Form</h2>
+<div class="contact-form-widget">
+<div class="form">
+<form name="contact-form">
+<p></p>
+Name
+<br>
+<input class="contact-form-name" id="ContactForm1_contact-form-name" name="name" size="30" type="text">
+<p></p>
+Email
+<span style="font-weight: bolder;">*</span>
+<br>
+<input class="contact-form-email" id="ContactForm1_contact-form-email" name="email" size="30" type="text">
+<p></p>
+Message
+<span style="font-weight: bolder;">*</span>
+<br>
+<textarea class="contact-form-email-message" cols="25" id="ContactForm1_contact-form-email-message" name="email-message" rows="5"></textarea>
+<p></p>
+<input class="contact-form-button contact-form-button-submit" id="ContactForm1_contact-form-submit" value="Send" type="button">
+<p></p>
+<div style="text-align: center; max-width: 222px; width: 100%">
+<p class="contact-form-error-message" id="ContactForm1_contact-form-error-message"></p>
+<p class="contact-form-success-message" id="ContactForm1_contact-form-success-message"></p>
+</div>
+</form>
+</div>
+</div>
+<div class="clear"></div>
+<span class="widget-item-control">
+<span class="item-control blog-admin">
+<a class="quickedit" href="http://www.blogger.com/rearrange?blogID=7893207765857027452&amp;widgetType=ContactForm&amp;widgetId=ContactForm1&amp;action=editWidget&amp;sectionId=sidebar" onclick='return _WidgetManager._PopupConfig(document.getElementById("ContactForm1"));' target="configContactForm1" title="Edit">
+<img alt="" src="Qt%20Snippet:%20QPushButton%20with%20word%20wrap%20feature%20%7C%20FalsinSoft_files/icon18_wrench_allbkg.png" height="18" width="18">
+</a>
+</span>
+</span>
+<div class="clear"></div>
+</div></div>
+</div>
+</div>
+<div class="clear"></div>
+</div>
+</div>
+</div>
+<div id="footer">
+<div class="footer-wrap">
+<div class="no-items section" id="footer-nav">
+</div>
+<div class="go-top"><a href="#"></a></div>
+<div class="copyright">Copyright 2013 © <a href="http://falsinsoft.blogspot.mx/" id="copyright">FalsinSoft</a>. Template by <a href="http://www.soratemplates.com/">SoraTemplates</a> and <a href="http://www.mybloggerthemes.com/">Blogger Themes</a></div>
+<div class="clear"></div>
+<div class="column no-items section" id="leftcolumn">
+</div>
+<div class="column no-items section" id="middlecolumn">
+</div>
+<div class="column no-items section" id="rightcolumn">
+</div>
+</div>
+</div>
+<script type="text/javascript">//<![CDATA[
+jQuery.extend(jQuery.easing, {
+    def: "easeOutQuad",
+    swing: function (x, t, b, c, d) {
+        return jQuery.easing[jQuery.easing.def](x, t, b, c, d);
+    },
+    easeInQuad: function (x, t, b, c, d) {
+        return c * (t /= d) * t + b;
+    },
+    easeOutQuad: function (x, t, b, c, d) {
+        return -c * (t /= d) * (t - 2) + b;
+    },
+    easeInOutQuad: function (x, t, b, c, d) {
+        if ((t /= d / 2) < 1) {
+            return c / 2 * t * t + b;
+        }
+        return -c / 2 * (--t * (t - 2) - 1) + b;
+    },
+    easeInCubic: function (x, t, b, c, d) {
+        return c * (t /= d) * t * t + b;
+    },
+    easeOutCubic: function (x, t, b, c, d) {
+        return c * ((t = t / d - 1) * t * t + 1) + b;
+    },
+    easeInOutCubic: function (x, t, b, c, d) {
+        if ((t /= d / 2) < 1) {
+            return c / 2 * t * t * t + b;
+        }
+        return c / 2 * ((t -= 2) * t * t + 2) + b;
+    },
+    easeInQuart: function (x, t, b, c, d) {
+        return c * (t /= d) * t * t * t + b;
+    },
+    easeOutQuart: function (x, t, b, c, d) {
+        return -c * ((t = t / d - 1) * t * t * t - 1) + b;
+    },
+    easeInOutQuart: function (x, t, b, c, d) {
+        if ((t /= d / 2) < 1) {
+            return c / 2 * t * t * t * t + b;
+        }
+        return -c / 2 * ((t -= 2) * t * t * t - 2) + b;
+    },
+    easeInQuint: function (x, t, b, c, d) {
+        return c * (t /= d) * t * t * t * t + b;
+    },
+    easeOutQuint: function (x, t, b, c, d) {
+        return c * ((t = t / d - 1) * t * t * t * t + 1) + b;
+    },
+    easeInOutQuint: function (x, t, b, c, d) {
+        if ((t /= d / 2) < 1) {
+            return c / 2 * t * t * t * t * t + b;
+        }
+        return c / 2 * ((t -= 2) * t * t * t * t + 2) + b;
+    },
+    easeInSine: function (x, t, b, c, d) {
+        return -c * Math.cos(t / d * (Math.PI / 2)) + c + b;
+    },
+    easeOutSine: function (x, t, b, c, d) {
+        return c * Math.sin(t / d * (Math.PI / 2)) + b;
+    },
+    easeInOutSine: function (x, t, b, c, d) {
+        return -c / 2 * (Math.cos(Math.PI * t / d) - 1) + b;
+    },
+    easeInExpo: function (x, t, b, c, d) {
+        return t == 0 ? b : c * Math.pow(2, 10 * (t / d - 1)) + b;
+    },
+    easeOutExpo: function (x, t, b, c, d) {
+        return t == d ? b + c : c * (-Math.pow(2, -10 * t / d) + 1) + b;
+    },
+    easeInOutExpo: function (x, t, b, c, d) {
+        if (t == 0) {
+            return b;
+        }
+        if (t == d) {
+            return b + c;
+        }
+        if ((t /= d / 2) < 1) {
+            return c / 2 * Math.pow(2, 10 * (t - 1)) + b;
+        }
+        return c / 2 * (-Math.pow(2, -10 * --t) + 2) + b;
+    },
+    easeInCirc: function (x, t, b, c, d) {
+        return -c * (Math.sqrt(1 - (t /= d) * t) - 1) + b;
+    },
+    easeOutCirc: function (x, t, b, c, d) {
+        return c * Math.sqrt(1 - (t = t / d - 1) * t) + b;
+    },
+    easeInOutCirc: function (x, t, b, c, d) {
+        if ((t /= d / 2) < 1) {
+            return -c / 2 * (Math.sqrt(1 - t * t) - 1) + b;
+        }
+        return c / 2 * (Math.sqrt(1 - (t -= 2) * t) + 1) + b;
+    },
+    easeInElastic: function (x, t, b, c, d) {
+        var s = 1.70158;
+        var p = 0;
+        var a = c;
+        if (t == 0) {
+            return b;
+        }
+        if ((t /= d) == 1) {
+            return b + c;
+        }
+        if (!p) {
+            p = d * 0.3;
+        }
+        if (a < Math.abs(c)) {
+            a = c;
+            var s = p / 4;
+        } else {
+            var s = p / (2 * Math.PI) * Math.asin(c / a);
+        }
+        return -(a * Math.pow(2, 10 * (t -= 1)) * Math.sin((t * d - s) * 2 * Math.PI / p)) + b;
+    },
+    easeOutElastic: function (x, t, b, c, d) {
+        var s = 1.70158;
+        var p = 0;
+        var a = c;
+        if (t == 0) {
+            return b;
+        }
+        if ((t /= d) == 1) {
+            return b + c;
+        }
+        if (!p) {
+            p = d * 0.3;
+        }
+        if (a < Math.abs(c)) {
+            a = c;
+            var s = p / 4;
+        } else {
+            var s = p / (2 * Math.PI) * Math.asin(c / a);
+        }
+        return a * Math.pow(2, -10 * t) * Math.sin((t * d - s) * 2 * Math.PI / p) + c + b;
+    },
+    easeInOutElastic: function (x, t, b, c, d) {
+        var s = 1.70158;
+        var p = 0;
+        var a = c;
+        if (t == 0) {
+            return b;
+        }
+        if ((t /= d / 2) == 2) {
+            return b + c;
+        }
+        if (!p) {
+            p = d * 0.3 * 1.5;
+        }
+        if (a < Math.abs(c)) {
+            a = c;
+            var s = p / 4;
+        } else {
+            var s = p / (2 * Math.PI) * Math.asin(c / a);
+        } if (t < 1) {
+            return -0.5 * a * Math.pow(2, 10 * (t -= 1)) * Math.sin((t * d - s) * 2 * Math.PI / p) + b;
+        }
+        return a * Math.pow(2, -10 * (t -= 1)) * Math.sin((t * d - s) * 2 * Math.PI / p) * 0.5 + c + b;
+    },
+    easeInBack: function (x, t, b, c, d, s) {
+        if (s == undefined) {
+            s = 1.70158;
+        }
+        return c * (t /= d) * t * ((s + 1) * t - s) + b;
+    },
+    easeOutBack: function (x, t, b, c, d, s) {
+        if (s == undefined) {
+            s = 1.70158;
+        }
+        return c * ((t = t / d - 1) * t * ((s + 1) * t + s) + 1) + b;
+    },
+    easeInOutBack: function (x, t, b, c, d, s) {
+        if (s == undefined) {
+            s = 1.70158;
+        }
+        if ((t /= d / 2) < 1) {
+            return c / 2 * t * t * (((s *= 1.525) + 1) * t - s) + b;
+        }
+        return c / 2 * ((t -= 2) * t * (((s *= 1.525) + 1) * t + s) + 2) + b;
+    },
+    easeInBounce: function (x, t, b, c, d) {
+        return c - jQuery.easing.easeOutBounce(x, d - t, 0, c, d) + b;
+    },
+    easeOutBounce: function (x, t, b, c, d) {
+        if ((t /= d) < 0.36363636363636365) {
+            return c * 7.5625 * t * t + b;
+        } else if (t < 0.7272727272727273) {
+            return c * (7.5625 * (t -= 0.5454545454545454) * t + 0.75) + b;
+        } else if (t < 0.9090909090909091) {
+            return c * (7.5625 * (t -= 0.8181818181818182) * t + 0.9375) + b;
+        } else {
+            return c * (7.5625 * (t -= 0.9545454545454546) * t + 0.984375) + b;
+        }
+    },
+    easeInOutBounce: function (x, t, b, c, d) {
+        if (t < d / 2) {
+            return jQuery.easing.easeInBounce(x, t * 2, 0, c, d) * 0.5 + b;
+        }
+        return jQuery.easing.easeOutBounce(x, t * 2 - d, 0, c, d) * 0.5 + c * 0.5 + b;
+    }
+});
+$(document).ready(function () {
+	$(".sub_menu").css("display", "none");
+	$(".sub_menu").parent("li").addClass("drop");
+	$(".drop").hover(function () {
+		$(this).find(".sub_menu").slideDown(100);
+	}, function () {
+		$(this).find(".sub_menu").slideUp(100);
+	});
+	$(".sub_menu a").hover(function () {
+		$(this).find("span").stop().animate({
+			marginLeft: "10px"
+		}, {
+			queue: false,
+			duration: 125,
+			easing: "easeInCubic"
+		});
+	}, function () {
+		$(this).find("span").stop().animate({
+			marginLeft: "0px"
+		}, {
+			queue: false,
+			duration: 250,
+			easing: "easeOutSine"
+		});
+	});
+	$("#sidebar li a").wrapInner("<span></span>");
+	$("#sidebar li a").hover(function () {
+		$(this).find("span").stop().animate({
+			marginLeft: "10px"
+		}, {
+			queue: false,
+			duration: 125,
+			easing: "easeInCubic"
+		});
+	}, function () {
+		$(this).find("span").stop().animate({
+			marginLeft: "0px"
+		}, {
+			queue: false,
+			duration: 250,
+			easing: "easeOutSine"
+		});
+	});
+});
+$(".pictures_entry a").hover(function () {
+	$(this).find("img").stop().animate({
+		opacity: "0.25"
+	}, {
+		queue: false,
+		duration: 600,
+		easing: "easeOutSine"
+	});
+}, function () {
+	$(this).find("img").stop().animate({
+		opacity: "1"
+	}, {
+		queue: false,
+		duration: 400,
+		easing: "easeOutSine"
+	});
+});
+$(".sharing ul").css("opacity", "0");
+$(".sharing").hover(function () {
+	$(".sharing ul").css("display", "block");
+	$(this).find("ul").stop().animate({
+		opacity: "1"
+	}, {
+		queue: false,
+		duration: 300
+	});
+}, function () {
+	$(this).find("ul").stop().animate({
+		opacity: "0"
+	}, {
+		queue: false,
+		duration: 90
+	});
+	$(".sharing ul").delay(300).css("display", "none");
+});
+$(".sharing ul span").css("opacity", "0");
+$(".sharing li").hover(function () {
+	$(this).find("span").stop().animate({
+		opacity: "1"
+	}, {
+		queue: false,
+		duration: 150
+	});
+}, function () {
+	$(this).find("span").stop().animate({
+		opacity: "0"
+	}, {
+		queue: false,
+		duration: 150
+	});
+});
+$(".go-top").click(function () {
+	$("html, body").animate({
+		scrollTop: 0
+	}, 1000);
+});
+//]]></script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-27199944-1', 'falsinsoft.blogspot.com');
+  ga('send', 'pageview');
+
+</script>
+
+<script type="text/javascript" src="Qt%20Snippet:%20QPushButton%20with%20word%20wrap%20feature%20%7C%20FalsinSoft_files/1494508888-widgets.js"></script>
+<script gapi_processed="true" type="text/javascript" src="Qt%20Snippet:%20QPushButton%20with%20word%20wrap%20feature%20%7C%20FalsinSoft_files/plusone.js"></script>
+<script type="text/javascript">
+window['__wavt'] = 'AOuZoY4mqLRuN9cj_5000FA5yIyhUqLfbw:1473916641771';_WidgetManager._Init('//www.blogger.com/rearrange?blogID\x3d7893207765857027452','//falsinsoft.blogspot.mx/2015/11/qt-snippet-qpushbutton-with-word-wrap.html','7893207765857027452');
+_WidgetManager._SetDataContext([{'name': 'blog', 'data': {'blogId': '7893207765857027452', 'bloggerUrl': 'https://www.blogger.com', 'title': 'FalsinSoft', 'pageType': 'item', 'postId': '8809269071046184788', 'url': 'http://falsinsoft.blogspot.mx/2015/11/qt-snippet-qpushbutton-with-word-wrap.html', 'canonicalUrl': 'http://falsinsoft.blogspot.com/2015/11/qt-snippet-qpushbutton-with-word-wrap.html', 'homepageUrl': 'http://falsinsoft.blogspot.mx/', 'searchUrl': 'http://falsinsoft.blogspot.mx/search', 'canonicalHomepageUrl': 'http://falsinsoft.blogspot.com/', 'blogspotFaviconUrl': 'http://falsinsoft.blogspot.mx/favicon.ico', 'enabledCommentProfileImages': true, 'adultContent': false, 'analyticsAccountNumber': '', 'useUniversalAnalytics': false, 'pageName': 'Qt Snippet: QPushButton with word wrap feature', 'pageTitle': 'FalsinSoft: Qt Snippet: QPushButton with word wrap feature', 'encoding': 'UTF-8', 'locale': 'en', 'localeUnderscoreDelimited': 'en', 'isPrivate': false, 'isMobile': false, 'isMobileRequest': false, 'mobileClass': '', 'isPrivateBlog': false, 'languageDirection': 'ltr', 'feedLinks': '\x3clink rel\x3d\x22alternate\x22 type\x3d\x22application/atom+xml\x22 title\x3d\x22FalsinSoft - Atom\x22 href\x3d\x22http://falsinsoft.blogspot.com/feeds/posts/default\x22 /\x3e\n\x3clink rel\x3d\x22alternate\x22 type\x3d\x22application/rss+xml\x22 title\x3d\x22FalsinSoft - RSS\x22 href\x3d\x22http://falsinsoft.blogspot.com/feeds/posts/default?alt\x3drss\x22 /\x3e\n\x3clink rel\x3d\x22service.post\x22 type\x3d\x22application/atom+xml\x22 title\x3d\x22FalsinSoft - Atom\x22 href\x3d\x22https://www.blogger.com/feeds/7893207765857027452/posts/default\x22 /\x3e\n\n\x3clink rel\x3d\x22alternate\x22 type\x3d\x22application/atom+xml\x22 title\x3d\x22FalsinSoft - Atom\x22 href\x3d\x22http://falsinsoft.blogspot.com/feeds/8809269071046184788/comments/default\x22 /\x3e\n', 'meTag': '', 'openIdOpTag': '', 'postImageThumbnailUrl': 'http://3.bp.blogspot.com/-MsUwcQXbHLU/Vi8wLlYTWyI/AAAAAAAABZo/3fZnO8fPyQg/s72-c/qt-icon.png', 'postImageUrl': 'http://3.bp.blogspot.com/-MsUwcQXbHLU/Vi8wLlYTWyI/AAAAAAAABZo/3fZnO8fPyQg/s1600/qt-icon.png', 'mobileHeadScript': '', 'adsenseHostId': 'ca-host-pub-1556223355139109', 'view': '', 'dynamicViewsCommentsSrc': '//www.blogblog.com/dynamicviews/4224c15c4e7c9321/js/comments.js', 'dynamicViewsScriptSrc': '//www.blogblog.com/dynamicviews/b34e2896838feff1', 'plusOneApiSrc': 'https://apis.google.com/js/plusone.js', 'sharing': {'platforms': [{'name': 'Get link', 'key': 'link', 'shareMessage': 'Get link', 'target': ''}, {'name': 'Facebook', 'key': 'facebook', 'shareMessage': 'Share to Facebook', 'target': 'facebook'}, {'name': 'BlogThis!', 'key': 'blogThis', 'shareMessage': 'BlogThis!', 'target': 'blog'}, {'name': 'Twitter', 'key': 'twitter', 'shareMessage': 'Share to Twitter', 'target': 'twitter'}, {'name': 'Pinterest', 'key': 'pinterest', 'shareMessage': 'Share to Pinterest', 'target': 'pinterest'}, {'name': 'Google+', 'key': 'googlePlus', 'shareMessage': 'Share to Google+', 'target': 'googleplus'}, {'name': 'Email', 'key': 'email', 'shareMessage': 'Email', 'target': 'email'}], 'googlePlusShareButtonWidth': 300, 'googlePlusBootstrap': '\x3cscript type\x3d\x22text/javascript\x22\x3ewindow.___gcfg \x3d {\x27lang\x27: \x27en\x27};\x3c/script\x3e'}}}, {'name': 'features', 'data': {'widgetVisibility': true}}, {'name': 'messages', 'data': {'linkCopiedToClipboard': 'Link copied to clipboard!', 'postLink': 'Post Link'}}, {'name': 'template', 'data': {'name': 'custom', 'localizedName': 'Custom', 'isResponsive': false, 'isAlternateRendering': false, 'isCustom': true}}, {'name': 'view', 'data': {'classic': {'name': 'classic', 'url': '?view\x3dclassic'}, 'flipcard': {'name': 'flipcard', 'url': '?view\x3dflipcard'}, 'magazine': {'name': 'magazine', 'url': '?view\x3dmagazine'}, 'mosaic': {'name': 'mosaic', 'url': '?view\x3dmosaic'}, 'sidebar': {'name': 'sidebar', 'url': '?view\x3dsidebar'}, 'snapshot': {'name': 'snapshot', 'url': '?view\x3dsnapshot'}, 'timeslide': {'name': 'timeslide', 'url': '?view\x3dtimeslide'}, 'isMobile': false, 'title': 'Qt Snippet: QPushButton with word wrap feature', 'description': '   Qt have two main classes to use as button widget, QPushButton and QToolButton. These classes made the job in a very good way but both mis...', 'featuredImage': 'http://3.bp.blogspot.com/-MsUwcQXbHLU/Vi8wLlYTWyI/AAAAAAAABZo/3fZnO8fPyQg/s1600/qt-icon.png', 'url': 'http://falsinsoft.blogspot.mx/2015/11/qt-snippet-qpushbutton-with-word-wrap.html', 'type': 'item', 'isPage': false, 'isPost': true, 'isHomepage': false, 'isArchive': false, 'isSearch': false, 'postId': 8809269071046184788}}]);
+_WidgetManager._RegisterWidget('_HeaderView', new _WidgetInfo('Header1', 'header', null, document.getElementById('Header1'), {}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_BlogView', new _WidgetInfo('Blog1', 'main', null, document.getElementById('Blog1'), {'cmtInteractionsEnabled': false, 'lightboxEnabled': true, 'lightboxModuleUrl': 'https://www.blogger.com/static/v1/jsbin/3054294795-lbx.js', 'lightboxCssUrl': 'https://www.blogger.com/static/v1/v-css/368954415-lightbox_bundle.css'}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_LabelView', new _WidgetInfo('Label1', 'sidebar', null, document.getElementById('Label1'), {}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_HTMLView', new _WidgetInfo('HTML1', 'sidebar', null, document.getElementById('HTML1'), {}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_HTMLView', new _WidgetInfo('HTML2', 'sidebar', null, document.getElementById('HTML2'), {}, 'displayModeFull'));
+_WidgetManager._RegisterWidget('_ContactFormView', new _WidgetInfo('ContactForm1', 'sidebar', null, document.getElementById('ContactForm1'), {'contactFormMessageSendingMsg': 'Sending...', 'contactFormMessageSentMsg': 'Your message has been sent.', 'contactFormMessageNotSentMsg': 'Message could not be sent. Please try again later.', 'contactFormInvalidEmailMsg': 'A valid email address is required.', 'contactFormEmptyMessageMsg': 'Message field cannot be empty.', 'title': 'Contact Form', 'blogId': '7893207765857027452', 'contactFormNameMsg': 'Name', 'contactFormEmailMsg': 'Email', 'contactFormMessageMsg': 'Message', 'contactFormSendMsg': 'Send', 'submitUrl': 'https://www.blogger.com/contact-form.do'}, 'displayModeFull'));
+</script>
+
+</body></html>

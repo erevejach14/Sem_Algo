@@ -1,0 +1,795 @@
+<!--?xml version="1.0" encoding="UTF-8"?-->
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<!-- imageviewer.qdoc -->
+  <title>Image Viewer Example | Qt Widgets 5.7</title>
+  <link rel="stylesheet" type="text/css" href="Image%20Viewer%20Example%20%7C%20Qt%20Widgets%205.7%281%29_files/online.css">
+  <link rel="shortcut icon" href="http://d33sqmjvzgs8hq.cloudfront.net/wp-content/themes/oneqt/assets/images/favicon.ico.gzip">
+  <link rel="icon" type="image/png" href="http://d33sqmjvzgs8hq.cloudfront.net/wp-content/themes/oneqt/assets/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" href="http://d33sqmjvzgs8hq.cloudfront.net/wp-content/themes/oneqt/assets/images/favicon-16x16.png">
+  <script src="Image%20Viewer%20Example%20%7C%20Qt%20Widgets%205.7%281%29_files/widgets.js" id="twitter-wjs"></script><script src="Image%20Viewer%20Example%20%7C%20Qt%20Widgets%205.7%281%29_files/sdk.js" id="facebook-jssdk"></script><script src="Image%20Viewer%20Example%20%7C%20Qt%20Widgets%205.7%281%29_files/async-ads.js" async=""></script><script src="Image%20Viewer%20Example%20%7C%20Qt%20Widgets%205.7%281%29_files/cse.js" async="" type="text/javascript"></script><script src="Image%20Viewer%20Example%20%7C%20Qt%20Widgets%205.7%281%29_files/analytics.js" async=""></script><script type="text/javascript"> wpThemeFolder = 'http://qt.io/wp-content/themes/oneqt'; </script>
+  <script type="text/javascript" src="Image%20Viewer%20Example%20%7C%20Qt%20Widgets%205.7%281%29_files/combo.js"></script>
+  <script type="text/javascript" src="Image%20Viewer%20Example%20%7C%20Qt%20Widgets%205.7%281%29_files/main.js"></script>
+  <script type="text/javascript" src="Image%20Viewer%20Example%20%7C%20Qt%20Widgets%205.7%281%29_files/extras.js"></script>
+  <script type="text/javascript">
+  $(function(){
+     $("#footer").load("/style/qt-footer.html");
+     $("#sidebar-content").load("style/qt5-sidebar.html");
+  });
+  </script>
+  <script type="text/javascript">
+    (function (i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+        (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date(); a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-54043535-2', 'qt.io');
+    ga('set', 'forceSSL', true);
+    ga('send', 'pageview');
+  </script>
+<script type="text/javascript" src="Image%20Viewer%20Example%20%7C%20Qt%20Widgets%205.7%281%29_files/jsapi"></script><link rel="stylesheet" href="Image%20Viewer%20Example%20%7C%20Qt%20Widgets%205.7%281%29_files/defaulten_002.css" type="text/css"><link rel="stylesheet" href="Image%20Viewer%20Example%20%7C%20Qt%20Widgets%205.7%281%29_files/default.css" type="text/css"><script src="Image%20Viewer%20Example%20%7C%20Qt%20Widgets%205.7%281%29_files/defaulten_002.js" type="text/javascript"></script><style type="text/css">
+.gsc-control-cse {
+font-family: Arial, sans-serif;
+border-color: #FFFFFF;
+background-color: #FFFFFF;
+}
+.gsc-control-cse .gsc-table-result {
+font-family: Arial, sans-serif;
+}
+input.gsc-input {
+border-color: #D9D9D9;
+}
+input.gsc-search-button {
+border-color: #5CAA15;
+background-color: #5CAA15;
+}
+.gsc-tabHeader.gsc-tabhInactive {
+border-color: #E9E9E9;
+background-color: #E9E9E9;
+}
+.gsc-tabHeader.gsc-tabhActive {
+border-top-color: #5CAA15;
+border-left-color: #E9E9E9;
+border-right-color: #E9E9E9;
+background-color: #FFFFFF;
+}
+.gsc-tabsArea {
+border-color: #E9E9E9;
+}
+.gsc-webResult.gsc-result,
+.gsc-results .gsc-imageResult {
+border-color: #FFFFFF;
+background-color: #FFFFFF;
+}
+.gsc-webResult.gsc-result:hover,
+.gsc-imageResult:hover {
+border-color: #FFFFFF;
+background-color: #FFFFFF;
+}
+.gsc-webResult.gsc-result.gsc-promotion:hover {
+border-color: #FFFFFF;
+background-color: #FFFFFF;
+}
+.gs-webResult.gs-result a.gs-title:link,
+.gs-webResult.gs-result a.gs-title:link b,
+.gs-imageResult a.gs-title:link,
+.gs-imageResult a.gs-title:link b {
+color: #5CAA15;
+}
+.gs-webResult.gs-result a.gs-title:visited,
+.gs-webResult.gs-result a.gs-title:visited b,
+.gs-imageResult a.gs-title:visited,
+.gs-imageResult a.gs-title:visited b {
+color: #46A2DA;
+}
+.gs-webResult.gs-result a.gs-title:hover,
+.gs-webResult.gs-result a.gs-title:hover b,
+.gs-imageResult a.gs-title:hover,
+.gs-imageResult a.gs-title:hover b {
+color: #46A2DA;
+}
+.gs-webResult.gs-result a.gs-title:active,
+.gs-webResult.gs-result a.gs-title:active b,
+.gs-imageResult a.gs-title:active,
+.gs-imageResult a.gs-title:active b {
+color: #5CAA15;
+}
+.gsc-cursor-page {
+color: #5CAA15;
+}
+a.gsc-trailing-more-results:link {
+color: #5CAA15;
+}
+.gs-webResult .gs-snippet,
+.gs-imageResult .gs-snippet,
+.gs-fileFormatType {
+color: #404244;
+}
+.gs-webResult div.gs-visibleUrl,
+.gs-imageResult div.gs-visibleUrl {
+color: #5CAA15;
+}
+.gs-webResult div.gs-visibleUrl-short {
+color: #5CAA15;
+}
+.gs-webResult div.gs-visibleUrl-short {
+display: none;
+}
+.gs-webResult div.gs-visibleUrl-long {
+display: block;
+}
+.gs-promotion div.gs-visibleUrl-short {
+display: none;
+}
+.gs-promotion div.gs-visibleUrl-long {
+display: block;
+}
+.gsc-cursor-box {
+border-color: #FFFFFF;
+}
+.gsc-results .gsc-cursor-box .gsc-cursor-page {
+border-color: #E9E9E9;
+background-color: #FFFFFF;
+color: #5CAA15;
+}
+.gsc-results .gsc-cursor-box .gsc-cursor-current-page {
+border-color: #5CAA15;
+background-color: #FFFFFF;
+color: #46A2DA;
+}
+.gsc-webResult.gsc-result.gsc-promotion {
+border-color: #404244;
+background-color: #FFFFFF;
+}
+.gsc-completion-title {
+color: #5CAA15;
+}
+.gsc-completion-snippet {
+color: #404244;
+}
+.gs-promotion a.gs-title:link,
+.gs-promotion a.gs-title:link *,
+.gs-promotion .gs-snippet a:link {
+color: #0000CC;
+}
+.gs-promotion a.gs-title:visited,
+.gs-promotion a.gs-title:visited *,
+.gs-promotion .gs-snippet a:visited {
+color: #0000CC;
+}
+.gs-promotion a.gs-title:hover,
+.gs-promotion a.gs-title:hover *,
+.gs-promotion .gs-snippet a:hover {
+color: #0000CC;
+}
+.gs-promotion a.gs-title:active,
+.gs-promotion a.gs-title:active *,
+.gs-promotion .gs-snippet a:active {
+color: #0000CC;
+}
+.gs-promotion .gs-snippet,
+.gs-promotion .gs-title .gs-promotion-title-right,
+.gs-promotion .gs-title .gs-promotion-title-right * {
+color: #000000;
+}
+.gs-promotion .gs-visibleUrl,
+.gs-promotion .gs-visibleUrl-short {
+color: #008000;
+}</style><style type="text/css">.gscb_a{display:inline-block;font:27px/13px arial,sans-serif}.gsst_a .gscb_a{color:#a1b9ed;cursor:pointer}.gsst_a:hover .gscb_a,.gsst_a:focus .gscb_a{color:#36c}.gsst_a{display:inline-block}.gsst_a{cursor:pointer;padding:0 4px}.gsst_a:hover{text-decoration:none!important}.gsst_b{font-size:16px;padding:0 2px;position:relative;user-select:none;-moz-user-select:none;white-space:nowrap}.gsst_e{opacity:0.55;}.gsst_a:hover .gsst_e,.gsst_a:focus .gsst_e{opacity:0.72;}.gsst_a:active .gsst_e{opacity:1;}.gsst_f{background:white;text-align:left}.gsst_g{background-color:white;border:1px solid #ccc;border-top-color:#d9d9d9;box-shadow:0 2px 4px rgba(0,0,0,0.2);-moz-box-shadow:0 2px 4px rgba(0,0,0,0.2);margin:-1px -3px;padding:0 6px}.gsst_h{background-color:white;height:1px;margin-bottom:-1px;position:relative;top:-1px}.gsib_a{width:100%;padding:4px 6px 0}.gsib_a,.gsib_b{vertical-align:top}.gssb_c{border:0;position:absolute;z-index:989}.gssb_e{border:1px solid #ccc;border-top-color:#d9d9d9;box-shadow:0 2px 4px rgba(0,0,0,0.2);-moz-box-shadow:0 2px 4px rgba(0,0,0,0.2);cursor:default}.gssb_f{visibility:hidden;white-space:nowrap}.gssb_k{border:0;display:block;position:absolute;top:0;z-index:988}.gsdd_a{border:none!important}.gsq_a{padding:0}.gscsep_a{display:none}.gssb_a{padding:0 7px}.gssb_a,.gssb_a td{white-space:nowrap;overflow:hidden;line-height:22px}#gssb_b{font-size:11px;color:#36c;text-decoration:none}#gssb_b:hover{font-size:11px;color:#36c;text-decoration:underline}.gssb_g{text-align:center;padding:8px 0 7px;position:relative}.gssb_h{font-size:15px;height:28px;margin:0.2em}.gssb_i{background:#eee}.gss_ifl{visibility:hidden;padding-left:5px}.gssb_i .gss_ifl{visibility:visible}a.gssb_j{font-size:13px;color:#36c;text-decoration:none;line-height:100%}a.gssb_j:hover{text-decoration:underline}.gssb_l{height:1px;background-color:#e5e5e5}.gssb_m{color:#000;background:#fff}.gsfe_a{border:1px solid #b9b9b9;border-top-color:#a0a0a0;box-shadow:inset 0px 1px 2px rgba(0,0,0,0.1);-moz-box-shadow:inset 0px 1px 2px rgba(0,0,0,0.1);-webkit-box-shadow:inset 0px 1px 2px rgba(0,0,0,0.1);}.gsfe_b{border:1px solid #4d90fe;outline:none;box-shadow:inset 0px 1px 2px rgba(0,0,0,0.3);-moz-box-shadow:inset 0px 1px 2px rgba(0,0,0,0.3);-webkit-box-shadow:inset 0px 1px 2px rgba(0,0,0,0.3);}.gssb_a{padding:0 7px}.gssb_e{border:0}.gssb_l{margin:5px 0}.gssb_c .gsc-completion-container{position:static}.gssb_c{z-index:5000}.gsc-completion-container table{background:transparent;font-size:inherit;font-family:inherit}.gssb_c > tbody > tr,.gssb_c > tbody > tr > td,.gssb_d,.gssb_d > tbody > tr,.gssb_d > tbody > tr > td,.gssb_e,.gssb_e > tbody > tr,.gssb_e > tbody > tr > td{padding:0;margin:0;border:0}.gssb_a table,.gssb_a table tr,.gssb_a table tr td{padding:0;margin:0;border:0}</style><style type="text/css">.fb_hidden{position:absolute;top:-10000px;z-index:10001}.fb_reposition{overflow:hidden;position:relative}.fb_invisible{display:none}.fb_reset{background:none;border:0;border-spacing:0;color:#000;cursor:auto;direction:ltr;font-family:"lucida grande", tahoma, verdana, arial, sans-serif;font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal}.fb_reset>div{overflow:hidden}.fb_link img{border:none}@keyframes fb_transform{from{opacity:0;transform:scale(.95)}to{opacity:1;transform:scale(1)}}.fb_animate{animation:fb_transform .3s forwards}
+.fb_dialog{background:rgba(82, 82, 82, .7);position:absolute;top:-10000px;z-index:10001}.fb_reset .fb_dialog_legacy{overflow:visible}.fb_dialog_advanced{padding:10px;-moz-border-radius:8px;-webkit-border-radius:8px;border-radius:8px}.fb_dialog_content{background:#fff;color:#333}.fb_dialog_close_icon{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 0 transparent;_background-image:url(https://static.xx.fbcdn.net/rsrc.php/v3/yL/r/s816eWC-2sl.gif);cursor:pointer;display:block;height:15px;position:absolute;right:18px;top:17px;width:15px}.fb_dialog_mobile .fb_dialog_close_icon{top:5px;left:5px;right:auto}.fb_dialog_padding{background-color:transparent;position:absolute;width:1px;z-index:-1}.fb_dialog_close_icon:hover{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -15px transparent;_background-image:url(https://static.xx.fbcdn.net/rsrc.php/v3/yL/r/s816eWC-2sl.gif)}.fb_dialog_close_icon:active{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -30px transparent;_background-image:url(https://static.xx.fbcdn.net/rsrc.php/v3/yL/r/s816eWC-2sl.gif)}.fb_dialog_loader{background-color:#f6f7f9;border:1px solid #606060;font-size:24px;padding:20px}.fb_dialog_top_left,.fb_dialog_top_right,.fb_dialog_bottom_left,.fb_dialog_bottom_right{height:10px;width:10px;overflow:hidden;position:absolute}.fb_dialog_top_left{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ye/r/8YeTNIlTZjm.png) no-repeat 0 0;left:-10px;top:-10px}.fb_dialog_top_right{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ye/r/8YeTNIlTZjm.png) no-repeat 0 -10px;right:-10px;top:-10px}.fb_dialog_bottom_left{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ye/r/8YeTNIlTZjm.png) no-repeat 0 -20px;bottom:-10px;left:-10px}.fb_dialog_bottom_right{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ye/r/8YeTNIlTZjm.png) no-repeat 0 -30px;right:-10px;bottom:-10px}.fb_dialog_vert_left,.fb_dialog_vert_right,.fb_dialog_horiz_top,.fb_dialog_horiz_bottom{position:absolute;background:#525252;filter:alpha(opacity=70);opacity:.7}.fb_dialog_vert_left,.fb_dialog_vert_right{width:10px;height:100%}.fb_dialog_vert_left{margin-left:-10px}.fb_dialog_vert_right{right:0;margin-right:-10px}.fb_dialog_horiz_top,.fb_dialog_horiz_bottom{width:100%;height:10px}.fb_dialog_horiz_top{margin-top:-10px}.fb_dialog_horiz_bottom{bottom:0;margin-bottom:-10px}.fb_dialog_iframe{line-height:0}.fb_dialog_content .dialog_title{background:#6d84b4;border:1px solid #365899;color:#fff;font-size:14px;font-weight:bold;margin:0}.fb_dialog_content .dialog_title>span{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yd/r/Cou7n-nqK52.gif) no-repeat 5px 50%;float:left;padding:5px 0 7px 26px}body.fb_hidden{-webkit-transform:none;height:100%;margin:0;overflow:visible;position:absolute;top:-10000px;left:0;width:100%}.fb_dialog.fb_dialog_mobile.loading{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ya/r/3rhSv5V8j3o.gif) white no-repeat 50% 50%;min-height:100%;min-width:100%;overflow:hidden;position:absolute;top:0;z-index:10001}.fb_dialog.fb_dialog_mobile.loading.centered{width:auto;height:auto;min-height:initial;min-width:initial;background:none}.fb_dialog.fb_dialog_mobile.loading.centered #fb_dialog_loader_spinner{width:100%}.fb_dialog.fb_dialog_mobile.loading.centered .fb_dialog_content{background:none}.loading.centered #fb_dialog_loader_close{color:#fff;display:block;padding-top:20px;clear:both;font-size:18px}#fb-root #fb_dialog_ipad_overlay{background:rgba(0, 0, 0, .45);position:absolute;bottom:0;left:0;right:0;top:0;width:100%;min-height:100%;z-index:10000}#fb-root #fb_dialog_ipad_overlay.hidden{display:none}.fb_dialog.fb_dialog_mobile.loading iframe{visibility:hidden}.fb_dialog_content .dialog_header{-webkit-box-shadow:white 0 1px 1px -1px inset;background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#738ABA), to(#2C4987));border-bottom:1px solid;border-color:#1d4088;color:#fff;font:14px Helvetica, sans-serif;font-weight:bold;text-overflow:ellipsis;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0;vertical-align:middle;white-space:nowrap}.fb_dialog_content .dialog_header table{-webkit-font-smoothing:subpixel-antialiased;height:43px;width:100%}.fb_dialog_content .dialog_header td.header_left{font-size:12px;padding-left:5px;vertical-align:middle;width:60px}.fb_dialog_content .dialog_header td.header_right{font-size:12px;padding-right:5px;vertical-align:middle;width:60px}.fb_dialog_content .touchable_button{background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#4966A6), color-stop(.5, #355492), to(#2A4887));border:1px solid #29487d;-webkit-background-clip:padding-box;-webkit-border-radius:3px;-webkit-box-shadow:rgba(0, 0, 0, .117188) 0 1px 1px inset, rgba(255, 255, 255, .167969) 0 1px 0;display:inline-block;margin-top:3px;max-width:85px;line-height:18px;padding:4px 12px;position:relative}.fb_dialog_content .dialog_header .touchable_button input{border:none;background:none;color:#fff;font:12px Helvetica, sans-serif;font-weight:bold;margin:2px -12px;padding:2px 6px 3px 6px;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog_content .dialog_header .header_center{color:#fff;font-size:16px;font-weight:bold;line-height:18px;text-align:center;vertical-align:middle}.fb_dialog_content .dialog_content{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/y9/r/jKEcVPZFk-2.gif) no-repeat 50% 50%;border:1px solid #555;border-bottom:0;border-top:0;height:150px}.fb_dialog_content .dialog_footer{background:#f6f7f9;border:1px solid #555;border-top-color:#ccc;height:40px}#fb_dialog_loader_close{float:left}.fb_dialog.fb_dialog_mobile .fb_dialog_close_button{text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog.fb_dialog_mobile .fb_dialog_close_icon{visibility:hidden}#fb_dialog_loader_spinner{animation:rotateSpinner 1.2s linear infinite;background-color:transparent;background-image:url(https://static.xx.fbcdn.net/rsrc.php/v3/yD/r/t-wz8gw1xG1.png);background-repeat:no-repeat;background-position:50% 50%;height:24px;width:24px}@keyframes rotateSpinner{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}
+.fb_iframe_widget{display:inline-block;position:relative}.fb_iframe_widget span{display:inline-block;position:relative;text-align:justify}.fb_iframe_widget iframe{position:absolute}.fb_iframe_widget_fluid_desktop,.fb_iframe_widget_fluid_desktop span,.fb_iframe_widget_fluid_desktop iframe{max-width:100%}.fb_iframe_widget_fluid_desktop iframe{min-width:220px;position:relative}.fb_iframe_widget_lift{z-index:1}.fb_hide_iframes iframe{position:relative;left:-10000px}.fb_iframe_widget_loader{position:relative;display:inline-block}.fb_iframe_widget_fluid{display:inline}.fb_iframe_widget_fluid span{width:100%}.fb_iframe_widget_loader iframe{min-height:32px;z-index:2;zoom:1}.fb_iframe_widget_loader .FB_Loader{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/y9/r/jKEcVPZFk-2.gif) no-repeat;height:32px;width:32px;margin-left:-16px;position:absolute;left:50%;z-index:4}</style><script src="Image%20Viewer%20Example%20%7C%20Qt%20Widgets%205.7%281%29_files/a" type="text/javascript"></script><link rel="stylesheet" href="Image%20Viewer%20Example%20%7C%20Qt%20Widgets%205.7%281%29_files/defaulten.css" type="text/css"><script src="Image%20Viewer%20Example%20%7C%20Qt%20Widgets%205.7%281%29_files/defaulten.js" type="text/javascript"></script></head>
+<body>
+<div class="header" id="header">
+<header id="navbar" class="fixed">
+        <div class="cookies_yum">
+            <div>
+                <img src="Image%20Viewer%20Example%20%7C%20Qt%20Widgets%205.7%281%29_files/cookie_small.png" align="left">
+                <p class="close_button">
+                    We bake cookies in your browser for a better experience.  Using this site means that you consent. <a href="http://qt.io/terms-conditions/">Read More</a>
+                </p>
+                <a class="close"></a>
+            </div>
+        </div>
+        <div class="container">
+                <div class="navbar-header clearfix">
+                    <a href="#" class="navbar-toggle">
+                        <figure>
+                            <span class="line"></span>
+                        </figure>
+                        <span>Menu</span>
+                    </a>
+                    <ul id="menuextras">
+                        <li>
+                            <a href="http://qt.io/partners/" data-icon="">
+                                <span>Partners</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a target="_blank" href="http://blog.qt.io/" data-icon="">
+                                <span>Blog</span>
+                            </a>
+                        </li>
+                    </ul>
+                    <a href="http://qt.io/" class="navbar-oneQt retina" data-icon="">
+                    </a>
+                    <nav class="navbar-menu clearfix" role="navigation">
+                        <ul id="mainmenu" class="menu"><li id="menu-item-18" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-18"><a href="http://qt.io/download/">Download</a></li>
+<li id="menu-item-12207" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-12207"><a href="http://www.qt.io/qt-for-device-creation/">Device Creation</a></li>
+<li id="menu-item-12208" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-12208"><a href="http://www.qt.io/application-development/">Application Development</a></li>
+<li id="menu-item-1381" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1381"><a href="http://www.qt.io/services/">Services</a></li>
+<li id="menu-item-20" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-20"><a href="http://www.qt.io/developers/">Developers</a></li>
+</ul>                        <ul class="menuextraslanguages">
+                            <li class="active dark"><a class="dark" href="http://qt.io/support/">EN</a></li><li class="dark"><a class="dark" href="http://qt.io/ru/">RU</a></li><li class="dark"><a class="dark" href="http://qt.io/zh-hans/">ZH</a></li></ul>
+                    </nav>
+                </div>
+            </div>
+<div class="big_bar account" style="">
+    <div class="container">
+        <h1><!-- mclude oneqt_no_cache_bMrsJxAh /wp-content/themes/oneqt/php_login_info_bottom_header.php --><!-- /mclude oneqt_no_cache_bMrsJxAh -->
+            <div class="col-1 right big_bar_button account" style="margin-top:5px !important;"></div>
+        </h1>
+    </div>
+</div>
+</header>
+</div>
+<div class="main">
+<div class="main-rounded">
+<div class="navigationbar">
+    <ul class="sub-navigation">
+        <li><a href="http://wiki.qt.io/">Wiki</a></li>
+        <li><a href="http://doc.qt.io/" class="active">Documentation</a></li>
+        <li><a href="http://forum.qt.io/">Forum</a></li>
+        <li><a href="https://bugreports.qt.io/">Bug Reports</a></li>
+        <li><a href="https://codereview.qt-project.org/">Code Review</a></li>
+    </ul>
+    <div id="main_title_bar">
+        <h1>Qt Documentation</h1>
+        <div class="search_bar">
+        <script>
+            (function() {
+                var cx = '003672281345882769388:1y4pftuq8so';
+                var gcse = document.createElement('script');
+                gcse.type = 'text/javascript';
+                gcse.async = true;
+                gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//www.google.com/cse/cse.js?cx=' + cx;
+                var s = document.getElementsByTagName('script')[0];
+                s.parentNode.insertBefore(gcse, s);
+            })();
+        </script>
+        <div id="___gcse_0"><div dir="ltr" class="gsc-control-searchbox-only gsc-control-searchbox-only-en"><form accept-charset="utf-8" class="gsc-search-box"><table class="gsc-search-box" cellpadding="0" cellspacing="0"><tbody><tr><td class="gsc-input"><input style="outline: medium none; background: rgb(255, 255, 255) url(&quot;http://www.google.com/cse/static/en/google_custom_search_watermark.gif&quot;) no-repeat scroll left center;" spellcheck="false" dir="ltr" id="gsc-i-id1" title="search" name="search" class=" gsc-input" size="10" autocomplete="off" type="text"><input id="bgresponse" name="bgresponse" type="hidden"></td><td class="gsc-search-button"><input title="search" class="gsc-search-button" value="Search" type="button"></td><td class="gsc-clear-button"><div title="clear results" class="gsc-clear-button">&nbsp;</div></td></tr></tbody></table><table class="gsc-branding" cellpadding="0" cellspacing="0"><tbody><tr><td class="gsc-branding-user-defined"></td><td class="gsc-branding-text"><div class="gsc-branding-text">powered by</div></td><td class="gsc-branding-img"><img class="gsc-branding-img" src="Image%20Viewer%20Example%20%7C%20Qt%20Widgets%205.7%281%29_files/small-logo.png"></td></tr></tbody></table></form></div></div>
+    </div></div>
+    <ul>
+<li><a href="http://doc.qt.io/qt-5/index.html">Qt 5.7</a></li>
+<li><a href="http://doc.qt.io/qt-5/qtwidgets-index.html">Qt Widgets</a></li>
+<li>Image Viewer Example</li>
+    </ul>
+</div>
+<div class="content">
+    <div class="line">
+        <div class="content mainContent">
+<div class="sidebar">
+<div class="toc"><div id="toc-toggle"></div>
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#imageviewer-class-definition">ImageViewer Class Definition</a></li>
+<li class="level1"><a href="#imageviewer-class-implementation">ImageViewer Class Implementation</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"><div id="sidebar-toggle"></div><h2 id="reference">Reference</h2><div class="sectionlist normallist">
+    <div class="heading">
+        <a name="reference"></a>
+        <h2 id="reference">Reference</h2>
+    </div>
+    <div class="indexboxcont indexboxbar">
+        <ul>
+            <li><a href="http://doc.qt.io/qt-5/classes.html">All Qt C++ Classes</a></li>
+            <li><a href="http://doc.qt.io/qt-5/qmltypes.html">All QML Types</a></li>
+            <li><a href="http://doc.qt.io/qt-5/qtmodules.html">All Qt Modules</a></li>
+            <li><a href="http://doc.qt.io/qtcreator/index.html">Qt Creator Manual</a></li>
+        </ul>
+        <ul>
+            <li><a href="http://doc.qt.io/qt-5/reference-overview.html">All Qt Reference Documentation</a></li>
+        </ul>
+    </div>
+</div>
+<div class="sectionlist normallist">
+    <div class="heading">
+        <a name="getting-started"></a>
+        <h2 id="getting-started">Getting Started</h2>
+    </div>
+    <ul>
+        <li><a href="http://doc.qt.io/qt-5/gettingstarted.html">Getting Started with Qt</a></li>
+        <li><a href="http://doc.qt.io/qt-5/qt5-intro.html">What's New in Qt 5</a></li>
+        <li><a href="http://doc.qt.io/qt-5/qtexamplesandtutorials.html">Examples and Tutorials</a></li>
+        <li><a href="http://doc.qt.io/qt-5/supported-platforms.html">Supported Platforms</a></li>
+        <li><a href="http://doc.qt.io/qt-5/licensing.html">Qt Licensing</a></li>
+    </ul>
+</div>
+<div class="sectionlist normallist">
+    <div class="heading">
+        <a name="overviews"></a>
+        <h2 id="overviews">Overviews</h2>
+    </div>
+    <ul>
+        <li><a href="http://doc.qt.io/qt-5/topics-app-development.html">Development Tools</a></li>
+        <li><a href="http://doc.qt.io/qt-5/topics-ui.html">User Interfaces</a></li>
+        <li><a href="http://doc.qt.io/qt-5/topics-core.html">Core Internals</a></li>
+        <li><a href="http://doc.qt.io/qt-5/topics-data-storage.html">Data Storage</a></li>
+        <li><a href="http://doc.qt.io/qt-5/multimediaoverview.html">Multimedia</a></li>
+        <li><a href="http://doc.qt.io/qt-5/topics-network-connectivity.html">Networking and Connectivity</a></li>
+        <li><a href="http://doc.qt.io/qt-5/topics-graphics.html">Graphics</a></li>
+        <li><a href="http://doc.qt.io/qt-5/mobiledevelopment.html">Mobile APIs</a></li>
+        <li><a href="http://doc.qt.io/qt-5/qmlapplications.html">QML Applications</a></li>
+    </ul>
+    <ul>
+        <li><a href="http://doc.qt.io/qt-5/overviews-main.html">All Qt Overviews</a></li>
+    </ul>
+</div>
+</div></div>
+<div class="context">
+<h1 class="title">Image Viewer Example</h1>
+<span class="subtitle"></span>
+<!-- $$$widgets/imageviewer-description -->
+<div class="descr"> <a name="details"></a>
+<p><a href="http://doc.qt.io/qt-5/qlabel.html">QLabel</a> is typically used for displaying text, but it can also display an image. <a href="http://doc.qt.io/qt-5/qscrollarea.html">QScrollArea</a> provides a scrolling view around another widget. If the child widget exceeds the size of the frame, <a href="http://doc.qt.io/qt-5/qscrollarea.html">QScrollArea</a> automatically provides scroll bars.</p>
+<p>The example demonstrates how <a href="http://doc.qt.io/qt-5/qlabel.html">QLabel</a>'s ability to scale its contents (<a href="http://doc.qt.io/qt-5/qlabel.html#scaledContents-prop">QLabel::scaledContents</a>), and <a href="http://doc.qt.io/qt-5/qscrollarea.html">QScrollArea</a>'s ability to automatically resize its contents (<a href="http://doc.qt.io/qt-5/qscrollarea.html#widgetResizable-prop">QScrollArea::widgetResizable</a>), can be used to implement zooming and scaling features. In addition the example shows how to use <a href="http://doc.qt.io/qt-5/qpainter.html">QPainter</a> to print an image.</p>
+<p class="centerAlign"><img src="Image%20Viewer%20Example%20%7C%20Qt%20Widgets%205.7%281%29_files/imageviewer-example.png" alt="Screenshot of the Image Viewer example"></p><p>With the Image Viewer application, the users can view an image of their choice. The <b>File</b> menu gives the user the possibility to:</p>
+<ul>
+<li><b>Open...</b> - Open an image file</li>
+<li><b>Print...</b> - Print an image</li>
+<li><b>Exit</b> - Exit the application</li>
+</ul>
+<p>Once an image is loaded, the <b>View</b> menu allows the users to:</p>
+<ul>
+<li><b>Zoom In</b> - Scale the image up by 25%</li>
+<li><b>Zoom Out</b> - Scale the image down by 25%</li>
+<li><b>Normal Size</b> - Show the image at its original size</li>
+<li><b>Fit to Window</b> - Stretch the image to occupy the entire window</li>
+</ul>
+<p>In addition the <b>Help</b> menu provides the users with information about the Image Viewer example in particular, and about Qt in general.</p>
+<a name="imageviewer-class-definition"></a>
+<h2 id="imageviewer-class-definition">ImageViewer Class Definition</h2>
+<pre class="cpp"><span class="keyword">class</span> ImageViewer : <span class="keyword">public</span> <span class="type"><a href="http://doc.qt.io/qt-5/qmainwindow.html">QMainWindow</a></span>
+{
+    Q_OBJECT
+
+<span class="keyword">public</span>:
+    ImageViewer();
+    bool loadFile(<span class="keyword">const</span> <span class="type"><a href="http://doc.qt.io/qt-5/qstring.html">QString</a></span> <span class="operator">&amp;</span>);
+
+<span class="keyword">private</span> <span class="keyword">slots</span>:
+    <span class="type">void</span> open();
+    <span class="type">void</span> saveAs();
+    <span class="type">void</span> print();
+    <span class="type">void</span> copy();
+    <span class="type">void</span> paste();
+    <span class="type">void</span> zoomIn();
+    <span class="type">void</span> zoomOut();
+    <span class="type">void</span> normalSize();
+    <span class="type">void</span> fitToWindow();
+    <span class="type">void</span> about();
+
+<span class="keyword">private</span>:
+    <span class="type">void</span> createActions();
+    <span class="type">void</span> createMenus();
+    <span class="type">void</span> updateActions();
+    bool saveFile(<span class="keyword">const</span> <span class="type"><a href="http://doc.qt.io/qt-5/qstring.html">QString</a></span> <span class="operator">&amp;</span>fileName);
+    <span class="type">void</span> setImage(<span class="keyword">const</span> <span class="type"><a href="http://doc.qt.io/qt-5/qimage.html">QImage</a></span> <span class="operator">&amp;</span>newImage);
+    <span class="type">void</span> scaleImage(<span class="type">double</span> factor);
+    <span class="type">void</span> adjustScrollBar(<span class="type"><a href="http://doc.qt.io/qt-5/qscrollbar.html">QScrollBar</a></span> <span class="operator">*</span>scrollBar<span class="operator">,</span> <span class="type">double</span> factor);
+
+    <span class="type"><a href="http://doc.qt.io/qt-5/qimage.html">QImage</a></span> image;
+    <span class="type"><a href="http://doc.qt.io/qt-5/qlabel.html">QLabel</a></span> <span class="operator">*</span>imageLabel;
+    <span class="type"><a href="http://doc.qt.io/qt-5/qscrollarea.html">QScrollArea</a></span> <span class="operator">*</span>scrollArea;
+    <span class="type">double</span> scaleFactor;
+
+<span class="preprocessor">#ifndef QT_NO_PRINTER</span>
+    <span class="type"><a href="http://doc.qt.io/qt-5/qprinter.html">QPrinter</a></span> printer;
+<span class="preprocessor">#endif</span>
+
+    <span class="type"><a href="http://doc.qt.io/qt-5/qaction.html">QAction</a></span> <span class="operator">*</span>saveAsAct;
+    <span class="type"><a href="http://doc.qt.io/qt-5/qaction.html">QAction</a></span> <span class="operator">*</span>printAct;
+    <span class="type"><a href="http://doc.qt.io/qt-5/qaction.html">QAction</a></span> <span class="operator">*</span>copyAct;
+    <span class="type"><a href="http://doc.qt.io/qt-5/qaction.html">QAction</a></span> <span class="operator">*</span>zoomInAct;
+    <span class="type"><a href="http://doc.qt.io/qt-5/qaction.html">QAction</a></span> <span class="operator">*</span>zoomOutAct;
+    <span class="type"><a href="http://doc.qt.io/qt-5/qaction.html">QAction</a></span> <span class="operator">*</span>normalSizeAct;
+    <span class="type"><a href="http://doc.qt.io/qt-5/qaction.html">QAction</a></span> <span class="operator">*</span>fitToWindowAct;
+};</pre>
+<p>The <code>ImageViewer</code> class inherits from <a href="http://doc.qt.io/qt-5/qmainwindow.html">QMainWindow</a>.
+ We reimplement the constructor, and create several private slots to 
+facilitate the menu entries. In addition we create four private 
+functions.</p>
+<p>We use <code>createActions()</code> and <code>createMenus()</code> when constructing the <code>ImageViewer</code> widget. We use the <code>updateActions()</code> function to update the menu entries when a new image is loaded, or when the <b>Fit to Window</b> option is toggled. The zoom slots use <code>scaleImage()</code> to perform the zooming. In turn, <code>scaleImage()</code> uses <code>adjustScrollBar()</code> to preserve the focal point after scaling an image.</p>
+<a name="imageviewer-class-implementation"></a>
+<h2 id="imageviewer-class-implementation">ImageViewer Class Implementation</h2>
+<pre class="cpp">ImageViewer<span class="operator">::</span>ImageViewer()
+   : imageLabel(<span class="keyword">new</span> <span class="type"><a href="http://doc.qt.io/qt-5/qlabel.html">QLabel</a></span>)
+   <span class="operator">,</span> scrollArea(<span class="keyword">new</span> <span class="type"><a href="http://doc.qt.io/qt-5/qscrollarea.html">QScrollArea</a></span>)
+   <span class="operator">,</span> scaleFactor(<span class="number">1</span>)
+{
+    imageLabel<span class="operator">-</span><span class="operator">&gt;</span>setBackgroundRole(<span class="type"><a href="http://doc.qt.io/qt-5/qpalette.html">QPalette</a></span><span class="operator">::</span>Base);
+    imageLabel<span class="operator">-</span><span class="operator">&gt;</span>setSizePolicy(<span class="type"><a href="http://doc.qt.io/qt-5/qsizepolicy.html">QSizePolicy</a></span><span class="operator">::</span>Ignored<span class="operator">,</span> <span class="type"><a href="http://doc.qt.io/qt-5/qsizepolicy.html">QSizePolicy</a></span><span class="operator">::</span>Ignored);
+    imageLabel<span class="operator">-</span><span class="operator">&gt;</span>setScaledContents(<span class="keyword">true</span>);
+
+    scrollArea<span class="operator">-</span><span class="operator">&gt;</span>setBackgroundRole(<span class="type"><a href="http://doc.qt.io/qt-5/qpalette.html">QPalette</a></span><span class="operator">::</span>Dark);
+    scrollArea<span class="operator">-</span><span class="operator">&gt;</span>setWidget(imageLabel);
+    scrollArea<span class="operator">-</span><span class="operator">&gt;</span>setVisible(<span class="keyword">false</span>);
+    setCentralWidget(scrollArea);
+
+    createActions();
+
+    resize(<span class="type"><a href="http://doc.qt.io/qt-5/qguiapplication.html">QGuiApplication</a></span><span class="operator">::</span>primaryScreen()<span class="operator">-</span><span class="operator">&gt;</span>availableSize() <span class="operator">*</span> <span class="number">3</span> <span class="operator">/</span> <span class="number">5</span>);
+}</pre>
+<p>In the constructor we first create the label and the scroll area.</p>
+<p>We set <code>imageLabel</code>'s size policy to <a href="http://doc.qt.io/qt-5/qsizepolicy.html#Policy-enum">ignored</a>, making the users able to scale the image to whatever size they want when the <b>Fit to Window</b> option is turned on. Otherwise, the default size polizy (<a href="http://doc.qt.io/qt-5/qsizepolicy.html#Policy-enum">preferred</a>) will make scroll bars appear when the scroll area becomes smaller than the label's minimum size hint.</p>
+<p>We ensure that the label will scale its contents to fill all 
+available space, to enable the image to scale properly when zooming. If 
+we omitted to set the <code>imageLabel</code>'s <a href="http://doc.qt.io/qt-5/qlabel.html#scaledContents-prop">scaledContents</a> property, zooming in would enlarge the <a href="http://doc.qt.io/qt-5/qlabel.html">QLabel</a>, but leave the pixmap at its original size, exposing the <a href="http://doc.qt.io/qt-5/qlabel.html">QLabel</a>'s background.</p>
+<p>We make <code>imageLabel</code> the scroll area's child widget, and we make <code>scrollArea</code> the central widget of the <a href="http://doc.qt.io/qt-5/qmainwindow.html">QMainWindow</a>. At the end we create the associated actions and menus, and customize the <code>ImageViewer</code>'s appearance.</p>
+<pre class="cpp"><span class="keyword">static</span> <span class="type">void</span> initializeImageFileDialog(<span class="type"><a href="http://doc.qt.io/qt-5/qfiledialog.html">QFileDialog</a></span> <span class="operator">&amp;</span>dialog<span class="operator">,</span> <span class="type"><a href="http://doc.qt.io/qt-5/qfiledialog.html">QFileDialog</a></span><span class="operator">::</span>AcceptMode acceptMode)
+{
+    <span class="keyword">static</span> bool firstDialog <span class="operator">=</span> <span class="keyword">true</span>;
+
+    <span class="keyword">if</span> (firstDialog) {
+        firstDialog <span class="operator">=</span> <span class="keyword">false</span>;
+        <span class="keyword">const</span> <span class="type"><a href="http://doc.qt.io/qt-5/qstringlist.html">QStringList</a></span> picturesLocations <span class="operator">=</span> <span class="type"><a href="http://doc.qt.io/qt-5/qstandardpaths.html">QStandardPaths</a></span><span class="operator">::</span>standardLocations(<span class="type"><a href="http://doc.qt.io/qt-5/qstandardpaths.html">QStandardPaths</a></span><span class="operator">::</span>PicturesLocation);
+        dialog<span class="operator">.</span>setDirectory(picturesLocations<span class="operator">.</span>isEmpty() <span class="operator">?</span> <span class="type"><a href="http://doc.qt.io/qt-5/qdir.html">QDir</a></span><span class="operator">::</span>currentPath() : picturesLocations<span class="operator">.</span>last());
+    }
+
+    <span class="type"><a href="http://doc.qt.io/qt-5/qstringlist.html">QStringList</a></span> mimeTypeFilters;
+    <span class="keyword">const</span> <span class="type"><a href="http://doc.qt.io/qt-5/qbytearraylist.html">QByteArrayList</a></span> supportedMimeTypes <span class="operator">=</span> acceptMode <span class="operator">=</span><span class="operator">=</span> <span class="type"><a href="http://doc.qt.io/qt-5/qfiledialog.html">QFileDialog</a></span><span class="operator">::</span>AcceptOpen
+        <span class="operator">?</span> <span class="type"><a href="http://doc.qt.io/qt-5/qimagereader.html">QImageReader</a></span><span class="operator">::</span>supportedMimeTypes() : <span class="type"><a href="http://doc.qt.io/qt-5/qimagewriter.html">QImageWriter</a></span><span class="operator">::</span>supportedMimeTypes();
+    foreach (<span class="keyword">const</span> <span class="type"><a href="http://doc.qt.io/qt-5/qbytearray.html">QByteArray</a></span> <span class="operator">&amp;</span>mimeTypeName<span class="operator">,</span> supportedMimeTypes)
+        mimeTypeFilters<span class="operator">.</span>append(mimeTypeName);
+    mimeTypeFilters<span class="operator">.</span>sort();
+    dialog<span class="operator">.</span>setMimeTypeFilters(mimeTypeFilters);
+    dialog<span class="operator">.</span>selectMimeTypeFilter(<span class="string">"image/jpeg"</span>);
+    <span class="keyword">if</span> (acceptMode <span class="operator">=</span><span class="operator">=</span> <span class="type"><a href="http://doc.qt.io/qt-5/qfiledialog.html">QFileDialog</a></span><span class="operator">::</span>AcceptSave)
+        dialog<span class="operator">.</span>setDefaultSuffix(<span class="string">"jpg"</span>);
+}
+
+<span class="type">void</span> ImageViewer<span class="operator">::</span>open()
+{
+    <span class="type"><a href="http://doc.qt.io/qt-5/qfiledialog.html">QFileDialog</a></span> dialog(<span class="keyword">this</span><span class="operator">,</span> tr(<span class="string">"Open File"</span>));
+    initializeImageFileDialog(dialog<span class="operator">,</span> <span class="type"><a href="http://doc.qt.io/qt-5/qfiledialog.html">QFileDialog</a></span><span class="operator">::</span>AcceptOpen);
+
+    <span class="keyword">while</span> (dialog<span class="operator">.</span>exec() <span class="operator">=</span><span class="operator">=</span> <span class="type"><a href="http://doc.qt.io/qt-5/qdialog.html">QDialog</a></span><span class="operator">::</span>Accepted <span class="operator">&amp;</span><span class="operator">&amp;</span> <span class="operator">!</span>loadFile(dialog<span class="operator">.</span>selectedFiles()<span class="operator">.</span>first())) {}
+}</pre>
+<p>In the <code>open()</code> slot, we show a file dialog to the user. We compile a list of mime types for use as a filter by querying <a href="http://doc.qt.io/qt-5/qimagereader.html">QImageReader</a> for the available mime type names.</p>
+<p>We show the file dialog until a valid file name is entered or the user cancels.</p>
+<p>The function <code>loadFile()</code> is used to load the image.</p>
+<pre class="cpp">bool ImageViewer<span class="operator">::</span>loadFile(<span class="keyword">const</span> <span class="type"><a href="http://doc.qt.io/qt-5/qstring.html">QString</a></span> <span class="operator">&amp;</span>fileName)
+{
+    <span class="type"><a href="http://doc.qt.io/qt-5/qimagereader.html">QImageReader</a></span> reader(fileName);
+    reader<span class="operator">.</span>setAutoTransform(<span class="keyword">true</span>);
+    <span class="keyword">const</span> <span class="type"><a href="http://doc.qt.io/qt-5/qimage.html">QImage</a></span> newImage <span class="operator">=</span> reader<span class="operator">.</span>read();
+    <span class="keyword">if</span> (newImage<span class="operator">.</span>isNull()) {
+        <span class="type"><a href="http://doc.qt.io/qt-5/qmessagebox.html">QMessageBox</a></span><span class="operator">::</span>information(<span class="keyword">this</span><span class="operator">,</span> <span class="type"><a href="http://doc.qt.io/qt-5/qguiapplication.html">QGuiApplication</a></span><span class="operator">::</span>applicationDisplayName()<span class="operator">,</span>
+                                 tr(<span class="string">"Cannot load %1: %2"</span>)
+                                 <span class="operator">.</span>arg(<span class="type"><a href="http://doc.qt.io/qt-5/qdir.html">QDir</a></span><span class="operator">::</span>toNativeSeparators(fileName)<span class="operator">,</span> reader<span class="operator">.</span>errorString()));
+        <span class="keyword">return</span> <span class="keyword">false</span>;
+    }</pre>
+<p>In the <code>loadFile()</code> function, we instantiate a <a href="http://doc.qt.io/qt-5/qimagereader.html">QImageReader</a> and enable automatic transformations by calling <a href="http://doc.qt.io/qt-5/qimagereader.html#setAutoTransform">QImageReader::setAutoTransform</a>().
+ For files in JPEG format, this ensures that portrait mode images of 
+digital cameras are shown correctly by applying the appropriate 
+orientation read from the EXIF meta data stored in the image file.</p>
+<p>We then load the image using <a href="http://doc.qt.io/qt-5/qimagereader.html#read">QImageReader::read</a>(). If this returns a null image, indicating that the file is not an image file, we use a <a href="http://doc.qt.io/qt-5/qmessagebox.html">QMessageBox</a> to alert the user.</p>
+<p>The <a href="http://doc.qt.io/qt-5/qmessagebox.html">QMessageBox</a> class provides a modal dialog with a short message, an icon, and some buttons. As with <a href="http://doc.qt.io/qt-5/qfiledialog.html">QFileDialog</a> the easiest way to create a <a href="http://doc.qt.io/qt-5/qmessagebox.html">QMessageBox</a> is to use its static convenience functions. <a href="http://doc.qt.io/qt-5/qmessagebox.html">QMessageBox</a>
+ provides a range of different messages arranged along two axes: 
+severity (question, information, warning and critical) and complexity 
+(the number of necessary response buttons). In this particular example 
+an information message with an <b>OK</b> button (the default) is sufficient, since the message is part of a normal operation.</p>
+<pre class="cpp">    scaleFactor <span class="operator">=</span> <span class="number">1.0</span>;
+
+    scrollArea<span class="operator">-</span><span class="operator">&gt;</span>setVisible(<span class="keyword">true</span>);
+    printAct<span class="operator">-</span><span class="operator">&gt;</span>setEnabled(<span class="keyword">true</span>);
+    fitToWindowAct<span class="operator">-</span><span class="operator">&gt;</span>setEnabled(<span class="keyword">true</span>);
+    updateActions();
+
+    <span class="keyword">if</span> (<span class="operator">!</span>fitToWindowAct<span class="operator">-</span><span class="operator">&gt;</span>isChecked())
+        imageLabel<span class="operator">-</span><span class="operator">&gt;</span>adjustSize();
+}</pre>
+<p>If the format is supported, we display the image in <code>imageLabel</code> by setting the label's <a href="http://doc.qt.io/qt-5/qlabel.html#pixmap-prop">pixmap</a>. Then we enable the <b>Print</b> and <b>Fit to Window</b> menu entries and update the rest of the view menu entries. The <b>Open</b> and <b>Exit</b> entries are enabled by default.</p>
+<p>If the <b>Fit to Window</b> option is turned off, the <a href="http://doc.qt.io/qt-5/qscrollarea.html#widgetResizable-prop">QScrollArea::widgetResizable</a> property is <code>false</code> and it is our responsibility (not <a href="http://doc.qt.io/qt-5/qscrollarea.html">QScrollArea</a>'s) to give the <a href="http://doc.qt.io/qt-5/qlabel.html">QLabel</a> a reasonable size based on its contents. We call {<a href="http://doc.qt.io/qt-5/qwidget.html#adjustSize">QWidget::adjustSize</a>()}{adjustSize()} to achieve this, which is essentially the same as</p>
+<pre class="cpp">imageLabel<span class="operator">-</span><span class="operator">&gt;</span>resize(imageLabel<span class="operator">-</span><span class="operator">&gt;</span>pixmap()<span class="operator">-</span><span class="operator">&gt;</span>size());</pre>
+<p>In the <code>print()</code> slot, we first make sure that an image has been loaded into the application:</p>
+<pre class="cpp"><span class="type">void</span> ImageViewer<span class="operator">::</span>print()
+{
+    Q_ASSERT(imageLabel<span class="operator">-</span><span class="operator">&gt;</span>pixmap());
+<span class="preprocessor">#if !defined(QT_NO_PRINTER) &amp;&amp; !defined(QT_NO_PRINTDIALOG)</span></pre>
+<p>If the application is built in debug mode, the <code>Q_ASSERT()</code> macro will expand to</p>
+<pre class="cpp"><span class="keyword">if</span> (<span class="operator">!</span>imageLabel<span class="operator">-</span><span class="operator">&gt;</span>pixmap())
+    <a href="http://doc.qt.io/qt-5/qtglobal.html#qFatal">qFatal</a>(<span class="string">"ASSERT: "</span>imageLabel<span class="operator">-</span><span class="operator">&gt;</span>pixmap()<span class="string">" in file ..."</span>);</pre>
+<p>In release mode, the macro simply disappear. The mode can be set in the application's <code>.pro</code> file. One way to do so is to add an option to <b>qmake</b> when building the application:</p>
+<pre class="cpp">qmake <span class="string">"CONFIG += debug"</span> foo<span class="operator">.</span>pro</pre>
+<p>or</p>
+<pre class="cpp">qmake <span class="string">"CONFIG += release"</span> foo<span class="operator">.</span>pro</pre>
+<p>Another approach is to add this line directly to the <code>.pro</code> file.</p>
+<pre class="cpp">    <span class="type"><a href="http://doc.qt.io/qt-5/qprintdialog.html">QPrintDialog</a></span> dialog(<span class="operator">&amp;</span>printer<span class="operator">,</span> <span class="keyword">this</span>);
+    <span class="keyword">if</span> (dialog<span class="operator">.</span>exec()) {
+        <span class="type"><a href="http://doc.qt.io/qt-5/qpainter.html">QPainter</a></span> painter(<span class="operator">&amp;</span>printer);
+        <span class="type"><a href="http://doc.qt.io/qt-5/qrect.html">QRect</a></span> rect <span class="operator">=</span> painter<span class="operator">.</span>viewport();
+        <span class="type"><a href="http://doc.qt.io/qt-5/qsize.html">QSize</a></span> size <span class="operator">=</span> imageLabel<span class="operator">-</span><span class="operator">&gt;</span>pixmap()<span class="operator">-</span><span class="operator">&gt;</span>size();
+        size<span class="operator">.</span>scale(rect<span class="operator">.</span>size()<span class="operator">,</span> <span class="type"><a href="http://doc.qt.io/qt-5/qt.html">Qt</a></span><span class="operator">::</span>KeepAspectRatio);
+        painter<span class="operator">.</span>setViewport(rect<span class="operator">.</span>x()<span class="operator">,</span> rect<span class="operator">.</span>y()<span class="operator">,</span> size<span class="operator">.</span>width()<span class="operator">,</span> size<span class="operator">.</span>height());
+        painter<span class="operator">.</span>setWindow(imageLabel<span class="operator">-</span><span class="operator">&gt;</span>pixmap()<span class="operator">-</span><span class="operator">&gt;</span>rect());
+        painter<span class="operator">.</span>drawPixmap(<span class="number">0</span><span class="operator">,</span> <span class="number">0</span><span class="operator">,</span> <span class="operator">*</span>imageLabel<span class="operator">-</span><span class="operator">&gt;</span>pixmap());
+    }
+<span class="preprocessor">#endif</span>
+}</pre>
+<p>Then we present a print dialog allowing the user to choose a printer and to set a few options. We construct a painter with a <a href="http://doc.qt.io/qt-5/qprinter.html">QPrinter</a>
+ as the paint device. We set the painter's window and viewport in such a
+ way that the image is as large as possible on the paper, but without 
+altering its <a href="http://doc.qt.io/qt-5/qt.html#AspectRatioMode-enum">aspect ratio</a>.</p>
+<p>In the end we draw the pixmap at position (0, 0).</p>
+<pre class="cpp"><span class="type">void</span> ImageViewer<span class="operator">::</span>zoomIn()
+{
+    scaleImage(<span class="number">1.25</span>);
+}
+
+<span class="type">void</span> ImageViewer<span class="operator">::</span>zoomOut()
+{
+    scaleImage(<span class="number">0.8</span>);
+}</pre>
+<p>We implement the zooming slots using the private <code>scaleImage()</code> function. We set the scaling factors to 1.25 and 0.8, respectively. These factor values ensure that a <b>Zoom In</b> action and a <b>Zoom Out</b>
+ action will cancel each other (since 1.25 * 0.8 == 1), and in that way 
+the normal image size can be restored using the zooming features.</p>
+<p>The screenshots below show an image in its normal size, and the same image after zooming in:</p>
+<div class="table"><table class="generic">
+ <tbody><tr class="odd" valign="top"><td><img src="Image%20Viewer%20Example%20%7C%20Qt%20Widgets%205.7%281%29_files/imageviewer-original_size.png" alt=""></td><td><img src="Image%20Viewer%20Example%20%7C%20Qt%20Widgets%205.7%281%29_files/imageviewer-zoom_in_1.png" alt=""></td><td><img src="Image%20Viewer%20Example%20%7C%20Qt%20Widgets%205.7%281%29_files/imageviewer-zoom_in_2.png" alt=""></td></tr>
+</tbody></table></div>
+<pre class="cpp"><span class="type">void</span> ImageViewer<span class="operator">::</span>normalSize()
+{
+    imageLabel<span class="operator">-</span><span class="operator">&gt;</span>adjustSize();
+    scaleFactor <span class="operator">=</span> <span class="number">1.0</span>;
+}</pre>
+<p>When zooming, we use the <a href="http://doc.qt.io/qt-5/qlabel.html">QLabel</a>'s ability to scale its contents. Such scaling doesn't change the actual size hint of the contents. And since the <a href="http://doc.qt.io/qt-5/qwidget.html#adjustSize">adjustSize()</a>
+ function use those size hint, the only thing we need to do to restore 
+the normal size of the currently displayed image is to call <code>adjustSize()</code> and reset the scale factor to 1.0.</p>
+<pre class="cpp"><span class="type">void</span> ImageViewer<span class="operator">::</span>fitToWindow()
+{
+    bool fitToWindow <span class="operator">=</span> fitToWindowAct<span class="operator">-</span><span class="operator">&gt;</span>isChecked();
+    scrollArea<span class="operator">-</span><span class="operator">&gt;</span>setWidgetResizable(fitToWindow);
+    <span class="keyword">if</span> (<span class="operator">!</span>fitToWindow)
+        normalSize();
+    updateActions();
+}</pre>
+<p>The <code>fitToWindow()</code> slot is called each time the user toggled the <b>Fit to Window</b> option. If the slot is called to turn on the option, we tell the scroll area to resize its child widget with the <a href="http://doc.qt.io/qt-5/qscrollarea.html#widgetResizable-prop">QScrollArea::setWidgetResizable</a>() function. Then we disable the <b>Zoom In</b>, <b>Zoom Out</b> and <b>Normal Size</b> menu entries using the private <code>updateActions()</code> function.</p>
+<p>If the <a href="http://doc.qt.io/qt-5/qscrollarea.html#widgetResizable-prop">QScrollArea::widgetResizable</a> property is set to <code>false</code> (the default), the scroll area honors the size of its child widget. If this property is set to <code>true</code>,
+ the scroll area will automatically resize the widget in order to avoid 
+scroll bars where they can be avoided, or to take advantage of extra 
+space. But the scroll area will honor the minimum size hint of its child
+ widget independent of the widget resizable property. So in this example
+ we set <code>imageLabel</code>'s size policy to <a href="http://doc.qt.io/qt-5/qsizepolicy.html#Policy-enum">ignored</a> in the constructor, to avoid that scroll bars appear when the scroll area becomes smaller than the label's minimum size hint.</p>
+<p>The screenshots below shows an image in its normal size, and the same image with the <b>Fit to window</b> option turned on. Enlarging the window will stretch the image further, as shown in the third screenshot.</p>
+<div class="table"><table class="generic">
+ <tbody><tr class="odd" valign="top"><td><img src="Image%20Viewer%20Example%20%7C%20Qt%20Widgets%205.7%281%29_files/imageviewer-original_size.png" alt=""></td><td><img src="Image%20Viewer%20Example%20%7C%20Qt%20Widgets%205.7%281%29_files/imageviewer-fit_to_window_1.png" alt=""></td><td><img src="Image%20Viewer%20Example%20%7C%20Qt%20Widgets%205.7%281%29_files/imageviewer-fit_to_window_2.png" alt=""></td></tr>
+</tbody></table></div>
+<p>If the slot is called to turn off the option, the {<a href="http://doc.qt.io/qt-5/qscrollarea.html#widgetResizable-prop">QScrollArea::setWidgetResizable</a>} property is set to <code>false</code>.
+ We also restore the image pixmap to its normal size by adjusting the 
+label's size to its content. And in the end we update the view menu 
+entries.</p>
+<pre class="cpp"><span class="type">void</span> ImageViewer<span class="operator">::</span>about()
+{
+    <span class="type"><a href="http://doc.qt.io/qt-5/qmessagebox.html">QMessageBox</a></span><span class="operator">::</span>about(<span class="keyword">this</span><span class="operator">,</span> tr(<span class="string">"About Image Viewer"</span>)<span class="operator">,</span>
+            tr(<span class="string">"&lt;p&gt;The &lt;b&gt;Image Viewer&lt;/b&gt; example shows how to combine QLabel "</span>
+               <span class="string">"and QScrollArea to display an image. QLabel is typically used "</span>
+               <span class="string">"for displaying a text, but it can also display an image. "</span>
+               <span class="string">"QScrollArea provides a scrolling view around another widget. "</span>
+               <span class="string">"If the child widget exceeds the size of the frame, QScrollArea "</span>
+               <span class="string">"automatically provides scroll bars. &lt;/p&gt;&lt;p&gt;The example "</span>
+               <span class="string">"demonstrates how QLabel's ability to scale its contents "</span>
+               <span class="string">"(QLabel::scaledContents), and QScrollArea's ability to "</span>
+               <span class="string">"automatically resize its contents "</span>
+               <span class="string">"(QScrollArea::widgetResizable), can be used to implement "</span>
+               <span class="string">"zooming and scaling features. &lt;/p&gt;&lt;p&gt;In addition the example "</span>
+               <span class="string">"shows how to use QPainter to print an image.&lt;/p&gt;"</span>));
+}</pre>
+<p>We implement the <code>about()</code> slot to create a message box describing what the example is designed to show.</p>
+<pre class="cpp"><span class="type">void</span> ImageViewer<span class="operator">::</span>createActions()
+{
+    <span class="type"><a href="http://doc.qt.io/qt-5/qmenu.html">QMenu</a></span> <span class="operator">*</span>fileMenu <span class="operator">=</span> menuBar()<span class="operator">-</span><span class="operator">&gt;</span>addMenu(tr(<span class="string">"&amp;File"</span>));
+
+    <span class="type"><a href="http://doc.qt.io/qt-5/qaction.html">QAction</a></span> <span class="operator">*</span>openAct <span class="operator">=</span> fileMenu<span class="operator">-</span><span class="operator">&gt;</span>addAction(tr(<span class="string">"&amp;Open..."</span>)<span class="operator">,</span> <span class="keyword">this</span><span class="operator">,</span> <span class="operator">&amp;</span>ImageViewer<span class="operator">::</span>open);
+    openAct<span class="operator">-</span><span class="operator">&gt;</span>setShortcut(<span class="type"><a href="http://doc.qt.io/qt-5/qkeysequence.html">QKeySequence</a></span><span class="operator">::</span>Open);
+
+    saveAsAct <span class="operator">=</span> fileMenu<span class="operator">-</span><span class="operator">&gt;</span>addAction(tr(<span class="string">"&amp;Save As..."</span>)<span class="operator">,</span> <span class="keyword">this</span><span class="operator">,</span> <span class="operator">&amp;</span>ImageViewer<span class="operator">::</span>saveAs);
+    saveAsAct<span class="operator">-</span><span class="operator">&gt;</span>setEnabled(<span class="keyword">false</span>);
+
+    printAct <span class="operator">=</span> fileMenu<span class="operator">-</span><span class="operator">&gt;</span>addAction(tr(<span class="string">"&amp;Print..."</span>)<span class="operator">,</span> <span class="keyword">this</span><span class="operator">,</span> <span class="operator">&amp;</span>ImageViewer<span class="operator">::</span>print);
+    printAct<span class="operator">-</span><span class="operator">&gt;</span>setShortcut(<span class="type"><a href="http://doc.qt.io/qt-5/qkeysequence.html">QKeySequence</a></span><span class="operator">::</span>Print);
+    printAct<span class="operator">-</span><span class="operator">&gt;</span>setEnabled(<span class="keyword">false</span>);
+
+    fileMenu<span class="operator">-</span><span class="operator">&gt;</span>addSeparator();
+
+    <span class="type"><a href="http://doc.qt.io/qt-5/qaction.html">QAction</a></span> <span class="operator">*</span>exitAct <span class="operator">=</span> fileMenu<span class="operator">-</span><span class="operator">&gt;</span>addAction(tr(<span class="string">"E&amp;xit"</span>)<span class="operator">,</span> <span class="keyword">this</span><span class="operator">,</span> <span class="operator">&amp;</span><span class="type"><a href="http://doc.qt.io/qt-5/qwidget.html">QWidget</a></span><span class="operator">::</span>close);
+    exitAct<span class="operator">-</span><span class="operator">&gt;</span>setShortcut(tr(<span class="string">"Ctrl+Q"</span>));
+
+    <span class="type"><a href="http://doc.qt.io/qt-5/qmenu.html">QMenu</a></span> <span class="operator">*</span>editMenu <span class="operator">=</span> menuBar()<span class="operator">-</span><span class="operator">&gt;</span>addMenu(tr(<span class="string">"&amp;Edit"</span>));
+
+    copyAct <span class="operator">=</span> editMenu<span class="operator">-</span><span class="operator">&gt;</span>addAction(tr(<span class="string">"&amp;Copy"</span>)<span class="operator">,</span> <span class="keyword">this</span><span class="operator">,</span> <span class="operator">&amp;</span>ImageViewer<span class="operator">::</span>copy);
+    copyAct<span class="operator">-</span><span class="operator">&gt;</span>setShortcut(<span class="type"><a href="http://doc.qt.io/qt-5/qkeysequence.html">QKeySequence</a></span><span class="operator">::</span>Copy);
+    copyAct<span class="operator">-</span><span class="operator">&gt;</span>setEnabled(<span class="keyword">false</span>);
+
+    <span class="type"><a href="http://doc.qt.io/qt-5/qaction.html">QAction</a></span> <span class="operator">*</span>pasteAct <span class="operator">=</span> editMenu<span class="operator">-</span><span class="operator">&gt;</span>addAction(tr(<span class="string">"&amp;Paste"</span>)<span class="operator">,</span> <span class="keyword">this</span><span class="operator">,</span> <span class="operator">&amp;</span>ImageViewer<span class="operator">::</span>paste);
+    pasteAct<span class="operator">-</span><span class="operator">&gt;</span>setShortcut(<span class="type"><a href="http://doc.qt.io/qt-5/qkeysequence.html">QKeySequence</a></span><span class="operator">::</span>Paste);
+
+    <span class="type"><a href="http://doc.qt.io/qt-5/qmenu.html">QMenu</a></span> <span class="operator">*</span>viewMenu <span class="operator">=</span> menuBar()<span class="operator">-</span><span class="operator">&gt;</span>addMenu(tr(<span class="string">"&amp;View"</span>));
+
+    zoomInAct <span class="operator">=</span> viewMenu<span class="operator">-</span><span class="operator">&gt;</span>addAction(tr(<span class="string">"Zoom &amp;In (25%)"</span>)<span class="operator">,</span> <span class="keyword">this</span><span class="operator">,</span> <span class="operator">&amp;</span>ImageViewer<span class="operator">::</span>zoomIn);
+    zoomInAct<span class="operator">-</span><span class="operator">&gt;</span>setShortcut(<span class="type"><a href="http://doc.qt.io/qt-5/qkeysequence.html">QKeySequence</a></span><span class="operator">::</span>ZoomIn);
+    zoomInAct<span class="operator">-</span><span class="operator">&gt;</span>setEnabled(<span class="keyword">false</span>);
+
+    zoomOutAct <span class="operator">=</span> viewMenu<span class="operator">-</span><span class="operator">&gt;</span>addAction(tr(<span class="string">"Zoom &amp;Out (25%)"</span>)<span class="operator">,</span> <span class="keyword">this</span><span class="operator">,</span> <span class="operator">&amp;</span>ImageViewer<span class="operator">::</span>zoomOut);
+    zoomOutAct<span class="operator">-</span><span class="operator">&gt;</span>setShortcut(<span class="type"><a href="http://doc.qt.io/qt-5/qkeysequence.html">QKeySequence</a></span><span class="operator">::</span>ZoomOut);
+    zoomOutAct<span class="operator">-</span><span class="operator">&gt;</span>setEnabled(<span class="keyword">false</span>);
+
+    normalSizeAct <span class="operator">=</span> viewMenu<span class="operator">-</span><span class="operator">&gt;</span>addAction(tr(<span class="string">"&amp;Normal Size"</span>)<span class="operator">,</span> <span class="keyword">this</span><span class="operator">,</span> <span class="operator">&amp;</span>ImageViewer<span class="operator">::</span>normalSize);
+    normalSizeAct<span class="operator">-</span><span class="operator">&gt;</span>setShortcut(tr(<span class="string">"Ctrl+S"</span>));
+    normalSizeAct<span class="operator">-</span><span class="operator">&gt;</span>setEnabled(<span class="keyword">false</span>);
+
+    viewMenu<span class="operator">-</span><span class="operator">&gt;</span>addSeparator();
+
+    fitToWindowAct <span class="operator">=</span> viewMenu<span class="operator">-</span><span class="operator">&gt;</span>addAction(tr(<span class="string">"&amp;Fit to Window"</span>)<span class="operator">,</span> <span class="keyword">this</span><span class="operator">,</span> <span class="operator">&amp;</span>ImageViewer<span class="operator">::</span>fitToWindow);
+    fitToWindowAct<span class="operator">-</span><span class="operator">&gt;</span>setEnabled(<span class="keyword">false</span>);
+    fitToWindowAct<span class="operator">-</span><span class="operator">&gt;</span>setCheckable(<span class="keyword">true</span>);
+    fitToWindowAct<span class="operator">-</span><span class="operator">&gt;</span>setShortcut(tr(<span class="string">"Ctrl+F"</span>));
+
+    <span class="type"><a href="http://doc.qt.io/qt-5/qmenu.html">QMenu</a></span> <span class="operator">*</span>helpMenu <span class="operator">=</span> menuBar()<span class="operator">-</span><span class="operator">&gt;</span>addMenu(tr(<span class="string">"&amp;Help"</span>));
+
+    helpMenu<span class="operator">-</span><span class="operator">&gt;</span>addAction(tr(<span class="string">"&amp;About"</span>)<span class="operator">,</span> <span class="keyword">this</span><span class="operator">,</span> <span class="operator">&amp;</span>ImageViewer<span class="operator">::</span>about);
+    helpMenu<span class="operator">-</span><span class="operator">&gt;</span>addAction(tr(<span class="string">"About &amp;Qt"</span>)<span class="operator">,</span> <span class="operator">&amp;</span><span class="type"><a href="http://doc.qt.io/qt-5/qapplication.html">QApplication</a></span><span class="operator">::</span>aboutQt);
+}</pre>
+<p>In the private <code>createAction()</code> function, we create the actions providing the application features and populate a menu with them.</p>
+<p>We assign a short-cut key to each action and connect them to the appropriate slots. We only enable the <code>openAct</code> and <code>exitAct</code> at the time of creation, the others are updated once an image has been loaded into the application. In addition we make the <code>fitToWindowAct</code> <a href="http://doc.qt.io/qt-5/qaction.html#checkable-prop">checkable</a>.</p>
+<p>The <a href="http://doc.qt.io/qt-5/qmenu.html">QMenu</a> class provides a menu widget for use in menu bars, context menus, and other popup menus. The <a href="http://doc.qt.io/qt-5/qmenubar.html">QMenuBar</a> class provides a horizontal menu bar that consists of a list of pull-down menu items. So we put the menus in the <code>ImageViewer</code>'s menu bar which we retrieve with the <a href="http://doc.qt.io/qt-5/qmainwindow.html#menuBar">QMainWindow::menuBar</a>() function.</p>
+<pre class="cpp"><span class="type">void</span> ImageViewer<span class="operator">::</span>updateActions()
+{
+    saveAsAct<span class="operator">-</span><span class="operator">&gt;</span>setEnabled(<span class="operator">!</span>image<span class="operator">.</span>isNull());
+    copyAct<span class="operator">-</span><span class="operator">&gt;</span>setEnabled(<span class="operator">!</span>image<span class="operator">.</span>isNull());
+    zoomInAct<span class="operator">-</span><span class="operator">&gt;</span>setEnabled(<span class="operator">!</span>fitToWindowAct<span class="operator">-</span><span class="operator">&gt;</span>isChecked());
+    zoomOutAct<span class="operator">-</span><span class="operator">&gt;</span>setEnabled(<span class="operator">!</span>fitToWindowAct<span class="operator">-</span><span class="operator">&gt;</span>isChecked());
+    normalSizeAct<span class="operator">-</span><span class="operator">&gt;</span>setEnabled(<span class="operator">!</span>fitToWindowAct<span class="operator">-</span><span class="operator">&gt;</span>isChecked());
+}</pre>
+<p>The private <code>updateActions()</code> function enables or disables the <b>Zoom In</b>, <b>Zoom Out</b> and <b>Normal Size</b> menu entries depending on whether the <b>Fit to Window</b> option is turned on or off.</p>
+<pre class="cpp"><span class="type">void</span> ImageViewer<span class="operator">::</span>scaleImage(<span class="type">double</span> factor)
+{
+    Q_ASSERT(imageLabel<span class="operator">-</span><span class="operator">&gt;</span>pixmap());
+    scaleFactor <span class="operator">*</span><span class="operator">=</span> factor;
+    imageLabel<span class="operator">-</span><span class="operator">&gt;</span>resize(scaleFactor <span class="operator">*</span> imageLabel<span class="operator">-</span><span class="operator">&gt;</span>pixmap()<span class="operator">-</span><span class="operator">&gt;</span>size());
+
+    adjustScrollBar(scrollArea<span class="operator">-</span><span class="operator">&gt;</span>horizontalScrollBar()<span class="operator">,</span> factor);
+    adjustScrollBar(scrollArea<span class="operator">-</span><span class="operator">&gt;</span>verticalScrollBar()<span class="operator">,</span> factor);
+
+    zoomInAct<span class="operator">-</span><span class="operator">&gt;</span>setEnabled(scaleFactor <span class="operator">&lt;</span> <span class="number">3.0</span>);
+    zoomOutAct<span class="operator">-</span><span class="operator">&gt;</span>setEnabled(scaleFactor <span class="operator">&gt;</span> <span class="number">0.333</span>);
+}</pre>
+<p>In <code>scaleImage()</code>, we use the <code>factor</code> parameter to calculate the new scaling factor for the displayed image, and resize <code>imageLabel</code>. Since we set the <a href="http://doc.qt.io/qt-5/qlabel.html#scaledContents-prop">scaledContents</a> property to <code>true</code> in the constructor, the call to <a href="http://doc.qt.io/qt-5/qwidget.html#size-prop">QWidget::resize</a>() will scale the image displayed in the label. We also adjust the scroll bars to preserve the focal point of the image.</p>
+<p>At the end, if the scale factor is less than 33.3% or greater than 
+300%, we disable the respective menu entry to prevent the image pixmap 
+from becoming too large, consuming too much resources in the window 
+system.</p>
+<pre class="cpp"><span class="type">void</span> ImageViewer<span class="operator">::</span>adjustScrollBar(<span class="type"><a href="http://doc.qt.io/qt-5/qscrollbar.html">QScrollBar</a></span> <span class="operator">*</span>scrollBar<span class="operator">,</span> <span class="type">double</span> factor)
+{
+    scrollBar<span class="operator">-</span><span class="operator">&gt;</span>setValue(<span class="type">int</span>(factor <span class="operator">*</span> scrollBar<span class="operator">-</span><span class="operator">&gt;</span>value()
+                            <span class="operator">+</span> ((factor <span class="operator">-</span> <span class="number">1</span>) <span class="operator">*</span> scrollBar<span class="operator">-</span><span class="operator">&gt;</span>pageStep()<span class="operator">/</span><span class="number">2</span>)));
+}</pre>
+<p>Whenever we zoom in or out, we need to adjust the scroll bars in consequence. It would have been tempting to simply call</p>
+<pre class="cpp">scrollBar<span class="operator">-</span><span class="operator">&gt;</span>setValue(<span class="type">int</span>(factor <span class="operator">*</span> scrollBar<span class="operator">-</span><span class="operator">&gt;</span>value()));</pre>
+<p>but this would make the top-left corner the focal point, not the 
+center. Therefore we need to take into account the scroll bar handle's 
+size (the <a href="http://doc.qt.io/qt-5/qabstractslider.html#pageStep-prop">page step</a>).</p>
+<p>Files:</p>
+<ul>
+<li><a href="http://doc.qt.io/qt-5/qtwidgets-widgets-imageviewer-imageviewer-cpp.html">widgets/imageviewer/imageviewer.cpp</a></li>
+<li><a href="http://doc.qt.io/qt-5/qtwidgets-widgets-imageviewer-imageviewer-h.html">widgets/imageviewer/imageviewer.h</a></li>
+<li><a href="http://doc.qt.io/qt-5/qtwidgets-widgets-imageviewer-main-cpp.html">widgets/imageviewer/main.cpp</a></li>
+<li><a href="http://doc.qt.io/qt-5/qtwidgets-widgets-imageviewer-imageviewer-pro.html">widgets/imageviewer/imageviewer.pro</a></li>
+</ul>
+</div>
+<!-- @@@widgets/imageviewer -->
+   </div>
+   <p class="copy-notice">
+   <acronym title="Copyright">©</acronym> 2016 The Qt Company Ltd.
+   Documentation contributions included herein are the copyrights of
+   their respective owners.     The documentation provided herein is licensed under the terms of the    <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation    License version 1.3</a>
+ as published by the Free Software Foundation.     Qt and respective 
+logos are trademarks of The Qt Company Ltd.     in Finland and/or other 
+countries worldwide. All other trademarks are property
+   of their respective owners. </p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="footer"><footer id="footerbar">
+    <div class="footer-main" style="background:#a6a8aa;margin:0;width:100%;max-width:initial">
+    <div class="container" style="padding-top:1px">
+        <a href="https://www.qtworldsummit.com/" target="_blank">
+            <img class="srsqjuozfricojxzrkgm" src="Image%20Viewer%20Example%20%7C%20Qt%20Widgets%205.7%281%29_files/QtWS16_Banner_728x90px.gif" style="display:block;max-width:100%;height:auto;margin:0 auto">
+        </a>
+    </div>
+    </div>
+    <div class="footer-main">
+            <div class="container clearfix">
+                <nav class="footer-nav clearfix">
+                    <div class="menu-footer-menu-container"><ul id="menu-footer-menu" class="menu"><li id="menu-item-1403" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1403"><a href="http://qt.io/download/">Download</a>
+<ul class="sub-menu">
+    <li id="menu-item-11677" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-11677"><a href="http://qt.io/download/">Start for Free</a></li>
+    <li id="menu-item-15840" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-15840"><a href="http://qt.io/download-eval-for-applications-step-2/">Qt for Application Development</a></li>
+    <li id="menu-item-15841" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-15841"><a href="http://qt.io/request-eval-for-devices-step-2/">Qt for Device Creation</a></li>
+    <li id="menu-item-15838" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-15838"><a href="http://qt.io/download-open-source/">Qt Open Source</a></li>
+    <li id="menu-item-1415" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1415"><a href="http://qt.io/terms-conditions/">Terms &amp; Conditions</a></li>
+    <li id="menu-item-14184" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-14184"><a href="http://qt.io/FAQ/">Licensing FAQ</a></li>
+</ul>
+</li>
+<li id="menu-item-1355" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1355"><a href="http://qt.io/product/">Product</a>
+<ul class="sub-menu">
+    <li id="menu-item-12576" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-12576"><a href="http://qt.io/product/">Qt in Use</a></li>
+    <li id="menu-item-15848" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-15848"><a href="http://qt.io/application-development/">Qt for Application Development</a></li>
+    <li id="menu-item-1357" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1357"><a href="http://qt.io/qt-for-device-creation/">Qt for Device Creation</a></li>
+    <li id="menu-item-1356" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1356"><a href="http://qt.io/qt-features/">Commercial Features</a></li>
+    <li id="menu-item-15850" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-15850"><a href="http://qt.io/ide/">Qt Creator IDE</a></li>
+    <li id="menu-item-1359" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1359"><a href="http://qt.io/qt-quick/">Qt Quick</a></li>
+</ul>
+</li>
+<li id="menu-item-1347" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-ancestor current-menu-parent current_page_parent current_page_ancestor menu-item-has-children menu-item-1347"><a href="http://qt.io/services/">Services</a>
+<ul class="sub-menu">
+    <li id="menu-item-4028" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4028"><a href="http://qt.io/services-technology-evaluation/">Technology Evaluation</a></li>
+    <li id="menu-item-4027" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4027"><a href="http://qt.io/services-proof-of-concept/">Proof of Concept</a></li>
+    <li id="menu-item-4026" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4026"><a href="http://qt.io/services-design-implementation/">Design &amp; Implementation</a></li>
+    <li id="menu-item-4025" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4025"><a href="http://qt.io/services-productization/">Productization</a></li>
+    <li id="menu-item-15863" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-15863"><a href="http://qt.io/qt-training/">Qt Training</a></li>
+    <li id="menu-item-4779" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4779"><a href="https://qt.io/partners/">Partner Network</a></li>
+</ul>
+</li>
+<li id="menu-item-33" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-33"><a href="http://qt.io/developers/">Developers</a>
+<ul class="sub-menu">
+    <li id="menu-item-1365" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1365"><a href="http://doc.qt.io/">Documentation</a></li>
+    <li id="menu-item-1364" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1364"><a href="http://doc.qt.io/qt-5/qtexamplesandtutorials.html">Examples &amp; Tutorials</a></li>
+    <li id="menu-item-1363" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1363"><a href="http://doc.qt.io/qt-5/topics-app-development.html">Development Tools</a></li>
+    <li id="menu-item-1361" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1361"><a href="http://wiki.qt.io/">Wiki</a></li>
+    <li id="menu-item-1360" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1360"><a href="http://forum.qt.io/">Forums</a></li>
+    <li id="menu-item-15922" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-15922"><a href="http://wiki.qt.io/contribute">Contribute to Qt</a></li>
+</ul>
+</li>
+<li id="menu-item-1350" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1350"><a href="http://qt.io/about-us/">About us</a>
+<ul class="sub-menu">
+    <li id="menu-item-1353" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1353"><a href="http://qt.io/events/">Training &amp; Events</a></li>
+    <li id="menu-item-1354" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1354"><a href="http://qt.io/resource-center/">Resource Center</a></li>
+    <li id="menu-item-12285" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-12285"><a href="http://qt.io/news/">News</a></li>
+    <li id="menu-item-1349" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1349"><a href="http://qt.io/careers/">Careers</a></li>
+    <li id="menu-item-11676" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-11676"><a href="http://qt.io/locations/">Locations</a></li>
+    <li id="menu-item-15911" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-15911"><a href="http://qt.io/contact-us">Contact Us</a></li>
+</ul>
+</li>
+</ul></div></nav>
+<a href="http://qt.io/about-us/" target="_blank" class="theqtcompany"></a>
+    <div class="footer-social clearfix">
+        <div class="facebook">
+            <iframe scrolling="no" allowtransparency="true" src="//www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2Fqt&amp;width&amp;layout=button_count&amp;action=like&amp;show_faces=true&amp;share=false&amp;height=21" style="border:none;overflow:hidden;height:21px;" frameborder="0"></iframe>
+        </div>
+        <div class="twitter">
+            <iframe id="twitter-widget-0" scrolling="no" allowtransparency="true" src="Image%20Viewer%20Example%20%7C%20Qt%20Widgets%205.7%281%29_files/follow_button.htm" class="twitter-follow-button twitter-follow-button" title="Twitter Follow Button" data-twttr-rendered="true" style="width: 160px; height: 20px;" frameborder="0"></iframe>
+        </div>
+    </div>
+</div>
+</div>
+<div class="disclaimer">
+<div class="container clearfix no_discs">
+    <ul id="menu-footer-submenu" class="right clearfix">
+      <li id="menu-item-17853" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-17853"><a href="http://www.cafepress.com/theqtcompany">Qt Merchandise</a></li>
+      <li id="menu-item-1795" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1795"><a title="Sign into your account." href="https://account.qt.io/login">Sign In</a></li>
+      <li id="menu-item-10375" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-10375"><a href="mailto:feedback@theqtcompany.com?Subject=Feedback%20about%20doc.qt.io%20site">Feedback</a></li>
+      <li id="menu-item-4472" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4472"><a href="http://qt.io/about-us/">© 2016 The Qt Company</a></li>
+    </ul>
+</div>
+</div>
+</footer>
+</div>
+
+
+<table class="gstl_50 gssb_c" style="width: 588px; display: none; top: 169px; left: 632px; position: absolute;" cellpadding="0" cellspacing="0"><tbody><tr><td class="gssb_f"></td><td style="width: 100%;" class="gssb_e"></td></tr></tbody></table><div class=" fb_reset" id="fb-root"><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div></div></div><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div><iframe src="http://staticxx.facebook.com/connect/xd_arbiter/r/P5DLcu0KGJB.js?version=42#channel=fac00f63772fbc&amp;origin=http%3A%2F%2Fdoc.qt.io" style="border: medium none;" tabindex="-1" title="Facebook Cross Domain Communication Frame" aria-hidden="true" id="fb_xdm_frame_http" scrolling="no" allowfullscreen="true" allowtransparency="true" name="fb_xdm_frame_http" frameborder="0"></iframe><iframe src="Image%20Viewer%20Example%20%7C%20Qt%20Widgets%205.7%281%29_files/P5DLcu0KGJB_002.htm" style="border: medium none;" tabindex="-1" title="Facebook Cross Domain Communication Frame" aria-hidden="true" id="fb_xdm_frame_https" scrolling="no" allowfullscreen="true" allowtransparency="true" name="fb_xdm_frame_https" frameborder="0"></iframe></div></div></div><iframe style="position: absolute; visibility: hidden; display: none; width: 0px; height: 0px; padding: 0px; border: medium none;" allowfullscreen="true" allowtransparency="true" scrolling="no" id="rufous-sandbox" frameborder="0"></iframe></body></html>

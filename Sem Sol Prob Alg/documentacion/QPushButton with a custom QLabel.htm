@@ -1,0 +1,3364 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr" id="vbulletin_html" lang="en"><head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta id="e_vb_meta_bburl" name="vb_meta_bburl" content="http://www.qtcentre.org">
+<!-- base href="http://www.qtcentre.org/" --><!--[if IE]></base><![endif]-->
+<meta name="generator" content="vBulletin 4.1.9">
+<link rel="search" type="application/opensearchdescription+xml" href="http://www.qtcentre.org/qtcentre_search.xml" title="QtCentre">
+
+	<link rel="Shortcut Icon" href="http://www.qtcentre.org/favicon.ico" type="image/x-icon">
+
+
+
+
+
+
+
+
+	<script type="text/javascript" src="QPushButton%20with%20a%20custom%20QLabel_files/yuiloader-dom-event.js"></script>
+	<script type="text/javascript" src="QPushButton%20with%20a%20custom%20QLabel_files/connection-min.js"></script>
+
+<script type="text/javascript">
+<!--
+	var SESSIONURL = "";
+	var SECURITYTOKEN = "guest";
+	var IMGDIR_MISC = "images/misc";
+	var IMGDIR_BUTTON = "images/buttons";
+	var vb_disable_ajax = parseInt("0", 10);
+	var SIMPLEVERSION = "419";
+	var BBURL = "http://www.qtcentre.org";
+	var LOGGEDIN = 0 > 0 ? true : false;
+	var THIS_SCRIPT = "showthread";
+	var RELPATH = "threads/31094-QPushButton-with-a-custom-QLabel";
+	var PATHS = {
+		forum : "",
+		cms   : "",
+		blog  : ""
+	};
+	var AJAXBASEURL = "http://www.qtcentre.org/";
+// -->
+</script>
+<script type="text/javascript" src="QPushButton%20with%20a%20custom%20QLabel_files/vbulletin-core.js"></script>
+
+
+
+	<link rel="alternate" type="application/rss+xml" title="Qt Centre Forum RSS Feed" href="http://www.qtcentre.org/external.php?type=RSS2">
+	
+		<link rel="alternate" type="application/rss+xml" title="Qt Centre Forum - Newbie - RSS Feed" href="http://www.qtcentre.org/external.php?type=RSS2&amp;forumids=4">
+	
+
+
+
+	<link rel="stylesheet" type="text/css" href="QPushButton%20with%20a%20custom%20QLabel_files/main-rollup.css">
+        
+
+	<!--[if lt IE 8]>
+	<link rel="stylesheet" type="text/css" href="clientscript/vbulletin_css/style00004l/popupmenu-ie.css?d=1438647088" />
+	<link rel="stylesheet" type="text/css" href="clientscript/vbulletin_css/style00004l/vbulletin-ie.css?d=1438647088" />
+	<link rel="stylesheet" type="text/css" href="clientscript/vbulletin_css/style00004l/vbulletin-chrome-ie.css?d=1438647088" />
+	<link rel="stylesheet" type="text/css" href="clientscript/vbulletin_css/style00004l/vbulletin-formcontrols-ie.css?d=1438647088" />
+	<link rel="stylesheet" type="text/css" href="clientscript/vbulletin_css/style00004l/editor-ie.css?d=1438647088" />
+	<![endif]-->
+
+
+<script type="text/javascript" src="QPushButton%20with%20a%20custom%20QLabel_files/post_thanks.js"></script>
+
+<style type="text/css">
+.postbitlegacy .postfoot .textcontrols a.post_thanks_button, .postbit .postfoot .textcontrols a.post_thanks_button  {
+	background: url(images/buttons/post_thanks.png) no-repeat transparent left;
+	padding-left: 20px;
+}
+.postbitlegacy .postfoot .textcontrols a.post_thanks_button:hover, .postbit .postfoot .textcontrols a.post_thanks_button:hover  {
+	background: url(images/buttons/post_thanks-hover.png) no-repeat transparent left;
+</style>
+ 
+	<meta name="keywords" content="helloworld, qlabel, qpushbutton, include, button, label, qpushbuttonnull, qt,button, char[], qlabelhello, aargc, qapplication, qobjectconnectbutton, button-show, label-setalignmentqtaligncenter|qtalignvcenter, label-show, return, a.exec, program, slotquit, button-setwindowtitlehelloworld, signalclicked, defined, custom, setting, child, appearance, works, expected, mainint">
+	<meta name="description" content="I am an absolute newbie. I am trying to test a simple application that has a pushbutton with colourful label and when I press that button, the application exits. But, its not working as expected. 
+ 
+I am conceptually wrong somewhere.. Pls help.. 
+ 
+#include &lt;QtGui/QApplication&gt; 
+#include &lt;QLabel&gt; 
+#include &lt;QPushButton&gt; 
+ 
+int main(int argc, char *argv) 
+{">
+
+	<title> QPushButton with a custom QLabel</title>
+	<link rel="canonical" href="http://www.qtcentre.org/threads/31094-QPushButton-with-a-custom-QLabel">
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+	
+		<link rel="stylesheet" type="text/css" href="QPushButton%20with%20a%20custom%20QLabel_files/showthread-rollup.css">
+	
+	<!--[if lt IE 8]><link rel="stylesheet" type="text/css" href="clientscript/vbulletin_css/style00004l/toolsmenu-ie.css?d=1438647088" />
+	<link rel="stylesheet" type="text/css" href="clientscript/vbulletin_css/style00004l/postlist-ie.css?d=1438647088" />
+	<link rel="stylesheet" type="text/css" href="clientscript/vbulletin_css/style00004l/showthread-ie.css?d=1438647088" />
+	<link rel="stylesheet" type="text/css" href="clientscript/vbulletin_css/style00004l/postbit-ie.css?d=1438647088" />
+	<link rel="stylesheet" type="text/css" href="clientscript/vbulletin_css/style00004l/poll-ie.css?d=1438647088" /><![endif]-->
+<link rel="stylesheet" type="text/css" href="QPushButton%20with%20a%20custom%20QLabel_files/additional.css">
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-12318426-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(ga);
+  })();
+</script><script src="QPushButton%20with%20a%20custom%20QLabel_files/ga.js" async="" type="text/javascript"></script>
+</head>
+
+<body>
+
+<div class="above_body"> <!-- closing tag is in template navbar -->
+<a href="http://www.qtcentre.org/biteme/"></a>
+<div id="header" class="floatcontainer doc_header">
+	<div><a name="top" href="http://www.qtcentre.org/forum.php" class="logo-image"><img title="Qt Centre Forum" src="QPushButton%20with%20a%20custom%20QLabel_files/QtCentre.png" alt="Qt Centre Forum"></a></div>
+	<div id="toplinks" class="toplinks">
+		
+			<ul class="nouser">
+			
+				<li><a href="http://www.qtcentre.org/register.php" rel="nofollow">Register</a></li>
+			
+				<li><a rel="help" href="http://www.qtcentre.org/faq.php">Help</a></li>
+				<li>
+			<script type="text/javascript" src="QPushButton%20with%20a%20custom%20QLabel_files/vbulletin_md5.js"></script>
+			<form id="navbar_loginform" action="login.php?do=login" method="post" onsubmit="md5hash(vb_login_password, vb_login_md5password, vb_login_md5password_utf, 0)">
+				<fieldset id="logindetails" class="logindetails">
+					<div>
+						<div>
+					<input class="textbox default-value" name="vb_login_username" id="navbar_username" size="10" accesskey="u" tabindex="101" value="User Name" type="text">
+					<input style="display: none;" class="textbox" tabindex="102" name="vb_login_password" id="navbar_password" size="10" type="password">
+					<input class="textbox default-value" tabindex="102" name="vb_login_password_hint" id="navbar_password_hint" size="10" value="Password" style="display: inline;" type="text">
+					<input class="loginbutton" tabindex="104" value="Log in" title="Enter your username and password in the boxes provided to login, or click the 'register' button to create a profile for yourself." accesskey="s" type="submit">
+						</div>
+					</div>
+				</fieldset>
+				<div id="remember" class="remember">
+					<label for="cb_cookieuser_navbar"><input name="cookieuser" value="1" id="cb_cookieuser_navbar" class="cb_cookieuser_navbar" accesskey="c" tabindex="103" type="checkbox"> Remember Me?</label>
+				</div>
+
+				<input name="s" value="" type="hidden">
+				<input name="securitytoken" value="guest" type="hidden">
+				<input name="do" value="login" type="hidden">
+				<input name="vb_login_md5password" type="hidden">
+				<input name="vb_login_md5password_utf" type="hidden">
+			</form>
+			<script type="text/javascript">
+			YAHOO.util.Dom.setStyle('navbar_password_hint', "display", "inline");
+			YAHOO.util.Dom.setStyle('navbar_password', "display", "none");
+			vB_XHTML_Ready.subscribe(function()
+			{
+			//
+				YAHOO.util.Event.on('navbar_username', "focus", navbar_username_focus);
+				YAHOO.util.Event.on('navbar_username', "blur", navbar_username_blur);
+				YAHOO.util.Event.on('navbar_password_hint', "focus", navbar_password_hint);
+				YAHOO.util.Event.on('navbar_password', "blur", navbar_password);
+			});
+			
+			function navbar_username_focus(e)
+			{
+			//
+				var textbox = YAHOO.util.Event.getTarget(e);
+				if (textbox.value == 'User Name')
+				{
+				//
+					textbox.value='';
+					textbox.style.color='#303030';
+				}
+			}
+
+			function navbar_username_blur(e)
+			{
+			//
+				var textbox = YAHOO.util.Event.getTarget(e);
+				if (textbox.value == '')
+				{
+				//
+					textbox.value='User Name';
+					textbox.style.color='#828282';
+				}
+			}
+			
+			function navbar_password_hint(e)
+			{
+			//
+				var textbox = YAHOO.util.Event.getTarget(e);
+				
+				YAHOO.util.Dom.setStyle('navbar_password_hint', "display", "none");
+				YAHOO.util.Dom.setStyle('navbar_password', "display", "inline");
+				YAHOO.util.Dom.get('navbar_password').focus();
+			}
+
+			function navbar_password(e)
+			{
+			//
+				var textbox = YAHOO.util.Event.getTarget(e);
+				
+				if (textbox.value == '')
+				{
+					YAHOO.util.Dom.setStyle('navbar_password_hint', "display", "inline");
+					YAHOO.util.Dom.setStyle('navbar_password', "display", "none");
+				}
+			}
+			</script>
+				</li>
+				
+			</ul>
+		
+	</div>
+	<div class="ad_global_header">
+		 
+		 
+	</div>
+	<hr>
+</div>
+<div id="navbar" class="navbar">
+	<ul id="navtabs" class="navtabs floatcontainer">
+		
+	<li>
+	
+		<a class="navtab" href="http://www.qtcentre.org/content.php">Home</a>
+	
+	</li>
+
+		
+			<li class="selected"><a class="navtab" href="http://www.qtcentre.org/forum.php">Forum</a>
+				<ul class="floatcontainer">
+					
+					
+						
+						<li><a href="http://www.qtcentre.org/search.php?do=getdaily&amp;contenttype=vBForum_Post">Today's Posts</a></li>
+						
+					
+					
+					
+					
+					<li><a rel="help" href="http://www.qtcentre.org/faq.php" accesskey="5">FAQ</a></li>
+					
+					
+						<li><a href="http://www.qtcentre.org/calendar.php">Calendar</a></li>
+					
+					
+					
+					
+					
+					<li id="yui-gen0" class="popupmenu">
+						<a id="yui-gen2" href="javascript://" class="popupctrl">Forum Actions</a>
+						<ul id="yui-gen1" class="popupbody">
+							<li>
+								<a href="http://www.qtcentre.org/forumdisplay.php?do=markread&amp;markreadhash=guest">Mark Forums Read</a>
+							</li>
+                                                        
+						</ul>
+					</li>
+					
+					<li id="yui-gen3" class="popupmenu">
+						<a id="yui-gen5" href="javascript://" class="popupctrl" accesskey="3">Quick Links</a>
+						<ul id="yui-gen4" class="popupbody">
+							
+							
+							<li><a href="http://www.qtcentre.org/showgroups.php" rel="nofollow">
+								
+									View Site Leaders
+								
+							</a></li>
+							
+							
+							
+							
+							
+							
+						</ul>
+					</li>
+					
+				</ul>
+
+			</li>
+		
+		
+	<li><a class="navtab" href="http://www.qtcentre.org/doc.php">Docs</a></li>
+
+
+ <li><a class="navtab" href="http://www.qtcentre.org/content.php?2">Contest</a></li>
+
+
+	<li><a class="navtab" href="http://www.qtcentre.org/faq">FAQ</a></li>
+ 
+	<li><a class="navtab" href="http://www.qtcentre.org/blog.php">Blogs</a></li>
+
+
+<li><a class="navtab" href="http://www.qtcentre.org/local_links.php">Links</a></li>
+
+
+		
+			<li><a class="navtab" href="http://www.qtcentre.org/search.php?do=getdaily&amp;contenttype=vBForum_Post" accesskey="2">What's New?</a></li>
+		
+		
+	</ul>
+
+	
+	<div id="globalsearch" class="globalsearch">
+		<form action="search.php?do=process" method="post" id="navbar_search" class="navbar_search">
+			
+			<input name="securitytoken" value="guest" type="hidden">
+			<input name="do" value="process" type="hidden">
+			<span class="textboxcontainer"><span><input name="query" class="textbox" tabindex="99" type="text"></span></span>
+			<span class="buttoncontainer"><span><input class="searchbutton" src="QPushButton%20with%20a%20custom%20QLabel_files/search.png" name="submit" onclick="document.getElementById('navbar_search').submit;" tabindex="100" type="image"></span></span>
+		</form>
+		<ul class="navbar_advanced_search">
+			<li><a href="http://www.qtcentre.org/search.php" accesskey="4">Advanced Search</a></li>
+		</ul>
+	</div>
+	
+</div>
+</div><!-- closing div for above_body -->
+
+<div class="body_wrapper">
+<div id="breadcrumb" class="breadcrumb">
+	<ul class="floatcontainer">
+		<li class="navbithome"><a href="http://www.qtcentre.org/index.php" accesskey="1"><img title="Home" src="QPushButton%20with%20a%20custom%20QLabel_files/navbit-home.png" alt="Home"></a></li>
+		
+	<li class="navbit"><a href="http://www.qtcentre.org/forum.php">Forum</a></li>
+
+	<li class="navbit"><a href="http://www.qtcentre.org/forums/1-Qt">Qt</a></li>
+
+	<li class="navbit"><a href="http://www.qtcentre.org/forums/4-Newbie">Newbie</a></li>
+
+		
+	<li class="navbit lastnavbit"><span> QPushButton with a custom QLabel</span></li>
+
+	</ul>
+	<hr>
+</div>
+
+ 
+ 
+
+
+	<form action="profile.php?do=dismissnotice" method="post" id="notices" class="notices">
+		<input name="do" value="dismissnotice" type="hidden">
+		<input name="s" value="" type="hidden">
+		<input name="securitytoken" value="guest" type="hidden">
+		<input id="dismiss_notice_hidden" name="dismiss_noticeid" value="" type="hidden">
+		<input name="url" value="" type="hidden">
+		<ol>
+			<li class="restore" id="navbar_notice_6">
+	
+	If this is your first visit, be sure to
+		check out the <a href="http://www.qtcentre.org/faq.php?" target="_blank"><b>FAQ</b></a> by clicking the
+		link above. You may have to <a href="http://www.qtcentre.org/register.php?" target="_blank"><b>register</b></a>
+		before you can post: click the register link above to proceed. To start viewing messages,
+		select the forum that you want to visit from the selection below.
+</li>
+		</ol>
+	</form>
+
+
+
+
+	<div id="above_postlist" class="above_postlist">
+		
+			<a href="http://www.qtcentre.org/newreply.php?p=280713&amp;noquote=1" class="newcontent_textcontrol" id="newreplylink_top"><span>+</span> Reply to Thread</a>
+			<img style="display:none" id="progress_newreplylink_top" src="QPushButton%20with%20a%20custom%20QLabel_files/progress.gif" alt="">
+		
+		<div id="pagination_top" class="pagination_top">
+		
+			<div id="postpagestats_above" class="postpagestats">
+				Results 1 to 10 of 10
+			</div>
+		</div>
+	</div>
+	<div id="pagetitle" class="pagetitle">
+		<h1>
+			Thread: <span class="threadtitle"><a href="http://www.qtcentre.org/threads/31094-QPushButton-with-a-custom-QLabel" title="Reload this Page">QPushButton with a custom QLabel</a></span>
+		</h1>
+		
+	</div>
+	<div id="thread_controls" class="thread_controls toolsmenu">
+		<div>
+		<ul id="postlist_popups" class="postlist_popups popupgroup">
+			
+			
+			<li class="popupmenu" id="threadtools">
+				<h6><a id="yui-gen7" class="popupctrl" href="javascript://">Thread Tools</a></h6>
+				<ul id="yui-gen6" class="popupbody">
+					<li><a href="http://www.qtcentre.org/printthread.php?t=31094&amp;pp=20&amp;page=1" accesskey="3" rel="nofollow">Show Printable Version</a></li>
+					
+					<li>
+						
+							<a href="http://www.qtcentre.org/subscription.php?do=addsubscription&amp;t=31094" rel="nofollow">Subscribe to this Thread…</a>
+						
+					</li>
+					
+				</ul>
+			</li>
+
+			
+
+			
+				<li class="popupmenu searchthread menusearch" id="searchthread">
+					<h6><a id="yui-gen9" class="popupctrl" href="javascript://">Search Thread</a></h6>
+					<form action="search.php" method="post">
+						<ul id="yui-gen8" class="popupbody">
+							<li>
+								<input name="query" class="searchbox" value="Search..." tabindex="13" type="text">
+								<input class="button" value="Search" tabindex="14" type="submit">
+							</li>
+							<li class="formsubmit">
+								<div class="submitoptions">&nbsp;</div>
+								<div class="advancedsearchlink"><a href="http://www.qtcentre.org/search.php?search_type=1&amp;searchthreadid=31094&amp;contenttype=vBForum_Post">Advanced Search</a></div>
+							</li>
+						</ul>
+						<input name="s" value="" type="hidden">
+						<input name="securitytoken" value="guest" type="hidden">
+						<input name="do" value="process" type="hidden">
+						<input name="searchthreadid" value="31094" type="hidden">
+						<input name="search_type" value="1" type="hidden">
+						<input name="contenttype" value="vBForum_Post" type="hidden">
+					</form>
+				</li>
+			
+
+			
+
+			
+				<li class="popupmenu" id="displaymodes">
+					<h6><a id="yui-gen11" class="popupctrl" href="javascript://">Display</a></h6>
+					<ul id="yui-gen10" class="popupbody">
+						<li><label>Linear Mode</label></li>
+						<li><a href="http://www.qtcentre.org/threads/31094-QPushButton-with-a-custom-QLabel?mode=hybrid"> Switch to Hybrid Mode</a></li>
+						<li><a href="http://www.qtcentre.org/threads/31094-QPushButton-with-a-custom-QLabel?p=145126&amp;mode=threaded#post145126"> Switch to Threaded Mode</a></li>
+					</ul>
+				</li>
+			
+
+			
+			</ul>
+		</div>
+	</div>
+
+<div id="postlist" class="postlist restrain">
+	
+
+	
+		<ol id="posts" class="posts" start="1">
+			
+<li class="postbit postbitim postcontainer old" id="post_145126">
+	<div class="postdetails_noavatar">
+		<div class="posthead">
+                        
+                                <span class="postdate old">
+                                        
+                                                <span class="date">27th May 2010,&nbsp;<span class="time">12:02</span></span>
+                                        
+                                </span>
+                                <span class="nodecontrols">
+                                        
+                                                <a name="post145126" href="http://www.qtcentre.org/threads/31094-QPushButton-with-a-custom-QLabel?p=145126#post145126" class="postcounter">#1</a><a id="postcount145126" name="1"></a>
+                                        
+                                        
+                                        
+                                </span>
+                        
+		</div>
+
+		<div class="userinfo_noavatar">
+			<div class="contact">
+				
+				<div class="username_container">
+					
+						<div id="yui-gen12" class="popupmenu memberaction">
+	<a id="yui-gen14" class="username offline popupctrl" href="http://www.qtcentre.org/members/13844-shadyabhi" title="shadyabhi is offline"><strong>shadyabhi</strong></a>
+	<ul id="yui-gen13" class="popupbody memberaction_body">
+		<li class="left">
+			<img src="QPushButton%20with%20a%20custom%20QLabel_files/profile.png" alt="">
+			<a href="http://www.qtcentre.org/members/13844-shadyabhi">
+				View Profile
+			</a>
+		</li>
+		
+		<li class="right">
+			<img src="QPushButton%20with%20a%20custom%20QLabel_files/forum.png" alt="">
+			<a href="http://www.qtcentre.org/search.php?do=finduser&amp;userid=13844&amp;contenttype=vBForum_Post&amp;showposts=1" rel="nofollow">
+				View Forum Posts
+			</a>
+		</li>
+		
+		
+		
+		
+		<li class="right">
+			<img src="QPushButton%20with%20a%20custom%20QLabel_files/blog.png" alt="">
+			<a href="http://www.qtcentre.org/blog.php?u=13844" rel="nofollow">
+				View Blog Entries
+			</a>
+		</li>
+		
+		
+		
+		
+		
+		<li class="right">
+			<img src="QPushButton%20with%20a%20custom%20QLabel_files/article.png" alt="">
+			<a href="http://www.qtcentre.org/list.php/author/13844-shadyabhi" rel="nofollow">
+				View Articles
+			</a>
+		</li>
+		
+
+		
+
+		
+		
+	</ul>
+</div>
+
+						<img title="shadyabhi is offline" class="inlineimg onlinestatus" src="QPushButton%20with%20a%20custom%20QLabel_files/user-offline.png" alt="shadyabhi is offline" border="0">
+
+					
+					<span class="usertitle">
+						Beginner
+					</span>
+					
+
+                                        
+					
+						<span class="postbit_reputation" id="repdisplay_145126_13844" title="shadyabhi is on a distinguished road">
+							
+								<img class="repimg" src="QPushButton%20with%20a%20custom%20QLabel_files/reputation_pos.png" alt="">
+							
+						</span>
+					
+					
+						<div class="imlinks">
+							    
+						</div>
+					
+				</div>
+<div class="username_container" style="margin-left: 5em;">
+ 
+</div>
+			</div>
+			
+				<div class="userinfo_extra">
+					<dl class="userstats">
+						<dt>Join Date</dt> <dd>Sep 2009</dd>
+						
+						
+						<dt>Posts</dt> <dd>8</dd>	
+						
+    
+    
+
+  <dt>Qt products</dt>
+  <dd>
+    
+    
+      <img style="height:12px;" src="QPushButton%20with%20a%20custom%20QLabel_files/qt4.png" title="Qt4" alt="Qt4">
+    
+    
+    
+    
+    
+    
+
+  </dd>
+
+  <dt>Platforms</dt>
+  <dd>
+    
+    
+      <img style="height:12px; margin-left: 2px;" src="QPushButton%20with%20a%20custom%20QLabel_files/x11.png" title="Unix/X11" alt="Unix/X11">
+    
+    
+    
+    
+
+    
+
+
+  </dd>
+ 
+					</dl>
+					
+					
+				</div>
+			
+		</div>
+	</div>
+
+	<div class="postbody">
+		
+		<div class="postrow">
+		
+		<h2 class="posttitle icon">
+			<img title="Default" src="QPushButton%20with%20a%20custom%20QLabel_files/icon1.png" alt="Default"> QPushButton with a custom QLabel
+		</h2>
+		
+				
+					
+					
+				
+				
+		<div class="content">
+			<div id="post_message_145126">
+				<blockquote class="postcontent restore">
+					I am an absolute newbie. I am trying to test a simple application 
+that has a pushbutton with colourful label and when I press that button,
+ the application exits. But, its not working as expected.<br>
+<br>
+I am conceptually wrong somewhere.. Pls help..<br>
+<br>
+<div class="bbcode_container">
+	<div class="bbcode_description">Qt Code:
+            <div style="width: 11em; float:right; text-align: right; font-size: x-small;">
+              <a onclick="document.getElementById('bea4164e03bbe165d2daf76893085ffe_plain').style.display=document.getElementById('bea4164e03bbe165d2daf76893085ffe_plain').style.display=='none' ? '' : 'none';document.getElementById('bea4164e03bbe165d2daf76893085ffe_pretty').style.display=document.getElementById('bea4164e03bbe165d2daf76893085ffe_pretty').style.display=='none' ? '' : 'none'">Switch view</a>
+            </div>
+        </div>
+	<pre class="bbcode_code" id="bea4164e03bbe165d2daf76893085ffe_pretty"><pre class="qt" style="font-family:monospace;"><ol><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;"><span style="color: #339900;">#include &lt;QtGui/QApplication&gt;</span></div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;"><span style="color: #339900;">#include &lt;QLabel&gt;</span></div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;"><span style="color: #339900;">#include &lt;QPushButton&gt;</span></div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">&nbsp;</div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;"><span style="color: #0000ff;">int</span> main<span style="color: #000000;">(</span><span style="color: #0000ff;">int</span> argc, <span style="color: #0000ff;">char</span> <span style="color: #000000;">*</span>argv<span style="color: #000000;">[</span><span style="color: #000000;">]</span><span style="color: #000000;">)</span></div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;"><span style="color: #000000;">{</span></div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">    <a href="http://qt-project.org/doc/qt-4.8/qapplication.html"><span style="">QApplication</span></a> a<span style="color: #000000;">(</span>argc, argv<span style="color: #000000;">)</span>;</div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">    <a href="http://qt-project.org/doc/qt-4.8/qpushbutton.html"><span style="">QPushButton</span></a> <span style="color: #000000;">*</span>button <span style="color: #000000;">=</span> <span style="color: #009900;">new</span> <a href="http://qt-project.org/doc/qt-4.8/qpushbutton.html"><span style="">QPushButton</span></a><span style="color: #000000;">(</span><span style="color: #0000ff;">NULL</span><span style="color: #000000;">)</span>;</div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">    <a href="http://qt-project.org/doc/qt-4.8/qlabel.html"><span style="">QLabel</span></a> <span style="color: #000000;">*</span>label <span style="color: #000000;">=</span> <span style="color: #009900;">new</span> <a href="http://qt-project.org/doc/qt-4.8/qlabel.html"><span style="">QLabel</span></a><span style="color: #000000;">(</span><span style="color: #666666;">"&lt;h2&gt;&lt;i&gt;Hello&lt;/i&gt; "</span><span style="color: #666666;">"&lt;font color=red&gt;Qt!&lt;/font&gt;&lt;/h2&gt;"</span>,button,Qt<span style="color: #000000;">::</span><span style="color: #009900;">Window</span><span style="color: #000000;">)</span>;</div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">    <a href="http://qt-project.org/doc/qt-4.8/qobject.html"><span style="">QObject</span></a><span style="color: #000000;">::</span><span style="color: #0000ff;">connect</span><span style="color: #000000;">(</span>button, <span style="color: #0000ff;">SIGNAL</span><span style="color: #000000;">(</span>clicked<span style="color: #000000;">(</span><span style="color: #000000;">)</span><span style="color: #000000;">)</span>,</div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">    <span style="color: #000000;">&amp;</span>a, <span style="color: #0000ff;">SLOT</span><span style="color: #000000;">(</span>quit<span style="color: #000000;">(</span><span style="color: #000000;">)</span><span style="color: #000000;">)</span><span style="color: #000000;">)</span>;</div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">&nbsp;</div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">    label<span style="color: #000000;">-</span>&gt;setAlignment<span style="color: #000000;">(</span>Qt<span style="color: #000000;">::</span><span style="color: #009900;">AlignCenter</span>|Qt<span style="color: #000000;">::</span><span style="color: #009900;">AlignVCenter</span><span style="color: #000000;">)</span>;</div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">    label<span style="color: #000000;">-</span>&gt;setWindowTitle<span style="color: #000000;">(</span><span style="color: #666666;">"HelloWorld Test Program"</span><span style="color: #000000;">)</span>;</div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">    label<span style="color: #000000;">-</span>&gt;show<span style="color: #000000;">(</span><span style="color: #000000;">)</span>;</div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">    <span style="color: #0000ff;">return</span> a.<span style="color: #009900;">exec</span><span style="color: #000000;">(</span><span style="color: #000000;">)</span>;</div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;"><span style="color: #000000;">}</span></div></li></ol></pre></pre>
+        <pre class="bbcode_code" style="display:none;" id="bea4164e03bbe165d2daf76893085ffe_plain">#include
+ &lt;QtGui/QApplication&gt;
+#include &lt;QLabel&gt;
+#include &lt;QPushButton&gt;
+
+int main(int argc, char *argv[])
+{
+    QApplication a(argc, argv);
+    QPushButton *button = new QPushButton(NULL);
+    QLabel *label = new QLabel("&lt;h2&gt;&lt;i&gt;Hello&lt;/i&gt; 
+""&lt;font color=red&gt;Qt!&lt;/font&gt;&lt;/h2&gt;",button,Qt::Window);
+    QObject::connect(button, SIGNAL(clicked()),
+    &amp;a, SLOT(quit()));
+    
+    label-&gt;setAlignment(Qt::AlignCenter|Qt::AlignVCenter);
+    label-&gt;setWindowTitle("HelloWorld Test Program");
+    label-&gt;show();
+    return a.exec();
+}</pre>
+<div style="font-size:x-small; text-align:right; color: #aaa; "><em>To copy to clipboard, switch view to plain text mode&nbsp;</em></div>
+</div> 
+				</blockquote>
+			</div>
+
+			
+
+
+		</div>
+			
+				
+			
+				 
+			
+			
+			
+		</div>
+	</div>
+	<div class="postfoot">
+		<div class="textcontrols floatcontainer">
+			<span class="postcontrols">
+				<img style="display:none" id="progress_145126" src="QPushButton%20with%20a%20custom%20QLabel_files/progress.gif" alt="">
+				
+				
+				
+					<a id="qrwq_145126" class="newreply" href="http://www.qtcentre.org/newreply.php?do=newreply&amp;p=145126" rel="nofollow" title="Reply With Quote"><img title="Reply With Quote" id="quoteimg_145126" src="QPushButton%20with%20a%20custom%20QLabel_files/clear.gif" alt="Reply With Quote">  Reply With Quote</a> 
+				
+				
+				
+			</span>
+			<span class="postlinking">
+				
+					
+				
+				
+
+				 
+				
+
+					
+
+					
+					 
+
+					
+					
+					
+					
+					
+			</span>
+		</div>
+	</div>
+	<hr>
+</li>
+<li class="postbit postbitim" id="post_thanks_box_145126" style="display:none">
+	
+</li> 
+<li class="postbit postbitim postcontainer old" id="post_145129">
+	<div class="postdetails_noavatar">
+		<div class="posthead">
+                        
+                                <span class="postdate old">
+                                        
+                                                <span class="date">27th May 2010,&nbsp;<span class="time">12:20</span></span>
+                                        
+                                </span>
+                                <span class="nodecontrols">
+                                        
+                                                <a name="post145129" href="http://www.qtcentre.org/threads/31094-QPushButton-with-a-custom-QLabel?p=145129#post145129" class="postcounter">#2</a><a id="postcount145129" name="2"></a>
+                                        
+                                        
+                                        
+                                </span>
+                        
+		</div>
+
+		<div class="userinfo">
+			<div class="contact">
+				
+					<a class="postuseravatarlink" href="http://www.qtcentre.org/members/13279-kavinsiva" title="kavinsiva is offline">
+						
+							<img title="kavinsiva's Avatar" src="QPushButton%20with%20a%20custom%20QLabel_files/image.jpe" alt="kavinsiva's Avatar">
+						
+					</a>
+				
+				<div class="username_container">
+					
+						<div id="yui-gen15" class="popupmenu memberaction">
+	<a id="yui-gen17" class="username offline popupctrl" href="http://www.qtcentre.org/members/13279-kavinsiva" title="kavinsiva is offline"><strong>kavinsiva</strong></a>
+	<ul id="yui-gen16" class="popupbody memberaction_body">
+		<li class="left">
+			<img src="QPushButton%20with%20a%20custom%20QLabel_files/profile.png" alt="">
+			<a href="http://www.qtcentre.org/members/13279-kavinsiva">
+				View Profile
+			</a>
+		</li>
+		
+		<li class="right">
+			<img src="QPushButton%20with%20a%20custom%20QLabel_files/forum.png" alt="">
+			<a href="http://www.qtcentre.org/search.php?do=finduser&amp;userid=13279&amp;contenttype=vBForum_Post&amp;showposts=1" rel="nofollow">
+				View Forum Posts
+			</a>
+		</li>
+		
+		
+		
+		
+		<li class="right">
+			<img src="QPushButton%20with%20a%20custom%20QLabel_files/blog.png" alt="">
+			<a href="http://www.qtcentre.org/blog.php?u=13279" rel="nofollow">
+				View Blog Entries
+			</a>
+		</li>
+		
+		
+		
+		
+		
+		<li class="right">
+			<img src="QPushButton%20with%20a%20custom%20QLabel_files/article.png" alt="">
+			<a href="http://www.qtcentre.org/list.php/author/13279-kavinsiva" rel="nofollow">
+				View Articles
+			</a>
+		</li>
+		
+
+		
+
+		
+		
+	</ul>
+</div>
+
+						<img title="kavinsiva is offline" class="inlineimg onlinestatus" src="QPushButton%20with%20a%20custom%20QLabel_files/user-offline.png" alt="kavinsiva is offline" border="0">
+
+					
+					<span class="usertitle">
+						Novice
+					</span>
+					
+
+                                        
+					
+						<span class="postbit_reputation" id="repdisplay_145129_13279" title="kavinsiva is on a distinguished road">
+							
+								<img class="repimg" src="QPushButton%20with%20a%20custom%20QLabel_files/reputation_pos.png" alt="">
+							
+						</span>
+					
+					
+						<div class="imlinks">
+							    
+						</div>
+					
+				</div>
+<div class="username_container" style="margin-left: 5em;">
+ 
+</div>
+			</div>
+			
+				<div class="userinfo_extra">
+					<dl class="userstats">
+						<dt>Join Date</dt> <dd>Aug 2009</dd>
+						
+						
+						<dt>Posts</dt> <dd>47</dd>	
+						
+    
+	<dt>Thanks</dt> <dd>6</dd>
+    
+    
+	
+		<dd style="white-space:nowrap; display:inline; float: right;">Thanked 1 Time in 1 Post</dd>
+	
+    
+
+  <dt>Qt products</dt>
+  <dd>
+    
+    
+      <img style="height:12px;" src="QPushButton%20with%20a%20custom%20QLabel_files/qt4.png" title="Qt4" alt="Qt4">
+    
+    
+    
+      <img style="height:12px;" src="QPushButton%20with%20a%20custom%20QLabel_files/qpe.png" title="Qt/Embedded" alt="Qt/Embedded">
+    
+    
+    
+      <img style="height:12px;" src="QPushButton%20with%20a%20custom%20QLabel_files/python.png" title="PyQt3" alt="PyQt3">
+    
+    
+      <img style="height:12px;" src="QPushButton%20with%20a%20custom%20QLabel_files/python.png" title="PyQt4" alt="PyQt4">
+    
+
+  </dd>
+
+  <dt>Platforms</dt>
+  <dd>
+    
+    
+      <img style="height:12px; margin-left: 2px;" src="QPushButton%20with%20a%20custom%20QLabel_files/x11.png" title="Unix/X11" alt="Unix/X11">
+    
+    
+    
+      <img style="height:12px; margin-left: 2px;" src="QPushButton%20with%20a%20custom%20QLabel_files/s60.png" title="Symbian S60" alt="Symbian S60">
+    
+    
+
+    
+
+
+  </dd>
+ 
+					</dl>
+					
+					
+				</div>
+			
+		</div>
+	</div>
+
+	<div class="postbody">
+		
+		<div class="postrow">
+		
+		<h2 class="posttitle icon">
+			<img title="Default" src="QPushButton%20with%20a%20custom%20QLabel_files/icon1.png" alt="Default"> Re: QPushButton with a custom QLabel
+		</h2>
+		
+				
+				
+		<div class="content">
+			<div id="post_message_145129">
+				<blockquote class="postcontent restore">
+					HI,<br>
+       use clear() instead of quit().If the slot is quit your application will terminate.
+				</blockquote>
+			</div>
+
+			
+
+
+		</div>
+			
+				
+			
+			
+				<blockquote class="signature restore"><div class="signaturecontainer">Kavin</div></blockquote>
+			
+			
+		</div>
+	</div>
+	<div class="postfoot">
+		<div class="textcontrols floatcontainer">
+			<span class="postcontrols">
+				<img style="display:none" id="progress_145129" src="QPushButton%20with%20a%20custom%20QLabel_files/progress.gif" alt="">
+				
+				
+				
+					<a id="qrwq_145129" class="newreply" href="http://www.qtcentre.org/newreply.php?do=newreply&amp;p=145129" rel="nofollow" title="Reply With Quote"><img title="Reply With Quote" id="quoteimg_145129" src="QPushButton%20with%20a%20custom%20QLabel_files/clear.gif" alt="Reply With Quote">  Reply With Quote</a> 
+				
+				
+				
+			</span>
+			<span class="postlinking">
+				
+					
+				
+				
+
+				 
+				
+
+					
+
+					
+					 
+
+					
+					
+					
+					
+					
+			</span>
+		</div>
+	</div>
+	<hr>
+</li>
+<li class="postbit postbitim" id="post_thanks_box_145129" style="display:none">
+	
+</li> 
+<li class="postbit postbitim postcontainer old" id="post_145130">
+	<div class="postdetails_noavatar">
+		<div class="posthead">
+                        
+                                <span class="postdate old">
+                                        
+                                                <span class="date">27th May 2010,&nbsp;<span class="time">12:24</span></span>
+                                        
+                                </span>
+                                <span class="nodecontrols">
+                                        
+                                                <a name="post145130" href="http://www.qtcentre.org/threads/31094-QPushButton-with-a-custom-QLabel?p=145130#post145130" class="postcounter">#3</a><a id="postcount145130" name="3"></a>
+                                        
+                                        
+                                        
+                                </span>
+                        
+		</div>
+
+		<div class="userinfo_noavatar">
+			<div class="contact">
+				
+				<div class="username_container">
+					
+						<div id="yui-gen18" class="popupmenu memberaction">
+	<a id="yui-gen20" class="username offline popupctrl" href="http://www.qtcentre.org/members/13844-shadyabhi" title="shadyabhi is offline"><strong>shadyabhi</strong></a>
+	<ul id="yui-gen19" class="popupbody memberaction_body">
+		<li class="left">
+			<img src="QPushButton%20with%20a%20custom%20QLabel_files/profile.png" alt="">
+			<a href="http://www.qtcentre.org/members/13844-shadyabhi">
+				View Profile
+			</a>
+		</li>
+		
+		<li class="right">
+			<img src="QPushButton%20with%20a%20custom%20QLabel_files/forum.png" alt="">
+			<a href="http://www.qtcentre.org/search.php?do=finduser&amp;userid=13844&amp;contenttype=vBForum_Post&amp;showposts=1" rel="nofollow">
+				View Forum Posts
+			</a>
+		</li>
+		
+		
+		
+		
+		<li class="right">
+			<img src="QPushButton%20with%20a%20custom%20QLabel_files/blog.png" alt="">
+			<a href="http://www.qtcentre.org/blog.php?u=13844" rel="nofollow">
+				View Blog Entries
+			</a>
+		</li>
+		
+		
+		
+		
+		
+		<li class="right">
+			<img src="QPushButton%20with%20a%20custom%20QLabel_files/article.png" alt="">
+			<a href="http://www.qtcentre.org/list.php/author/13844-shadyabhi" rel="nofollow">
+				View Articles
+			</a>
+		</li>
+		
+
+		
+
+		
+		
+	</ul>
+</div>
+
+						<img title="shadyabhi is offline" class="inlineimg onlinestatus" src="QPushButton%20with%20a%20custom%20QLabel_files/user-offline.png" alt="shadyabhi is offline" border="0">
+
+					
+					<span class="usertitle">
+						Beginner
+					</span>
+					
+
+                                        
+					
+						<span class="postbit_reputation" id="repdisplay_145130_13844" title="shadyabhi is on a distinguished road">
+							
+								<img class="repimg" src="QPushButton%20with%20a%20custom%20QLabel_files/reputation_pos.png" alt="">
+							
+						</span>
+					
+					
+						<div class="imlinks">
+							    
+						</div>
+					
+				</div>
+<div class="username_container" style="margin-left: 5em;">
+ 
+</div>
+			</div>
+			
+				<div class="userinfo_extra">
+					<dl class="userstats">
+						<dt>Join Date</dt> <dd>Sep 2009</dd>
+						
+						
+						<dt>Posts</dt> <dd>8</dd>	
+						
+    
+    
+
+  <dt>Qt products</dt>
+  <dd>
+    
+    
+      <img style="height:12px;" src="QPushButton%20with%20a%20custom%20QLabel_files/qt4.png" title="Qt4" alt="Qt4">
+    
+    
+    
+    
+    
+    
+
+  </dd>
+
+  <dt>Platforms</dt>
+  <dd>
+    
+    
+      <img style="height:12px; margin-left: 2px;" src="QPushButton%20with%20a%20custom%20QLabel_files/x11.png" title="Unix/X11" alt="Unix/X11">
+    
+    
+    
+    
+
+    
+
+
+  </dd>
+ 
+					</dl>
+					
+					
+				</div>
+			
+		</div>
+	</div>
+
+	<div class="postbody">
+		
+		<div class="postrow">
+		
+		<h2 class="posttitle icon">
+			<img title="Default" src="QPushButton%20with%20a%20custom%20QLabel_files/icon1.png" alt="Default"> Re: QPushButton with a custom QLabel
+		</h2>
+		
+				
+				
+		<div class="content">
+			<div id="post_message_145130">
+				<blockquote class="postcontent restore">
+					<div class="bbcode_container">
+	<div class="bbcode_quote">
+		<div class="quote_container">
+			<div class="bbcode_quote_container"></div>
+			
+				<div class="bbcode_postedby">
+					<img title="Quote" src="QPushButton%20with%20a%20custom%20QLabel_files/quote_icon.png" alt="Quote"> Originally Posted by <strong>kavinsiva</strong>
+					<a href="http://www.qtcentre.org/showthread.php?p=145129#post145129" rel="nofollow"><img title="View Post" class="inlineimg" src="QPushButton%20with%20a%20custom%20QLabel_files/viewpost-right.png" alt="View Post"></a>
+				</div>
+				<div class="message">HI,<br>
+       use clear() instead of quit().If the slot is quit your application will terminate.</div>
+			
+		</div>
+	</div>
+</div> Thats the behavior I want. But, I am not getting the PushButton 
+which I can press and exit the application. I am just getting a label 
+which I cant press...
+				</blockquote>
+			</div>
+
+			
+
+
+		</div>
+			
+				
+			
+			
+			
+		</div>
+	</div>
+	<div class="postfoot">
+		<div class="textcontrols floatcontainer">
+			<span class="postcontrols">
+				<img style="display:none" id="progress_145130" src="QPushButton%20with%20a%20custom%20QLabel_files/progress.gif" alt="">
+				
+				
+				
+					<a id="qrwq_145130" class="newreply" href="http://www.qtcentre.org/newreply.php?do=newreply&amp;p=145130" rel="nofollow" title="Reply With Quote"><img title="Reply With Quote" id="quoteimg_145130" src="QPushButton%20with%20a%20custom%20QLabel_files/clear.gif" alt="Reply With Quote">  Reply With Quote</a> 
+				
+				
+				
+			</span>
+			<span class="postlinking">
+				
+					
+				
+				
+
+				 
+				
+
+					
+
+					
+					 
+
+					
+					
+					
+					
+					
+			</span>
+		</div>
+	</div>
+	<hr>
+</li>
+<li class="postbit postbitim" id="post_thanks_box_145130" style="display:none">
+	
+</li> 
+<li class="postbit postbitim postcontainer old" id="post_145133">
+	<div class="postdetails_noavatar">
+		<div class="posthead">
+                        
+                                <span class="postdate old">
+                                        
+                                                <span class="date">27th May 2010,&nbsp;<span class="time">12:41</span></span>
+                                        
+                                </span>
+                                <span class="nodecontrols">
+                                        
+                                                <a name="post145133" href="http://www.qtcentre.org/threads/31094-QPushButton-with-a-custom-QLabel?p=145133#post145133" class="postcounter">#4</a><a id="postcount145133" name="4"></a>
+                                        
+                                        
+                                        
+                                </span>
+                        
+		</div>
+
+		<div class="userinfo">
+			<div class="contact">
+				
+					<a class="postuseravatarlink" href="http://www.qtcentre.org/members/13279-kavinsiva" title="kavinsiva is offline">
+						
+							<img title="kavinsiva's Avatar" src="QPushButton%20with%20a%20custom%20QLabel_files/image.jpe" alt="kavinsiva's Avatar">
+						
+					</a>
+				
+				<div class="username_container">
+					
+						<div id="yui-gen21" class="popupmenu memberaction">
+	<a id="yui-gen23" class="username offline popupctrl" href="http://www.qtcentre.org/members/13279-kavinsiva" title="kavinsiva is offline"><strong>kavinsiva</strong></a>
+	<ul id="yui-gen22" class="popupbody memberaction_body">
+		<li class="left">
+			<img src="QPushButton%20with%20a%20custom%20QLabel_files/profile.png" alt="">
+			<a href="http://www.qtcentre.org/members/13279-kavinsiva">
+				View Profile
+			</a>
+		</li>
+		
+		<li class="right">
+			<img src="QPushButton%20with%20a%20custom%20QLabel_files/forum.png" alt="">
+			<a href="http://www.qtcentre.org/search.php?do=finduser&amp;userid=13279&amp;contenttype=vBForum_Post&amp;showposts=1" rel="nofollow">
+				View Forum Posts
+			</a>
+		</li>
+		
+		
+		
+		
+		<li class="right">
+			<img src="QPushButton%20with%20a%20custom%20QLabel_files/blog.png" alt="">
+			<a href="http://www.qtcentre.org/blog.php?u=13279" rel="nofollow">
+				View Blog Entries
+			</a>
+		</li>
+		
+		
+		
+		
+		
+		<li class="right">
+			<img src="QPushButton%20with%20a%20custom%20QLabel_files/article.png" alt="">
+			<a href="http://www.qtcentre.org/list.php/author/13279-kavinsiva" rel="nofollow">
+				View Articles
+			</a>
+		</li>
+		
+
+		
+
+		
+		
+	</ul>
+</div>
+
+						<img title="kavinsiva is offline" class="inlineimg onlinestatus" src="QPushButton%20with%20a%20custom%20QLabel_files/user-offline.png" alt="kavinsiva is offline" border="0">
+
+					
+					<span class="usertitle">
+						Novice
+					</span>
+					
+
+                                        
+					
+						<span class="postbit_reputation" id="repdisplay_145133_13279" title="kavinsiva is on a distinguished road">
+							
+								<img class="repimg" src="QPushButton%20with%20a%20custom%20QLabel_files/reputation_pos.png" alt="">
+							
+						</span>
+					
+					
+						<div class="imlinks">
+							    
+						</div>
+					
+				</div>
+<div class="username_container" style="margin-left: 5em;">
+ 
+</div>
+			</div>
+			
+				<div class="userinfo_extra">
+					<dl class="userstats">
+						<dt>Join Date</dt> <dd>Aug 2009</dd>
+						
+						
+						<dt>Posts</dt> <dd>47</dd>	
+						
+    
+	<dt>Thanks</dt> <dd>6</dd>
+    
+    
+	
+		<dd style="white-space:nowrap; display:inline; float: right;">Thanked 1 Time in 1 Post</dd>
+	
+    
+
+  <dt>Qt products</dt>
+  <dd>
+    
+    
+      <img style="height:12px;" src="QPushButton%20with%20a%20custom%20QLabel_files/qt4.png" title="Qt4" alt="Qt4">
+    
+    
+    
+      <img style="height:12px;" src="QPushButton%20with%20a%20custom%20QLabel_files/qpe.png" title="Qt/Embedded" alt="Qt/Embedded">
+    
+    
+    
+      <img style="height:12px;" src="QPushButton%20with%20a%20custom%20QLabel_files/python.png" title="PyQt3" alt="PyQt3">
+    
+    
+      <img style="height:12px;" src="QPushButton%20with%20a%20custom%20QLabel_files/python.png" title="PyQt4" alt="PyQt4">
+    
+
+  </dd>
+
+  <dt>Platforms</dt>
+  <dd>
+    
+    
+      <img style="height:12px; margin-left: 2px;" src="QPushButton%20with%20a%20custom%20QLabel_files/x11.png" title="Unix/X11" alt="Unix/X11">
+    
+    
+    
+      <img style="height:12px; margin-left: 2px;" src="QPushButton%20with%20a%20custom%20QLabel_files/s60.png" title="Symbian S60" alt="Symbian S60">
+    
+    
+
+    
+
+
+  </dd>
+ 
+					</dl>
+					
+					
+				</div>
+			
+		</div>
+	</div>
+
+	<div class="postbody">
+		
+		<div class="postrow">
+		
+		<h2 class="posttitle icon">
+			<img title="Default" src="QPushButton%20with%20a%20custom%20QLabel_files/icon1.png" alt="Default"> Re: QPushButton with a custom QLabel
+		</h2>
+		
+				
+				
+		<div class="content">
+			<div id="post_message_145133">
+				<blockquote class="postcontent restore">
+					Hi,<br>
+<br>
+ use Following program<br>
+<div class="bbcode_container">
+	<div class="bbcode_description">Qt Code:
+            <div style="width: 11em; float:right; text-align: right; font-size: x-small;">
+              <a onclick="document.getElementById('9a37bf237b08da3d960ac5e5aa2b3023_plain').style.display=document.getElementById('9a37bf237b08da3d960ac5e5aa2b3023_plain').style.display=='none' ? '' : 'none';document.getElementById('9a37bf237b08da3d960ac5e5aa2b3023_pretty').style.display=document.getElementById('9a37bf237b08da3d960ac5e5aa2b3023_pretty').style.display=='none' ? '' : 'none'">Switch view</a>
+            </div>
+        </div>
+	<pre class="bbcode_code" id="9a37bf237b08da3d960ac5e5aa2b3023_pretty"><pre class="qt" style="font-family:monospace;"><ol><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;"><span style="color: #339900;">#include &lt;QtGui/QApplication&gt;</span></div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;"><span style="color: #339900;">#include &lt;QLabel&gt;</span></div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;"><span style="color: #339900;">#include &lt;QPushButton&gt;</span></div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;"><span style="color: #339900;">#include&lt;QtGui&gt;</span></div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">&nbsp;</div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;"><span style="color: #0000ff;">int</span> main<span style="color: #000000;">(</span><span style="color: #0000ff;">int</span> argc, <span style="color: #0000ff;">char</span> <span style="color: #000000;">*</span>argv<span style="color: #000000;">[</span><span style="color: #000000;">]</span><span style="color: #000000;">)</span></div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;"><span style="color: #000000;">{</span></div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;"><a href="http://qt-project.org/doc/qt-4.8/qapplication.html"><span style="">QApplication</span></a> a<span style="color: #000000;">(</span>argc, argv<span style="color: #000000;">)</span>;</div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;"><a href="http://qt-project.org/doc/qt-4.8/qmainwindow.html"><span style="">QMainWindow</span></a> <span style="color: #000000;">*</span>Main<span style="color: #000000;">=</span><span style="color: #009900;">new</span> <a href="http://qt-project.org/doc/qt-4.8/qmainwindow.html"><span style="">QMainWindow</span></a>;</div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">&nbsp;</div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;"><a href="http://qt-project.org/doc/qt-4.8/qpushbutton.html"><span style="">QPushButton</span></a> <span style="color: #000000;">*</span>button <span style="color: #000000;">=</span> <span style="color: #009900;">new</span> <a href="http://qt-project.org/doc/qt-4.8/qpushbutton.html"><span style="">QPushButton</span></a><span style="color: #000000;">(</span>Main<span style="color: #000000;">)</span>;</div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;"><a href="http://qt-project.org/doc/qt-4.8/qlabel.html"><span style="">QLabel</span></a> <span style="color: #000000;">*</span>label <span style="color: #000000;">=</span> <span style="color: #009900;">new</span> <a href="http://qt-project.org/doc/qt-4.8/qlabel.html"><span style="">QLabel</span></a><span style="color: #000000;">(</span>Main<span style="color: #000000;">)</span>;</div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">label<span style="color: #000000;">-</span>&gt;setText<span style="color: #000000;">(</span><span style="color: #666666;">"&lt;h2&gt;&lt;i&gt;Hello&lt;/i&gt; "</span><span style="color: #666666;">"&lt;font color=red&gt;Qt!&lt;/font&gt;&lt;/h2&gt;"</span><span style="color: #000000;">)</span>;</div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">label<span style="color: #000000;">-</span>&gt;setVisible<span style="color: #000000;">(</span><span style="color: #0000ff;">true</span><span style="color: #000000;">)</span>;</div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">label<span style="color: #000000;">-</span>&gt;setGeometry<span style="color: #000000;">(</span><span style="color: #0000dd;">30</span>,<span style="color: #0000dd;">30</span>,<span style="color: #0000dd;">40</span>,<span style="color: #0000dd;">80</span><span style="color: #000000;">)</span>;</div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;"><a href="http://qt-project.org/doc/qt-4.8/qobject.html"><span style="">QObject</span></a><span style="color: #000000;">::</span><span style="color: #0000ff;">connect</span><span style="color: #000000;">(</span>button, <span style="color: #0000ff;">SIGNAL</span><span style="color: #000000;">(</span>clicked<span style="color: #000000;">(</span><span style="color: #000000;">)</span><span style="color: #000000;">)</span>,label, <span style="color: #0000ff;">SLOT</span><span style="color: #000000;">(</span>clear<span style="color: #000000;">(</span><span style="color: #000000;">)</span><span style="color: #000000;">)</span><span style="color: #000000;">)</span>;</div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">label<span style="color: #000000;">-</span>&gt;setAlignment<span style="color: #000000;">(</span>Qt<span style="color: #000000;">::</span><span style="color: #009900;">AlignCenter</span>|Qt<span style="color: #000000;">::</span><span style="color: #009900;">AlignVCenter</span><span style="color: #000000;">)</span>;</div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">label<span style="color: #000000;">-</span>&gt;setWindowTitle<span style="color: #000000;">(</span><span style="color: #666666;">"HelloWorld Test Program"</span><span style="color: #000000;">)</span>;</div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">Main<span style="color: #000000;">-</span>&gt;show<span style="color: #000000;">(</span><span style="color: #000000;">)</span>;</div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;"><span style="color: #0000ff;">return</span> a.<span style="color: #009900;">exec</span><span style="color: #000000;">(</span><span style="color: #000000;">)</span>;</div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;"><span style="color: #000000;">}</span></div></li></ol></pre></pre>
+        <pre class="bbcode_code" style="display:none;" id="9a37bf237b08da3d960ac5e5aa2b3023_plain">#include &lt;QtGui/QApplication&gt;
+#include &lt;QLabel&gt;
+#include &lt;QPushButton&gt;
+#include&lt;QtGui&gt;
+
+int main(int argc, char *argv[])
+{
+QApplication a(argc, argv);
+QMainWindow *Main=new QMainWindow;
+
+QPushButton *button = new QPushButton(Main);
+QLabel *label = new QLabel(Main);
+label-&gt;setText("&lt;h2&gt;&lt;i&gt;Hello&lt;/i&gt; ""&lt;font color=red&gt;Qt!&lt;/font&gt;&lt;/h2&gt;");
+label-&gt;setVisible(true);
+label-&gt;setGeometry(30,30,40,80);
+QObject::connect(button, SIGNAL(clicked()),label, SLOT(clear()));
+label-&gt;setAlignment(Qt::AlignCenter|Qt::AlignVCenter);
+label-&gt;setWindowTitle("HelloWorld Test Program");
+Main-&gt;show();
+return a.exec();
+}</pre>
+<div style="font-size:x-small; text-align:right; color: #aaa; "><em>To copy to clipboard, switch view to plain text mode&nbsp;</em></div>
+</div> 
+				</blockquote>
+			</div>
+
+			
+
+
+		</div>
+			
+				
+			
+			
+				<blockquote class="signature restore"><div class="signaturecontainer">Kavin</div></blockquote>
+			
+			
+		</div>
+	</div>
+	<div class="postfoot">
+		<div class="textcontrols floatcontainer">
+			<span class="postcontrols">
+				<img style="display:none" id="progress_145133" src="QPushButton%20with%20a%20custom%20QLabel_files/progress.gif" alt="">
+				
+				
+				
+					<a id="qrwq_145133" class="newreply" href="http://www.qtcentre.org/newreply.php?do=newreply&amp;p=145133" rel="nofollow" title="Reply With Quote"><img title="Reply With Quote" id="quoteimg_145133" src="QPushButton%20with%20a%20custom%20QLabel_files/clear.gif" alt="Reply With Quote">  Reply With Quote</a> 
+				
+				
+				
+			</span>
+			<span class="postlinking">
+				
+					
+				
+				
+
+				 
+				
+
+					
+
+					
+					 
+
+					
+					
+					
+					
+					
+			</span>
+		</div>
+	</div>
+	<hr>
+</li>
+<li class="postbit postbitim" id="post_thanks_box_145133" style="display:none">
+	
+</li> 
+<li class="postbit postbitim postcontainer old" id="post_145134">
+	<div class="postdetails_noavatar">
+		<div class="posthead">
+                        
+                                <span class="postdate old">
+                                        
+                                                <span class="date">27th May 2010,&nbsp;<span class="time">12:41</span></span>
+                                        
+                                </span>
+                                <span class="nodecontrols">
+                                        
+                                                <a name="post145134" href="http://www.qtcentre.org/threads/31094-QPushButton-with-a-custom-QLabel?p=145134#post145134" class="postcounter">#5</a><a id="postcount145134" name="5"></a>
+                                        
+                                        
+                                        
+                                </span>
+                        
+		</div>
+
+		<div class="userinfo_noavatar">
+			<div class="contact">
+				
+				<div class="username_container">
+					
+						<div id="yui-gen24" class="popupmenu memberaction">
+	<a id="yui-gen26" class="username offline popupctrl" href="http://www.qtcentre.org/members/238-tbscope" title="tbscope is offline"><strong>tbscope</strong></a>
+	<ul id="yui-gen25" class="popupbody memberaction_body">
+		<li class="left">
+			<img src="QPushButton%20with%20a%20custom%20QLabel_files/profile.png" alt="">
+			<a href="http://www.qtcentre.org/members/238-tbscope">
+				View Profile
+			</a>
+		</li>
+		
+		<li class="right">
+			<img src="QPushButton%20with%20a%20custom%20QLabel_files/forum.png" alt="">
+			<a href="http://www.qtcentre.org/search.php?do=finduser&amp;userid=238&amp;contenttype=vBForum_Post&amp;showposts=1" rel="nofollow">
+				View Forum Posts
+			</a>
+		</li>
+		
+		
+		
+		
+		<li class="right">
+			<img src="QPushButton%20with%20a%20custom%20QLabel_files/blog.png" alt="">
+			<a href="http://www.qtcentre.org/blog.php?u=238" rel="nofollow">
+				View Blog Entries
+			</a>
+		</li>
+		
+		
+		
+		
+		
+		<li class="right">
+			<img src="QPushButton%20with%20a%20custom%20QLabel_files/article.png" alt="">
+			<a href="http://www.qtcentre.org/list.php/author/238-tbscope" rel="nofollow">
+				View Articles
+			</a>
+		</li>
+		
+
+		
+
+		
+		
+	</ul>
+</div>
+
+						<img title="tbscope is offline" class="inlineimg onlinestatus" src="QPushButton%20with%20a%20custom%20QLabel_files/user-offline.png" alt="tbscope is offline" border="0">
+
+					
+					<span class="usertitle">
+						Expert
+					</span>
+					
+
+                                        
+					
+						<span class="postbit_reputation" id="repdisplay_145134_238" title="tbscope is a glorious beacon of light">
+							
+								<img class="repimg" src="QPushButton%20with%20a%20custom%20QLabel_files/reputation_pos.png" alt="">
+							
+								<img class="repimg" src="QPushButton%20with%20a%20custom%20QLabel_files/reputation_pos.png" alt="">
+							
+								<img class="repimg" src="QPushButton%20with%20a%20custom%20QLabel_files/reputation_pos.png" alt="">
+							
+								<img class="repimg" src="QPushButton%20with%20a%20custom%20QLabel_files/reputation_pos.png" alt="">
+							
+								<img class="repimg" src="QPushButton%20with%20a%20custom%20QLabel_files/reputation_pos.png" alt="">
+							
+								<img class="repimg" src="QPushButton%20with%20a%20custom%20QLabel_files/reputation_highpos.png" alt="">
+							
+						</span>
+					
+					
+						<div class="imlinks">
+							    
+						</div>
+					
+				</div>
+<div class="username_container" style="margin-left: 5em;">
+ 
+</div>
+			</div>
+			
+				<div class="userinfo_extra">
+					<dl class="userstats">
+						<dt>Join Date</dt> <dd>Jan 2006</dd>
+						<dt>Location</dt> <dd>Belgium</dd>
+						
+						<dt>Posts</dt> <dd>1,939</dd>	
+						
+    
+    
+	
+		<dd style="white-space:nowrap; display:inline; float: right;">Thanked 268 Times in 268 Posts</dd>
+	
+    
+
+  <dt>Qt products</dt>
+  <dd>
+    
+    
+      <img style="height:12px;" src="QPushButton%20with%20a%20custom%20QLabel_files/qt4.png" title="Qt4" alt="Qt4">
+    
+    
+    
+    
+    
+    
+
+  </dd>
+
+  <dt>Platforms</dt>
+  <dd>
+    
+    
+      <img style="height:12px; margin-left: 2px;" src="QPushButton%20with%20a%20custom%20QLabel_files/x11.png" title="Unix/X11" alt="Unix/X11">
+    
+    
+      <img style="height:12px; margin-left: 2px;" src="QPushButton%20with%20a%20custom%20QLabel_files/windows.png" title="Windows" alt="Windows">
+    
+    
+    
+
+    
+
+
+  </dd>
+
+    <dt>Wiki edits</dt> <dd><a title="Wiki edits" href="http://www.qtcentre.org/wiki/Special:Contributions/tbscope">20</a></dd>
+ 
+					</dl>
+					
+					
+				</div>
+			
+		</div>
+	</div>
+
+	<div class="postbody">
+		
+		<div class="postrow">
+		
+		<h2 class="posttitle icon">
+			<img title="Default" src="QPushButton%20with%20a%20custom%20QLabel_files/icon1.png" alt="Default"> Re: QPushButton with a custom QLabel
+		</h2>
+		
+				
+				
+		<div class="content">
+			<div id="post_message_145134">
+				<blockquote class="postcontent restore">
+					That's because you set the button as the parent of the label. What you want doesn't work like you tried it.<br>
+<br>
+Here's a better solution (don't copy and past, check it first)<br>
+<div class="bbcode_container">
+	<div class="bbcode_description">Qt Code:
+            <div style="width: 11em; float:right; text-align: right; font-size: x-small;">
+              <a onclick="document.getElementById('6cea92d517680a8afddbf5440466c476_plain').style.display=document.getElementById('6cea92d517680a8afddbf5440466c476_plain').style.display=='none' ? '' : 'none';document.getElementById('6cea92d517680a8afddbf5440466c476_pretty').style.display=document.getElementById('6cea92d517680a8afddbf5440466c476_pretty').style.display=='none' ? '' : 'none'">Switch view</a>
+            </div>
+        </div>
+	<pre class="bbcode_code" id="6cea92d517680a8afddbf5440466c476_pretty"><pre class="qt" style="font-family:monospace;"><ol><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;"><a href="http://qt-project.org/doc/qt-4.8/qwidget.html"><span style="">QWidget</span></a> <span style="color: #000000;">*</span>myContainerWidget <span style="color: #000000;">=</span> <span style="color: #009900;">new</span> <a href="http://qt-project.org/doc/qt-4.8/qwidget.html"><span style="">QWidget</span></a>;</div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;"><a href="http://qt-project.org/doc/qt-4.8/qgridlayout.html"><span style="">QGridLayout</span></a> <span style="color: #000000;">*</span>myContainingLayout <span style="color: #000000;">=</span> <span style="color: #009900;">new</span> <a href="http://qt-project.org/doc/qt-4.8/qgridlayout.html"><span style="">QGridLayout</span></a>;</div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">&nbsp;</div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;"><a href="http://qt-project.org/doc/qt-4.8/qlabel.html"><span style="">QLabel</span></a> <span style="color: #000000;">*</span>myLabel <span style="color: #000000;">=</span> <span style="color: #009900;">new</span> <a href="http://qt-project.org/doc/qt-4.8/qlabel.html"><span style="">QLabel</span></a>;</div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">myLabel<span style="color: #000000;">-</span>&gt;setText<span style="color: #000000;">(</span><span style="color: #666666;">"my label"</span><span style="color: #000000;">)</span>;</div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">&nbsp;</div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;"><a href="http://qt-project.org/doc/qt-4.8/qpushbutton.html"><span style="">QPushButton</span></a> <span style="color: #000000;">*</span>myButton <span style="color: #000000;">=</span> <span style="color: #009900;">new</span> <a href="http://qt-project.org/doc/qt-4.8/qpushbutton.html"><span style="">QPushButton</span></a>;</div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">myButton<span style="color: #000000;">-</span>&gt;setText<span style="color: #000000;">(</span><span style="color: #666666;">"my button"</span><span style="color: #000000;">)</span>;</div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">&nbsp;</div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">myContainingLayout<span style="color: #000000;">-</span>&gt;addWidget<span style="color: #000000;">(</span>myLabel<span style="color: #000000;">)</span>;</div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">myContainingLayout<span style="color: #000000;">-</span>&gt;addWidget<span style="color: #000000;">(</span>myButton<span style="color: #000000;">)</span>;</div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">&nbsp;</div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">myContainerWidget<span style="color: #000000;">-</span>&gt;setLayout<span style="color: #000000;">(</span>myContainingLayout<span style="color: #000000;">)</span>;</div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">&nbsp;</div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">myContainerWidget<span style="color: #000000;">-</span>&gt;show<span style="color: #000000;">(</span><span style="color: #000000;">)</span>;</div></li></ol></pre></pre>
+        <pre class="bbcode_code" style="display:none;" id="6cea92d517680a8afddbf5440466c476_plain">QWidget *myContainerWidget = new QWidget;
+QGridLayout *myContainingLayout = new QGridLayout;
+
+QLabel *myLabel = new QLabel;
+myLabel-&gt;setText("my label");
+
+QPushButton *myButton = new QPushButton;
+myButton-&gt;setText("my button");
+
+myContainingLayout-&gt;addWidget(myLabel);
+myContainingLayout-&gt;addWidget(myButton);
+
+myContainerWidget-&gt;setLayout(myContainingLayout);
+
+myContainerWidget-&gt;show();</pre>
+<div style="font-size:x-small; text-align:right; color: #aaa; "><em>To copy to clipboard, switch view to plain text mode&nbsp;</em></div>
+</div> 
+				</blockquote>
+			</div>
+
+			
+
+
+		</div>
+			
+				
+			
+			
+			
+		</div>
+	</div>
+	<div class="postfoot">
+		<div class="textcontrols floatcontainer">
+			<span class="postcontrols">
+				<img style="display:none" id="progress_145134" src="QPushButton%20with%20a%20custom%20QLabel_files/progress.gif" alt="">
+				
+				
+				
+					<a id="qrwq_145134" class="newreply" href="http://www.qtcentre.org/newreply.php?do=newreply&amp;p=145134" rel="nofollow" title="Reply With Quote"><img title="Reply With Quote" id="quoteimg_145134" src="QPushButton%20with%20a%20custom%20QLabel_files/clear.gif" alt="Reply With Quote">  Reply With Quote</a> 
+				
+				
+				
+			</span>
+			<span class="postlinking">
+				
+					
+				
+				
+
+				 
+				
+
+					
+
+					
+					 
+
+					
+					
+					
+					
+					
+			</span>
+		</div>
+	</div>
+	<hr>
+</li>
+<li class="postbit postbitim" id="post_thanks_box_145134" style="display:none">
+	
+</li> 
+<li class="postbit postbitim postcontainer old" id="post_145145">
+	<div class="postdetails_noavatar">
+		<div class="posthead">
+                        
+                                <span class="postdate old">
+                                        
+                                                <span class="date">27th May 2010,&nbsp;<span class="time">13:15</span></span>
+                                        
+                                </span>
+                                <span class="nodecontrols">
+                                        
+                                                <a name="post145145" href="http://www.qtcentre.org/threads/31094-QPushButton-with-a-custom-QLabel?p=145145#post145145" class="postcounter">#6</a><a id="postcount145145" name="6"></a>
+                                        
+                                        
+                                        
+                                </span>
+                        
+		</div>
+
+		<div class="userinfo_noavatar">
+			<div class="contact">
+				
+				<div class="username_container">
+					
+						<div id="yui-gen27" class="popupmenu memberaction">
+	<a id="yui-gen29" class="username offline popupctrl" href="http://www.qtcentre.org/members/13844-shadyabhi" title="shadyabhi is offline"><strong>shadyabhi</strong></a>
+	<ul id="yui-gen28" class="popupbody memberaction_body">
+		<li class="left">
+			<img src="QPushButton%20with%20a%20custom%20QLabel_files/profile.png" alt="">
+			<a href="http://www.qtcentre.org/members/13844-shadyabhi">
+				View Profile
+			</a>
+		</li>
+		
+		<li class="right">
+			<img src="QPushButton%20with%20a%20custom%20QLabel_files/forum.png" alt="">
+			<a href="http://www.qtcentre.org/search.php?do=finduser&amp;userid=13844&amp;contenttype=vBForum_Post&amp;showposts=1" rel="nofollow">
+				View Forum Posts
+			</a>
+		</li>
+		
+		
+		
+		
+		<li class="right">
+			<img src="QPushButton%20with%20a%20custom%20QLabel_files/blog.png" alt="">
+			<a href="http://www.qtcentre.org/blog.php?u=13844" rel="nofollow">
+				View Blog Entries
+			</a>
+		</li>
+		
+		
+		
+		
+		
+		<li class="right">
+			<img src="QPushButton%20with%20a%20custom%20QLabel_files/article.png" alt="">
+			<a href="http://www.qtcentre.org/list.php/author/13844-shadyabhi" rel="nofollow">
+				View Articles
+			</a>
+		</li>
+		
+
+		
+
+		
+		
+	</ul>
+</div>
+
+						<img title="shadyabhi is offline" class="inlineimg onlinestatus" src="QPushButton%20with%20a%20custom%20QLabel_files/user-offline.png" alt="shadyabhi is offline" border="0">
+
+					
+					<span class="usertitle">
+						Beginner
+					</span>
+					
+
+                                        
+					
+						<span class="postbit_reputation" id="repdisplay_145145_13844" title="shadyabhi is on a distinguished road">
+							
+								<img class="repimg" src="QPushButton%20with%20a%20custom%20QLabel_files/reputation_pos.png" alt="">
+							
+						</span>
+					
+					
+						<div class="imlinks">
+							    
+						</div>
+					
+				</div>
+<div class="username_container" style="margin-left: 5em;">
+ 
+</div>
+			</div>
+			
+				<div class="userinfo_extra">
+					<dl class="userstats">
+						<dt>Join Date</dt> <dd>Sep 2009</dd>
+						
+						
+						<dt>Posts</dt> <dd>8</dd>	
+						
+    
+    
+
+  <dt>Qt products</dt>
+  <dd>
+    
+    
+      <img style="height:12px;" src="QPushButton%20with%20a%20custom%20QLabel_files/qt4.png" title="Qt4" alt="Qt4">
+    
+    
+    
+    
+    
+    
+
+  </dd>
+
+  <dt>Platforms</dt>
+  <dd>
+    
+    
+      <img style="height:12px; margin-left: 2px;" src="QPushButton%20with%20a%20custom%20QLabel_files/x11.png" title="Unix/X11" alt="Unix/X11">
+    
+    
+    
+    
+
+    
+
+
+  </dd>
+ 
+					</dl>
+					
+					
+				</div>
+			
+		</div>
+	</div>
+
+	<div class="postbody">
+		
+		<div class="postrow">
+		
+		<h2 class="posttitle icon">
+			<img title="Default" src="QPushButton%20with%20a%20custom%20QLabel_files/icon1.png" alt="Default"> Re: QPushButton with a custom QLabel
+		</h2>
+		
+				
+				
+		<div class="content">
+			<div id="post_message_145145">
+				<blockquote class="postcontent restore">
+					<div class="bbcode_container">
+	<div class="bbcode_quote">
+		<div class="quote_container">
+			<div class="bbcode_quote_container"></div>
+			
+				<div class="bbcode_postedby">
+					<img title="Quote" src="QPushButton%20with%20a%20custom%20QLabel_files/quote_icon.png" alt="Quote"> Originally Posted by <strong>tbscope</strong>
+					<a href="http://www.qtcentre.org/showthread.php?p=145134#post145134" rel="nofollow"><img title="View Post" class="inlineimg" src="QPushButton%20with%20a%20custom%20QLabel_files/viewpost-right.png" alt="View Post"></a>
+				</div>
+				<div class="message">That's because you set the button as the parent of the label. What you want doesn't work like you tried it.<br>
+<br>
+Here's a better solution (don't copy and past, check it first)<br>
+<div class="bbcode_container">
+	<div class="bbcode_description">Qt Code:
+            <div style="width: 11em; float:right; text-align: right; font-size: x-small;">
+              <a onclick="document.getElementById('449b8c9d3619dd9d7cf3575ee447853f_plain').style.display=document.getElementById('449b8c9d3619dd9d7cf3575ee447853f_plain').style.display=='none' ? '' : 'none';document.getElementById('449b8c9d3619dd9d7cf3575ee447853f_pretty').style.display=document.getElementById('449b8c9d3619dd9d7cf3575ee447853f_pretty').style.display=='none' ? '' : 'none'">Switch view</a>
+            </div>
+        </div>
+	<pre class="bbcode_code" id="449b8c9d3619dd9d7cf3575ee447853f_pretty"><pre class="qt" style="font-family:monospace;"><ol><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;"><a href="http://qt-project.org/doc/qt-4.8/qwidget.html"><span style="">QWidget</span></a> <span style="color: #000000;">*</span>myContainerWidget <span style="color: #000000;">=</span> <span style="color: #009900;">new</span> <a href="http://qt-project.org/doc/qt-4.8/qwidget.html"><span style="">QWidget</span></a>;</div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;"><a href="http://qt-project.org/doc/qt-4.8/qgridlayout.html"><span style="">QGridLayout</span></a> <span style="color: #000000;">*</span>myContainingLayout <span style="color: #000000;">=</span> <span style="color: #009900;">new</span> <a href="http://qt-project.org/doc/qt-4.8/qgridlayout.html"><span style="">QGridLayout</span></a>;</div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">&nbsp;</div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;"><a href="http://qt-project.org/doc/qt-4.8/qlabel.html"><span style="">QLabel</span></a> <span style="color: #000000;">*</span>myLabel <span style="color: #000000;">=</span> <span style="color: #009900;">new</span> <a href="http://qt-project.org/doc/qt-4.8/qlabel.html"><span style="">QLabel</span></a>;</div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">myLabel<span style="color: #000000;">-</span>&gt;setText<span style="color: #000000;">(</span><span style="color: #666666;">"my label"</span><span style="color: #000000;">)</span>;</div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">&nbsp;</div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;"><a href="http://qt-project.org/doc/qt-4.8/qpushbutton.html"><span style="">QPushButton</span></a> <span style="color: #000000;">*</span>myButton <span style="color: #000000;">=</span> <span style="color: #009900;">new</span> <a href="http://qt-project.org/doc/qt-4.8/qpushbutton.html"><span style="">QPushButton</span></a>;</div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">myButton<span style="color: #000000;">-</span>&gt;setText<span style="color: #000000;">(</span><span style="color: #666666;">"my button"</span><span style="color: #000000;">)</span>;</div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">&nbsp;</div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">myContainingLayout<span style="color: #000000;">-</span>&gt;addWidget<span style="color: #000000;">(</span>myLabel<span style="color: #000000;">)</span>;</div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">myContainingLayout<span style="color: #000000;">-</span>&gt;addWidget<span style="color: #000000;">(</span>myButton<span style="color: #000000;">)</span>;</div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">&nbsp;</div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">myContainerWidget<span style="color: #000000;">-</span>&gt;setLayout<span style="color: #000000;">(</span>myContainingLayout<span style="color: #000000;">)</span>;</div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">&nbsp;</div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">myContainerWidget<span style="color: #000000;">-</span>&gt;show<span style="color: #000000;">(</span><span style="color: #000000;">)</span>;</div></li></ol></pre></pre>
+        <pre class="bbcode_code" style="display:none;" id="449b8c9d3619dd9d7cf3575ee447853f_plain">QWidget *myContainerWidget = new QWidget;
+QGridLayout *myContainingLayout = new QGridLayout;
+
+QLabel *myLabel = new QLabel;
+myLabel-&gt;setText("my label");
+
+QPushButton *myButton = new QPushButton;
+myButton-&gt;setText("my button");
+
+myContainingLayout-&gt;addWidget(myLabel);
+myContainingLayout-&gt;addWidget(myButton);
+
+myContainerWidget-&gt;setLayout(myContainingLayout);
+
+myContainerWidget-&gt;show();</pre>
+<div style="font-size:x-small; text-align:right; color: #aaa; "><em>To copy to clipboard, switch view to plain text mode&nbsp;</em></div>
+</div></div>
+			
+		</div>
+	</div>
+</div><br>
+I am sorry, I think I was not clear. I want a windows that has a 
+pushButton with color text displayed on it. If the press that button, my
+ app exits.<br>
+I cant use the constructor to set text because then I cant use colorful text. Hope I am clear now. Now, what should I do?
+				</blockquote>
+			</div>
+
+			
+
+
+		</div>
+			
+				
+			
+			
+			
+		</div>
+	</div>
+	<div class="postfoot">
+		<div class="textcontrols floatcontainer">
+			<span class="postcontrols">
+				<img style="display:none" id="progress_145145" src="QPushButton%20with%20a%20custom%20QLabel_files/progress.gif" alt="">
+				
+				
+				
+					<a id="qrwq_145145" class="newreply" href="http://www.qtcentre.org/newreply.php?do=newreply&amp;p=145145" rel="nofollow" title="Reply With Quote"><img title="Reply With Quote" id="quoteimg_145145" src="QPushButton%20with%20a%20custom%20QLabel_files/clear.gif" alt="Reply With Quote">  Reply With Quote</a> 
+				
+				
+				
+			</span>
+			<span class="postlinking">
+				
+					
+				
+				
+
+				 
+				
+
+					
+
+					
+					 
+
+					
+					
+					
+					
+					
+			</span>
+		</div>
+	</div>
+	<hr>
+</li>
+<li class="postbit postbitim" id="post_thanks_box_145145" style="display:none">
+	
+</li> 
+<li class="postbit postbitim postcontainer old" id="post_145146">
+	<div class="postdetails_noavatar">
+		<div class="posthead">
+                        
+                                <span class="postdate old">
+                                        
+                                                <span class="date">27th May 2010,&nbsp;<span class="time">13:21</span></span>
+                                        
+                                </span>
+                                <span class="nodecontrols">
+                                        
+                                                <a name="post145146" href="http://www.qtcentre.org/threads/31094-QPushButton-with-a-custom-QLabel?p=145146#post145146" class="postcounter">#7</a><a id="postcount145146" name="7"></a>
+                                        
+                                        
+                                        
+                                </span>
+                        
+		</div>
+
+		<div class="userinfo_noavatar">
+			<div class="contact">
+				
+				<div class="username_container">
+					
+						<div id="yui-gen30" class="popupmenu memberaction">
+	<a id="yui-gen32" class="username offline popupctrl" href="http://www.qtcentre.org/members/13844-shadyabhi" title="shadyabhi is offline"><strong>shadyabhi</strong></a>
+	<ul id="yui-gen31" class="popupbody memberaction_body">
+		<li class="left">
+			<img src="QPushButton%20with%20a%20custom%20QLabel_files/profile.png" alt="">
+			<a href="http://www.qtcentre.org/members/13844-shadyabhi">
+				View Profile
+			</a>
+		</li>
+		
+		<li class="right">
+			<img src="QPushButton%20with%20a%20custom%20QLabel_files/forum.png" alt="">
+			<a href="http://www.qtcentre.org/search.php?do=finduser&amp;userid=13844&amp;contenttype=vBForum_Post&amp;showposts=1" rel="nofollow">
+				View Forum Posts
+			</a>
+		</li>
+		
+		
+		
+		
+		<li class="right">
+			<img src="QPushButton%20with%20a%20custom%20QLabel_files/blog.png" alt="">
+			<a href="http://www.qtcentre.org/blog.php?u=13844" rel="nofollow">
+				View Blog Entries
+			</a>
+		</li>
+		
+		
+		
+		
+		
+		<li class="right">
+			<img src="QPushButton%20with%20a%20custom%20QLabel_files/article.png" alt="">
+			<a href="http://www.qtcentre.org/list.php/author/13844-shadyabhi" rel="nofollow">
+				View Articles
+			</a>
+		</li>
+		
+
+		
+
+		
+		
+	</ul>
+</div>
+
+						<img title="shadyabhi is offline" class="inlineimg onlinestatus" src="QPushButton%20with%20a%20custom%20QLabel_files/user-offline.png" alt="shadyabhi is offline" border="0">
+
+					
+					<span class="usertitle">
+						Beginner
+					</span>
+					
+
+                                        
+					
+						<span class="postbit_reputation" id="repdisplay_145146_13844" title="shadyabhi is on a distinguished road">
+							
+								<img class="repimg" src="QPushButton%20with%20a%20custom%20QLabel_files/reputation_pos.png" alt="">
+							
+						</span>
+					
+					
+						<div class="imlinks">
+							    
+						</div>
+					
+				</div>
+<div class="username_container" style="margin-left: 5em;">
+ 
+</div>
+			</div>
+			
+				<div class="userinfo_extra">
+					<dl class="userstats">
+						<dt>Join Date</dt> <dd>Sep 2009</dd>
+						
+						
+						<dt>Posts</dt> <dd>8</dd>	
+						
+    
+    
+
+  <dt>Qt products</dt>
+  <dd>
+    
+    
+      <img style="height:12px;" src="QPushButton%20with%20a%20custom%20QLabel_files/qt4.png" title="Qt4" alt="Qt4">
+    
+    
+    
+    
+    
+    
+
+  </dd>
+
+  <dt>Platforms</dt>
+  <dd>
+    
+    
+      <img style="height:12px; margin-left: 2px;" src="QPushButton%20with%20a%20custom%20QLabel_files/x11.png" title="Unix/X11" alt="Unix/X11">
+    
+    
+    
+    
+
+    
+
+
+  </dd>
+ 
+					</dl>
+					
+					
+				</div>
+			
+		</div>
+	</div>
+
+	<div class="postbody">
+		
+		<div class="postrow">
+		
+		<h2 class="posttitle icon">
+			<img title="Default" src="QPushButton%20with%20a%20custom%20QLabel_files/icon1.png" alt="Default"> Re: QPushButton with a custom QLabel
+		</h2>
+		
+				
+				
+		<div class="content">
+			<div id="post_message_145146">
+				<blockquote class="postcontent restore">
+					@kavinsiva<br>
+<br>
+I cant press the button.. Thats what the problem is.. My code does what 
+your code does.. But, dont know why but, I cant press the pushButton
+				</blockquote>
+			</div>
+
+			
+
+
+		</div>
+			
+				
+			
+			
+			
+		</div>
+	</div>
+	<div class="postfoot">
+		<div class="textcontrols floatcontainer">
+			<span class="postcontrols">
+				<img style="display:none" id="progress_145146" src="QPushButton%20with%20a%20custom%20QLabel_files/progress.gif" alt="">
+				
+				
+				
+					<a id="qrwq_145146" class="newreply" href="http://www.qtcentre.org/newreply.php?do=newreply&amp;p=145146" rel="nofollow" title="Reply With Quote"><img title="Reply With Quote" id="quoteimg_145146" src="QPushButton%20with%20a%20custom%20QLabel_files/clear.gif" alt="Reply With Quote">  Reply With Quote</a> 
+				
+				
+				
+			</span>
+			<span class="postlinking">
+				
+					
+				
+				
+
+				 
+				
+
+					
+
+					
+					 
+
+					
+					
+					
+					
+					
+			</span>
+		</div>
+	</div>
+	<hr>
+</li>
+<li class="postbit postbitim" id="post_thanks_box_145146" style="display:none">
+	
+</li> 
+<li class="postbit postbitim postcontainer old" id="post_145152">
+	<div class="postdetails_noavatar">
+		<div class="posthead">
+                        
+                                <span class="postdate old">
+                                        
+                                                <span class="date">27th May 2010,&nbsp;<span class="time">13:42</span></span>
+                                        
+                                </span>
+                                <span class="nodecontrols">
+                                        
+                                                <a name="post145152" href="http://www.qtcentre.org/threads/31094-QPushButton-with-a-custom-QLabel?p=145152#post145152" class="postcounter">#8</a><a id="postcount145152" name="8"></a>
+                                        
+                                        
+                                        
+                                </span>
+                        
+		</div>
+
+		<div class="userinfo_noavatar">
+			<div class="contact">
+				
+				<div class="username_container">
+					
+						<div id="yui-gen33" class="popupmenu memberaction">
+	<a id="yui-gen35" class="username offline popupctrl" href="http://www.qtcentre.org/members/238-tbscope" title="tbscope is offline"><strong>tbscope</strong></a>
+	<ul id="yui-gen34" class="popupbody memberaction_body">
+		<li class="left">
+			<img src="QPushButton%20with%20a%20custom%20QLabel_files/profile.png" alt="">
+			<a href="http://www.qtcentre.org/members/238-tbscope">
+				View Profile
+			</a>
+		</li>
+		
+		<li class="right">
+			<img src="QPushButton%20with%20a%20custom%20QLabel_files/forum.png" alt="">
+			<a href="http://www.qtcentre.org/search.php?do=finduser&amp;userid=238&amp;contenttype=vBForum_Post&amp;showposts=1" rel="nofollow">
+				View Forum Posts
+			</a>
+		</li>
+		
+		
+		
+		
+		<li class="right">
+			<img src="QPushButton%20with%20a%20custom%20QLabel_files/blog.png" alt="">
+			<a href="http://www.qtcentre.org/blog.php?u=238" rel="nofollow">
+				View Blog Entries
+			</a>
+		</li>
+		
+		
+		
+		
+		
+		<li class="right">
+			<img src="QPushButton%20with%20a%20custom%20QLabel_files/article.png" alt="">
+			<a href="http://www.qtcentre.org/list.php/author/238-tbscope" rel="nofollow">
+				View Articles
+			</a>
+		</li>
+		
+
+		
+
+		
+		
+	</ul>
+</div>
+
+						<img title="tbscope is offline" class="inlineimg onlinestatus" src="QPushButton%20with%20a%20custom%20QLabel_files/user-offline.png" alt="tbscope is offline" border="0">
+
+					
+					<span class="usertitle">
+						Expert
+					</span>
+					
+
+                                        
+					
+						<span class="postbit_reputation" id="repdisplay_145152_238" title="tbscope is a glorious beacon of light">
+							
+								<img class="repimg" src="QPushButton%20with%20a%20custom%20QLabel_files/reputation_pos.png" alt="">
+							
+								<img class="repimg" src="QPushButton%20with%20a%20custom%20QLabel_files/reputation_pos.png" alt="">
+							
+								<img class="repimg" src="QPushButton%20with%20a%20custom%20QLabel_files/reputation_pos.png" alt="">
+							
+								<img class="repimg" src="QPushButton%20with%20a%20custom%20QLabel_files/reputation_pos.png" alt="">
+							
+								<img class="repimg" src="QPushButton%20with%20a%20custom%20QLabel_files/reputation_pos.png" alt="">
+							
+								<img class="repimg" src="QPushButton%20with%20a%20custom%20QLabel_files/reputation_highpos.png" alt="">
+							
+						</span>
+					
+					
+						<div class="imlinks">
+							    
+						</div>
+					
+				</div>
+<div class="username_container" style="margin-left: 5em;">
+ 
+</div>
+			</div>
+			
+				<div class="userinfo_extra">
+					<dl class="userstats">
+						<dt>Join Date</dt> <dd>Jan 2006</dd>
+						<dt>Location</dt> <dd>Belgium</dd>
+						
+						<dt>Posts</dt> <dd>1,939</dd>	
+						
+    
+    
+	
+		<dd style="white-space:nowrap; display:inline; float: right;">Thanked 268 Times in 268 Posts</dd>
+	
+    
+
+  <dt>Qt products</dt>
+  <dd>
+    
+    
+      <img style="height:12px;" src="QPushButton%20with%20a%20custom%20QLabel_files/qt4.png" title="Qt4" alt="Qt4">
+    
+    
+    
+    
+    
+    
+
+  </dd>
+
+  <dt>Platforms</dt>
+  <dd>
+    
+    
+      <img style="height:12px; margin-left: 2px;" src="QPushButton%20with%20a%20custom%20QLabel_files/x11.png" title="Unix/X11" alt="Unix/X11">
+    
+    
+      <img style="height:12px; margin-left: 2px;" src="QPushButton%20with%20a%20custom%20QLabel_files/windows.png" title="Windows" alt="Windows">
+    
+    
+    
+
+    
+
+
+  </dd>
+
+    <dt>Wiki edits</dt> <dd><a title="Wiki edits" href="http://www.qtcentre.org/wiki/Special:Contributions/tbscope">20</a></dd>
+ 
+					</dl>
+					
+					
+				</div>
+			
+		</div>
+	</div>
+
+	<div class="postbody">
+		
+		<div class="postrow">
+		
+		<h2 class="posttitle icon">
+			<img title="Default" src="QPushButton%20with%20a%20custom%20QLabel_files/icon1.png" alt="Default"> Re: QPushButton with a custom QLabel
+		</h2>
+		
+				
+				
+		<div class="content">
+			<div id="post_message_145152">
+				<blockquote class="postcontent restore">
+					Then rich text isn't possible with QPushButton.<br>
+But... you can set the color and style of the complete text in a pushbutton via a stylesheet.
+				</blockquote>
+			</div>
+
+			
+
+
+		</div>
+			
+				
+			
+			
+			
+		</div>
+	</div>
+	<div class="postfoot">
+		<div class="textcontrols floatcontainer">
+			<span class="postcontrols">
+				<img style="display:none" id="progress_145152" src="QPushButton%20with%20a%20custom%20QLabel_files/progress.gif" alt="">
+				
+				
+				
+					<a id="qrwq_145152" class="newreply" href="http://www.qtcentre.org/newreply.php?do=newreply&amp;p=145152" rel="nofollow" title="Reply With Quote"><img title="Reply With Quote" id="quoteimg_145152" src="QPushButton%20with%20a%20custom%20QLabel_files/clear.gif" alt="Reply With Quote">  Reply With Quote</a> 
+				
+				
+				
+			</span>
+			<span class="postlinking">
+				
+					
+				
+				
+
+				 
+				
+
+					
+
+					
+					 
+
+					
+					
+					
+					
+					
+			</span>
+		</div>
+	</div>
+	<hr>
+</li>
+<li class="postbit postbitim" id="post_thanks_box_145152" style="display:none">
+	
+</li> 
+<li class="postbit postbitim postcontainer old" id="post_145160">
+	<div class="postdetails_noavatar">
+		<div class="posthead">
+                        
+                                <span class="postdate old">
+                                        
+                                                <span class="date">27th May 2010,&nbsp;<span class="time">15:06</span></span>
+                                        
+                                </span>
+                                <span class="nodecontrols">
+                                        
+                                                <a name="post145160" href="http://www.qtcentre.org/threads/31094-QPushButton-with-a-custom-QLabel?p=145160#post145160" class="postcounter">#9</a><a id="postcount145160" name="9"></a>
+                                        
+                                        
+                                        
+                                </span>
+                        
+		</div>
+
+		<div class="userinfo_noavatar">
+			<div class="contact">
+				
+				<div class="username_container">
+					
+						<div id="yui-gen36" class="popupmenu memberaction">
+	<a id="yui-gen38" class="username offline popupctrl" href="http://www.qtcentre.org/members/13844-shadyabhi" title="shadyabhi is offline"><strong>shadyabhi</strong></a>
+	<ul id="yui-gen37" class="popupbody memberaction_body">
+		<li class="left">
+			<img src="QPushButton%20with%20a%20custom%20QLabel_files/profile.png" alt="">
+			<a href="http://www.qtcentre.org/members/13844-shadyabhi">
+				View Profile
+			</a>
+		</li>
+		
+		<li class="right">
+			<img src="QPushButton%20with%20a%20custom%20QLabel_files/forum.png" alt="">
+			<a href="http://www.qtcentre.org/search.php?do=finduser&amp;userid=13844&amp;contenttype=vBForum_Post&amp;showposts=1" rel="nofollow">
+				View Forum Posts
+			</a>
+		</li>
+		
+		
+		
+		
+		<li class="right">
+			<img src="QPushButton%20with%20a%20custom%20QLabel_files/blog.png" alt="">
+			<a href="http://www.qtcentre.org/blog.php?u=13844" rel="nofollow">
+				View Blog Entries
+			</a>
+		</li>
+		
+		
+		
+		
+		
+		<li class="right">
+			<img src="QPushButton%20with%20a%20custom%20QLabel_files/article.png" alt="">
+			<a href="http://www.qtcentre.org/list.php/author/13844-shadyabhi" rel="nofollow">
+				View Articles
+			</a>
+		</li>
+		
+
+		
+
+		
+		
+	</ul>
+</div>
+
+						<img title="shadyabhi is offline" class="inlineimg onlinestatus" src="QPushButton%20with%20a%20custom%20QLabel_files/user-offline.png" alt="shadyabhi is offline" border="0">
+
+					
+					<span class="usertitle">
+						Beginner
+					</span>
+					
+
+                                        
+					
+						<span class="postbit_reputation" id="repdisplay_145160_13844" title="shadyabhi is on a distinguished road">
+							
+								<img class="repimg" src="QPushButton%20with%20a%20custom%20QLabel_files/reputation_pos.png" alt="">
+							
+						</span>
+					
+					
+						<div class="imlinks">
+							    
+						</div>
+					
+				</div>
+<div class="username_container" style="margin-left: 5em;">
+ 
+</div>
+			</div>
+			
+				<div class="userinfo_extra">
+					<dl class="userstats">
+						<dt>Join Date</dt> <dd>Sep 2009</dd>
+						
+						
+						<dt>Posts</dt> <dd>8</dd>	
+						
+    
+    
+
+  <dt>Qt products</dt>
+  <dd>
+    
+    
+      <img style="height:12px;" src="QPushButton%20with%20a%20custom%20QLabel_files/qt4.png" title="Qt4" alt="Qt4">
+    
+    
+    
+    
+    
+    
+
+  </dd>
+
+  <dt>Platforms</dt>
+  <dd>
+    
+    
+      <img style="height:12px; margin-left: 2px;" src="QPushButton%20with%20a%20custom%20QLabel_files/x11.png" title="Unix/X11" alt="Unix/X11">
+    
+    
+    
+    
+
+    
+
+
+  </dd>
+ 
+					</dl>
+					
+					
+				</div>
+			
+		</div>
+	</div>
+
+	<div class="postbody">
+		
+		<div class="postrow">
+		
+		<h2 class="posttitle icon">
+			<img title="Default" src="QPushButton%20with%20a%20custom%20QLabel_files/icon1.png" alt="Default"> Re: QPushButton with a custom QLabel
+		</h2>
+		
+				
+				
+		<div class="content">
+			<div id="post_message_145160">
+				<blockquote class="postcontent restore">
+					Ok, I researched a bit and got the answer.. The code for what I wanted is:-<br>
+<br>
+<div class="bbcode_container">
+	<div class="bbcode_description">Qt Code:
+            <div style="width: 11em; float:right; text-align: right; font-size: x-small;">
+              <a onclick="document.getElementById('3e18c8477881ec6ce89e58f5b36bf6c3_plain').style.display=document.getElementById('3e18c8477881ec6ce89e58f5b36bf6c3_plain').style.display=='none' ? '' : 'none';document.getElementById('3e18c8477881ec6ce89e58f5b36bf6c3_pretty').style.display=document.getElementById('3e18c8477881ec6ce89e58f5b36bf6c3_pretty').style.display=='none' ? '' : 'none'">Switch view</a>
+            </div>
+        </div>
+	<pre class="bbcode_code" id="3e18c8477881ec6ce89e58f5b36bf6c3_pretty"><pre class="qt" style="font-family:monospace;"><ol><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;"><span style="color: #339900;">#include &lt;QtGui/QApplication&gt;</span></div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;"><span style="color: #339900;">#include &lt;QLabel&gt;</span></div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;"><span style="color: #339900;">#include &lt;QPushButton&gt;</span></div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;"><span style="color: #339900;">#include &lt;QtGui&gt;</span></div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;"><span style="color: #339900;">#include &lt;QTextDocument&gt;</span></div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">&nbsp;</div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;"><span style="color: #0000ff;">int</span> main<span style="color: #000000;">(</span><span style="color: #0000ff;">int</span> argc, <span style="color: #0000ff;">char</span> <span style="color: #000000;">*</span>argv<span style="color: #000000;">[</span><span style="color: #000000;">]</span><span style="color: #000000;">)</span></div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;"><span style="color: #000000;">{</span></div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">    <a href="http://qt-project.org/doc/qt-4.8/qapplication.html"><span style="">QApplication</span></a> a<span style="color: #000000;">(</span>argc, argv<span style="color: #000000;">)</span>;</div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">    <a href="http://qt-project.org/doc/qt-4.8/qmainwindow.html"><span style="">QMainWindow</span></a> <span style="color: #000000;">*</span>Main<span style="color: #000000;">=</span><span style="color: #009900;">new</span> <a href="http://qt-project.org/doc/qt-4.8/qmainwindow.html"><span style="">QMainWindow</span></a>;</div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">&nbsp;</div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">    <a href="http://qt-project.org/doc/qt-4.8/qpushbutton.html"><span style="">QPushButton</span></a> <span style="color: #000000;">*</span>button <span style="color: #000000;">=</span> <span style="color: #009900;">new</span> <a href="http://qt-project.org/doc/qt-4.8/qpushbutton.html"><span style="">QPushButton</span></a><span style="color: #000000;">(</span>Main<span style="color: #000000;">)</span>;</div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">    <a href="http://qt-project.org/doc/qt-4.8/qtextdocument.html"><span style="">QTextDocument</span></a> Text;</div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">    Text.<span style="color: #009900;">setHtml</span><span style="color: #000000;">(</span><span style="color: #666666;">"&lt;h2&gt;&lt;i&gt;Hello&lt;/i&gt; "</span><span style="color: #666666;">"&lt;font color=red&gt;Qt!&lt;/font&gt;&lt;/h2&gt;"</span><span style="color: #000000;">)</span>;</div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">&nbsp;</div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">    <a href="http://qt-project.org/doc/qt-4.8/qpixmap.html"><span style="">QPixmap</span></a> pixmap<span style="color: #000000;">(</span>Text.<span style="color: #009900;">size</span><span style="color: #000000;">(</span><span style="color: #000000;">)</span>.<span style="color: #009900;">width</span><span style="color: #000000;">(</span><span style="color: #000000;">)</span>, Text.<span style="color: #009900;">size</span><span style="color: #000000;">(</span><span style="color: #000000;">)</span>.<span style="color: #009900;">height</span><span style="color: #000000;">(</span><span style="color: #000000;">)</span><span style="color: #000000;">)</span>;</div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">    pixmap.<span style="color: #009900;">fill</span><span style="color: #000000;">(</span> Qt<span style="color: #000000;">::</span><span style="color: #009900;">transparent</span> <span style="color: #000000;">)</span>;</div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">    <a href="http://qt-project.org/doc/qt-4.8/qpainter.html"><span style="">QPainter</span></a> painter<span style="color: #000000;">(</span> <span style="color: #000000;">&amp;</span>pixmap <span style="color: #000000;">)</span>;</div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">    Text.<span style="color: #009900;">drawContents</span><span style="color: #000000;">(</span><span style="color: #000000;">&amp;</span>painter, pixmap.<span style="color: #009900;">rect</span><span style="color: #000000;">(</span><span style="color: #000000;">)</span><span style="color: #000000;">)</span>;</div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">&nbsp;</div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">    <a href="http://qt-project.org/doc/qt-4.8/qicon.html"><span style="">QIcon</span></a> ButtonIcon<span style="color: #000000;">(</span>pixmap<span style="color: #000000;">)</span>;</div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">    button<span style="color: #000000;">-</span>&gt;setIcon<span style="color: #000000;">(</span>ButtonIcon<span style="color: #000000;">)</span>;</div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">    button<span style="color: #000000;">-</span>&gt;setIconSize<span style="color: #000000;">(</span>pixmap.<span style="color: #009900;">rect</span><span style="color: #000000;">(</span><span style="color: #000000;">)</span>.<span style="color: #009900;">size</span><span style="color: #000000;">(</span><span style="color: #000000;">)</span><span style="color: #000000;">)</span>;</div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">    <a href="http://qt-project.org/doc/qt-4.8/qobject.html"><span style="">QObject</span></a><span style="color: #000000;">::</span><span style="color: #0000ff;">connect</span><span style="color: #000000;">(</span>button, <span style="color: #0000ff;">SIGNAL</span><span style="color: #000000;">(</span>clicked<span style="color: #000000;">(</span><span style="color: #000000;">)</span><span style="color: #000000;">)</span>,Main, <span style="color: #0000ff;">SLOT</span><span style="color: #000000;">(</span>close<span style="color: #000000;">(</span><span style="color: #000000;">)</span><span style="color: #000000;">)</span><span style="color: #000000;">)</span>;</div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">    Main<span style="color: #000000;">-</span>&gt;show<span style="color: #000000;">(</span><span style="color: #000000;">)</span>;</div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">    <span style="color: #0000ff;">return</span> a.<span style="color: #009900;">exec</span><span style="color: #000000;">(</span><span style="color: #000000;">)</span>;</div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;"><span style="color: #000000;">}</span></div></li></ol></pre></pre>
+        <pre class="bbcode_code" style="display:none;" id="3e18c8477881ec6ce89e58f5b36bf6c3_plain">#include &lt;QtGui/QApplication&gt;
+#include &lt;QLabel&gt;
+#include &lt;QPushButton&gt;
+#include &lt;QtGui&gt;
+#include &lt;QTextDocument&gt;
+
+int main(int argc, char *argv[])
+{
+    QApplication a(argc, argv);
+    QMainWindow *Main=new QMainWindow;
+
+    QPushButton *button = new QPushButton(Main);
+    QTextDocument Text;
+    Text.setHtml("&lt;h2&gt;&lt;i&gt;Hello&lt;/i&gt; ""&lt;font color=red&gt;Qt!&lt;/font&gt;&lt;/h2&gt;");
+
+    QPixmap pixmap(Text.size().width(), Text.size().height());
+    pixmap.fill( Qt::transparent );
+    QPainter painter( &amp;pixmap );
+    Text.drawContents(&amp;painter, pixmap.rect());
+
+    QIcon ButtonIcon(pixmap);
+    button-&gt;setIcon(ButtonIcon);
+    button-&gt;setIconSize(pixmap.rect().size());
+    QObject::connect(button, SIGNAL(clicked()),Main, SLOT(close()));
+    Main-&gt;show();
+    return a.exec();
+}</pre>
+<div style="font-size:x-small; text-align:right; color: #aaa; "><em>To copy to clipboard, switch view to plain text mode&nbsp;</em></div>
+</div> 
+				</blockquote>
+			</div>
+
+			
+
+
+		</div>
+			
+				
+			
+			
+			
+		</div>
+	</div>
+	<div class="postfoot">
+		<div class="textcontrols floatcontainer">
+			<span class="postcontrols">
+				<img style="display:none" id="progress_145160" src="QPushButton%20with%20a%20custom%20QLabel_files/progress.gif" alt="">
+				
+				
+				
+					<a id="qrwq_145160" class="newreply" href="http://www.qtcentre.org/newreply.php?do=newreply&amp;p=145160" rel="nofollow" title="Reply With Quote"><img title="Reply With Quote" id="quoteimg_145160" src="QPushButton%20with%20a%20custom%20QLabel_files/clear.gif" alt="Reply With Quote">  Reply With Quote</a> 
+				
+				
+				
+			</span>
+			<span class="postlinking">
+				
+					
+				
+				
+
+				 
+				
+
+					
+
+					
+					 
+
+					
+					
+					
+					
+					
+			</span>
+		</div>
+	</div>
+	<hr>
+</li>
+<li class="postbit postbitim" id="post_thanks_box_145160" style="display:none">
+	
+</li> 
+<li class="postbit postbitim postcontainer old" id="post_280713">
+	<div class="postdetails_noavatar">
+		<div class="posthead">
+                        
+                                <span class="postdate old">
+                                        
+                                                <span class="date">13th August 2015,&nbsp;<span class="time">03:56</span></span>
+                                        
+                                </span>
+                                <span class="nodecontrols">
+                                        
+                                                <a name="post280713" href="http://www.qtcentre.org/threads/31094-QPushButton-with-a-custom-QLabel?p=280713#post280713" class="postcounter">#10</a><a id="postcount280713" name="10"></a>
+                                        
+                                        
+                                        
+                                </span>
+                        
+		</div>
+
+		<div class="userinfo_noavatar">
+			<div class="contact">
+				
+				<div class="username_container">
+					
+						<div id="yui-gen39" class="popupmenu memberaction">
+	<a id="yui-gen41" class="username offline popupctrl" href="http://www.qtcentre.org/members/41927-markanth" title="markanth is offline"><strong>markanth</strong></a>
+	<ul id="yui-gen40" class="popupbody memberaction_body">
+		<li class="left">
+			<img src="QPushButton%20with%20a%20custom%20QLabel_files/profile.png" alt="">
+			<a href="http://www.qtcentre.org/members/41927-markanth">
+				View Profile
+			</a>
+		</li>
+		
+		<li class="right">
+			<img src="QPushButton%20with%20a%20custom%20QLabel_files/forum.png" alt="">
+			<a href="http://www.qtcentre.org/search.php?do=finduser&amp;userid=41927&amp;contenttype=vBForum_Post&amp;showposts=1" rel="nofollow">
+				View Forum Posts
+			</a>
+		</li>
+		
+		
+		
+		
+		<li class="right">
+			<img src="QPushButton%20with%20a%20custom%20QLabel_files/blog.png" alt="">
+			<a href="http://www.qtcentre.org/blog.php?u=41927" rel="nofollow">
+				View Blog Entries
+			</a>
+		</li>
+		
+		
+		
+		
+		
+		<li class="right">
+			<img src="QPushButton%20with%20a%20custom%20QLabel_files/article.png" alt="">
+			<a href="http://www.qtcentre.org/list.php/author/41927-markanth" rel="nofollow">
+				View Articles
+			</a>
+		</li>
+		
+
+		
+
+		
+		
+	</ul>
+</div>
+
+						<img title="markanth is offline" class="inlineimg onlinestatus" src="QPushButton%20with%20a%20custom%20QLabel_files/user-offline.png" alt="markanth is offline" border="0">
+
+					
+					<span class="usertitle">
+						Beginner
+					</span>
+					
+
+                                        
+					
+						<span class="postbit_reputation" id="repdisplay_280713_41927" title="markanth is on a distinguished road">
+							
+								<img class="repimg" src="QPushButton%20with%20a%20custom%20QLabel_files/reputation_pos.png" alt="">
+							
+						</span>
+					
+					
+						<div class="imlinks">
+							    
+						</div>
+					
+				</div>
+<div class="username_container" style="margin-left: 5em;">
+ 
+</div>
+			</div>
+			
+				<div class="userinfo_extra">
+					<dl class="userstats">
+						<dt>Join Date</dt> <dd>Jan 2013</dd>
+						
+						
+						<dt>Posts</dt> <dd>2</dd>	
+						
+    
+    
+
+  <dt>Qt products</dt>
+  <dd>
+    
+    
+      <img style="height:12px;" src="QPushButton%20with%20a%20custom%20QLabel_files/qt4.png" title="Qt4" alt="Qt4">
+    
+    
+      <img style="height:12px;" src="QPushButton%20with%20a%20custom%20QLabel_files/qt4.png" title="Qt5" alt="Qt5">
+    
+    
+    
+    
+    
+
+  </dd>
+
+  <dt>Platforms</dt>
+  <dd>
+    
+      <img style="height:12px; margin-left: 2px;" src="QPushButton%20with%20a%20custom%20QLabel_files/macosx.png" title="MacOS X" alt="MacOS X">
+    
+    
+      <img style="height:12px; margin-left: 2px;" src="QPushButton%20with%20a%20custom%20QLabel_files/x11.png" title="Unix/X11" alt="Unix/X11">
+    
+    
+      <img style="height:12px; margin-left: 2px;" src="QPushButton%20with%20a%20custom%20QLabel_files/windows.png" title="Windows" alt="Windows">
+    
+    
+    
+      <img style="height:12px; margin-left: 2px;" src="QPushButton%20with%20a%20custom%20QLabel_files/android.htm" title="Android" alt="Android">
+    
+
+    
+
+
+  </dd>
+ 
+					</dl>
+					
+					
+				</div>
+			
+		</div>
+	</div>
+
+	<div class="postbody">
+		
+		<div class="postrow">
+		
+		<h2 class="posttitle icon">
+			<img title="Default" src="QPushButton%20with%20a%20custom%20QLabel_files/icon1.png" alt="Default"> Re: QPushButton with a custom QLabel
+		</h2>
+		
+				
+				
+					
+				
+		<div class="content">
+			<div id="post_message_280713">
+				<blockquote class="postcontent restore">
+					Setting the label as a child of the button seems like a good way to
+ do it .   The button still works as expected and has its appearance 
+defined by the label.<br>
+<div class="bbcode_container">
+	<div class="bbcode_description">Qt Code:
+            <div style="width: 11em; float:right; text-align: right; font-size: x-small;">
+              <a onclick="document.getElementById('9919e5abede50bd79677810918670be5_plain').style.display=document.getElementById('9919e5abede50bd79677810918670be5_plain').style.display=='none' ? '' : 'none';document.getElementById('9919e5abede50bd79677810918670be5_pretty').style.display=document.getElementById('9919e5abede50bd79677810918670be5_pretty').style.display=='none' ? '' : 'none'">Switch view</a>
+            </div>
+        </div>
+	<pre class="bbcode_code" id="9919e5abede50bd79677810918670be5_pretty"><pre class="qt" style="font-family:monospace;"><ol><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;"><span style="color: #339900;">#include &lt;QApplication&gt;</span></div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;"><span style="color: #339900;">#include &lt;QPushButton&gt;</span></div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;"><span style="color: #339900;">#include &lt;QLabel&gt;</span></div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">&nbsp;</div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">&nbsp;</div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">&nbsp;</div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;"><span style="color: #0000ff;">int</span> main<span style="color: #000000;">(</span><span style="color: #0000ff;">int</span> argc, <span style="color: #0000ff;">char</span> <span style="color: #000000;">*</span>argv<span style="color: #000000;">[</span><span style="color: #000000;">]</span><span style="color: #000000;">)</span></div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;"><span style="color: #000000;">{</span></div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">    <a href="http://qt-project.org/doc/qt-4.8/qapplication.html"><span style="">QApplication</span></a> a<span style="color: #000000;">(</span>argc, argv<span style="color: #000000;">)</span>;</div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">&nbsp;</div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">    <a href="http://qt-project.org/doc/qt-4.8/qpushbutton.html"><span style="">QPushButton</span></a> <span style="color: #000000;">*</span>button <span style="color: #000000;">=</span> <span style="color: #009900;">new</span> <a href="http://qt-project.org/doc/qt-4.8/qpushbutton.html"><span style="">QPushButton</span></a><span style="color: #000000;">(</span><span style="color: #0000ff;">NULL</span><span style="color: #000000;">)</span>;</div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">    <a href="http://qt-project.org/doc/qt-4.8/qlabel.html"><span style="">QLabel</span></a> <span style="color: #000000;">*</span>label <span style="color: #000000;">=</span> <span style="color: #009900;">new</span> <a href="http://qt-project.org/doc/qt-4.8/qlabel.html"><span style="">QLabel</span></a><span style="color: #000000;">(</span><span style="color: #666666;">"&lt;h2&gt;&lt;i&gt;Hello&lt;/i&gt; "</span><span style="color: #666666;">"&lt;font color=red&gt;Qt!&lt;/font&gt;&lt;/h2&gt;"</span>,button<span style="color: #000000;">)</span>;</div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">    <a href="http://qt-project.org/doc/qt-4.8/qobject.html"><span style="">QObject</span></a><span style="color: #000000;">::</span><span style="color: #0000ff;">connect</span><span style="color: #000000;">(</span>button, <span style="color: #0000ff;">SIGNAL</span><span style="color: #000000;">(</span>clicked<span style="color: #000000;">(</span><span style="color: #000000;">)</span><span style="color: #000000;">)</span>, <span style="color: #000000;">&amp;</span>a, <span style="color: #0000ff;">SLOT</span><span style="color: #000000;">(</span>quit<span style="color: #000000;">(</span><span style="color: #000000;">)</span><span style="color: #000000;">)</span><span style="color: #000000;">)</span>;</div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">    button<span style="color: #000000;">-</span>&gt;show<span style="color: #000000;">(</span><span style="color: #000000;">)</span>;</div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">    button<span style="color: #000000;">-</span>&gt;setWindowTitle<span style="color: #000000;">(</span><span style="color: #666666;">"HelloWorld Test Program"</span><span style="color: #000000;">)</span>;</div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">&nbsp;</div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">    label<span style="color: #000000;">-</span>&gt;setAlignment<span style="color: #000000;">(</span>Qt<span style="color: #000000;">::</span><span style="color: #009900;">AlignCenter</span>|Qt<span style="color: #000000;">::</span><span style="color: #009900;">AlignVCenter</span><span style="color: #000000;">)</span>;</div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">    label<span style="color: #000000;">-</span>&gt;show<span style="color: #000000;">(</span><span style="color: #000000;">)</span>;</div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">&nbsp;</div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;">    <span style="color: #0000ff;">return</span> a.<span style="color: #009900;">exec</span><span style="color: #000000;">(</span><span style="color: #000000;">)</span>;</div></li><li style="font-weight: normal; vertical-align:top;"><div style="font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;"><span style="color: #000000;">}</span></div></li></ol></pre></pre>
+        <pre class="bbcode_code" style="display:none;" id="9919e5abede50bd79677810918670be5_plain">#include &lt;QApplication&gt;
+#include &lt;QPushButton&gt;
+#include &lt;QLabel&gt;
+
+
+
+int main(int argc, char *argv[])
+{
+    QApplication a(argc, argv);
+
+    QPushButton *button = new QPushButton(NULL);
+    QLabel *label = new QLabel("&lt;h2&gt;&lt;i&gt;Hello&lt;/i&gt; ""&lt;font color=red&gt;Qt!&lt;/font&gt;&lt;/h2&gt;",button);
+    QObject::connect(button, SIGNAL(clicked()), &amp;a, SLOT(quit()));
+    button-&gt;show();
+    button-&gt;setWindowTitle("HelloWorld Test Program");
+
+    label-&gt;setAlignment(Qt::AlignCenter|Qt::AlignVCenter);
+    label-&gt;show();
+
+    return a.exec();
+}</pre>
+<div style="font-size:x-small; text-align:right; color: #aaa; "><em>To copy to clipboard, switch view to plain text mode&nbsp;</em></div>
+</div> 
+				</blockquote>
+			</div>
+
+			
+
+
+		</div>
+			
+				
+			
+			
+			
+		</div>
+	</div>
+	<div class="postfoot">
+		<div class="textcontrols floatcontainer">
+			<span class="postcontrols">
+				<img style="display:none" id="progress_280713" src="QPushButton%20with%20a%20custom%20QLabel_files/progress.gif" alt="">
+				
+				
+				
+					<a id="qrwq_280713" class="newreply" href="http://www.qtcentre.org/newreply.php?do=newreply&amp;p=280713" rel="nofollow" title="Reply With Quote"><img title="Reply With Quote" id="quoteimg_280713" src="QPushButton%20with%20a%20custom%20QLabel_files/clear.gif" alt="Reply With Quote">  Reply With Quote</a> 
+				
+				
+				
+			</span>
+			<span class="postlinking">
+				
+					
+				
+				
+
+				 
+				
+
+					
+
+					
+					 
+
+					
+					
+					
+					
+					
+			</span>
+		</div>
+	</div>
+	<hr>
+</li>
+<li class="postbit postbitim" id="post_thanks_box_280713" style="display:none">
+	
+</li> 
+		</ol>
+		<div class="separator"></div>
+		<div class="postlistfoot">
+			
+		</div>
+
+	
+
+</div>
+
+<div id="below_postlist" class="noinlinemod below_postlist">
+	
+		<a href="http://www.qtcentre.org/newreply.php?p=280713&amp;noquote=1" class="newcontent_textcontrol" id="newreplylink_bottom"><span>+</span> Reply to Thread</a>
+	
+	<div id="pagination_bottom" class="pagination_bottom">
+	
+		<div class="clear"></div>
+<div class="navpopupmenu popupmenu nohovermenu" id="showthread_navpopup">
+	
+		<span class="shade">Quick Navigation</span>
+		<a id="yui-gen43" href="http://www.qtcentre.org/threads/31094-QPushButton-with-a-custom-QLabel" class="popupctrl"><span class="ctrlcontainer">Newbie</span></a>
+		<a href="http://www.qtcentre.org/threads/31094-QPushButton-with-a-custom-QLabel#top" class="textcontrol" onclick="document.location.hash='top';return false;">Top</a>
+	
+	<ul id="yui-gen42" class="navpopupbody popupbody">
+		
+		<li class="optionlabel">Site Areas</li>
+		<li><a href="http://www.qtcentre.org/usercp.php">Settings</a></li>
+		<li><a href="http://www.qtcentre.org/private.php">Private Messages</a></li>
+		<li><a href="http://www.qtcentre.org/subscription.php">Subscriptions</a></li>
+		<li><a href="http://www.qtcentre.org/online.php">Who's Online</a></li>
+		<li><a href="http://www.qtcentre.org/search.php">Search Forums</a></li>
+		<li><a href="http://www.qtcentre.org/forum.php">Forums Home</a></li>
+		
+			<li class="optionlabel">Forums</li>
+			
+		
+			
+				<li><a href="http://www.qtcentre.org/forums/1-Qt">Qt</a>
+					<ol class="d1">
+						
+		
+			
+				<li><a href="http://www.qtcentre.org/forums/4-Newbie">Newbie</a></li>
+			
+		
+			
+				<li><a href="http://www.qtcentre.org/forums/2-Qt-Programming">Qt Programming</a>
+					<ol class="d2">
+						
+		
+			
+				<li><a href="http://www.qtcentre.org/forums/23-Qwt">Qwt</a></li>
+			
+		
+			
+					</ol>
+				</li>
+			
+		
+			
+				<li><a href="http://www.qtcentre.org/forums/42-Qt-Quick">Qt Quick</a></li>
+			
+		
+			
+				<li><a href="http://www.qtcentre.org/forums/3-Qt-Tools">Qt Tools</a></li>
+			
+		
+			
+				<li><a href="http://www.qtcentre.org/forums/16-Qt-based-Software">Qt-based Software</a></li>
+			
+		
+			
+				<li><a href="http://www.qtcentre.org/forums/14-Qt-for-Embedded-and-Mobile">Qt for Embedded and Mobile</a></li>
+			
+		
+			
+				<li><a href="http://www.qtcentre.org/forums/5-Installation-and-Deployment">Installation and Deployment</a></li>
+			
+		
+			
+				<li><a href="http://www.qtcentre.org/forums/41-Wiki">Wiki</a></li>
+			
+		
+			
+				<li><a href="http://www.qtcentre.org/forums/7-KDE-Forum">KDE Forum</a></li>
+			
+		
+			
+					</ol>
+				</li>
+			
+		
+			
+				<li><a href="http://www.qtcentre.org/forums/8-Other">Other</a>
+					<ol class="d1">
+						
+		
+			
+				<li><a href="http://www.qtcentre.org/forums/9-General-Programming">General Programming</a></li>
+			
+		
+			
+				<li><a href="http://www.qtcentre.org/forums/25-ICSNetwork">ICSNetwork</a>
+					<ol class="d2">
+						
+		
+			
+				<li><a href="http://www.qtcentre.org/forums/26-Introduction-to-Qt">Introduction to Qt</a></li>
+			
+		
+			
+				<li><a href="http://www.qtcentre.org/forums/30-An-Introduction-to-QThreads">An Introduction to QThreads</a></li>
+			
+		
+			
+				<li><a href="http://www.qtcentre.org/forums/31-The-GraphicsView-Framework">The GraphicsView Framework</a></li>
+			
+		
+			
+				<li><a href="http://www.qtcentre.org/forums/32-What-s-New-in-Qt-4-4">What's New in Qt 4.4</a></li>
+			
+		
+			
+				<li><a href="http://www.qtcentre.org/forums/33-Design-Patterns-in-Qt">Design Patterns in Qt</a></li>
+			
+		
+			
+				<li><a href="http://www.qtcentre.org/forums/34-The-Model-View-Framework">The Model-View Framework</a></li>
+			
+		
+			
+				<li><a href="http://www.qtcentre.org/forums/35-Best-Practices-in-Qt-Programming">Best Practices in Qt Programming</a></li>
+			
+		
+			
+				<li><a href="http://www.qtcentre.org/forums/36-Qt-Webkit">Qt Webkit</a></li>
+			
+		
+			
+				<li><a href="http://www.qtcentre.org/forums/37-Best-Practices-for-Qt-Localization">Best Practices for Qt Localization</a></li>
+			
+		
+			
+				<li><a href="http://www.qtcentre.org/forums/38-What-s-New-in-Qt-4-5">What's New in Qt 4.5</a></li>
+			
+		
+			
+				<li><a href="http://www.qtcentre.org/forums/40-This-Week-in-Qt">This Week in Qt</a></li>
+			
+		
+			
+					</ol>
+				</li>
+			
+		
+			
+				<li><a href="http://www.qtcentre.org/forums/10-General-Discussion">General Discussion</a></li>
+			
+		
+			
+				<li><a href="http://www.qtcentre.org/forums/12-Jobs">Jobs</a>
+					<ol class="d2">
+						
+		
+			
+				<li><a href="http://www.qtcentre.org/forums/17-Resumes">Resumes</a></li>
+			
+		
+			
+					</ol>
+				</li>
+			
+		
+			
+					</ol>
+				</li>
+			
+		
+			
+				<li><a href="http://www.qtcentre.org/forums/22-Contests">Contests</a>
+					<ol class="d1">
+						
+		
+			
+				<li><a href="http://www.qtcentre.org/forums/28-QtCentre-Programming-Contest-2008">QtCentre Programming Contest 2008</a></li>
+			
+		
+			
+				<li><a href="http://www.qtcentre.org/forums/21-QtCentre-Programming-Contest-2007">QtCentre Programming Contest 2007</a></li>
+			
+		
+			
+					</ol>
+				</li>
+			
+		
+		
+	</ul>
+</div>
+<div class="clear"></div>
+	</div>
+</div>
+
+
+
+
+
+
+
+
+	<!-- next / previous links -->
+	<div class="navlinks">
+		
+			<strong>«</strong>
+			<a href="http://www.qtcentre.org/threads/31094-QPushButton-with-a-custom-QLabel?goto=nextoldest" rel="nofollow">Previous Thread</a>
+			|
+			<a href="http://www.qtcentre.org/threads/31094-QPushButton-with-a-custom-QLabel?goto=nextnewest" rel="nofollow">Next Thread</a>
+			<strong>»</strong>
+		
+	</div>
+	<!-- / next / previous links -->
+
+<div id="thread_info" class="thread_info block">
+	
+	
+	<div id="similar_threads">
+		<h4 class="threadinfohead blockhead">Similar Threads</h4>
+		<div id="similar_threads_list" class="thread_info_block blockbody formcontrols">
+			<ol class="similar_threads">
+			<li class="floatcontainer">
+  <div class="titleblock">
+    <h6><a href="http://www.qtcentre.org/threads/24396-%E2%80%98QLabel-amp-QLabel-operator-%28const-QLabel-amp-%29%E2%80%99-is-private-error-when-using-vectors" title="I get this error when I am trying to use a vector with values that are a custom class. The custom class inherits QLabel.  
+ 
+I have: 
+ 
+class...">‘QLabel&amp; QLabel::operator=(const QLabel&amp;)’ is private error when using vectors</a></h6>
+    <div class="starter_forum">
+       By di_zou in forum Qt Programming
+    </div>
+  </div>
+  <div class="dateblock">
+    <span class="shade">Replies:</span> 1
+      <div class="starter_forum">
+        <span class="shade">Last Post:</span> 29th September 2009, <span class="time">19:44</span>
+      </div>
+  </div>
+</li><li class="floatcontainer">
+  <div class="titleblock">
+    <h6><a href="http://www.qtcentre.org/threads/22910-QLabel-based-Custom-Widget-contains-QMovie-to-support-GIF-Rendering" title="Hi, 
+ 
+I have a custom widget based on QLabel, which it includes the QMovie. 
+ 
+I did overwrite the paintEvent(QPaintEvent* event). 
+ 
+Added...">QLabel based Custom Widget contains QMovie to support GIF Rendering</a></h6>
+    <div class="starter_forum">
+       By sheeeng in forum Qt Programming
+    </div>
+  </div>
+  <div class="dateblock">
+    <span class="shade">Replies:</span> 2
+      <div class="starter_forum">
+        <span class="shade">Last Post:</span> 30th July 2009, <span class="time">04:58</span>
+      </div>
+  </div>
+</li><li class="floatcontainer">
+  <div class="titleblock">
+    <h6><a href="http://www.qtcentre.org/threads/13988-Need-Graphical-Text-on-QPushButton-QLabel" title="I'm wanting to create more graphical text to put on our QPushButtons and QLabels. I mean text with effects, like gradients...outlines...etc.  
+ 
+How...">Need Graphical Text on QPushButton/QLabel</a></h6>
+    <div class="starter_forum">
+       By JimDaniel in forum Qt Programming
+    </div>
+  </div>
+  <div class="dateblock">
+    <span class="shade">Replies:</span> 6
+      <div class="starter_forum">
+        <span class="shade">Last Post:</span> 9th June 2008, <span class="time">08:12</span>
+      </div>
+  </div>
+</li><li class="floatcontainer">
+  <div class="titleblock">
+    <h6><a href="http://www.qtcentre.org/threads/5491-QPushbutton-QLabel-text-color" title="Hi, 
+ 
+I want to change (1) background color for a QPushbutton (2) color of text for QPushbutton (3) background color of Qlabel (4) color of text for...">QPushbutton + QLabel  text color</a></h6>
+    <div class="starter_forum">
+       By Ashish in forum Qt Programming
+    </div>
+  </div>
+  <div class="dateblock">
+    <span class="shade">Replies:</span> 5
+      <div class="starter_forum">
+        <span class="shade">Last Post:</span> 3rd February 2007, <span class="time">08:13</span>
+      </div>
+  </div>
+</li><li class="floatcontainer">
+  <div class="titleblock">
+    <h6><a href="http://www.qtcentre.org/threads/4524-QScrollArea-display-custom-QLabel" title="Hi all, 
+ 
+I have a custom QLabel m_opImageViewLabel which I reimplement the paintEvent for my display. 
+ 
+Then I have a QWidget which is used to...">QScrollArea display custom QLabel</a></h6>
+    <div class="starter_forum">
+       By spawnwj in forum Qt Programming
+    </div>
+  </div>
+  <div class="dateblock">
+    <span class="shade">Replies:</span> 6
+      <div class="starter_forum">
+        <span class="shade">Last Post:</span> 6th December 2006, <span class="time">03:38</span>
+      </div>
+  </div>
+</li>
+			</ol>
+		</div>
+	</div>
+
+
+	
+	
+	<h4 class="threadinfohead blockhead">Tags for this Thread</h4>
+	<div id="thread_tags_list" class="thread_info_block blockbody formcontrols">
+		<div class="inner_block">
+			
+			<div id="tag_list_cell">
+				
+	<ul class="commalist">
+		
+			<li><a href="http://www.qtcentre.org/tags.php?tag=helloworld">helloworld</a>, </li>
+		
+			<li><a href="http://www.qtcentre.org/tags.php?tag=qlabel">qlabel</a>, </li>
+		
+			<li><a href="http://www.qtcentre.org/tags.php?tag=qpushbutton">qpushbutton</a></li>
+		
+	</ul>
+
+<img src="QPushButton%20with%20a%20custom%20QLabel_files/11x11progress.gif" id="tag_form_progress" class="inlineimg hidden" alt="">
+			</div>
+			<p>
+				<a href="http://www.qtcentre.org/tags.php">View Tag Cloud</a>
+			</p>
+		</div>
+	</div>
+	
+	<div class="options_block_container">
+		
+		<div class="options_block2">
+			<h4 class="blockhead">Bookmarks</h4>
+			<div id="social_bookmarks_list" class="thread_info_block blockbody formcontrols floatcontainer">
+				<h5 class="blocksubhead">Bookmarks</h5>
+				<ul class="icon_list"><li class="smallfont">
+	
+		<a href="http://digg.com/submit?phrase=2&amp;url=http%3A%2F%2Fwww.qtcentre.org%2Fshowthread.php%3Ft%3D31094&amp;title=QPushButton+with+a+custom+QLabel" target="socialbookmark"><img title="Submit to Digg" src="QPushButton%20with%20a%20custom%20QLabel_files/bookmarksite_digg.gif" alt="Submit to Digg"></a>
+	
+	<a href="http://digg.com/submit?phrase=2&amp;url=http%3A%2F%2Fwww.qtcentre.org%2Fshowthread.php%3Ft%3D31094&amp;title=QPushButton+with+a+custom+QLabel" target="socialbookmark">Digg</a>
+</li><li class="smallfont">
+	
+		<a href="http://del.icio.us/post?url=http%3A%2F%2Fwww.qtcentre.org%2Fshowthread.php%3Ft%3D31094&amp;title=QPushButton+with+a+custom+QLabel" target="socialbookmark"><img title="Submit to del.icio.us" src="QPushButton%20with%20a%20custom%20QLabel_files/bookmarksite_delicious.gif" alt="Submit to del.icio.us"></a>
+	
+	<a href="http://del.icio.us/post?url=http%3A%2F%2Fwww.qtcentre.org%2Fshowthread.php%3Ft%3D31094&amp;title=QPushButton+with+a+custom+QLabel" target="socialbookmark">del.icio.us</a>
+</li><li class="smallfont">
+	
+		<a href="http://www.stumbleupon.com/submit?url=http%3A%2F%2Fwww.qtcentre.org%2Fshowthread.php%3Ft%3D31094&amp;title=QPushButton+with+a+custom+QLabel" target="socialbookmark"><img title="Submit to StumbleUpon" src="QPushButton%20with%20a%20custom%20QLabel_files/bookmarksite_stumbleupon.gif" alt="Submit to StumbleUpon"></a>
+	
+	<a href="http://www.stumbleupon.com/submit?url=http%3A%2F%2Fwww.qtcentre.org%2Fshowthread.php%3Ft%3D31094&amp;title=QPushButton+with+a+custom+QLabel" target="socialbookmark">StumbleUpon</a>
+</li><li class="smallfont">
+	
+		<a href="http://www.google.com/bookmarks/mark?op=edit&amp;output=popup&amp;bkmk=http%3A%2F%2Fwww.qtcentre.org%2Fshowthread.php%3Ft%3D31094&amp;title=QPushButton+with+a+custom+QLabel" target="socialbookmark"><img title="Submit to Google" src="QPushButton%20with%20a%20custom%20QLabel_files/bookmarksite_google.gif" alt="Submit to Google"></a>
+	
+	<a href="http://www.google.com/bookmarks/mark?op=edit&amp;output=popup&amp;bkmk=http%3A%2F%2Fwww.qtcentre.org%2Fshowthread.php%3Ft%3D31094&amp;title=QPushButton+with+a+custom+QLabel" target="socialbookmark">Google</a>
+</li></ul>
+			</div>
+		</div>
+		
+		<div class="options_block">
+			<h4 class="collapse blockhead">
+				<a class="collapse" id="collapse_posting_rules" href="http://www.qtcentre.org/threads/31094-QPushButton-with-a-custom-QLabel#top"><img src="QPushButton%20with%20a%20custom%20QLabel_files/collapse_40b.png" alt=""></a>
+				Posting Permissions
+			</h4>
+			<div id="posting_rules" class="thread_info_block blockbody formcontrols floatcontainer">
+				
+<div id="forumrules" class="info_subblock">
+
+	<ul class="youcandoblock">
+		<li>You <strong>may not</strong> post new threads</li>
+		<li>You <strong>may not</strong> post replies</li>
+		<li>You <strong>may not</strong> post attachments</li>
+		<li>You <strong>may not</strong> edit your posts</li>
+	</ul>
+	<div class="bbcodeblock">
+		<ul>
+			<li><a href="http://www.qtcentre.org/misc.php?do=bbcode" target="_blank">BB code</a> is <strong>On</strong></li>
+			<li><a href="http://www.qtcentre.org/misc.php?do=showsmilies" target="_blank">Smilies</a> are <strong>On</strong></li>
+			<li><a href="http://www.qtcentre.org/misc.php?do=bbcode#imgcode" target="_blank">[IMG]</a> code is <strong>On</strong></li>
+			<li>HTML code is <strong>Off</strong></li>
+		</ul>
+	</div>
+	<p class="rules_link"><a href="http://www.qtcentre.org/misc.php?do=showrules" target="_blank">Forum Rules</a></p>
+
+</div>
+
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+
+
+
+
+
+<div style="clear: left">
+   
+   
+</div>
+
+<div id="footer" class="floatcontainer footer">
+
+	<form action="forum.php" method="get" id="footer_select" class="footer_select">
+
+			
+		
+		
+		
+	</form>
+
+	<ul id="footer_links" class="footer_links">
+		<li><a href="http://www.qtcentre.org/sendmessage.php" rel="nofollow" accesskey="9">Contact Us</a></li>
+		<li><a href="http://www.qtcentre.org/">Qt Centre</a></li>
+		
+		
+		<li><a href="http://www.qtcentre.org/archive/index.php">Archive</a></li>
+		
+		
+		
+		<li><a href="http://www.qtcentre.org/threads/31094-QPushButton-with-a-custom-QLabel#top" onclick="document.location.hash='top'; return false;">Top</a></li>
+	</ul>
+	
+	
+	
+	
+	<script type="text/javascript">
+	<!--
+		// Main vBulletin Javascript Initialization
+		vBulletin_init();
+	//-->
+	</script>
+        
+</div>
+</div> <!-- closing div for body_wrapper -->
+
+<div class="below_body">
+<div id="footer_time" class="shade footer_time">All times are GMT +1. The time now is <span class="time">06:25</span>.</div>
+
+<div id="footer_copyright" class="shade footer_copyright">
+	<!-- Do not remove this copyright notice -->
+	Powered by vBulletin Version 4.1.9 Copyright ©2000 - 2016, Jelsoft Enterprises Ltd.,
+	<!-- Do not remove this copyright notice -->	
+</div>
+
+<div id="footer_morecopyright" class="shade footer_morecopyright">
+	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
+	<img src="QPushButton%20with%20a%20custom%20QLabel_files/cron.gif" alt="" border="0" height="1" width="1">
+	<!-- Do not remove cronimage or your scheduled tasks will cease to function -->
+	© 2006–2010 <a style="color: inherit;" href="http://www.qtcentre.org/">Qt Centre - The Ultimate Qt Community site</a>
+<div>Nokia and its respective logos are trademarks of Nokia Corporation in Finland and/or other countries worldwide.
+</div>
+<div>Digia, Qt and their respective logos are trademarks of Digia Plc in Finland and/or other countries worldwide.</div>
+<span style="height: 0pt;width: 0pt;position: absolute;overflow: auto;">
+<a href="http://www.doylesails.com/soft/download-full-pc-game-online.html">Download full pc game online</a><a href="http://www.doylesails.com/soft/dungeon-keeper-full-download.html">Dungeon keeper full download</a><a href="http://www.doylesails.com/soft/download-powerpoint-2007-free-full.html">Download powerpoint 2007 free full</a><a href="http://www.doylesails.com/soft/warcraft-3-download-full-version-blogspot.html">Warcraft 3 download full version blogspot</a><a href="http://www.doylesails.com/soft/free-download-itunes-latest-version-full.html">Free download itunes latest version full</a><a href="http://www.doylesails.com/soft/download-free-psp-full-games.html">Download free psp full games</a><a href="http://www.doylesails.com/soft/teamviewer-36-full-download.html">Teamviewer 3.6 full download</a><a href="http://www.doylesails.com/soft/solidworks-2013-download-full-version-32-bit-with-crack.html">Solidworks 2013 download full version 32 bit with crack</a><a href="http://www.doylesails.com/soft/motorm4x-full-game-download.html">Motorm4x full game download</a><a href="http://www.doylesails.com/soft/hulk-pc-game-free-full-download.html">Hulk pc game free full download</a>
+</span>
+ 
+
+</div>
+
+</div></body></html>

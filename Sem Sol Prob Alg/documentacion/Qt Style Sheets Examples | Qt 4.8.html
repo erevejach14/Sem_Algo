@@ -1,0 +1,1764 @@
+<!--?xml version="1.0" encoding="UTF-8"?-->
+<!DOCTYPE html>
+<html lang="en_US"><head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<!-- stylesheet.qdoc -->
+  <title>Qt Style Sheets Examples | Qt 4.8 </title>
+  <link rel="stylesheet" type="text/css" href="Qt%20Style%20Sheets%20Examples%20%7C%20Qt%204.8_files/online.css">
+  <link rel="shortcut icon" href="http://d33sqmjvzgs8hq.cloudfront.net/wp-content/themes/oneqt/assets/images/favicon.ico.gzip">
+  <link rel="icon" type="image/png" href="http://d33sqmjvzgs8hq.cloudfront.net/wp-content/themes/oneqt/assets/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" href="http://d33sqmjvzgs8hq.cloudfront.net/wp-content/themes/oneqt/assets/images/favicon-16x16.png">
+  <script src="Qt%20Style%20Sheets%20Examples%20%7C%20Qt%204.8_files/widgets.js" id="twitter-wjs"></script><script src="Qt%20Style%20Sheets%20Examples%20%7C%20Qt%204.8_files/sdk.js" id="facebook-jssdk"></script><script src="Qt%20Style%20Sheets%20Examples%20%7C%20Qt%204.8_files/async-ads.js" async=""></script><script src="Qt%20Style%20Sheets%20Examples%20%7C%20Qt%204.8_files/cse.js" async="" type="text/javascript"></script><script src="Qt%20Style%20Sheets%20Examples%20%7C%20Qt%204.8_files/analytics.js" async=""></script><script type="text/javascript"> wpThemeFolder = 'http://qt.io/wp-content/themes/oneqt'; </script>
+  <script type="text/javascript" src="Qt%20Style%20Sheets%20Examples%20%7C%20Qt%204.8_files/combo.js"></script>
+  <script type="text/javascript" src="Qt%20Style%20Sheets%20Examples%20%7C%20Qt%204.8_files/main.js"></script>
+  <script type="text/javascript" src="Qt%20Style%20Sheets%20Examples%20%7C%20Qt%204.8_files/extras.js"></script>
+  <script type="text/javascript">
+  $(function(){
+     $("#footer").load("/style/qt-footer.html");
+     $("#sidebar-content").load("style/qt5-sidebar.html");
+  });
+  </script>
+  <script type="text/javascript">
+    (function (i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+        (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date(); a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-54043535-2', 'qt.io');
+    ga('set', 'forceSSL', true);
+    ga('send', 'pageview');
+  </script>
+<script type="text/javascript" src="Qt%20Style%20Sheets%20Examples%20%7C%20Qt%204.8_files/jsapi"></script><link rel="stylesheet" href="Qt%20Style%20Sheets%20Examples%20%7C%20Qt%204.8_files/defaulten_002.css" type="text/css"><link rel="stylesheet" href="Qt%20Style%20Sheets%20Examples%20%7C%20Qt%204.8_files/default.css" type="text/css"><script src="Qt%20Style%20Sheets%20Examples%20%7C%20Qt%204.8_files/defaulten_002.js" type="text/javascript"></script><style type="text/css">
+.gsc-control-cse {
+font-family: Arial, sans-serif;
+border-color: #FFFFFF;
+background-color: #FFFFFF;
+}
+.gsc-control-cse .gsc-table-result {
+font-family: Arial, sans-serif;
+}
+input.gsc-input {
+border-color: #D9D9D9;
+}
+input.gsc-search-button {
+border-color: #5CAA15;
+background-color: #5CAA15;
+}
+.gsc-tabHeader.gsc-tabhInactive {
+border-color: #E9E9E9;
+background-color: #E9E9E9;
+}
+.gsc-tabHeader.gsc-tabhActive {
+border-top-color: #5CAA15;
+border-left-color: #E9E9E9;
+border-right-color: #E9E9E9;
+background-color: #FFFFFF;
+}
+.gsc-tabsArea {
+border-color: #E9E9E9;
+}
+.gsc-webResult.gsc-result,
+.gsc-results .gsc-imageResult {
+border-color: #FFFFFF;
+background-color: #FFFFFF;
+}
+.gsc-webResult.gsc-result:hover,
+.gsc-imageResult:hover {
+border-color: #FFFFFF;
+background-color: #FFFFFF;
+}
+.gsc-webResult.gsc-result.gsc-promotion:hover {
+border-color: #FFFFFF;
+background-color: #FFFFFF;
+}
+.gs-webResult.gs-result a.gs-title:link,
+.gs-webResult.gs-result a.gs-title:link b,
+.gs-imageResult a.gs-title:link,
+.gs-imageResult a.gs-title:link b {
+color: #5CAA15;
+}
+.gs-webResult.gs-result a.gs-title:visited,
+.gs-webResult.gs-result a.gs-title:visited b,
+.gs-imageResult a.gs-title:visited,
+.gs-imageResult a.gs-title:visited b {
+color: #46A2DA;
+}
+.gs-webResult.gs-result a.gs-title:hover,
+.gs-webResult.gs-result a.gs-title:hover b,
+.gs-imageResult a.gs-title:hover,
+.gs-imageResult a.gs-title:hover b {
+color: #46A2DA;
+}
+.gs-webResult.gs-result a.gs-title:active,
+.gs-webResult.gs-result a.gs-title:active b,
+.gs-imageResult a.gs-title:active,
+.gs-imageResult a.gs-title:active b {
+color: #5CAA15;
+}
+.gsc-cursor-page {
+color: #5CAA15;
+}
+a.gsc-trailing-more-results:link {
+color: #5CAA15;
+}
+.gs-webResult .gs-snippet,
+.gs-imageResult .gs-snippet,
+.gs-fileFormatType {
+color: #404244;
+}
+.gs-webResult div.gs-visibleUrl,
+.gs-imageResult div.gs-visibleUrl {
+color: #5CAA15;
+}
+.gs-webResult div.gs-visibleUrl-short {
+color: #5CAA15;
+}
+.gs-webResult div.gs-visibleUrl-short {
+display: none;
+}
+.gs-webResult div.gs-visibleUrl-long {
+display: block;
+}
+.gs-promotion div.gs-visibleUrl-short {
+display: none;
+}
+.gs-promotion div.gs-visibleUrl-long {
+display: block;
+}
+.gsc-cursor-box {
+border-color: #FFFFFF;
+}
+.gsc-results .gsc-cursor-box .gsc-cursor-page {
+border-color: #E9E9E9;
+background-color: #FFFFFF;
+color: #5CAA15;
+}
+.gsc-results .gsc-cursor-box .gsc-cursor-current-page {
+border-color: #5CAA15;
+background-color: #FFFFFF;
+color: #46A2DA;
+}
+.gsc-webResult.gsc-result.gsc-promotion {
+border-color: #404244;
+background-color: #FFFFFF;
+}
+.gsc-completion-title {
+color: #5CAA15;
+}
+.gsc-completion-snippet {
+color: #404244;
+}
+.gs-promotion a.gs-title:link,
+.gs-promotion a.gs-title:link *,
+.gs-promotion .gs-snippet a:link {
+color: #0000CC;
+}
+.gs-promotion a.gs-title:visited,
+.gs-promotion a.gs-title:visited *,
+.gs-promotion .gs-snippet a:visited {
+color: #0000CC;
+}
+.gs-promotion a.gs-title:hover,
+.gs-promotion a.gs-title:hover *,
+.gs-promotion .gs-snippet a:hover {
+color: #0000CC;
+}
+.gs-promotion a.gs-title:active,
+.gs-promotion a.gs-title:active *,
+.gs-promotion .gs-snippet a:active {
+color: #0000CC;
+}
+.gs-promotion .gs-snippet,
+.gs-promotion .gs-title .gs-promotion-title-right,
+.gs-promotion .gs-title .gs-promotion-title-right * {
+color: #000000;
+}
+.gs-promotion .gs-visibleUrl,
+.gs-promotion .gs-visibleUrl-short {
+color: #008000;
+}</style><style type="text/css">.gscb_a{display:inline-block;font:27px/13px arial,sans-serif}.gsst_a .gscb_a{color:#a1b9ed;cursor:pointer}.gsst_a:hover .gscb_a,.gsst_a:focus .gscb_a{color:#36c}.gsst_a{display:inline-block}.gsst_a{cursor:pointer;padding:0 4px}.gsst_a:hover{text-decoration:none!important}.gsst_b{font-size:16px;padding:0 2px;position:relative;user-select:none;-moz-user-select:none;white-space:nowrap}.gsst_e{opacity:0.55;}.gsst_a:hover .gsst_e,.gsst_a:focus .gsst_e{opacity:0.72;}.gsst_a:active .gsst_e{opacity:1;}.gsst_f{background:white;text-align:left}.gsst_g{background-color:white;border:1px solid #ccc;border-top-color:#d9d9d9;box-shadow:0 2px 4px rgba(0,0,0,0.2);-moz-box-shadow:0 2px 4px rgba(0,0,0,0.2);margin:-1px -3px;padding:0 6px}.gsst_h{background-color:white;height:1px;margin-bottom:-1px;position:relative;top:-1px}.gsib_a{width:100%;padding:4px 6px 0}.gsib_a,.gsib_b{vertical-align:top}.gssb_c{border:0;position:absolute;z-index:989}.gssb_e{border:1px solid #ccc;border-top-color:#d9d9d9;box-shadow:0 2px 4px rgba(0,0,0,0.2);-moz-box-shadow:0 2px 4px rgba(0,0,0,0.2);cursor:default}.gssb_f{visibility:hidden;white-space:nowrap}.gssb_k{border:0;display:block;position:absolute;top:0;z-index:988}.gsdd_a{border:none!important}.gsq_a{padding:0}.gscsep_a{display:none}.gssb_a{padding:0 7px}.gssb_a,.gssb_a td{white-space:nowrap;overflow:hidden;line-height:22px}#gssb_b{font-size:11px;color:#36c;text-decoration:none}#gssb_b:hover{font-size:11px;color:#36c;text-decoration:underline}.gssb_g{text-align:center;padding:8px 0 7px;position:relative}.gssb_h{font-size:15px;height:28px;margin:0.2em}.gssb_i{background:#eee}.gss_ifl{visibility:hidden;padding-left:5px}.gssb_i .gss_ifl{visibility:visible}a.gssb_j{font-size:13px;color:#36c;text-decoration:none;line-height:100%}a.gssb_j:hover{text-decoration:underline}.gssb_l{height:1px;background-color:#e5e5e5}.gssb_m{color:#000;background:#fff}.gsfe_a{border:1px solid #b9b9b9;border-top-color:#a0a0a0;box-shadow:inset 0px 1px 2px rgba(0,0,0,0.1);-moz-box-shadow:inset 0px 1px 2px rgba(0,0,0,0.1);-webkit-box-shadow:inset 0px 1px 2px rgba(0,0,0,0.1);}.gsfe_b{border:1px solid #4d90fe;outline:none;box-shadow:inset 0px 1px 2px rgba(0,0,0,0.3);-moz-box-shadow:inset 0px 1px 2px rgba(0,0,0,0.3);-webkit-box-shadow:inset 0px 1px 2px rgba(0,0,0,0.3);}.gssb_a{padding:0 7px}.gssb_e{border:0}.gssb_l{margin:5px 0}.gssb_c .gsc-completion-container{position:static}.gssb_c{z-index:5000}.gsc-completion-container table{background:transparent;font-size:inherit;font-family:inherit}.gssb_c > tbody > tr,.gssb_c > tbody > tr > td,.gssb_d,.gssb_d > tbody > tr,.gssb_d > tbody > tr > td,.gssb_e,.gssb_e > tbody > tr,.gssb_e > tbody > tr > td{padding:0;margin:0;border:0}.gssb_a table,.gssb_a table tr,.gssb_a table tr td{padding:0;margin:0;border:0}</style><script src="Qt%20Style%20Sheets%20Examples%20%7C%20Qt%204.8_files/a" type="text/javascript"></script><link rel="stylesheet" href="Qt%20Style%20Sheets%20Examples%20%7C%20Qt%204.8_files/defaulten.css" type="text/css"><script src="Qt%20Style%20Sheets%20Examples%20%7C%20Qt%204.8_files/defaulten.js" type="text/javascript"></script><style type="text/css">.fb_hidden{position:absolute;top:-10000px;z-index:10001}.fb_reposition{overflow:hidden;position:relative}.fb_invisible{display:none}.fb_reset{background:none;border:0;border-spacing:0;color:#000;cursor:auto;direction:ltr;font-family:"lucida grande", tahoma, verdana, arial, sans-serif;font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal}.fb_reset>div{overflow:hidden}.fb_link img{border:none}@keyframes fb_transform{from{opacity:0;transform:scale(.95)}to{opacity:1;transform:scale(1)}}.fb_animate{animation:fb_transform .3s forwards}
+.fb_dialog{background:rgba(82, 82, 82, .7);position:absolute;top:-10000px;z-index:10001}.fb_reset .fb_dialog_legacy{overflow:visible}.fb_dialog_advanced{padding:10px;-moz-border-radius:8px;-webkit-border-radius:8px;border-radius:8px}.fb_dialog_content{background:#fff;color:#333}.fb_dialog_close_icon{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 0 transparent;_background-image:url(https://static.xx.fbcdn.net/rsrc.php/v3/yL/r/s816eWC-2sl.gif);cursor:pointer;display:block;height:15px;position:absolute;right:18px;top:17px;width:15px}.fb_dialog_mobile .fb_dialog_close_icon{top:5px;left:5px;right:auto}.fb_dialog_padding{background-color:transparent;position:absolute;width:1px;z-index:-1}.fb_dialog_close_icon:hover{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -15px transparent;_background-image:url(https://static.xx.fbcdn.net/rsrc.php/v3/yL/r/s816eWC-2sl.gif)}.fb_dialog_close_icon:active{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -30px transparent;_background-image:url(https://static.xx.fbcdn.net/rsrc.php/v3/yL/r/s816eWC-2sl.gif)}.fb_dialog_loader{background-color:#f6f7f9;border:1px solid #606060;font-size:24px;padding:20px}.fb_dialog_top_left,.fb_dialog_top_right,.fb_dialog_bottom_left,.fb_dialog_bottom_right{height:10px;width:10px;overflow:hidden;position:absolute}.fb_dialog_top_left{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ye/r/8YeTNIlTZjm.png) no-repeat 0 0;left:-10px;top:-10px}.fb_dialog_top_right{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ye/r/8YeTNIlTZjm.png) no-repeat 0 -10px;right:-10px;top:-10px}.fb_dialog_bottom_left{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ye/r/8YeTNIlTZjm.png) no-repeat 0 -20px;bottom:-10px;left:-10px}.fb_dialog_bottom_right{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ye/r/8YeTNIlTZjm.png) no-repeat 0 -30px;right:-10px;bottom:-10px}.fb_dialog_vert_left,.fb_dialog_vert_right,.fb_dialog_horiz_top,.fb_dialog_horiz_bottom{position:absolute;background:#525252;filter:alpha(opacity=70);opacity:.7}.fb_dialog_vert_left,.fb_dialog_vert_right{width:10px;height:100%}.fb_dialog_vert_left{margin-left:-10px}.fb_dialog_vert_right{right:0;margin-right:-10px}.fb_dialog_horiz_top,.fb_dialog_horiz_bottom{width:100%;height:10px}.fb_dialog_horiz_top{margin-top:-10px}.fb_dialog_horiz_bottom{bottom:0;margin-bottom:-10px}.fb_dialog_iframe{line-height:0}.fb_dialog_content .dialog_title{background:#6d84b4;border:1px solid #365899;color:#fff;font-size:14px;font-weight:bold;margin:0}.fb_dialog_content .dialog_title>span{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/yd/r/Cou7n-nqK52.gif) no-repeat 5px 50%;float:left;padding:5px 0 7px 26px}body.fb_hidden{-webkit-transform:none;height:100%;margin:0;overflow:visible;position:absolute;top:-10000px;left:0;width:100%}.fb_dialog.fb_dialog_mobile.loading{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/ya/r/3rhSv5V8j3o.gif) white no-repeat 50% 50%;min-height:100%;min-width:100%;overflow:hidden;position:absolute;top:0;z-index:10001}.fb_dialog.fb_dialog_mobile.loading.centered{width:auto;height:auto;min-height:initial;min-width:initial;background:none}.fb_dialog.fb_dialog_mobile.loading.centered #fb_dialog_loader_spinner{width:100%}.fb_dialog.fb_dialog_mobile.loading.centered .fb_dialog_content{background:none}.loading.centered #fb_dialog_loader_close{color:#fff;display:block;padding-top:20px;clear:both;font-size:18px}#fb-root #fb_dialog_ipad_overlay{background:rgba(0, 0, 0, .45);position:absolute;bottom:0;left:0;right:0;top:0;width:100%;min-height:100%;z-index:10000}#fb-root #fb_dialog_ipad_overlay.hidden{display:none}.fb_dialog.fb_dialog_mobile.loading iframe{visibility:hidden}.fb_dialog_content .dialog_header{-webkit-box-shadow:white 0 1px 1px -1px inset;background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#738ABA), to(#2C4987));border-bottom:1px solid;border-color:#1d4088;color:#fff;font:14px Helvetica, sans-serif;font-weight:bold;text-overflow:ellipsis;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0;vertical-align:middle;white-space:nowrap}.fb_dialog_content .dialog_header table{-webkit-font-smoothing:subpixel-antialiased;height:43px;width:100%}.fb_dialog_content .dialog_header td.header_left{font-size:12px;padding-left:5px;vertical-align:middle;width:60px}.fb_dialog_content .dialog_header td.header_right{font-size:12px;padding-right:5px;vertical-align:middle;width:60px}.fb_dialog_content .touchable_button{background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#4966A6), color-stop(.5, #355492), to(#2A4887));border:1px solid #29487d;-webkit-background-clip:padding-box;-webkit-border-radius:3px;-webkit-box-shadow:rgba(0, 0, 0, .117188) 0 1px 1px inset, rgba(255, 255, 255, .167969) 0 1px 0;display:inline-block;margin-top:3px;max-width:85px;line-height:18px;padding:4px 12px;position:relative}.fb_dialog_content .dialog_header .touchable_button input{border:none;background:none;color:#fff;font:12px Helvetica, sans-serif;font-weight:bold;margin:2px -12px;padding:2px 6px 3px 6px;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog_content .dialog_header .header_center{color:#fff;font-size:16px;font-weight:bold;line-height:18px;text-align:center;vertical-align:middle}.fb_dialog_content .dialog_content{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/y9/r/jKEcVPZFk-2.gif) no-repeat 50% 50%;border:1px solid #555;border-bottom:0;border-top:0;height:150px}.fb_dialog_content .dialog_footer{background:#f6f7f9;border:1px solid #555;border-top-color:#ccc;height:40px}#fb_dialog_loader_close{float:left}.fb_dialog.fb_dialog_mobile .fb_dialog_close_button{text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog.fb_dialog_mobile .fb_dialog_close_icon{visibility:hidden}#fb_dialog_loader_spinner{animation:rotateSpinner 1.2s linear infinite;background-color:transparent;background-image:url(https://static.xx.fbcdn.net/rsrc.php/v3/yD/r/t-wz8gw1xG1.png);background-repeat:no-repeat;background-position:50% 50%;height:24px;width:24px}@keyframes rotateSpinner{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}
+.fb_iframe_widget{display:inline-block;position:relative}.fb_iframe_widget span{display:inline-block;position:relative;text-align:justify}.fb_iframe_widget iframe{position:absolute}.fb_iframe_widget_fluid_desktop,.fb_iframe_widget_fluid_desktop span,.fb_iframe_widget_fluid_desktop iframe{max-width:100%}.fb_iframe_widget_fluid_desktop iframe{min-width:220px;position:relative}.fb_iframe_widget_lift{z-index:1}.fb_hide_iframes iframe{position:relative;left:-10000px}.fb_iframe_widget_loader{position:relative;display:inline-block}.fb_iframe_widget_fluid{display:inline}.fb_iframe_widget_fluid span{width:100%}.fb_iframe_widget_loader iframe{min-height:32px;z-index:2;zoom:1}.fb_iframe_widget_loader .FB_Loader{background:url(https://static.xx.fbcdn.net/rsrc.php/v3/y9/r/jKEcVPZFk-2.gif) no-repeat;height:32px;width:32px;margin-left:-16px;position:absolute;left:50%;z-index:4}</style></head>
+<body>
+<div class="header" id="header">
+<header id="navbar" class="">
+        <div class="cookies_yum">
+            <div>
+                <img src="Qt%20Style%20Sheets%20Examples%20%7C%20Qt%204.8_files/cookie_small.png" align="left">
+                <p class="close_button">
+                    We bake cookies in your browser for a better experience.  Using this site means that you consent. <a href="http://qt.io/terms-conditions/">Read More</a>
+                </p>
+                <a class="close"></a>
+            </div>
+        </div>
+        <div class="container">
+                <div class="navbar-header clearfix">
+                    <a href="#" class="navbar-toggle">
+                        <figure>
+                            <span class="line"></span>
+                        </figure>
+                        <span>Menu</span>
+                    </a>
+                    <ul id="menuextras">
+                        <li>
+                            <a href="http://qt.io/partners/" data-icon="">
+                                <span>Partners</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a target="_blank" href="http://blog.qt.io/" data-icon="">
+                                <span>Blog</span>
+                            </a>
+                        </li>
+                    </ul>
+                    <a href="http://qt.io/" class="navbar-oneQt retina" data-icon="">
+                    </a>
+                    <nav class="navbar-menu clearfix" role="navigation">
+                        <ul id="mainmenu" class="menu"><li id="menu-item-18" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-18"><a href="http://qt.io/download/">Download</a></li>
+<li id="menu-item-12207" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-12207"><a href="http://www.qt.io/qt-for-device-creation/">Device Creation</a></li>
+<li id="menu-item-12208" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-12208"><a href="http://www.qt.io/application-development/">Application Development</a></li>
+<li id="menu-item-1381" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1381"><a href="http://www.qt.io/services/">Services</a></li>
+<li id="menu-item-20" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-20"><a href="http://www.qt.io/developers/">Developers</a></li>
+</ul>                        <ul class="menuextraslanguages">
+                            <li class="active dark"><a class="dark" href="http://qt.io/support/">EN</a></li><li class="dark"><a class="dark" href="http://qt.io/ru/">RU</a></li><li class="dark"><a class="dark" href="http://qt.io/zh-hans/">ZH</a></li></ul>
+                    </nav>
+                </div>
+            </div>
+<div class="big_bar account" style="">
+    <div class="container">
+        <h1><!-- mclude oneqt_no_cache_bMrsJxAh /wp-content/themes/oneqt/php_login_info_bottom_header.php --><!-- /mclude oneqt_no_cache_bMrsJxAh -->
+            <div class="col-1 right big_bar_button account" style="margin-top:5px !important;"></div>
+        </h1>
+    </div>
+</div>
+</header>
+</div>
+<div class="main">
+<div class="main-rounded">
+<div class="navigationbar">
+    <ul class="sub-navigation">
+        <li><a href="http://wiki.qt.io/">Wiki</a></li>
+        <li><a href="http://doc.qt.io/" class="active">Documentation</a></li>
+        <li><a href="http://forum.qt.io/">Forum</a></li>
+        <li><a href="https://bugreports.qt.io/">Bug Reports</a></li>
+        <li><a href="https://codereview.qt-project.org/">Code Review</a></li>
+    </ul>
+    <div id="main_title_bar">
+        <h1>Qt Documentation</h1>
+        <div class="search_bar">
+        <script>
+            (function() {
+                var cx = '003672281345882769388:1y4pftuq8so';
+                var gcse = document.createElement('script');
+                gcse.type = 'text/javascript';
+                gcse.async = true;
+                gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//www.google.com/cse/cse.js?cx=' + cx;
+                var s = document.getElementsByTagName('script')[0];
+                s.parentNode.insertBefore(gcse, s);
+            })();
+        </script>
+        <div id="___gcse_0"><div dir="ltr" class="gsc-control-searchbox-only gsc-control-searchbox-only-en"><form accept-charset="utf-8" class="gsc-search-box"><table class="gsc-search-box" cellpadding="0" cellspacing="0"><tbody><tr><td class="gsc-input"><input style="outline: medium none; background: rgb(255, 255, 255) url(&quot;http://www.google.com/cse/static/en/google_custom_search_watermark.gif&quot;) no-repeat scroll left center;" spellcheck="false" dir="ltr" id="gsc-i-id1" title="search" name="search" class=" gsc-input" size="10" autocomplete="off" type="text"><input id="bgresponse" name="bgresponse" type="hidden"></td><td class="gsc-search-button"><input title="search" class="gsc-search-button" value="Search" type="button"></td><td class="gsc-clear-button"><div title="clear results" class="gsc-clear-button">&nbsp;</div></td></tr></tbody></table><table class="gsc-branding" cellpadding="0" cellspacing="0"><tbody><tr><td class="gsc-branding-user-defined"></td><td class="gsc-branding-text"><div class="gsc-branding-text">powered by</div></td><td class="gsc-branding-img"><img class="gsc-branding-img" src="Qt%20Style%20Sheets%20Examples%20%7C%20Qt%204.8_files/small-logo.png"></td></tr></tbody></table></form></div></div>
+    </div></div>
+    <ul>
+<li><a href="http://doc.qt.io/qt-4.8/index.html">Qt 4.8</a></li>
+<li>Qt Style Sheets Examples</li>
+    </ul>
+</div>
+<div class="content">
+    <div class="line">
+        <div class="content mainContent">
+  <link rel="prev" href="http://doc.qt.io/qt-4.8/stylesheet-reference.html">
+<p class="naviNextPrevious headerNavi">
+<a class="prevPage" href="http://doc.qt.io/qt-4.8/stylesheet-reference.html">Qt Style Sheets Reference</a>
+</p><p>
+</p><div class="sidebar">
+<div class="toc"><div id="toc-toggle"></div>
+<h3><a name="toc">Contents</a></h3>
+<ul>
+<li class="level1"><a href="#style-sheet-usage">Style Sheet Usage</a></li>
+<li class="level2"><a href="#customizing-the-foreground-and-background-colors">Customizing the Foreground and Background Colors</a></li>
+<li class="level2"><a href="#customizing-using-dynamic-properties">Customizing Using Dynamic Properties</a></li>
+<li class="level2"><a href="#customizing-a-qpushbutton-using-the-box-model">Customizing a QPushButton Using the Box Model</a></li>
+<li class="level2"><a href="#customizing-the-qpushbutton-s-menu-indicator-sub-control">Customizing the QPushButton's Menu Indicator Sub-Control</a></li>
+<li class="level2"><a href="#complex-selector-example">Complex Selector Example</a></li>
+<li class="level1"><a href="#customizing-specific-widgets">Customizing specific widgets</a></li>
+<li class="level2"><a href="#customizing-qabstractscrollarea">Customizing QAbstractScrollArea</a></li>
+<li class="level2"><a href="#customizing-qcheckbox">Customizing QCheckBox</a></li>
+<li class="level2"><a href="#customizing-qcombobox">Customizing QComboBox</a></li>
+<li class="level2"><a href="#customizing-qdockwidget">Customizing QDockWidget</a></li>
+<li class="level2"><a href="#customizing-qframe">Customizing QFrame</a></li>
+<li class="level2"><a href="#customizing-qgroupbox">Customizing QGroupBox</a></li>
+<li class="level2"><a href="#customizing-qheaderview">Customizing QHeaderView</a></li>
+<li class="level2"><a href="#customizing-qlineedit">Customizing QLineEdit</a></li>
+<li class="level2"><a href="#customizing-qlistview">Customizing QListView</a></li>
+<li class="level2"><a href="#customizing-qmainwindow">Customizing QMainWindow</a></li>
+<li class="level2"><a href="#customizing-qmenu">Customizing QMenu</a></li>
+<li class="level2"><a href="#customizing-qmenubar">Customizing QMenuBar</a></li>
+<li class="level2"><a href="#customizing-qprogressbar">Customizing QProgressBar</a></li>
+<li class="level2"><a href="#customizing-qpushbutton">Customizing QPushButton</a></li>
+<li class="level2"><a href="#customizing-qradiobutton">Customizing QRadioButton</a></li>
+<li class="level2"><a href="#customizing-qscrollbar">Customizing QScrollBar</a></li>
+<li class="level2"><a href="#customizing-qsizegrip">Customizing QSizeGrip</a></li>
+<li class="level2"><a href="#customizing-qslider">Customizing QSlider</a></li>
+<li class="level2"><a href="#customizing-qspinbox">Customizing QSpinBox</a></li>
+<li class="level2"><a href="#customizing-qsplitter">Customizing QSplitter</a></li>
+<li class="level2"><a href="#customizing-qstatusbar">Customizing QStatusBar</a></li>
+<li class="level2"><a href="#customizing-qtabwidget-and-qtabbar">Customizing QTabWidget and QTabBar</a></li>
+<li class="level2"><a href="#customizing-qtableview">Customizing QTableView</a></li>
+<li class="level2"><a href="#customizing-qtoolbar">Customizing QToolBar</a></li>
+<li class="level2"><a href="#customizing-qtoolbox">Customizing QToolBox</a></li>
+<li class="level2"><a href="#customizing-qtoolbutton">Customizing QToolButton</a></li>
+<li class="level2"><a href="#customizing-qtooltip">Customizing QToolTip</a></li>
+<li class="level2"><a href="#customizing-qtreeview">Customizing QTreeView</a></li>
+<li class="level1"><a href="#common-mistakes">Common mistakes</a></li>
+<li class="level2"><a href="#qpushbutton-and-images">QPushButton and images</a></li>
+</ul>
+</div>
+<div class="sidebar-content" id="sidebar-content"><div id="sidebar-toggle"></div><h2 id="reference">Reference</h2><div class="sectionlist normallist">
+    <div class="heading">
+        <a name="reference"></a>
+        <h2 id="reference">Reference</h2>
+    </div>
+    <div class="indexboxcont indexboxbar">
+        <ul>
+            <li><a href="http://doc.qt.io/qt-4.8/classes.html">All Qt C++ Classes</a></li>
+            <li><a href="http://doc.qt.io/qt-4.8/functions.html">Function Index</a></li>
+            <li><a href="http://doc.qt.io/qt-4.8/modules.html">All Qt Modules</a></li>
+            <li><a href="http://doc.qt.io/qt-4.8/qdeclarativeelements.html">All QML Elements</a></li>
+            <li><a href="http://doc.qt.io/qt-4.8/qtquick.html">Qt Quick</a></li>
+            <li><a href="http://doc.qt.io/qtcreator/index.html">Qt Creator Manual</a></li>
+        </ul>
+    </div>
+</div>
+<div class="sectionlist normallist">
+    <div class="heading">
+        <a name="getting-started"></a>
+        <h2 id="getting-started">Getting Started</h2>
+    </div>
+    <ul>
+        <li><a href="http://doc.qt.io/qt-4.8/gettingstarted.html">Getting Started with Qt</a></li>
+        <li><a href="http://doc.qt.io/qt-4.8/how-to-learn-qt.html">How to Learn Qt</a></li>
+        <li><a href="http://doc.qt.io/qt-4.8/qt-basic-concepts.html">Basic Qt Architecture</a></li>
+        <li><a href="http://doc.qt.io/qt-4.8/qt-gui-concepts.html">UI Design with Qt</a></li>
+        <li><a href="http://doc.qt.io/qt-4.8/supported-platforms.html">Supported Platforms</a></li>
+    </ul>
+</div>
+<div class="sectionlist normallist">
+    <div class="heading">
+        <a name="sidebar-examples"></a>
+        <h2 id="sidebar-examples">Examples</h2>
+    </div>
+    <ul>
+        <li><a href="http://doc.qt.io/qt-4.8/all-examples.html">All Examples</a></li>
+        <li><a href="http://doc.qt.io/qt-4.8/qdeclarativeexamples.html">Qt Quick Examples</a></li>
+        <li><a href="http://doc.qt.io/qt-4.8/tutorials.html">Tutorials</a></li>
+        <li><a href="http://doc.qt.io/qt-4.8/demos.html">Demos</a></li>
+    </ul>
+</div>
+</div></div>
+<div class="context">
+<h1 class="title">Qt Style Sheets Examples</h1>
+<span class="subtitle"></span>
+<!-- $$$stylesheet-examples.html-description -->
+<div class="descr"> <a name="details"></a>
+<p>We will now see a few examples to get started with using Qt Style Sheets.</p>
+<a name="style-sheet-usage"></a>
+<h2 id="style-sheet-usage">Style Sheet Usage</h2>
+<a name="customizing-the-foreground-and-background-colors"></a>
+<h3>Customizing the Foreground and Background Colors</h3>
+<p>Let's start by setting yellow as the background color of all <a href="http://doc.qt.io/qt-4.8/porting4.html#qlineedit">QLineEdit</a>s in an application. This could be achieved like this:</p>
+<pre class="cpp">qApp<span class="operator">-</span><span class="operator">&gt;</span>setStyleSheet(<span class="string">"QLineEdit { background-color: yellow }"</span>);</pre>
+<p>If we want the property to apply only to the <a href="http://doc.qt.io/qt-4.8/porting4.html#qlineedit">QLineEdit</a>s that are children (or grandchildren or grand-grandchildren) of a specific dialog, we would rather do this:</p>
+<pre class="cpp">myDialog<span class="operator">-</span><span class="operator">&gt;</span>setStyleSheet(<span class="string">"QLineEdit { background-color: yellow }"</span>);</pre>
+<p>If we want the property to apply only to one specific <a href="http://doc.qt.io/qt-4.8/porting4.html#qlineedit">QLineEdit</a>, we can give it a name using <a href="http://doc.qt.io/qt-4.8/qobject.html#objectName-prop">QObject::setObjectName</a>() and use an ID Selector to refer to it:</p>
+<pre class="cpp">myDialog<span class="operator">-</span><span class="operator">&gt;</span>setStyleSheet(<span class="string">"QLineEdit#nameEdit { background-color: yellow }"</span>);</pre>
+<p>Alternatively, we can set the <a href="http://doc.qt.io/qt-4.8/stylesheet-reference.html#background-prop">background-color</a> property directly on the <a href="http://doc.qt.io/qt-4.8/porting4.html#qlineedit">QLineEdit</a>, omitting the selector:</p>
+<pre class="cpp">nameEdit<span class="operator">-</span><span class="operator">&gt;</span>setStyleSheet(<span class="string">"background-color: yellow"</span>);</pre>
+<p>To ensure a good contrast, we should also specify a suitable color for the text:</p>
+<pre class="cpp">nameEdit<span class="operator">-</span><span class="operator">&gt;</span>setStyleSheet(<span class="string">"color: blue; background-color: yellow"</span>);</pre>
+<p>It might be a good idea to change the colors used for selected text as well:</p>
+<pre class="cpp">nameEdit<span class="operator">-</span><span class="operator">&gt;</span>setStyleSheet(<span class="string">"color: blue;"</span>
+                        <span class="string">"background-color: yellow;"</span>
+                        <span class="string">"selection-color: yellow;"</span>
+                        <span class="string">"selection-background-color: blue;"</span>);</pre>
+<a name="customizing-using-dynamic-properties"></a>
+<h3>Customizing Using Dynamic Properties</h3>
+<p>There are many situations where we need to present a form that has 
+mandatory fields. To indicate to the user that the field is mandatory, 
+one effective (albeit esthetically dubious) solution is to use yellow as
+ the background color for those fields. It turns out this is very easy 
+to implement using Qt Style Sheets. First, we would use the following 
+application-wide style sheet:</p>
+<pre class="cpp"><span class="operator">*</span><span class="operator">[</span>mandatoryField<span class="operator">=</span><span class="string">"true"</span><span class="operator">]</span> { background<span class="operator">-</span>color: yellow }</pre>
+<p>This means that every widget whose <code>mandatoryField</code> Qt property is set to true would have a yellow background.</p>
+<p>Then, for each mandatory field widget, we would simply create a <code>mandatoryField</code> property on the fly and set it to true. For example:</p>
+<pre class="cpp"><span class="type"><a href="http://doc.qt.io/qt-4.8/qlineedit.html">QLineEdit</a></span> <span class="operator">*</span>nameEdit <span class="operator">=</span> <span class="keyword">new</span> <span class="type"><a href="http://doc.qt.io/qt-4.8/qlineedit.html">QLineEdit</a></span>(<span class="keyword">this</span>);
+nameEdit<span class="operator">-</span><span class="operator">&gt;</span>setProperty(<span class="string">"mandatoryField"</span><span class="operator">,</span> <span class="keyword">true</span>);
+
+<span class="type"><a href="http://doc.qt.io/qt-4.8/qlineedit.html">QLineEdit</a></span> <span class="operator">*</span>emailEdit <span class="operator">=</span> <span class="keyword">new</span> <span class="type"><a href="http://doc.qt.io/qt-4.8/qlineedit.html">QLineEdit</a></span>(<span class="keyword">this</span>);
+emailEdit<span class="operator">-</span><span class="operator">&gt;</span>setProperty(<span class="string">"mandatoryField"</span><span class="operator">,</span> <span class="keyword">true</span>);
+
+<span class="type"><a href="http://doc.qt.io/qt-4.8/qspinbox.html">QSpinBox</a></span> <span class="operator">*</span>ageSpinBox <span class="operator">=</span> <span class="keyword">new</span> <span class="type"><a href="http://doc.qt.io/qt-4.8/qspinbox.html">QSpinBox</a></span>(<span class="keyword">this</span>);
+ageSpinBox<span class="operator">-</span><span class="operator">&gt;</span>setProperty(<span class="string">"mandatoryField"</span><span class="operator">,</span> <span class="keyword">true</span>);</pre>
+<a name="customizing-a-qpushbutton-using-the-box-model"></a>
+<h3>Customizing a QPushButton Using the Box Model</h3>
+<p>This time, we will show how to create a red <a href="http://doc.qt.io/qt-4.8/porting4.html#qpushbutton">QPushButton</a>. This <a href="http://doc.qt.io/qt-4.8/porting4.html#qpushbutton">QPushButton</a> would presumably be connected to a very destructive piece of code.</p>
+<p>First, we are tempted to use this style sheet:</p>
+<pre class="cpp"><span class="type"><a href="http://doc.qt.io/qt-4.8/qpushbutton.html">QPushButton</a></span><span class="preprocessor">#evilButton { background-color: red }</span></pre>
+<p>However, the result is a boring, flat button with no borders:</p>
+<p class="centerAlign"><img src="Qt%20Style%20Sheets%20Examples%20%7C%20Qt%204.8_files/stylesheet-redbutton1.png" alt="A flat red button"></p><p>What happened is this:</p>
+<ul>
+<li>We have made a request that cannot be satisfied using the native 
+styles alone (e.g., the Windows XP theme engine doesn't let us specify 
+the background color of a button).</li>
+<li>Therefore, the button is rendered using style sheets.</li>
+<li>We haven't specified any values for <a href="http://doc.qt.io/qt-4.8/stylesheet-reference.html#border-width-prop">border-width</a> and <a href="http://doc.qt.io/qt-4.8/stylesheet-reference.html#border-style-prop">border-style</a>, so by default we obtain a 0-pixel wide border of style <code>none</code>.</li>
+</ul>
+<p>Let's improve the situation by specifying a border:</p>
+<pre class="cpp"><span class="type"><a href="http://doc.qt.io/qt-4.8/qpushbutton.html">QPushButton</a></span><span class="preprocessor">#evilButton {</span>
+    background<span class="operator">-</span>color: red;
+    border<span class="operator">-</span>style: outset;
+    border<span class="operator">-</span>width: <span class="number">2px</span>;
+    border<span class="operator">-</span>color: beige;
+}</pre>
+<p class="centerAlign"><img src="Qt%20Style%20Sheets%20Examples%20%7C%20Qt%204.8_files/stylesheet-redbutton2.png" alt="A red button with a beige border"></p><p>Things
+ look already a lot better. But the button looks a bit cramped. Let's 
+specify some spacing between the border and the text using the <a href="http://doc.qt.io/qt-4.8/stylesheet-reference.html#padding-prop">padding</a>. Additionally, we will enforce a minimum width, round the corners, and specify a larger font to make the button look nicer:</p>
+<pre class="cpp"><span class="type"><a href="http://doc.qt.io/qt-4.8/qpushbutton.html">QPushButton</a></span><span class="preprocessor">#evilButton {</span>
+    background<span class="operator">-</span>color: red;
+    border<span class="operator">-</span>style: outset;
+    border<span class="operator">-</span>width: <span class="number">2px</span>;
+    border<span class="operator">-</span>radius: <span class="number">10px</span>;
+    border<span class="operator">-</span>color: beige;
+    font: bold <span class="number">14px</span>;
+    min<span class="operator">-</span>width: <span class="number">10em</span>;
+    padding: <span class="number">6px</span>;
+}</pre>
+<p class="centerAlign"><img src="Qt%20Style%20Sheets%20Examples%20%7C%20Qt%204.8_files/stylesheet-redbutton3.png" alt="A red button with a round beige border and big, bold text"></p><p>The
+ only issue remaining is that the button doesn't react when we press it.
+ We can fix this by specifying a slightly different background color and
+ use a different border style.</p>
+<pre class="cpp"><span class="type"><a href="http://doc.qt.io/qt-4.8/qpushbutton.html">QPushButton</a></span><span class="preprocessor">#evilButton {</span>
+    background<span class="operator">-</span>color: red;
+    border<span class="operator">-</span>style: outset;
+    border<span class="operator">-</span>width: <span class="number">2px</span>;
+    border<span class="operator">-</span>radius: <span class="number">10px</span>;
+    border<span class="operator">-</span>color: beige;
+    font: bold <span class="number">14px</span>;
+    min<span class="operator">-</span>width: <span class="number">10em</span>;
+    padding: <span class="number">6px</span>;
+}
+<span class="type"><a href="http://doc.qt.io/qt-4.8/qpushbutton.html">QPushButton</a></span><span class="preprocessor">#evilButton:pressed {</span>
+    background<span class="operator">-</span>color: rgb(<span class="number">224</span><span class="operator">,</span> <span class="number">0</span><span class="operator">,</span> <span class="number">0</span>);
+    border<span class="operator">-</span>style: inset;
+}</pre>
+<a name="customizing-the-qpushbutton-s-menu-indicator-sub-control"></a>
+<h3>Customizing the QPushButton's Menu Indicator Sub-Control</h3>
+<p>Subcontrols give access to the sub-elements of a widget. For example, a <a href="http://doc.qt.io/qt-4.8/porting4.html#qpushbutton">QPushButton</a> associated with a menu (using <a href="http://doc.qt.io/qt-4.8/qpushbutton.html#setMenu">QPushButton::setMenu</a>()) has a menu indicator. Let's customize the menu indicator for the red push button:</p>
+<pre class="cpp"><span class="type"><a href="http://doc.qt.io/qt-4.8/qpushbutton.html">QPushButton</a></span><span class="preprocessor">#evilButton::menu-indicator {</span>
+    image: url(myindicator<span class="operator">.</span>png);
+}</pre>
+<p>By default, the menu indicator is located at the bottom-right corner of the padding rectangle. We can change this by specifying <a href="http://doc.qt.io/qt-4.8/stylesheet-reference.html#subcontrol-position-prop">subcontrol-position</a> and <a href="http://doc.qt.io/qt-4.8/stylesheet-reference.html#subcontrol-origin-prop">subcontrol-origin</a> to anchor the indicator differently. We can also use <a href="http://doc.qt.io/qt-4.8/stylesheet-reference.html#top-prop">top</a> and <a href="http://doc.qt.io/qt-4.8/stylesheet-reference.html#left-prop">left</a> to move the indicator by a few pixels. For example:</p>
+<pre class="cpp"><span class="type"><a href="http://doc.qt.io/qt-4.8/qpushbutton.html">QPushButton</a></span><span class="operator">::</span>menu<span class="operator">-</span>indicator {
+    image: url(myindicator<span class="operator">.</span>png);
+    subcontrol<span class="operator">-</span>position: right center;
+    subcontrol<span class="operator">-</span>origin: padding;
+    left: <span class="operator">-</span><span class="number">2px</span>;
+}</pre>
+<p>This positions the <code>myindicator.png</code> to the center right of the <a href="http://doc.qt.io/qt-4.8/porting4.html#qpushbutton">QPushButton</a>'s <a href="http://doc.qt.io/qt-4.8/stylesheet-reference.html#padding-prop">padding</a> rectangle (see <a href="http://doc.qt.io/qt-4.8/stylesheet-reference.html#subcontrol-origin-prop">subcontrol-origin</a> for more information).</p>
+<a name="complex-selector-example"></a>
+<h3>Complex Selector Example</h3>
+<p>Since red seems to be our favorite color, let's make the text in <a href="http://doc.qt.io/qt-4.8/porting4.html#qlineedit">QLineEdit</a> red by setting the following application-wide stylesheet:</p>
+<pre class="cpp"><span class="type"><a href="http://doc.qt.io/qt-4.8/qlineedit.html">QLineEdit</a></span> { color: red }</pre>
+<p>However, we would like to give a visual indication that a <a href="http://doc.qt.io/qt-4.8/porting4.html#qlineedit">QLineEdit</a> is read-only by making it appear gray:</p>
+<pre class="cpp"><span class="type"><a href="http://doc.qt.io/qt-4.8/qlineedit.html">QLineEdit</a></span> { color: red }
+<span class="type"><a href="http://doc.qt.io/qt-4.8/qlineedit.html">QLineEdit</a></span><span class="operator">[</span>readOnly<span class="operator">=</span><span class="string">"true"</span><span class="operator">]</span> { color: gray }</pre>
+<p>At some point, our design team comes with the requirement that all <a href="http://doc.qt.io/qt-4.8/porting4.html#qlineedit">QLineEdit</a>s in the registration form (with the <a href="http://doc.qt.io/qt-4.8/qobject.html#objectName-prop">object name</a> <code>registrationDialog</code>) to be brown:</p>
+<pre class="cpp"><span class="type"><a href="http://doc.qt.io/qt-4.8/qlineedit.html">QLineEdit</a></span> { color: red }
+<span class="type"><a href="http://doc.qt.io/qt-4.8/qlineedit.html">QLineEdit</a></span><span class="operator">[</span>readOnly<span class="operator">=</span><span class="string">"true"</span><span class="operator">]</span> { color: gray }
+<span class="preprocessor">#registrationDialog QLineEdit { color: brown }</span></pre>
+<p>A few UI design meetings later, we decide that all our <a href="http://doc.qt.io/qt-4.8/qdialog.html">QDialog</a>s should have brown colored <a href="http://doc.qt.io/qt-4.8/porting4.html#qlineedit">QLineEdit</a>s:</p>
+<pre class="cpp"><span class="type"><a href="http://doc.qt.io/qt-4.8/qlineedit.html">QLineEdit</a></span> { color: red }
+<span class="type"><a href="http://doc.qt.io/qt-4.8/qlineedit.html">QLineEdit</a></span><span class="operator">[</span>readOnly<span class="operator">=</span><span class="string">"true"</span><span class="operator">]</span> { color: gray }
+<span class="type"><a href="http://doc.qt.io/qt-4.8/qdialog.html">QDialog</a></span> <span class="type"><a href="http://doc.qt.io/qt-4.8/qlineedit.html">QLineEdit</a></span> { color: brown }</pre>
+<p>Quiz: What happens if we have a read-only <a href="http://doc.qt.io/qt-4.8/porting4.html#qlineedit">QLineEdit</a> in a <a href="http://doc.qt.io/qt-4.8/qdialog.html">QDialog</a>? [Hint: The <a href="http://doc.qt.io/qt-4.8/stylesheet-syntax.html#conflict-resolution">Conflict Resolution</a> section above explains what happens in cases like this.]</p>
+<a name="customizing-specific-widgets"></a>
+<h2 id="customizing-specific-widgets">Customizing specific widgets</h2>
+<p>This section provides examples to customize specific widgets using Style Sheets.</p>
+<a name="customizing-qabstractscrollarea"></a>
+<h3>Customizing QAbstractScrollArea</h3>
+<p>The background of any <a href="http://doc.qt.io/qt-4.8/qabstractscrollarea.html">QAbstractScrollArea</a> (Item views, <a href="http://doc.qt.io/qt-4.8/porting4.html#qtextedit">QTextEdit</a> and <a href="http://doc.qt.io/qt-4.8/qtextbrowser.html">QTextBrowser</a>) can be set using the background properties. For example, to set a background-image that scrolls with the scroll bar:</p>
+<pre class="cpp"><span class="type"><a href="http://doc.qt.io/qt-4.8/qtextedit.html">QTextEdit</a></span><span class="operator">,</span> <span class="type"><a href="http://doc.qt.io/qt-4.8/qlistview.html">QListView</a></span> {
+    background<span class="operator">-</span>color: white;
+    background<span class="operator">-</span>image: url(draft<span class="operator">.</span>png);
+    background<span class="operator">-</span>attachment: scroll;
+}</pre>
+<p>If the background-image is to be fixed with the viewport:</p>
+<pre class="cpp"><span class="type"><a href="http://doc.qt.io/qt-4.8/qtextedit.html">QTextEdit</a></span><span class="operator">,</span> <span class="type"><a href="http://doc.qt.io/qt-4.8/qlistview.html">QListView</a></span> {
+    background<span class="operator">-</span>color: white;
+    background<span class="operator">-</span>image: url(draft<span class="operator">.</span>png);
+    background<span class="operator">-</span>attachment: fixed;
+}</pre>
+<a name="customizing-qcheckbox"></a>
+<h3>Customizing QCheckBox</h3>
+<p>Styling of a <a href="http://doc.qt.io/qt-4.8/qcheckbox.html">QCheckBox</a> is almost indentical to styling a <a href="http://doc.qt.io/qt-4.8/qradiobutton.html">QRadioButton</a>. The main difference is that a tristate <a href="http://doc.qt.io/qt-4.8/qcheckbox.html">QCheckBox</a> has an indeterminate state.</p>
+<pre class="cpp"><span class="type"><a href="http://doc.qt.io/qt-4.8/qcheckbox.html">QCheckBox</a></span> {
+    spacing: <span class="number">5px</span>;
+}
+
+<span class="type"><a href="http://doc.qt.io/qt-4.8/qcheckbox.html">QCheckBox</a></span><span class="operator">::</span>indicator {
+    width: <span class="number">13px</span>;
+    height: <span class="number">13px</span>;
+}
+
+<span class="type"><a href="http://doc.qt.io/qt-4.8/qcheckbox.html">QCheckBox</a></span><span class="operator">::</span>indicator:unchecked {
+    image: url(:<span class="operator">/</span>images<span class="operator">/</span>checkbox_unchecked<span class="operator">.</span>png);
+}
+
+<span class="type"><a href="http://doc.qt.io/qt-4.8/qcheckbox.html">QCheckBox</a></span><span class="operator">::</span>indicator:unchecked:hover {
+    image: url(:<span class="operator">/</span>images<span class="operator">/</span>checkbox_unchecked_hover<span class="operator">.</span>png);
+}
+
+<span class="type"><a href="http://doc.qt.io/qt-4.8/qcheckbox.html">QCheckBox</a></span><span class="operator">::</span>indicator:unchecked:pressed {
+    image: url(:<span class="operator">/</span>images<span class="operator">/</span>checkbox_unchecked_pressed<span class="operator">.</span>png);
+}
+
+<span class="type"><a href="http://doc.qt.io/qt-4.8/qcheckbox.html">QCheckBox</a></span><span class="operator">::</span>indicator:checked {
+    image: url(:<span class="operator">/</span>images<span class="operator">/</span>checkbox_checked<span class="operator">.</span>png);
+}
+
+<span class="type"><a href="http://doc.qt.io/qt-4.8/qcheckbox.html">QCheckBox</a></span><span class="operator">::</span>indicator:checked:hover {
+    image: url(:<span class="operator">/</span>images<span class="operator">/</span>checkbox_checked_hover<span class="operator">.</span>png);
+}
+
+<span class="type"><a href="http://doc.qt.io/qt-4.8/qcheckbox.html">QCheckBox</a></span><span class="operator">::</span>indicator:checked:pressed {
+    image: url(:<span class="operator">/</span>images<span class="operator">/</span>checkbox_checked_pressed<span class="operator">.</span>png);
+}
+
+<span class="type"><a href="http://doc.qt.io/qt-4.8/qcheckbox.html">QCheckBox</a></span><span class="operator">::</span>indicator:indeterminate:hover {
+    image: url(:<span class="operator">/</span>images<span class="operator">/</span>checkbox_indeterminate_hover<span class="operator">.</span>png);
+}
+
+<span class="type"><a href="http://doc.qt.io/qt-4.8/qcheckbox.html">QCheckBox</a></span><span class="operator">::</span>indicator:indeterminate:pressed {
+    image: url(:<span class="operator">/</span>images<span class="operator">/</span>checkbox_indeterminate_pressed<span class="operator">.</span>png);
+}</pre>
+<a name="customizing-qcombobox"></a>
+<h3>Customizing QComboBox</h3>
+<p>We will look at an example where the drop down button of a <a href="http://doc.qt.io/qt-4.8/porting4.html#qcombobox">QComboBox</a> appears "merged" with the combo box frame.</p>
+<pre class="cpp"><span class="type"><a href="http://doc.qt.io/qt-4.8/qcombobox.html">QComboBox</a></span> {
+    border: <span class="number">1px</span> solid gray;
+    border<span class="operator">-</span>radius: <span class="number">3px</span>;
+    padding: <span class="number">1px</span> <span class="number">18px</span> <span class="number">1px</span> <span class="number">3px</span>;
+    min<span class="operator">-</span>width: <span class="number">6em</span>;
+}
+
+<span class="type"><a href="http://doc.qt.io/qt-4.8/qcombobox.html">QComboBox</a></span>:editable {
+    background: white;
+}
+
+<span class="type"><a href="http://doc.qt.io/qt-4.8/qcombobox.html">QComboBox</a></span>:<span class="operator">!</span>editable<span class="operator">,</span> <span class="type"><a href="http://doc.qt.io/qt-4.8/qcombobox.html">QComboBox</a></span><span class="operator">::</span>drop<span class="operator">-</span>down:editable {
+     background: qlineargradient(x1: <span class="number">0</span><span class="operator">,</span> y1: <span class="number">0</span><span class="operator">,</span> x2: <span class="number">0</span><span class="operator">,</span> y2: <span class="number">1</span><span class="operator">,</span>
+                                 stop: <span class="number">0</span> <span class="preprocessor">#E1E1E1, stop: 0.4 #DDDDDD,</span>
+                                 stop: <span class="number">0.5</span> <span class="preprocessor">#D8D8D8, stop: 1.0 #D3D3D3);</span>
+}
+
+<span class="comment">/* QComboBox gets the "on" state when the popup is open */</span>
+<span class="type"><a href="http://doc.qt.io/qt-4.8/qcombobox.html">QComboBox</a></span>:<span class="operator">!</span>editable:on<span class="operator">,</span> <span class="type"><a href="http://doc.qt.io/qt-4.8/qcombobox.html">QComboBox</a></span><span class="operator">::</span>drop<span class="operator">-</span>down:editable:on {
+    background: qlineargradient(x1: <span class="number">0</span><span class="operator">,</span> y1: <span class="number">0</span><span class="operator">,</span> x2: <span class="number">0</span><span class="operator">,</span> y2: <span class="number">1</span><span class="operator">,</span>
+                                stop: <span class="number">0</span> <span class="preprocessor">#D3D3D3, stop: 0.4 #D8D8D8,</span>
+                                stop: <span class="number">0.5</span> <span class="preprocessor">#DDDDDD, stop: 1.0 #E1E1E1);</span>
+}
+
+<span class="type"><a href="http://doc.qt.io/qt-4.8/qcombobox.html">QComboBox</a></span>:on { <span class="comment">/* shift the text when the popup opens */</span>
+    padding<span class="operator">-</span>top: <span class="number">3px</span>;
+    padding<span class="operator">-</span>left: <span class="number">4px</span>;
+}
+
+<span class="type"><a href="http://doc.qt.io/qt-4.8/qcombobox.html">QComboBox</a></span><span class="operator">::</span>drop<span class="operator">-</span>down {
+    subcontrol<span class="operator">-</span>origin: padding;
+    subcontrol<span class="operator">-</span>position: top right;
+    width: <span class="number">15px</span>;
+
+    border<span class="operator">-</span>left<span class="operator">-</span>width: <span class="number">1px</span>;
+    border<span class="operator">-</span>left<span class="operator">-</span>color: darkgray;
+    border<span class="operator">-</span>left<span class="operator">-</span>style: solid; <span class="comment">/* just a single line */</span>
+    border<span class="operator">-</span>top<span class="operator">-</span>right<span class="operator">-</span>radius: <span class="number">3px</span>; <span class="comment">/* same radius as the QComboBox */</span>
+    border<span class="operator">-</span>bottom<span class="operator">-</span>right<span class="operator">-</span>radius: <span class="number">3px</span>;
+}
+
+<span class="type"><a href="http://doc.qt.io/qt-4.8/qcombobox.html">QComboBox</a></span><span class="operator">::</span>down<span class="operator">-</span>arrow {
+    image: url(<span class="operator">/</span>usr<span class="operator">/</span>share<span class="operator">/</span>icons<span class="operator">/</span>crystalsvg<span class="operator">/</span><span class="number">16x16</span><span class="operator">/</span>actions<span class="operator">/</span><span class="number">1downarrow.png</span>);
+}
+
+<span class="type"><a href="http://doc.qt.io/qt-4.8/qcombobox.html">QComboBox</a></span><span class="operator">::</span>down<span class="operator">-</span>arrow:on { <span class="comment">/* shift the arrow when popup is open */</span>
+    top: <span class="number">1px</span>;
+    left: <span class="number">1px</span>;
+}</pre>
+<p>The pop-up of the <a href="http://doc.qt.io/qt-4.8/porting4.html#qcombobox">QComboBox</a> is a <a href="http://doc.qt.io/qt-4.8/qabstractitemview.html">QAbstractItemView</a> and is styled using the descendant selector:</p>
+<pre class="cpp"><span class="type"><a href="http://doc.qt.io/qt-4.8/qcombobox.html">QComboBox</a></span> <span class="type"><a href="http://doc.qt.io/qt-4.8/qabstractitemview.html">QAbstractItemView</a></span> {
+    border: <span class="number">2px</span> solid darkgray;
+    selection<span class="operator">-</span>background<span class="operator">-</span>color: lightgray;
+}</pre>
+<a name="customizing-qdockwidget"></a>
+<h3>Customizing QDockWidget</h3>
+<p>The title bar and the buttons of a <a href="http://doc.qt.io/qt-4.8/qdockwidget.html">QDockWidget</a> can be customized as follows:</p>
+<pre class="cpp"><span class="type"><a href="http://doc.qt.io/qt-4.8/qdockwidget.html">QDockWidget</a></span> {
+    border: <span class="number">1px</span> solid lightgray;
+    titlebar<span class="operator">-</span>close<span class="operator">-</span>icon: url(close<span class="operator">.</span>png);
+    titlebar<span class="operator">-</span>normal<span class="operator">-</span>icon: url(undock<span class="operator">.</span>png);
+}
+
+<span class="type"><a href="http://doc.qt.io/qt-4.8/qdockwidget.html">QDockWidget</a></span><span class="operator">::</span>title {
+    text<span class="operator">-</span>align: left; <span class="comment">/* align the text to the left */</span>
+    background: lightgray;
+    padding<span class="operator">-</span>left: <span class="number">5px</span>;
+}
+
+<span class="type"><a href="http://doc.qt.io/qt-4.8/qdockwidget.html">QDockWidget</a></span><span class="operator">::</span>close<span class="operator">-</span>button<span class="operator">,</span> <span class="type"><a href="http://doc.qt.io/qt-4.8/qdockwidget.html">QDockWidget</a></span><span class="operator">::</span><span class="type">float</span><span class="operator">-</span>button {
+    border: <span class="number">1px</span> solid transparent;
+    background: darkgray;
+    padding: <span class="number">0px</span>;
+}
+
+<span class="type"><a href="http://doc.qt.io/qt-4.8/qdockwidget.html">QDockWidget</a></span><span class="operator">::</span>close<span class="operator">-</span>button:hover<span class="operator">,</span> <span class="type"><a href="http://doc.qt.io/qt-4.8/qdockwidget.html">QDockWidget</a></span><span class="operator">::</span><span class="type">float</span><span class="operator">-</span>button:hover {
+    background: gray;
+}
+
+<span class="type"><a href="http://doc.qt.io/qt-4.8/qdockwidget.html">QDockWidget</a></span><span class="operator">::</span>close<span class="operator">-</span>button:pressed<span class="operator">,</span> <span class="type"><a href="http://doc.qt.io/qt-4.8/qdockwidget.html">QDockWidget</a></span><span class="operator">::</span><span class="type">float</span><span class="operator">-</span>button:pressed {
+    padding: <span class="number">1px</span> <span class="operator">-</span><span class="number">1px</span> <span class="operator">-</span><span class="number">1px</span> <span class="number">1px</span>;
+}</pre>
+<p>If one desires to move the dock widget buttons to the left, the following style sheet can be used:</p>
+<pre class="cpp"><span class="type"><a href="http://doc.qt.io/qt-4.8/qdockwidget.html">QDockWidget</a></span> {
+    border: <span class="number">1px</span> solid lightgray;
+    titlebar<span class="operator">-</span>close<span class="operator">-</span>icon: url(close<span class="operator">.</span>png);
+    titlebar<span class="operator">-</span>normal<span class="operator">-</span>icon: url(<span class="type">float</span><span class="operator">.</span>png);
+}
+
+<span class="type"><a href="http://doc.qt.io/qt-4.8/qdockwidget.html">QDockWidget</a></span><span class="operator">::</span>title {
+    text<span class="operator">-</span>align: left;
+    background: lightgray;
+    padding<span class="operator">-</span>left: <span class="number">35px</span>;
+}
+
+<span class="type"><a href="http://doc.qt.io/qt-4.8/qdockwidget.html">QDockWidget</a></span><span class="operator">::</span>close<span class="operator">-</span>button<span class="operator">,</span> <span class="type"><a href="http://doc.qt.io/qt-4.8/qdockwidget.html">QDockWidget</a></span><span class="operator">::</span><span class="type">float</span><span class="operator">-</span>button {
+    background: darkgray;
+    padding: <span class="number">0px</span>;
+    icon<span class="operator">-</span>size: <span class="number">14px</span>; <span class="comment">/* maximum icon size */</span>
+}
+
+<span class="type"><a href="http://doc.qt.io/qt-4.8/qdockwidget.html">QDockWidget</a></span><span class="operator">::</span>close<span class="operator">-</span>button:hover<span class="operator">,</span> <span class="type"><a href="http://doc.qt.io/qt-4.8/qdockwidget.html">QDockWidget</a></span><span class="operator">::</span><span class="type">float</span><span class="operator">-</span>button:hover {
+    background: gray;
+}
+
+<span class="type"><a href="http://doc.qt.io/qt-4.8/qdockwidget.html">QDockWidget</a></span><span class="operator">::</span>close<span class="operator">-</span>button:pressed<span class="operator">,</span> <span class="type"><a href="http://doc.qt.io/qt-4.8/qdockwidget.html">QDockWidget</a></span><span class="operator">::</span><span class="type">float</span><span class="operator">-</span>button:pressed {
+    padding: <span class="number">1px</span> <span class="operator">-</span><span class="number">1px</span> <span class="operator">-</span><span class="number">1px</span> <span class="number">1px</span>;
+}
+
+<span class="type"><a href="http://doc.qt.io/qt-4.8/qdockwidget.html">QDockWidget</a></span><span class="operator">::</span>close<span class="operator">-</span>button {
+    subcontrol<span class="operator">-</span>position: top left;
+    subcontrol<span class="operator">-</span>origin: margin;
+    position: absolute;
+    top: <span class="number">0px</span>; left: <span class="number">0px</span>; bottom: <span class="number">0px</span>;
+    width: <span class="number">14px</span>;
+}
+
+<span class="type"><a href="http://doc.qt.io/qt-4.8/qdockwidget.html">QDockWidget</a></span><span class="operator">::</span><span class="type">float</span><span class="operator">-</span>button {
+    subcontrol<span class="operator">-</span>position: top left;
+    subcontrol<span class="operator">-</span>origin: margin;
+    position: absolute;
+    top: <span class="number">0px</span>; left: <span class="number">16px</span>; bottom: <span class="number">0px</span>;
+    width: <span class="number">14px</span>;
+}</pre>
+<p><b>Note: </b>To customize the separator (resize handle) of a <a href="http://doc.qt.io/qt-4.8/qdockwidget.html">QDockWidget</a>, use QMainWindow::separator.</p><a name="customizing-qframe"></a>
+<h3>Customizing QFrame</h3>
+<p>A <a href="http://doc.qt.io/qt-4.8/porting4.html#qframe">QFrame</a> is styled using the <a href="http://doc.qt.io/qt-4.8/stylesheet-customizing.html#the-box-model">The Box Model</a>.</p>
+<pre class="cpp"><span class="type"><a href="http://doc.qt.io/qt-4.8/qframe.html">QFrame</a></span><span class="operator">,</span> <span class="type"><a href="http://doc.qt.io/qt-4.8/qlabel.html">QLabel</a></span><span class="operator">,</span> <span class="type"><a href="http://doc.qt.io/qt-4.8/qtooltip.html">QToolTip</a></span> {
+    border: <span class="number">2px</span> solid green;
+    border<span class="operator">-</span>radius: <span class="number">4px</span>;
+    padding: <span class="number">2px</span>;
+    background<span class="operator">-</span>image: url(images<span class="operator">/</span>welcome<span class="operator">.</span>png);
+}</pre>
+<a name="customizing-qgroupbox"></a>
+<h3>Customizing QGroupBox</h3>
+<p>Let us look at an example that moves the <a href="http://doc.qt.io/qt-4.8/porting4.html#qgroupbox">QGroupBox</a>'s title to the center.</p>
+<pre class="cpp"><span class="type"><a href="http://doc.qt.io/qt-4.8/qgroupbox.html">QGroupBox</a></span> {
+    background<span class="operator">-</span>color: qlineargradient(x1: <span class="number">0</span><span class="operator">,</span> y1: <span class="number">0</span><span class="operator">,</span> x2: <span class="number">0</span><span class="operator">,</span> y2: <span class="number">1</span><span class="operator">,</span>
+                                      stop: <span class="number">0</span> <span class="preprocessor">#E0E0E0, stop: 1 #FFFFFF);</span>
+    border: <span class="number">2px</span> solid gray;
+    border<span class="operator">-</span>radius: <span class="number">5px</span>;
+    margin<span class="operator">-</span>top: <span class="number">1ex</span>; <span class="comment">/* leave space at the top for the title */</span>
+}
+
+<span class="type"><a href="http://doc.qt.io/qt-4.8/qgroupbox.html">QGroupBox</a></span><span class="operator">::</span>title {
+    subcontrol<span class="operator">-</span>origin: margin;
+    subcontrol<span class="operator">-</span>position: top center; <span class="comment">/* position at the top center */</span>
+    padding: <span class="number">0</span> <span class="number">3px</span>;
+    background<span class="operator">-</span>color: qlineargradient(x1: <span class="number">0</span><span class="operator">,</span> y1: <span class="number">0</span><span class="operator">,</span> x2: <span class="number">0</span><span class="operator">,</span> y2: <span class="number">1</span><span class="operator">,</span>
+                                      stop: <span class="number">0</span> <span class="preprocessor">#FFOECE, stop: 1 #FFFFFF);</span>
+}</pre>
+<p>For a checkable <a href="http://doc.qt.io/qt-4.8/porting4.html#qgroupbox">QGroupBox</a>, use the {#indicator-sub}{::indicator} subcontrol and style it exactly like a <a href="http://doc.qt.io/qt-4.8/qcheckbox.html">QCheckBox</a> (i.e)</p>
+<pre class="cpp"><span class="type"><a href="http://doc.qt.io/qt-4.8/qgroupbox.html">QGroupBox</a></span><span class="operator">::</span>indicator {
+    width: <span class="number">13px</span>;
+    height: <span class="number">13px</span>;
+}
+
+<span class="type"><a href="http://doc.qt.io/qt-4.8/qgroupbox.html">QGroupBox</a></span><span class="operator">::</span>indicator:unchecked {
+    image: url(:<span class="operator">/</span>images<span class="operator">/</span>checkbox_unchecked<span class="operator">.</span>png);
+}
+
+<span class="comment">/* proceed with styling just like QCheckBox */</span></pre>
+<a name="customizing-qheaderview"></a>
+<h3>Customizing QHeaderView</h3>
+<p><a href="http://doc.qt.io/qt-4.8/qheaderview.html">QHeaderView</a> is customized as follows:</p>
+<pre class="cpp"><span class="type"><a href="http://doc.qt.io/qt-4.8/qheaderview.html">QHeaderView</a></span><span class="operator">::</span>section {
+    background<span class="operator">-</span>color: qlineargradient(x1:<span class="number">0</span><span class="operator">,</span> y1:<span class="number">0</span><span class="operator">,</span> x2:<span class="number">0</span><span class="operator">,</span> y2:<span class="number">1</span><span class="operator">,</span>
+                                      stop:<span class="number">0</span> <span class="preprocessor">#616161, stop: 0.5 #505050,</span>
+                                      stop: <span class="number">0.6</span> <span class="preprocessor">#434343, stop:1 #656565);</span>
+    color: white;
+    padding<span class="operator">-</span>left: <span class="number">4px</span>;
+    border: <span class="number">1px</span> solid <span class="preprocessor">#6c6c6c;</span>
+}
+
+<span class="type"><a href="http://doc.qt.io/qt-4.8/qheaderview.html">QHeaderView</a></span><span class="operator">::</span>section:checked
+{
+    background<span class="operator">-</span>color: red;
+}
+
+<span class="comment">/* style the sort indicator */</span>
+<span class="type"><a href="http://doc.qt.io/qt-4.8/qheaderview.html">QHeaderView</a></span><span class="operator">::</span>down<span class="operator">-</span>arrow {
+    image: url(down_arrow<span class="operator">.</span>png);
+}
+
+<span class="type"><a href="http://doc.qt.io/qt-4.8/qheaderview.html">QHeaderView</a></span><span class="operator">::</span>up<span class="operator">-</span>arrow {
+    image: url(up_arrow<span class="operator">.</span>png);
+}</pre>
+<a name="customizing-qlineedit"></a>
+<h3>Customizing QLineEdit</h3>
+<p>The frame of a <a href="http://doc.qt.io/qt-4.8/porting4.html#qlineedit">QLineEdit</a> is styled using the <a href="http://doc.qt.io/qt-4.8/stylesheet-customizing.html#the-box-model">The Box Model</a>. To create a line edit with rounded corners, we can set:</p>
+<pre class="cpp"><span class="type"><a href="http://doc.qt.io/qt-4.8/qlineedit.html">QLineEdit</a></span> {
+    border: <span class="number">2px</span> solid gray;
+    border<span class="operator">-</span>radius: <span class="number">10px</span>;
+    padding: <span class="number">0</span> <span class="number">8px</span>;
+    background: yellow;
+    selection<span class="operator">-</span>background<span class="operator">-</span>color: darkgray;
+}</pre>
+<p>The password character of line edits that have <a href="http://doc.qt.io/qt-4.8/qlineedit.html#EchoMode-enum">QLineEdit::Password</a> echo mode can be set using:</p>
+<pre class="cpp"><span class="type"><a href="http://doc.qt.io/qt-4.8/qlineedit.html">QLineEdit</a></span><span class="operator">[</span>echoMode<span class="operator">=</span><span class="string">"2"</span><span class="operator">]</span> {
+    lineedit<span class="operator">-</span>password<span class="operator">-</span>character: <span class="number">9679</span>;
+}</pre>
+<p>The background of a read only <a href="http://doc.qt.io/qt-4.8/porting4.html#qlineedit">QLineEdit</a> can be modified as below:</p>
+<pre class="cpp"><span class="type"><a href="http://doc.qt.io/qt-4.8/qlineedit.html">QLineEdit</a></span>:read<span class="operator">-</span>only {
+    background: lightblue;</pre>
+<a name="customizing-qlistview"></a>
+<h3>Customizing QListView</h3>
+<p>The background color of alternating rows can be customized using the following style sheet:</p>
+<pre class="cpp"><span class="type"><a href="http://doc.qt.io/qt-4.8/qlistview.html">QListView</a></span> {
+    alternate<span class="operator">-</span>background<span class="operator">-</span>color: yellow;
+}</pre>
+<p>To provide a special background when you hover over items, we can use the <a href="http://doc.qt.io/qt-4.8/stylesheet-reference.html#item-sub">::item</a> subcontrol. For example,</p>
+<pre class="cpp"><span class="type"><a href="http://doc.qt.io/qt-4.8/qlistview.html">QListView</a></span> {
+    show<span class="operator">-</span>decoration<span class="operator">-</span>selected: <span class="number">1</span>; <span class="comment">/* make the selection span the entire width of the view */</span>
+}
+
+<span class="type"><a href="http://doc.qt.io/qt-4.8/qlistview.html">QListView</a></span><span class="operator">::</span>item:alternate {
+    background: <span class="preprocessor">#EEEEEE;</span>
+}
+
+<span class="type"><a href="http://doc.qt.io/qt-4.8/qlistview.html">QListView</a></span><span class="operator">::</span>item:selected {
+    border: <span class="number">1px</span> solid <span class="preprocessor">#6a6ea9;</span>
+}
+
+<span class="type"><a href="http://doc.qt.io/qt-4.8/qlistview.html">QListView</a></span><span class="operator">::</span>item:selected:<span class="operator">!</span>active {
+    background: qlineargradient(x1: <span class="number">0</span><span class="operator">,</span> y1: <span class="number">0</span><span class="operator">,</span> x2: <span class="number">0</span><span class="operator">,</span> y2: <span class="number">1</span><span class="operator">,</span>
+                                stop: <span class="number">0</span> <span class="preprocessor">#ABAFE5, stop: 1 #8588B2);</span>
+}
+
+<span class="type"><a href="http://doc.qt.io/qt-4.8/qlistview.html">QListView</a></span><span class="operator">::</span>item:selected:active {
+    background: qlineargradient(x1: <span class="number">0</span><span class="operator">,</span> y1: <span class="number">0</span><span class="operator">,</span> x2: <span class="number">0</span><span class="operator">,</span> y2: <span class="number">1</span><span class="operator">,</span>
+                                stop: <span class="number">0</span> <span class="preprocessor">#6a6ea9, stop: 1 #888dd9);</span>
+}
+
+<span class="type"><a href="http://doc.qt.io/qt-4.8/qlistview.html">QListView</a></span><span class="operator">::</span>item:hover {
+    background: qlineargradient(x1: <span class="number">0</span><span class="operator">,</span> y1: <span class="number">0</span><span class="operator">,</span> x2: <span class="number">0</span><span class="operator">,</span> y2: <span class="number">1</span><span class="operator">,</span>
+                                stop: <span class="number">0</span> <span class="preprocessor">#FAFBFE, stop: 1 #DCDEF1);</span>
+}</pre>
+<a name="customizing-qmainwindow"></a>
+<h3>Customizing QMainWindow</h3>
+<p>The separator of a <a href="http://doc.qt.io/qt-4.8/porting4.html#qmainwindow">QMainWindow</a> can be styled as follows:</p>
+<pre class="cpp"><span class="type"><a href="http://doc.qt.io/qt-4.8/qmainwindow.html">QMainWindow</a></span><span class="operator">::</span>separator {
+    background: yellow;
+    width: <span class="number">10px</span>; <span class="comment">/* when vertical */</span>
+    height: <span class="number">10px</span>; <span class="comment">/* when horizontal */</span>
+}
+
+<span class="type"><a href="http://doc.qt.io/qt-4.8/qmainwindow.html">QMainWindow</a></span><span class="operator">::</span>separator:hover {
+    background: red;
+}</pre>
+<a name="customizing-qmenu"></a>
+<h3>Customizing QMenu</h3>
+<p>Individual items of a <a href="http://doc.qt.io/qt-4.8/qmenu.html">QMenu</a> are styled using the 'item' subcontrol as follows:</p>
+<pre class="cpp"><span class="type"><a href="http://doc.qt.io/qt-4.8/qmenu.html">QMenu</a></span> {
+    background<span class="operator">-</span>color: <span class="preprocessor">#ABABAB; /* sets background of the menu */</span>
+    border: <span class="number">1px</span> solid black;
+}
+
+<span class="type"><a href="http://doc.qt.io/qt-4.8/qmenu.html">QMenu</a></span><span class="operator">::</span>item {
+    <span class="comment">/* sets background of menu item. set this to something non-transparent
+        if you want menu color and menu item color to be different */</span>
+    background<span class="operator">-</span>color: transparent;
+}
+
+<span class="type"><a href="http://doc.qt.io/qt-4.8/qmenu.html">QMenu</a></span><span class="operator">::</span>item:selected { <span class="comment">/* when user selects item using mouse or keyboard */</span>
+    background<span class="operator">-</span>color: <span class="preprocessor">#654321;</span>
+}</pre>
+<p>For a more advanced customization, use a style sheet as follows:</p>
+<pre class="cpp"><span class="type"><a href="http://doc.qt.io/qt-4.8/qmenu.html">QMenu</a></span> {
+    background<span class="operator">-</span>color: white;
+    margin: <span class="number">2px</span>; <span class="comment">/* some spacing around the menu */</span>
+}
+
+<span class="type"><a href="http://doc.qt.io/qt-4.8/qmenu.html">QMenu</a></span><span class="operator">::</span>item {
+    padding: <span class="number">2px</span> <span class="number">25px</span> <span class="number">2px</span> <span class="number">20px</span>;
+    border: <span class="number">1px</span> solid transparent; <span class="comment">/* reserve space for selection border */</span>
+}
+
+<span class="type"><a href="http://doc.qt.io/qt-4.8/qmenu.html">QMenu</a></span><span class="operator">::</span>item:selected {
+    border<span class="operator">-</span>color: darkblue;
+    background: rgba(<span class="number">100</span><span class="operator">,</span> <span class="number">100</span><span class="operator">,</span> <span class="number">100</span><span class="operator">,</span> <span class="number">150</span>);
+}
+
+<span class="type"><a href="http://doc.qt.io/qt-4.8/qmenu.html">QMenu</a></span><span class="operator">::</span>icon:checked { <span class="comment">/* appearance of a 'checked' icon */</span>
+    background: gray;
+    border: <span class="number">1px</span> inset gray;
+    position: absolute;
+    top: <span class="number">1px</span>;
+    right: <span class="number">1px</span>;
+    bottom: <span class="number">1px</span>;
+    left: <span class="number">1px</span>;
+}
+
+<span class="type"><a href="http://doc.qt.io/qt-4.8/qmenu.html">QMenu</a></span><span class="operator">::</span>separator {
+    height: <span class="number">2px</span>;
+    background: lightblue;
+    margin<span class="operator">-</span>left: <span class="number">10px</span>;
+    margin<span class="operator">-</span>right: <span class="number">5px</span>;
+}
+
+<span class="type"><a href="http://doc.qt.io/qt-4.8/qmenu.html">QMenu</a></span><span class="operator">::</span>indicator {
+    width: <span class="number">13px</span>;
+    height: <span class="number">13px</span>;
+}
+
+<span class="comment">/* non-exclusive indicator = check box style indicator (see QActionGroup::setExclusive) */</span>
+<span class="type"><a href="http://doc.qt.io/qt-4.8/qmenu.html">QMenu</a></span><span class="operator">::</span>indicator:non<span class="operator">-</span>exclusive:unchecked {
+    image: url(:<span class="operator">/</span>images<span class="operator">/</span>checkbox_unchecked<span class="operator">.</span>png);
+}
+
+<span class="type"><a href="http://doc.qt.io/qt-4.8/qmenu.html">QMenu</a></span><span class="operator">::</span>indicator:non<span class="operator">-</span>exclusive:unchecked:selected {
+    image: url(:<span class="operator">/</span>images<span class="operator">/</span>checkbox_unchecked_hover<span class="operator">.</span>png);
+}
+
+<span class="type"><a href="http://doc.qt.io/qt-4.8/qmenu.html">QMenu</a></span><span class="operator">::</span>indicator:non<span class="operator">-</span>exclusive:checked {
+    image: url(:<span class="operator">/</span>images<span class="operator">/</span>checkbox_checked<span class="operator">.</span>png);
+}
+
+<span class="type"><a href="http://doc.qt.io/qt-4.8/qmenu.html">QMenu</a></span><span class="operator">::</span>indicator:non<span class="operator">-</span>exclusive:checked:selected {
+    image: url(:<span class="operator">/</span>images<span class="operator">/</span>checkbox_checked_hover<span class="operator">.</span>png);
+}
+
+<span class="comment">/* exclusive indicator = radio button style indicator (see QActionGroup::setExclusive) */</span>
+<span class="type"><a href="http://doc.qt.io/qt-4.8/qmenu.html">QMenu</a></span><span class="operator">::</span>indicator:exclusive:unchecked {
+    image: url(:<span class="operator">/</span>images<span class="operator">/</span>radiobutton_unchecked<span class="operator">.</span>png);
+}
+
+<span class="type"><a href="http://doc.qt.io/qt-4.8/qmenu.html">QMenu</a></span><span class="operator">::</span>indicator:exclusive:unchecked:selected {
+    image: url(:<span class="operator">/</span>images<span class="operator">/</span>radiobutton_unchecked_hover<span class="operator">.</span>png);
+}
+
+<span class="type"><a href="http://doc.qt.io/qt-4.8/qmenu.html">QMenu</a></span><span class="operator">::</span>indicator:exclusive:checked {
+    image: url(:<span class="operator">/</span>images<span class="operator">/</span>radiobutton_checked<span class="operator">.</span>png);
+}
+
+<span class="type"><a href="http://doc.qt.io/qt-4.8/qmenu.html">QMenu</a></span><span class="operator">::</span>indicator:exclusive:checked:selected {
+    image: url(:<span class="operator">/</span>images<span class="operator">/</span>radiobutton_checked_hover<span class="operator">.</span>png);
+}</pre>
+<a name="customizing-qmenubar"></a>
+<h3>Customizing QMenuBar</h3>
+<p><a href="http://doc.qt.io/qt-4.8/porting4.html#qmenubar">QMenuBar</a> is styled as follows:</p>
+<pre class="cpp"><span class="type"><a href="http://doc.qt.io/qt-4.8/qmenubar.html">QMenuBar</a></span> {
+    background<span class="operator">-</span>color: qlineargradient(x1:<span class="number">0</span><span class="operator">,</span> y1:<span class="number">0</span><span class="operator">,</span> x2:<span class="number">0</span><span class="operator">,</span> y2:<span class="number">1</span><span class="operator">,</span>
+                                      stop:<span class="number">0</span> lightgray<span class="operator">,</span> stop:<span class="number">1</span> darkgray);
+}
+
+<span class="type"><a href="http://doc.qt.io/qt-4.8/qmenubar.html">QMenuBar</a></span><span class="operator">::</span>item {
+    spacing: <span class="number">3px</span>; <span class="comment">/* spacing between menu bar items */</span>
+    padding: <span class="number">1px</span> <span class="number">4px</span>;
+    background: transparent;
+    border<span class="operator">-</span>radius: <span class="number">4px</span>;
+}
+
+<span class="type"><a href="http://doc.qt.io/qt-4.8/qmenubar.html">QMenuBar</a></span><span class="operator">::</span>item:selected { <span class="comment">/* when selected using mouse or keyboard */</span>
+    background: <span class="preprocessor">#a8a8a8;</span>
+}
+
+<span class="type"><a href="http://doc.qt.io/qt-4.8/qmenubar.html">QMenuBar</a></span><span class="operator">::</span>item:pressed {
+    background: <span class="preprocessor">#888888;</span>
+}</pre>
+<a name="customizing-qprogressbar"></a>
+<h3>Customizing QProgressBar</h3>
+<p>The <a href="http://doc.qt.io/qt-4.8/porting4.html#qprogressbar">QProgressBar</a>'s <a href="http://doc.qt.io/qt-4.8/stylesheet-reference.html#border-prop">border</a>, <a href="http://doc.qt.io/qt-4.8/stylesheet-reference.html#chunk-sub">chunk</a>, and <a href="http://doc.qt.io/qt-4.8/stylesheet-reference.html#text-align-prop">text-align</a>
+ can be customized using style sheets. However, if one property or 
+sub-control is customized, all the other properties or sub-controls must
+ be customized as well.</p>
+<p class="centerAlign"><img src="Qt%20Style%20Sheets%20Examples%20%7C%20Qt%204.8_files/progressBar-stylesheet.png" alt=""></p><p>For example, we change the <a href="http://doc.qt.io/qt-4.8/stylesheet-reference.html#border-prop">border</a> to grey and the <a href="http://doc.qt.io/qt-4.8/stylesheet-reference.html#chunk-sub">chunk</a> to cerulean.</p>
+<pre class="cpp"><span class="type"><a href="http://doc.qt.io/qt-4.8/qprogressbar.html">QProgressBar</a></span> {
+    border: <span class="number">2px</span> solid grey;
+    border<span class="operator">-</span>radius: <span class="number">5px</span>;
+}
+
+<span class="type"><a href="http://doc.qt.io/qt-4.8/qprogressbar.html">QProgressBar</a></span><span class="operator">::</span>chunk {
+    background<span class="operator">-</span>color: <span class="preprocessor">#05B8CC;</span>
+    width: <span class="number">20px</span>;
+}</pre>
+<p>This leaves the <a href="http://doc.qt.io/qt-4.8/stylesheet-reference.html#text-align-prop">text-align</a>, which we customize by positioning the text in the center of the progress bar.</p>
+<pre class="cpp"><span class="type"><a href="http://doc.qt.io/qt-4.8/qprogressbar.html">QProgressBar</a></span> {
+    border: <span class="number">2px</span> solid grey;
+    border<span class="operator">-</span>radius: <span class="number">5px</span>;
+    text<span class="operator">-</span>align: center;
+}</pre>
+<p>A <a href="http://doc.qt.io/qt-4.8/stylesheet-reference.html#margin-prop">margin</a> can be included to obtain more visible chunks.</p>
+<p class="centerAlign"><img src="Qt%20Style%20Sheets%20Examples%20%7C%20Qt%204.8_files/progressBar2-stylesheet.png" alt=""></p><p>In the screenshot above, we use a <a href="http://doc.qt.io/qt-4.8/stylesheet-reference.html#margin-prop">margin</a> of 0.5 pixels.</p>
+<pre class="cpp"><span class="type"><a href="http://doc.qt.io/qt-4.8/qprogressbar.html">QProgressBar</a></span><span class="operator">::</span>chunk {
+    background<span class="operator">-</span>color: <span class="preprocessor">#CD96CD;</span>
+    width: <span class="number">10px</span>;
+    margin: <span class="number">0.5px</span>;
+}</pre>
+<a name="customizing-qpushbutton"></a>
+<h3>Customizing QPushButton</h3>
+<p>A <a href="http://doc.qt.io/qt-4.8/porting4.html#qpushbutton">QPushButton</a> is styled as follows:</p>
+<pre class="cpp"><span class="type"><a href="http://doc.qt.io/qt-4.8/qpushbutton.html">QPushButton</a></span> {
+    border: <span class="number">2px</span> solid <span class="preprocessor">#8f8f91;</span>
+    border<span class="operator">-</span>radius: <span class="number">6px</span>;
+    background<span class="operator">-</span>color: qlineargradient(x1: <span class="number">0</span><span class="operator">,</span> y1: <span class="number">0</span><span class="operator">,</span> x2: <span class="number">0</span><span class="operator">,</span> y2: <span class="number">1</span><span class="operator">,</span>
+                                      stop: <span class="number">0</span> <span class="preprocessor">#f6f7fa, stop: 1 #dadbde);</span>
+    min<span class="operator">-</span>width: <span class="number">80px</span>;
+}
+
+<span class="type"><a href="http://doc.qt.io/qt-4.8/qpushbutton.html">QPushButton</a></span>:pressed {
+    background<span class="operator">-</span>color: qlineargradient(x1: <span class="number">0</span><span class="operator">,</span> y1: <span class="number">0</span><span class="operator">,</span> x2: <span class="number">0</span><span class="operator">,</span> y2: <span class="number">1</span><span class="operator">,</span>
+                                      stop: <span class="number">0</span> <span class="preprocessor">#dadbde, stop: 1 #f6f7fa);</span>
+}
+
+<span class="type"><a href="http://doc.qt.io/qt-4.8/qpushbutton.html">QPushButton</a></span>:flat {
+    border: none; <span class="comment">/* no border for a flat push button */</span>
+}
+
+<span class="type"><a href="http://doc.qt.io/qt-4.8/qpushbutton.html">QPushButton</a></span>:<span class="keyword">default</span> {
+    border<span class="operator">-</span>color: navy; <span class="comment">/* make the default button prominent */</span>
+}</pre>
+<p>For a <a href="http://doc.qt.io/qt-4.8/porting4.html#qpushbutton">QPushButton</a> with a menu, use the <a href="http://doc.qt.io/qt-4.8/stylesheet-reference.html#menu-indicator-sub">::menu-indicator</a> subcontrol.</p>
+<pre class="cpp"><span class="type"><a href="http://doc.qt.io/qt-4.8/qpushbutton.html">QPushButton</a></span>:open { <span class="comment">/* when the button has its menu open */</span>
+    background<span class="operator">-</span>color: qlineargradient(x1: <span class="number">0</span><span class="operator">,</span> y1: <span class="number">0</span><span class="operator">,</span> x2: <span class="number">0</span><span class="operator">,</span> y2: <span class="number">1</span><span class="operator">,</span>
+                                      stop: <span class="number">0</span> <span class="preprocessor">#dadbde, stop: 1 #f6f7fa);</span>
+}
+
+<span class="type"><a href="http://doc.qt.io/qt-4.8/qpushbutton.html">QPushButton</a></span><span class="operator">::</span>menu<span class="operator">-</span>indicator {
+    image: url(menu_indicator<span class="operator">.</span>png);
+    subcontrol<span class="operator">-</span>origin: padding;
+    subcontrol<span class="operator">-</span>position: bottom right;
+}
+
+<span class="type"><a href="http://doc.qt.io/qt-4.8/qpushbutton.html">QPushButton</a></span><span class="operator">::</span>menu<span class="operator">-</span>indicator:pressed<span class="operator">,</span> <span class="type"><a href="http://doc.qt.io/qt-4.8/qpushbutton.html">QPushButton</a></span><span class="operator">::</span>menu<span class="operator">-</span>indicator:open {
+    position: relative;
+    top: <span class="number">2px</span>; left: <span class="number">2px</span>; <span class="comment">/* shift the arrow by 2 px */</span>
+}</pre>
+<p>Checkable <a href="http://doc.qt.io/qt-4.8/porting4.html#qpushbutton">QPushButton</a> have the <a href="http://doc.qt.io/qt-4.8/stylesheet-reference.html#checked-ps">:checked</a> pseudo state set.</p>
+<a name="customizing-qradiobutton"></a>
+<h3>Customizing QRadioButton</h3>
+<p>The indicator of a <a href="http://doc.qt.io/qt-4.8/qradiobutton.html">QRadioButton</a> can be changed using:</p>
+<pre class="cpp"><span class="type"><a href="http://doc.qt.io/qt-4.8/qradiobutton.html">QRadioButton</a></span><span class="operator">::</span>indicator {
+    width: <span class="number">13px</span>;
+    height: <span class="number">13px</span>;
+}
+
+<span class="type"><a href="http://doc.qt.io/qt-4.8/qradiobutton.html">QRadioButton</a></span><span class="operator">::</span>indicator<span class="operator">::</span>unchecked {
+    image: url(:<span class="operator">/</span>images<span class="operator">/</span>radiobutton_unchecked<span class="operator">.</span>png);
+}
+
+<span class="type"><a href="http://doc.qt.io/qt-4.8/qradiobutton.html">QRadioButton</a></span><span class="operator">::</span>indicator:unchecked:hover {
+    image: url(:<span class="operator">/</span>images<span class="operator">/</span>radiobutton_unchecked_hover<span class="operator">.</span>png);
+}
+
+<span class="type"><a href="http://doc.qt.io/qt-4.8/qradiobutton.html">QRadioButton</a></span><span class="operator">::</span>indicator:unchecked:pressed {
+    image: url(:<span class="operator">/</span>images<span class="operator">/</span>radiobutton_unchecked_pressed<span class="operator">.</span>png);
+}
+
+<span class="type"><a href="http://doc.qt.io/qt-4.8/qradiobutton.html">QRadioButton</a></span><span class="operator">::</span>indicator<span class="operator">::</span>checked {
+    image: url(:<span class="operator">/</span>images<span class="operator">/</span>radiobutton_checked<span class="operator">.</span>png);
+}
+
+<span class="type"><a href="http://doc.qt.io/qt-4.8/qradiobutton.html">QRadioButton</a></span><span class="operator">::</span>indicator:checked:hover {
+    image: url(:<span class="operator">/</span>images<span class="operator">/</span>radiobutton_checked_hover<span class="operator">.</span>png);
+}
+
+<span class="type"><a href="http://doc.qt.io/qt-4.8/qradiobutton.html">QRadioButton</a></span><span class="operator">::</span>indicator:checked:pressed {
+    image: url(:<span class="operator">/</span>images<span class="operator">/</span>radiobutton_checked_pressed<span class="operator">.</span>png);
+}</pre>
+<a name="customizing-qscrollbar"></a>
+<h3>Customizing QScrollBar</h3>
+<p>The <a href="http://doc.qt.io/qt-4.8/porting4.html#qscrollbar">QScrollBar</a> can be styled using its subcontrols like <a href="http://doc.qt.io/qt-4.8/stylesheet-reference.html#handle-sub">handle</a>, <a href="http://doc.qt.io/qt-4.8/stylesheet-reference.html#add-line-sub">add-line</a>, <a href="http://doc.qt.io/qt-4.8/stylesheet-reference.html#sub-line-sub">sub-line</a>,
+ and so on. Note that if one property or sub-control is customized, all 
+the other properties or sub-controls must be customized as well.</p>
+<p class="centerAlign"><img src="Qt%20Style%20Sheets%20Examples%20%7C%20Qt%204.8_files/stylesheet-scrollbar1.png" alt=""></p><p>The scroll bar above has been styled in aquamarine with a solid grey border.</p>
+<pre class="cpp"><span class="type"><a href="http://doc.qt.io/qt-4.8/qscrollbar.html">QScrollBar</a></span>:horizontal {
+    border: <span class="number">2px</span> solid grey;
+    background: <span class="preprocessor">#32CC99;</span>
+    height: <span class="number">15px</span>;
+    margin: <span class="number">0px</span> <span class="number">20px</span> <span class="number">0</span> <span class="number">20px</span>;
+}
+<span class="type"><a href="http://doc.qt.io/qt-4.8/qscrollbar.html">QScrollBar</a></span><span class="operator">::</span>handle:horizontal {
+    background: white;
+    min<span class="operator">-</span>width: <span class="number">20px</span>;
+}
+<span class="type"><a href="http://doc.qt.io/qt-4.8/qscrollbar.html">QScrollBar</a></span><span class="operator">::</span>add<span class="operator">-</span>line:horizontal {
+    border: <span class="number">2px</span> solid grey;
+    background: <span class="preprocessor">#32CC99;</span>
+    width: <span class="number">20px</span>;
+    subcontrol<span class="operator">-</span>position: right;
+    subcontrol<span class="operator">-</span>origin: margin;
+}
+
+<span class="type"><a href="http://doc.qt.io/qt-4.8/qscrollbar.html">QScrollBar</a></span><span class="operator">::</span>sub<span class="operator">-</span>line:horizontal {
+    border: <span class="number">2px</span> solid grey;
+    background: <span class="preprocessor">#32CC99;</span>
+    width: <span class="number">20px</span>;
+    subcontrol<span class="operator">-</span>position: left;
+    subcontrol<span class="operator">-</span>origin: margin;
+}</pre>
+<p>The <a href="http://doc.qt.io/qt-4.8/stylesheet-reference.html#left-arrow-sub">left-arrow</a> and <a href="http://doc.qt.io/qt-4.8/stylesheet-reference.html#right-arrow-sub">right-arrow</a> have a solid grey border with a white background. As an alternative, you could also embed the image of an arrow.</p>
+<pre class="cpp"><span class="type"><a href="http://doc.qt.io/qt-4.8/qscrollbar.html">QScrollBar</a></span>:left<span class="operator">-</span>arrow:horizontal<span class="operator">,</span> <span class="type"><a href="http://doc.qt.io/qt-4.8/qscrollbar.html">QScrollBar</a></span><span class="operator">::</span>right<span class="operator">-</span>arrow:horizontal {
+    border: <span class="number">2px</span> solid grey;
+    width: <span class="number">3px</span>;
+    height: <span class="number">3px</span>;
+    background: white;
+}
+
+<span class="type"><a href="http://doc.qt.io/qt-4.8/qscrollbar.html">QScrollBar</a></span><span class="operator">::</span>add<span class="operator">-</span>page:horizontal<span class="operator">,</span> <span class="type"><a href="http://doc.qt.io/qt-4.8/qscrollbar.html">QScrollBar</a></span><span class="operator">::</span>sub<span class="operator">-</span>page:horizontal {
+    background: none;
+}</pre>
+<p>If you want the scroll buttons of the scroll bar to be placed 
+together (instead of the edges) like on Mac OS X, you can use the 
+following stylesheet:</p>
+<pre class="cpp"><span class="type"><a href="http://doc.qt.io/qt-4.8/qscrollbar.html">QScrollBar</a></span>:horizontal {
+    border: <span class="number">2px</span> solid green;
+    background: cyan;
+    height: <span class="number">15px</span>;
+    margin: <span class="number">0px</span> <span class="number">40px</span> <span class="number">0</span> <span class="number">0px</span>;
+}
+
+<span class="type"><a href="http://doc.qt.io/qt-4.8/qscrollbar.html">QScrollBar</a></span><span class="operator">::</span>handle:horizontal {
+    background: gray;
+    min<span class="operator">-</span>width: <span class="number">20px</span>;
+}
+
+<span class="type"><a href="http://doc.qt.io/qt-4.8/qscrollbar.html">QScrollBar</a></span><span class="operator">::</span>add<span class="operator">-</span>line:horizontal {
+    background: blue;
+    width: <span class="number">16px</span>;
+    subcontrol<span class="operator">-</span>position: right;
+    subcontrol<span class="operator">-</span>origin: margin;
+    border: <span class="number">2px</span> solid black;
+}
+
+<span class="type"><a href="http://doc.qt.io/qt-4.8/qscrollbar.html">QScrollBar</a></span><span class="operator">::</span>sub<span class="operator">-</span>line:horizontal {
+    background: magenta;
+    width: <span class="number">16px</span>;
+    subcontrol<span class="operator">-</span>position: top right;
+    subcontrol<span class="operator">-</span>origin: margin;
+    border: <span class="number">2px</span> solid black;
+    position: absolute;
+    right: <span class="number">20px</span>;
+}
+
+<span class="type"><a href="http://doc.qt.io/qt-4.8/qscrollbar.html">QScrollBar</a></span>:left<span class="operator">-</span>arrow:horizontal<span class="operator">,</span> <span class="type"><a href="http://doc.qt.io/qt-4.8/qscrollbar.html">QScrollBar</a></span><span class="operator">::</span>right<span class="operator">-</span>arrow:horizontal {
+    width: <span class="number">3px</span>;
+    height: <span class="number">3px</span>;
+    background: pink;
+}
+
+<span class="type"><a href="http://doc.qt.io/qt-4.8/qscrollbar.html">QScrollBar</a></span><span class="operator">::</span>add<span class="operator">-</span>page:horizontal<span class="operator">,</span> <span class="type"><a href="http://doc.qt.io/qt-4.8/qscrollbar.html">QScrollBar</a></span><span class="operator">::</span>sub<span class="operator">-</span>page:horizontal {
+    background: none;
+}</pre>
+<p>The scroll bar using the above stylesheet looks like this:</p>
+<p class="centerAlign"><img src="Qt%20Style%20Sheets%20Examples%20%7C%20Qt%204.8_files/stylesheet-scrollbar2.png" alt=""></p><p>To customize a vertical scroll bar use a style sheet similar to the following:</p>
+<pre class="cpp"> <span class="type"><a href="http://doc.qt.io/qt-4.8/qscrollbar.html">QScrollBar</a></span>:vertical {
+     border: <span class="number">2px</span> solid grey;
+     background: <span class="preprocessor">#32CC99;</span>
+     width: <span class="number">15px</span>;
+     margin: <span class="number">22px</span> <span class="number">0</span> <span class="number">22px</span> <span class="number">0</span>;
+ }
+ <span class="type"><a href="http://doc.qt.io/qt-4.8/qscrollbar.html">QScrollBar</a></span><span class="operator">::</span>handle:vertical {
+     background: white;
+     min<span class="operator">-</span>height: <span class="number">20px</span>;
+ }
+ <span class="type"><a href="http://doc.qt.io/qt-4.8/qscrollbar.html">QScrollBar</a></span><span class="operator">::</span>add<span class="operator">-</span>line:vertical {
+     border: <span class="number">2px</span> solid grey;
+     background: <span class="preprocessor">#32CC99;</span>
+     height: <span class="number">20px</span>;
+     subcontrol<span class="operator">-</span>position: bottom;
+     subcontrol<span class="operator">-</span>origin: margin;
+ }
+
+ <span class="type"><a href="http://doc.qt.io/qt-4.8/qscrollbar.html">QScrollBar</a></span><span class="operator">::</span>sub<span class="operator">-</span>line:vertical {
+     border: <span class="number">2px</span> solid grey;
+     background: <span class="preprocessor">#32CC99;</span>
+     height: <span class="number">20px</span>;
+     subcontrol<span class="operator">-</span>position: top;
+     subcontrol<span class="operator">-</span>origin: margin;
+ }
+ <span class="type"><a href="http://doc.qt.io/qt-4.8/qscrollbar.html">QScrollBar</a></span><span class="operator">::</span>up<span class="operator">-</span>arrow:vertical<span class="operator">,</span> <span class="type"><a href="http://doc.qt.io/qt-4.8/qscrollbar.html">QScrollBar</a></span><span class="operator">::</span>down<span class="operator">-</span>arrow:vertical {
+     border: <span class="number">2px</span> solid grey;
+     width: <span class="number">3px</span>;
+     height: <span class="number">3px</span>;
+     background: white;
+ }
+
+ <span class="type"><a href="http://doc.qt.io/qt-4.8/qscrollbar.html">QScrollBar</a></span><span class="operator">::</span>add<span class="operator">-</span>page:vertical<span class="operator">,</span> <span class="type"><a href="http://doc.qt.io/qt-4.8/qscrollbar.html">QScrollBar</a></span><span class="operator">::</span>sub<span class="operator">-</span>page:vertical {
+     background: none;
+ }</pre>
+<a name="customizing-qsizegrip"></a>
+<h3>Customizing QSizeGrip</h3>
+<p><a href="http://doc.qt.io/qt-4.8/qsizegrip.html">QSizeGrip</a> is usually styled by just setting an image.</p>
+<pre class="cpp"><span class="type"><a href="http://doc.qt.io/qt-4.8/qsizegrip.html">QSizeGrip</a></span> {
+    image: url(:<span class="operator">/</span>images<span class="operator">/</span>sizegrip<span class="operator">.</span>png);
+    width: <span class="number">16px</span>;
+    height: <span class="number">16px</span>;
+}</pre>
+<a name="customizing-qslider"></a>
+<h3>Customizing QSlider</h3>
+<p>You can style horizontal slider as below:</p>
+<pre class="cpp"><span class="type"><a href="http://doc.qt.io/qt-4.8/qslider.html">QSlider</a></span><span class="operator">::</span>groove:horizontal {
+    border: <span class="number">1px</span> solid <span class="preprocessor">#999999;</span>
+    height: <span class="number">8px</span>; <span class="comment">/* the groove expands to the size of the slider by default. by giving it a height, it has a fixed size */</span>
+    background: qlineargradient(x1:<span class="number">0</span><span class="operator">,</span> y1:<span class="number">0</span><span class="operator">,</span> x2:<span class="number">0</span><span class="operator">,</span> y2:<span class="number">1</span><span class="operator">,</span> stop:<span class="number">0</span> <span class="preprocessor">#B1B1B1, stop:1 #c4c4c4);</span>
+    margin: <span class="number">2px</span> <span class="number">0</span>;
+}
+
+<span class="type"><a href="http://doc.qt.io/qt-4.8/qslider.html">QSlider</a></span><span class="operator">::</span>handle:horizontal {
+    background: qlineargradient(x1:<span class="number">0</span><span class="operator">,</span> y1:<span class="number">0</span><span class="operator">,</span> x2:<span class="number">1</span><span class="operator">,</span> y2:<span class="number">1</span><span class="operator">,</span> stop:<span class="number">0</span> <span class="preprocessor">#b4b4b4, stop:1 #8f8f8f);</span>
+    border: <span class="number">1px</span> solid <span class="preprocessor">#5c5c5c;</span>
+    width: <span class="number">18px</span>;
+    margin: <span class="operator">-</span><span class="number">2px</span> <span class="number">0</span>; <span class="comment">/* handle is placed by default on the contents rect of the groove. Expand outside the groove */</span>
+    border<span class="operator">-</span>radius: <span class="number">3px</span>;
+}</pre>
+<p>If you want to change the color of the slider parts before and after 
+the handle, you can use the add-page and sub-page subcontrols. For 
+example, for a vertical slider:</p>
+<pre class="cpp"><span class="type"><a href="http://doc.qt.io/qt-4.8/qslider.html">QSlider</a></span><span class="operator">::</span>groove:vertical {
+    background: red;
+    position: absolute; <span class="comment">/* absolutely position 4px from the left and right of the widget. setting margins on the widget should work too... */</span>
+    left: <span class="number">4px</span>; right: <span class="number">4px</span>;
+}
+
+<span class="type"><a href="http://doc.qt.io/qt-4.8/qslider.html">QSlider</a></span><span class="operator">::</span>handle:vertical {
+    height: <span class="number">10px</span>;
+    background: green;
+    margin: <span class="number">0</span> <span class="operator">-</span><span class="number">4px</span>; <span class="comment">/* expand outside the groove */</span>
+}
+
+<span class="type"><a href="http://doc.qt.io/qt-4.8/qslider.html">QSlider</a></span><span class="operator">::</span>add<span class="operator">-</span>page:vertical {
+    background: white;
+}
+
+<span class="type"><a href="http://doc.qt.io/qt-4.8/qslider.html">QSlider</a></span><span class="operator">::</span>sub<span class="operator">-</span>page:vertical {
+    background: pink;
+}</pre>
+<a name="customizing-qspinbox"></a>
+<h3>Customizing QSpinBox</h3>
+<p><a href="http://doc.qt.io/qt-4.8/porting4.html#qspinbox">QSpinBox</a> can be completely customized as below (the style sheet has commentary inline):</p>
+<pre class="cpp"><span class="type"><a href="http://doc.qt.io/qt-4.8/qspinbox.html">QSpinBox</a></span> {
+    padding<span class="operator">-</span>right: <span class="number">15px</span>; <span class="comment">/* make room for the arrows */</span>
+    border<span class="operator">-</span>image: url(:<span class="operator">/</span>images<span class="operator">/</span>frame<span class="operator">.</span>png) <span class="number">4</span>;
+    border<span class="operator">-</span>width: <span class="number">3</span>;
+}
+
+<span class="type"><a href="http://doc.qt.io/qt-4.8/qspinbox.html">QSpinBox</a></span><span class="operator">::</span>up<span class="operator">-</span>button {
+    subcontrol<span class="operator">-</span>origin: border;
+    subcontrol<span class="operator">-</span>position: top right; <span class="comment">/* position at the top right corner */</span>
+
+    width: <span class="number">16px</span>; <span class="comment">/* 16 + 2*1px border-width = 15px padding + 3px parent border */</span>
+    border<span class="operator">-</span>image: url(:<span class="operator">/</span>images<span class="operator">/</span>spinup<span class="operator">.</span>png) <span class="number">1</span>;
+    border<span class="operator">-</span>width: <span class="number">1px</span>;
+}
+
+<span class="type"><a href="http://doc.qt.io/qt-4.8/qspinbox.html">QSpinBox</a></span><span class="operator">::</span>up<span class="operator">-</span>button:hover {
+    border<span class="operator">-</span>image: url(:<span class="operator">/</span>images<span class="operator">/</span>spinup_hover<span class="operator">.</span>png) <span class="number">1</span>;
+}
+
+<span class="type"><a href="http://doc.qt.io/qt-4.8/qspinbox.html">QSpinBox</a></span><span class="operator">::</span>up<span class="operator">-</span>button:pressed {
+    border<span class="operator">-</span>image: url(:<span class="operator">/</span>images<span class="operator">/</span>spinup_pressed<span class="operator">.</span>png) <span class="number">1</span>;
+}
+
+<span class="type"><a href="http://doc.qt.io/qt-4.8/qspinbox.html">QSpinBox</a></span><span class="operator">::</span>up<span class="operator">-</span>arrow {
+    image: url(:<span class="operator">/</span>images<span class="operator">/</span>up_arrow<span class="operator">.</span>png);
+    width: <span class="number">7px</span>;
+    height: <span class="number">7px</span>;
+}
+
+<span class="type"><a href="http://doc.qt.io/qt-4.8/qspinbox.html">QSpinBox</a></span><span class="operator">::</span>up<span class="operator">-</span>arrow:disabled<span class="operator">,</span> <span class="type"><a href="http://doc.qt.io/qt-4.8/qspinbox.html">QSpinBox</a></span><span class="operator">::</span>up<span class="operator">-</span>arrow:off { <span class="comment">/* off state when value is max */</span>
+   image: url(:<span class="operator">/</span>images<span class="operator">/</span>up_arrow_disabled<span class="operator">.</span>png);
+}
+
+<span class="type"><a href="http://doc.qt.io/qt-4.8/qspinbox.html">QSpinBox</a></span><span class="operator">::</span>down<span class="operator">-</span>button {
+    subcontrol<span class="operator">-</span>origin: border;
+    subcontrol<span class="operator">-</span>position: bottom right; <span class="comment">/* position at bottom right corner */</span>
+
+    width: <span class="number">16px</span>;
+    border<span class="operator">-</span>image: url(:<span class="operator">/</span>images<span class="operator">/</span>spindown<span class="operator">.</span>png) <span class="number">1</span>;
+    border<span class="operator">-</span>width: <span class="number">1px</span>;
+    border<span class="operator">-</span>top<span class="operator">-</span>width: <span class="number">0</span>;
+}
+
+<span class="type"><a href="http://doc.qt.io/qt-4.8/qspinbox.html">QSpinBox</a></span><span class="operator">::</span>down<span class="operator">-</span>button:hover {
+    border<span class="operator">-</span>image: url(:<span class="operator">/</span>images<span class="operator">/</span>spindown_hover<span class="operator">.</span>png) <span class="number">1</span>;
+}
+
+<span class="type"><a href="http://doc.qt.io/qt-4.8/qspinbox.html">QSpinBox</a></span><span class="operator">::</span>down<span class="operator">-</span>button:pressed {
+    border<span class="operator">-</span>image: url(:<span class="operator">/</span>images<span class="operator">/</span>spindown_pressed<span class="operator">.</span>png) <span class="number">1</span>;
+}
+
+<span class="type"><a href="http://doc.qt.io/qt-4.8/qspinbox.html">QSpinBox</a></span><span class="operator">::</span>down<span class="operator">-</span>arrow {
+    image: url(:<span class="operator">/</span>images<span class="operator">/</span>down_arrow<span class="operator">.</span>png);
+    width: <span class="number">7px</span>;
+    height: <span class="number">7px</span>;
+}
+
+<span class="type"><a href="http://doc.qt.io/qt-4.8/qspinbox.html">QSpinBox</a></span><span class="operator">::</span>down<span class="operator">-</span>arrow:disabled<span class="operator">,</span>
+<span class="type"><a href="http://doc.qt.io/qt-4.8/qspinbox.html">QSpinBox</a></span><span class="operator">::</span>down<span class="operator">-</span>arrow:off { <span class="comment">/* off state when value in min */</span>
+   image: url(:<span class="operator">/</span>images<span class="operator">/</span>down_arrow_disabled<span class="operator">.</span>png);
+}</pre>
+<a name="customizing-qsplitter"></a>
+<h3>Customizing QSplitter</h3>
+<p>A <a href="http://doc.qt.io/qt-4.8/porting4.html#qsplitter">QSplitter</a> derives from a <a href="http://doc.qt.io/qt-4.8/porting4.html#qframe">QFrame</a> and hence can be styled like a <a href="http://doc.qt.io/qt-4.8/porting4.html#qframe">QFrame</a>. The grip or the handle is customized using the <a href="http://doc.qt.io/qt-4.8/stylesheet-reference.html#handle-sub">::handle</a> subcontrol.</p>
+<pre class="cpp"><span class="type"><a href="http://doc.qt.io/qt-4.8/qsplitter.html">QSplitter</a></span><span class="operator">::</span>handle {
+    image: url(images<span class="operator">/</span>splitter<span class="operator">.</span>png);
+}
+
+<span class="type"><a href="http://doc.qt.io/qt-4.8/qsplitter.html">QSplitter</a></span><span class="operator">::</span>handle:horizontal {
+    width: <span class="number">2px</span>;
+}
+
+<span class="type"><a href="http://doc.qt.io/qt-4.8/qsplitter.html">QSplitter</a></span><span class="operator">::</span>handle:vertical {
+    height: <span class="number">2px</span>;
+}
+
+<span class="type"><a href="http://doc.qt.io/qt-4.8/qsplitter.html">QSplitter</a></span><span class="operator">::</span>handle:pressed {
+    image: url(images<span class="operator">/</span>splitter_pressed<span class="operator">.</span>png);
+}</pre>
+<a name="customizing-qstatusbar"></a>
+<h3>Customizing QStatusBar</h3>
+<p>We can provide a background for the status bar and a border for items inside the status bar as follows:</p>
+<pre class="cpp"><span class="type"><a href="http://doc.qt.io/qt-4.8/qstatusbar.html">QStatusBar</a></span> {
+    background: brown;
+}
+
+<span class="type"><a href="http://doc.qt.io/qt-4.8/qstatusbar.html">QStatusBar</a></span><span class="operator">::</span>item {
+    border: <span class="number">1px</span> solid red;
+    border<span class="operator">-</span>radius: <span class="number">3px</span>;
+}</pre>
+<p>Note that widgets that have been added to the <a href="http://doc.qt.io/qt-4.8/qstatusbar.html">QStatusBar</a> can be styled using the descendant declaration (i.e)</p>
+<pre class="cpp"><span class="type"><a href="http://doc.qt.io/qt-4.8/qstatusbar.html">QStatusBar</a></span> <span class="type"><a href="http://doc.qt.io/qt-4.8/qlabel.html">QLabel</a></span> {
+    border: <span class="number">3px</span> solid white;
+}</pre>
+<a name="customizing-qtabwidget-and-qtabbar"></a>
+<h3>Customizing QTabWidget and QTabBar</h3>
+<p class="centerAlign"><img src="Qt%20Style%20Sheets%20Examples%20%7C%20Qt%204.8_files/tabWidget-stylesheet1.png" alt=""></p><p>For the screenshot above, we need a stylesheet as follows:</p>
+<pre class="cpp"><span class="type"><a href="http://doc.qt.io/qt-4.8/qtabwidget.html">QTabWidget</a></span><span class="operator">::</span>pane { <span class="comment">/* The tab widget frame */</span>
+    border<span class="operator">-</span>top: <span class="number">2px</span> solid <span class="preprocessor">#C2C7CB;</span>
+}
+
+<span class="type"><a href="http://doc.qt.io/qt-4.8/qtabwidget.html">QTabWidget</a></span><span class="operator">::</span>tab<span class="operator">-</span>bar {
+    left: <span class="number">5px</span>; <span class="comment">/* move to the right by 5px */</span>
+}
+
+<span class="comment">/* Style the tab using the tab sub-control. Note that
+    it reads QTabBar _not_ QTabWidget */</span>
+<span class="type"><a href="http://doc.qt.io/qt-4.8/qtabbar.html">QTabBar</a></span><span class="operator">::</span>tab {
+    background: qlineargradient(x1: <span class="number">0</span><span class="operator">,</span> y1: <span class="number">0</span><span class="operator">,</span> x2: <span class="number">0</span><span class="operator">,</span> y2: <span class="number">1</span><span class="operator">,</span>
+                                stop: <span class="number">0</span> <span class="preprocessor">#E1E1E1, stop: 0.4 #DDDDDD,</span>
+                                stop: <span class="number">0.5</span> <span class="preprocessor">#D8D8D8, stop: 1.0 #D3D3D3);</span>
+    border: <span class="number">2px</span> solid <span class="preprocessor">#C4C4C3;</span>
+    border<span class="operator">-</span>bottom<span class="operator">-</span>color: <span class="preprocessor">#C2C7CB; /* same as the pane color */</span>
+    border<span class="operator">-</span>top<span class="operator">-</span>left<span class="operator">-</span>radius: <span class="number">4px</span>;
+    border<span class="operator">-</span>top<span class="operator">-</span>right<span class="operator">-</span>radius: <span class="number">4px</span>;
+    min<span class="operator">-</span>width: <span class="number">8ex</span>;
+    padding: <span class="number">2px</span>;
+}
+
+<span class="type"><a href="http://doc.qt.io/qt-4.8/qtabbar.html">QTabBar</a></span><span class="operator">::</span>tab:selected<span class="operator">,</span> <span class="type"><a href="http://doc.qt.io/qt-4.8/qtabbar.html">QTabBar</a></span><span class="operator">::</span>tab:hover {
+    background: qlineargradient(x1: <span class="number">0</span><span class="operator">,</span> y1: <span class="number">0</span><span class="operator">,</span> x2: <span class="number">0</span><span class="operator">,</span> y2: <span class="number">1</span><span class="operator">,</span>
+                                stop: <span class="number">0</span> <span class="preprocessor">#fafafa, stop: 0.4 #f4f4f4,</span>
+                                stop: <span class="number">0.5</span> <span class="preprocessor">#e7e7e7, stop: 1.0 #fafafa);</span>
+}
+
+<span class="type"><a href="http://doc.qt.io/qt-4.8/qtabbar.html">QTabBar</a></span><span class="operator">::</span>tab:selected {
+    border<span class="operator">-</span>color: <span class="preprocessor">#9B9B9B;</span>
+    border<span class="operator">-</span>bottom<span class="operator">-</span>color: <span class="preprocessor">#C2C7CB; /* same as pane color */</span>
+}
+
+<span class="type"><a href="http://doc.qt.io/qt-4.8/qtabbar.html">QTabBar</a></span><span class="operator">::</span>tab:<span class="operator">!</span>selected {
+    margin<span class="operator">-</span>top: <span class="number">2px</span>; <span class="comment">/* make non-selected tabs look smaller */</span>
+}</pre>
+<p>Often we require the tabs to overlap to look like below:</p>
+<p class="centerAlign"><img src="Qt%20Style%20Sheets%20Examples%20%7C%20Qt%204.8_files/tabWidget-stylesheet2.png" alt=""></p><p>For a tab widget that looks like above, we make use of <a href="http://www.communitymx.com/content/article.cfm?cid=B0029">negative margins</a>. The resulting stylesheet looks like this:</p>
+<pre class="cpp"><span class="type"><a href="http://doc.qt.io/qt-4.8/qtabwidget.html">QTabWidget</a></span><span class="operator">::</span>pane { <span class="comment">/* The tab widget frame */</span>
+    border<span class="operator">-</span>top: <span class="number">2px</span> solid <span class="preprocessor">#C2C7CB;</span>
+}
+
+<span class="type"><a href="http://doc.qt.io/qt-4.8/qtabwidget.html">QTabWidget</a></span><span class="operator">::</span>tab<span class="operator">-</span>bar {
+    left: <span class="number">5px</span>; <span class="comment">/* move to the right by 5px */</span>
+}
+
+<span class="comment">/* Style the tab using the tab sub-control. Note that
+    it reads QTabBar _not_ QTabWidget */</span>
+<span class="type"><a href="http://doc.qt.io/qt-4.8/qtabbar.html">QTabBar</a></span><span class="operator">::</span>tab {
+    background: qlineargradient(x1: <span class="number">0</span><span class="operator">,</span> y1: <span class="number">0</span><span class="operator">,</span> x2: <span class="number">0</span><span class="operator">,</span> y2: <span class="number">1</span><span class="operator">,</span>
+                                stop: <span class="number">0</span> <span class="preprocessor">#E1E1E1, stop: 0.4 #DDDDDD,</span>
+                                stop: <span class="number">0.5</span> <span class="preprocessor">#D8D8D8, stop: 1.0 #D3D3D3);</span>
+    border: <span class="number">2px</span> solid <span class="preprocessor">#C4C4C3;</span>
+    border<span class="operator">-</span>bottom<span class="operator">-</span>color: <span class="preprocessor">#C2C7CB; /* same as the pane color */</span>
+    border<span class="operator">-</span>top<span class="operator">-</span>left<span class="operator">-</span>radius: <span class="number">4px</span>;
+    border<span class="operator">-</span>top<span class="operator">-</span>right<span class="operator">-</span>radius: <span class="number">4px</span>;
+    min<span class="operator">-</span>width: <span class="number">8ex</span>;
+    padding: <span class="number">2px</span>;
+}
+
+<span class="type"><a href="http://doc.qt.io/qt-4.8/qtabbar.html">QTabBar</a></span><span class="operator">::</span>tab:selected<span class="operator">,</span> <span class="type"><a href="http://doc.qt.io/qt-4.8/qtabbar.html">QTabBar</a></span><span class="operator">::</span>tab:hover {
+    background: qlineargradient(x1: <span class="number">0</span><span class="operator">,</span> y1: <span class="number">0</span><span class="operator">,</span> x2: <span class="number">0</span><span class="operator">,</span> y2: <span class="number">1</span><span class="operator">,</span>
+                                stop: <span class="number">0</span> <span class="preprocessor">#fafafa, stop: 0.4 #f4f4f4,</span>
+                                stop: <span class="number">0.5</span> <span class="preprocessor">#e7e7e7, stop: 1.0 #fafafa);</span>
+}
+
+<span class="type"><a href="http://doc.qt.io/qt-4.8/qtabbar.html">QTabBar</a></span><span class="operator">::</span>tab:selected {
+    border<span class="operator">-</span>color: <span class="preprocessor">#9B9B9B;</span>
+    border<span class="operator">-</span>bottom<span class="operator">-</span>color: <span class="preprocessor">#C2C7CB; /* same as pane color */</span>
+}
+
+<span class="type"><a href="http://doc.qt.io/qt-4.8/qtabbar.html">QTabBar</a></span><span class="operator">::</span>tab:<span class="operator">!</span>selected {
+    margin<span class="operator">-</span>top: <span class="number">2px</span>; <span class="comment">/* make non-selected tabs look smaller */</span>
+}
+
+<span class="comment">/* make use of negative margins for overlapping tabs */</span>
+<span class="type"><a href="http://doc.qt.io/qt-4.8/qtabbar.html">QTabBar</a></span><span class="operator">::</span>tab:selected {
+    <span class="comment">/* expand/overlap to the left and right by 4px */</span>
+    margin<span class="operator">-</span>left: <span class="operator">-</span><span class="number">4px</span>;
+    margin<span class="operator">-</span>right: <span class="operator">-</span><span class="number">4px</span>;
+}
+
+<span class="type"><a href="http://doc.qt.io/qt-4.8/qtabbar.html">QTabBar</a></span><span class="operator">::</span>tab:first:selected {
+    margin<span class="operator">-</span>left: <span class="number">0</span>; <span class="comment">/* the first selected tab has nothing to overlap with on the left */</span>
+}
+
+<span class="type"><a href="http://doc.qt.io/qt-4.8/qtabbar.html">QTabBar</a></span><span class="operator">::</span>tab:last:selected {
+    margin<span class="operator">-</span>right: <span class="number">0</span>; <span class="comment">/* the last selected tab has nothing to overlap with on the right */</span>
+}
+
+<span class="type"><a href="http://doc.qt.io/qt-4.8/qtabbar.html">QTabBar</a></span><span class="operator">::</span>tab:only<span class="operator">-</span>one {
+    margin: <span class="number">0</span>; <span class="comment">/* if there is only one tab, we don't want overlapping margins */</span>
+}</pre>
+<p>To move the tab bar to the center (as below), we require the following stylesheet:</p>
+<p class="centerAlign"><img src="Qt%20Style%20Sheets%20Examples%20%7C%20Qt%204.8_files/tabWidget-stylesheet3.png" alt=""></p><pre class="cpp"><span class="type"><a href="http://doc.qt.io/qt-4.8/qtabwidget.html">QTabWidget</a></span><span class="operator">::</span>pane { <span class="comment">/* The tab widget frame */</span>
+    border<span class="operator">-</span>top: <span class="number">2px</span> solid <span class="preprocessor">#C2C7CB;</span>
+    position: absolute;
+    top: <span class="operator">-</span><span class="number">0.5em</span>;
+}
+
+<span class="type"><a href="http://doc.qt.io/qt-4.8/qtabwidget.html">QTabWidget</a></span><span class="operator">::</span>tab<span class="operator">-</span>bar {
+    alignment: center;
+}
+
+<span class="comment">/* Style the tab using the tab sub-control. Note that
+    it reads QTabBar _not_ QTabWidget */</span>
+<span class="type"><a href="http://doc.qt.io/qt-4.8/qtabbar.html">QTabBar</a></span><span class="operator">::</span>tab {
+    background: qlineargradient(x1: <span class="number">0</span><span class="operator">,</span> y1: <span class="number">0</span><span class="operator">,</span> x2: <span class="number">0</span><span class="operator">,</span> y2: <span class="number">1</span><span class="operator">,</span>
+                                stop: <span class="number">0</span> <span class="preprocessor">#E1E1E1, stop: 0.4 #DDDDDD,</span>
+                                stop: <span class="number">0.5</span> <span class="preprocessor">#D8D8D8, stop: 1.0 #D3D3D3);</span>
+    border: <span class="number">2px</span> solid <span class="preprocessor">#C4C4C3;</span>
+    border<span class="operator">-</span>bottom<span class="operator">-</span>color: <span class="preprocessor">#C2C7CB; /* same as the pane color */</span>
+    border<span class="operator">-</span>top<span class="operator">-</span>left<span class="operator">-</span>radius: <span class="number">4px</span>;
+    border<span class="operator">-</span>top<span class="operator">-</span>right<span class="operator">-</span>radius: <span class="number">4px</span>;
+    min<span class="operator">-</span>width: <span class="number">8ex</span>;
+    padding: <span class="number">2px</span>;
+}
+
+<span class="type"><a href="http://doc.qt.io/qt-4.8/qtabbar.html">QTabBar</a></span><span class="operator">::</span>tab:selected<span class="operator">,</span> <span class="type"><a href="http://doc.qt.io/qt-4.8/qtabbar.html">QTabBar</a></span><span class="operator">::</span>tab:hover {
+    background: qlineargradient(x1: <span class="number">0</span><span class="operator">,</span> y1: <span class="number">0</span><span class="operator">,</span> x2: <span class="number">0</span><span class="operator">,</span> y2: <span class="number">1</span><span class="operator">,</span>
+                                stop: <span class="number">0</span> <span class="preprocessor">#fafafa, stop: 0.4 #f4f4f4,</span>
+                                stop: <span class="number">0.5</span> <span class="preprocessor">#e7e7e7, stop: 1.0 #fafafa);</span>
+}
+
+<span class="type"><a href="http://doc.qt.io/qt-4.8/qtabbar.html">QTabBar</a></span><span class="operator">::</span>tab:selected {
+    border<span class="operator">-</span>color: <span class="preprocessor">#9B9B9B;</span>
+    border<span class="operator">-</span>bottom<span class="operator">-</span>color: <span class="preprocessor">#C2C7CB; /* same as pane color */</span>
+}</pre>
+<p>The tear indicator and the scroll buttons can be further customized as follows:</p>
+<pre class="cpp"><span class="type"><a href="http://doc.qt.io/qt-4.8/qtabbar.html">QTabBar</a></span><span class="operator">::</span>tear {
+    image: url(tear_indicator<span class="operator">.</span>png);
+}
+
+<span class="type"><a href="http://doc.qt.io/qt-4.8/qtabbar.html">QTabBar</a></span><span class="operator">::</span>scroller { <span class="comment">/* the width of the scroll buttons */</span>
+    width: <span class="number">20px</span>;
+}
+
+<span class="type"><a href="http://doc.qt.io/qt-4.8/qtabbar.html">QTabBar</a></span> <span class="type"><a href="http://doc.qt.io/qt-4.8/qtoolbutton.html">QToolButton</a></span> { <span class="comment">/* the scroll buttons are tool buttons */</span>
+    border<span class="operator">-</span>image: url(scrollbutton<span class="operator">.</span>png) <span class="number">2</span>;
+    border<span class="operator">-</span>width: <span class="number">2px</span>;
+}
+
+<span class="type"><a href="http://doc.qt.io/qt-4.8/qtabbar.html">QTabBar</a></span> <span class="type"><a href="http://doc.qt.io/qt-4.8/qtoolbutton.html">QToolButton</a></span><span class="operator">::</span>right<span class="operator">-</span>arrow { <span class="comment">/* the arrow mark in the tool buttons */</span>
+    image: url(rightarrow<span class="operator">.</span>png);
+}
+
+<span class="type"><a href="http://doc.qt.io/qt-4.8/qtabbar.html">QTabBar</a></span> <span class="type"><a href="http://doc.qt.io/qt-4.8/qtoolbutton.html">QToolButton</a></span><span class="operator">::</span>left<span class="operator">-</span>arrow {
+    image: url(leftarrow<span class="operator">.</span>png);
+}</pre>
+<p>Since Qt 4.6 the close button can be customized as follow:</p>
+<pre class="cpp"><span class="type"><a href="http://doc.qt.io/qt-4.8/qtabbar.html">QTabBar</a></span><span class="operator">::</span>close<span class="operator">-</span>button {
+    image: url(close<span class="operator">.</span>png)
+    subcontrol<span class="operator">-</span>position: left;
+}
+<span class="type"><a href="http://doc.qt.io/qt-4.8/qtabbar.html">QTabBar</a></span><span class="operator">::</span>close<span class="operator">-</span>button:hover {
+    image: url(close<span class="operator">-</span>hover<span class="operator">.</span>png)
+}</pre>
+<a name="customizing-qtableview"></a>
+<h3>Customizing QTableView</h3>
+<p>Suppose we'd like our selected item in <a href="http://doc.qt.io/qt-4.8/qtableview.html">QTableView</a> to have bubblegum pink fade to white as its background.</p>
+<p class="centerAlign"><img src="Qt%20Style%20Sheets%20Examples%20%7C%20Qt%204.8_files/tableWidget-stylesheet.png" alt=""></p><p>This is possible with the <a href="http://doc.qt.io/qt-4.8/stylesheet-reference.html#selection-background-color-prop">selection-background-color</a> property and the syntax required is:</p>
+<pre class="cpp"><span class="type"><a href="http://doc.qt.io/qt-4.8/qtableview.html">QTableView</a></span> {
+    selection<span class="operator">-</span>background<span class="operator">-</span>color: qlineargradient(x1: <span class="number">0</span><span class="operator">,</span> y1: <span class="number">0</span><span class="operator">,</span> x2: <span class="number">0.5</span><span class="operator">,</span> y2: <span class="number">0.5</span><span class="operator">,</span>
+                                stop: <span class="number">0</span> <span class="preprocessor">#FF92BB, stop: 1 white);</span>
+}</pre>
+<p>The corner widget can be customized using the following style sheet</p>
+<pre class="cpp"><span class="type"><a href="http://doc.qt.io/qt-4.8/qtableview.html">QTableView</a></span> <span class="type">QTableCornerButton</span><span class="operator">::</span>section {
+    background: red;
+    border: <span class="number">2px</span> outset red;
+}</pre>
+<a name="customizing-qtoolbar"></a>
+<h3>Customizing QToolBar</h3>
+<p>The background and the handle of a <a href="http://doc.qt.io/qt-4.8/porting4.html#qtoolbar">QToolBar</a> is customized as below:</p>
+<pre class="cpp"><span class="type"><a href="http://doc.qt.io/qt-4.8/qtoolbar.html">QToolBar</a></span> {
+    background: red;
+    spacing: <span class="number">3px</span>; <span class="comment">/* spacing between items in the tool bar */</span>
+}
+
+<span class="type"><a href="http://doc.qt.io/qt-4.8/qtoolbar.html">QToolBar</a></span><span class="operator">::</span>handle {
+    image: url(handle<span class="operator">.</span>png);
+}</pre>
+<a name="customizing-qtoolbox"></a>
+<h3>Customizing QToolBox</h3>
+<p>The tabs of the <a href="http://doc.qt.io/qt-4.8/qtoolbox.html">QToolBox</a> are customized using the 'tab' subcontrol.</p>
+<pre class="cpp"><span class="type"><a href="http://doc.qt.io/qt-4.8/qtoolbox.html">QToolBox</a></span><span class="operator">::</span>tab {
+    background: qlineargradient(x1: <span class="number">0</span><span class="operator">,</span> y1: <span class="number">0</span><span class="operator">,</span> x2: <span class="number">0</span><span class="operator">,</span> y2: <span class="number">1</span><span class="operator">,</span>
+                                stop: <span class="number">0</span> <span class="preprocessor">#E1E1E1, stop: 0.4 #DDDDDD,</span>
+                                stop: <span class="number">0.5</span> <span class="preprocessor">#D8D8D8, stop: 1.0 #D3D3D3);</span>
+    border<span class="operator">-</span>radius: <span class="number">5px</span>;
+    color: darkgray;
+}
+
+<span class="type"><a href="http://doc.qt.io/qt-4.8/qtoolbox.html">QToolBox</a></span><span class="operator">::</span>tab:selected { <span class="comment">/* italicize selected tabs */</span>
+    font: italic;
+    color: white;
+}</pre>
+<a name="customizing-qtoolbutton"></a>
+<h3>Customizing QToolButton</h3>
+<p>There are three types of QToolButtons.</p>
+<ul>
+<li>The <a href="http://doc.qt.io/qt-4.8/porting4.html#qtoolbutton">QToolButton</a> has no menu. In this case, the <a href="http://doc.qt.io/qt-4.8/porting4.html#qtoolbutton">QToolButton</a> is styled exactly like <a href="http://doc.qt.io/qt-4.8/porting4.html#qpushbutton">QPushButton</a>. See <a href="http://doc.qt.io/qt-4.8/stylesheet-examples.html#customizing-qpushbutton">Customizing QPushButton</a> for an example.</li>
+<li>The <a href="http://doc.qt.io/qt-4.8/porting4.html#qtoolbutton">QToolButton</a> has a menu and has the <a href="http://doc.qt.io/qt-4.8/qtoolbutton.html#popupMode-prop">QToolButton::popupMode</a> set to <a href="http://doc.qt.io/qt-4.8/qtoolbutton.html#ToolButtonPopupMode-enum">QToolButton::DelayedPopup</a> or <a href="http://doc.qt.io/qt-4.8/qtoolbutton.html#ToolButtonPopupMode-enum">QToolButton::InstantPopup</a>. In this case, the <a href="http://doc.qt.io/qt-4.8/porting4.html#qtoolbutton">QToolButton</a> is styled exactly like a <a href="http://doc.qt.io/qt-4.8/porting4.html#qpushbutton">QPushButton</a> with a menu. See <a href="http://doc.qt.io/qt-4.8/stylesheet-examples.html#customizing-qpushbutton">Customizing QPushButton</a> for an example of the usage of the menu-indicator pseudo state.</li>
+<li>The <a href="http://doc.qt.io/qt-4.8/porting4.html#qtoolbutton">QToolButton</a> has its <a href="http://doc.qt.io/qt-4.8/qtoolbutton.html#popupMode-prop">QToolButton::popupMode</a> set to <a href="http://doc.qt.io/qt-4.8/qtoolbutton.html#ToolButtonPopupMode-enum">QToolButton::MenuButtonPopup</a>. In this case, we style it as follows:</li>
+</ul>
+<pre class="cpp"><span class="type"><a href="http://doc.qt.io/qt-4.8/qtoolbutton.html">QToolButton</a></span> { <span class="comment">/* all types of tool button */</span>
+    border: <span class="number">2px</span> solid <span class="preprocessor">#8f8f91;</span>
+    border<span class="operator">-</span>radius: <span class="number">6px</span>;
+    background<span class="operator">-</span>color: qlineargradient(x1: <span class="number">0</span><span class="operator">,</span> y1: <span class="number">0</span><span class="operator">,</span> x2: <span class="number">0</span><span class="operator">,</span> y2: <span class="number">1</span><span class="operator">,</span>
+                                      stop: <span class="number">0</span> <span class="preprocessor">#f6f7fa, stop: 1 #dadbde);</span>
+}
+
+<span class="type"><a href="http://doc.qt.io/qt-4.8/qtoolbutton.html">QToolButton</a></span><span class="operator">[</span>popupMode<span class="operator">=</span><span class="string">"1"</span><span class="operator">]</span> { <span class="comment">/* only for MenuButtonPopup */</span>
+    padding<span class="operator">-</span>right: <span class="number">20px</span>; <span class="comment">/* make way for the popup button */</span>
+}
+
+<span class="type"><a href="http://doc.qt.io/qt-4.8/qtoolbutton.html">QToolButton</a></span>:pressed {
+    background<span class="operator">-</span>color: qlineargradient(x1: <span class="number">0</span><span class="operator">,</span> y1: <span class="number">0</span><span class="operator">,</span> x2: <span class="number">0</span><span class="operator">,</span> y2: <span class="number">1</span><span class="operator">,</span>
+                                      stop: <span class="number">0</span> <span class="preprocessor">#dadbde, stop: 1 #f6f7fa);</span>
+}
+
+<span class="comment">/* the subcontrols below are used only in the MenuButtonPopup mode */</span>
+<span class="type"><a href="http://doc.qt.io/qt-4.8/qtoolbutton.html">QToolButton</a></span><span class="operator">::</span>menu<span class="operator">-</span>button {
+    border: <span class="number">2px</span> solid gray;
+    border<span class="operator">-</span>top<span class="operator">-</span>right<span class="operator">-</span>radius: <span class="number">6px</span>;
+    border<span class="operator">-</span>bottom<span class="operator">-</span>right<span class="operator">-</span>radius: <span class="number">6px</span>;
+    <span class="comment">/* 16px width + 4px for border = 20px allocated above */</span>
+    width: <span class="number">16px</span>;
+}
+
+<span class="type"><a href="http://doc.qt.io/qt-4.8/qtoolbutton.html">QToolButton</a></span><span class="operator">::</span>menu<span class="operator">-</span>arrow {
+    image: url(downarrow<span class="operator">.</span>png);
+}
+
+<span class="type"><a href="http://doc.qt.io/qt-4.8/qtoolbutton.html">QToolButton</a></span><span class="operator">::</span>menu<span class="operator">-</span>arrow:open {
+    top: <span class="number">1px</span>; left: <span class="number">1px</span>; <span class="comment">/* shift it a bit */</span>
+}</pre>
+<a name="customizing-qtooltip"></a>
+<h3>Customizing QToolTip</h3>
+<p><a href="http://doc.qt.io/qt-4.8/porting4.html#qtooltip">QToolTip</a> is customized exactly like a <a href="http://doc.qt.io/qt-4.8/porting4.html#qlabel">QLabel</a>. In addition, for platforms that support it, the opacity property may be set to adjust the opacity.</p>
+<p>For example,</p>
+<pre class="cpp"><span class="type"><a href="http://doc.qt.io/qt-4.8/qtooltip.html">QToolTip</a></span> {
+    border: <span class="number">2px</span> solid darkkhaki;
+    padding: <span class="number">5px</span>;
+    border<span class="operator">-</span>radius: <span class="number">3px</span>;
+    opacity: <span class="number">200</span>;
+}</pre>
+<a name="customizing-qtreeview"></a>
+<h3>Customizing QTreeView</h3>
+<p>The background color of alternating rows can be customized using the following style sheet:</p>
+<pre class="cpp"><span class="type"><a href="http://doc.qt.io/qt-4.8/qtreeview.html">QTreeView</a></span> {
+    alternate<span class="operator">-</span>background<span class="operator">-</span>color: yellow;
+}</pre>
+<p>To provide a special background when you hover over items, we can use the <a href="http://doc.qt.io/qt-4.8/stylesheet-reference.html#item-sub">::item</a> subcontrol. For example,</p>
+<pre class="cpp"><span class="type"><a href="http://doc.qt.io/qt-4.8/qtreeview.html">QTreeView</a></span> {
+    show<span class="operator">-</span>decoration<span class="operator">-</span>selected: <span class="number">1</span>;
+}
+
+<span class="type"><a href="http://doc.qt.io/qt-4.8/qtreeview.html">QTreeView</a></span><span class="operator">::</span>item {
+     border: <span class="number">1px</span> solid <span class="preprocessor">#d9d9d9;</span>
+    border<span class="operator">-</span>top<span class="operator">-</span>color: transparent;
+    border<span class="operator">-</span>bottom<span class="operator">-</span>color: transparent;
+}
+
+<span class="type"><a href="http://doc.qt.io/qt-4.8/qtreeview.html">QTreeView</a></span><span class="operator">::</span>item:hover {
+    background: qlineargradient(x1: <span class="number">0</span><span class="operator">,</span> y1: <span class="number">0</span><span class="operator">,</span> x2: <span class="number">0</span><span class="operator">,</span> y2: <span class="number">1</span><span class="operator">,</span> stop: <span class="number">0</span> <span class="preprocessor">#e7effd, stop: 1 #cbdaf1);</span>
+    border: <span class="number">1px</span> solid <span class="preprocessor">#bfcde4;</span>
+}
+
+<span class="type"><a href="http://doc.qt.io/qt-4.8/qtreeview.html">QTreeView</a></span><span class="operator">::</span>item:selected {
+    border: <span class="number">1px</span> solid <span class="preprocessor">#567dbc;</span>
+}
+
+<span class="type"><a href="http://doc.qt.io/qt-4.8/qtreeview.html">QTreeView</a></span><span class="operator">::</span>item:selected:active{
+    background: qlineargradient(x1: <span class="number">0</span><span class="operator">,</span> y1: <span class="number">0</span><span class="operator">,</span> x2: <span class="number">0</span><span class="operator">,</span> y2: <span class="number">1</span><span class="operator">,</span> stop: <span class="number">0</span> <span class="preprocessor">#6ea1f1, stop: 1 #567dbc);</span>
+}
+
+<span class="type"><a href="http://doc.qt.io/qt-4.8/qtreeview.html">QTreeView</a></span><span class="operator">::</span>item:selected:<span class="operator">!</span>active {
+    background: qlineargradient(x1: <span class="number">0</span><span class="operator">,</span> y1: <span class="number">0</span><span class="operator">,</span> x2: <span class="number">0</span><span class="operator">,</span> y2: <span class="number">1</span><span class="operator">,</span> stop: <span class="number">0</span> <span class="preprocessor">#6b9be8, stop: 1 #577fbf);</span>
+}</pre>
+<p>The branches of a <a href="http://doc.qt.io/qt-4.8/qtreeview.html">QTreeView</a> are styled using the <a href="http://doc.qt.io/qt-4.8/stylesheet-reference.html#branch-sub">::branch</a> subcontrol. The following stylesheet color codes the various states when drawing a branch.</p>
+<pre class="cpp"><span class="type"><a href="http://doc.qt.io/qt-4.8/qtreeview.html">QTreeView</a></span><span class="operator">::</span>branch {
+        background: palette(base);
+}
+
+<span class="type"><a href="http://doc.qt.io/qt-4.8/qtreeview.html">QTreeView</a></span><span class="operator">::</span>branch:has<span class="operator">-</span>siblings:<span class="operator">!</span>adjoins<span class="operator">-</span>item {
+        background: cyan;
+}
+
+<span class="type"><a href="http://doc.qt.io/qt-4.8/qtreeview.html">QTreeView</a></span><span class="operator">::</span>branch:has<span class="operator">-</span>siblings:adjoins<span class="operator">-</span>item {
+        background: red;
+}
+
+<span class="type"><a href="http://doc.qt.io/qt-4.8/qtreeview.html">QTreeView</a></span><span class="operator">::</span>branch:<span class="operator">!</span>has<span class="operator">-</span>children:<span class="operator">!</span>has<span class="operator">-</span>siblings:adjoins<span class="operator">-</span>item {
+        background: blue;
+}
+
+<span class="type"><a href="http://doc.qt.io/qt-4.8/qtreeview.html">QTreeView</a></span><span class="operator">::</span>branch:closed:has<span class="operator">-</span>children:has<span class="operator">-</span>siblings {
+        background: pink;
+}
+
+<span class="type"><a href="http://doc.qt.io/qt-4.8/qtreeview.html">QTreeView</a></span><span class="operator">::</span>branch:has<span class="operator">-</span>children:<span class="operator">!</span>has<span class="operator">-</span>siblings:closed {
+        background: gray;
+}
+
+<span class="type"><a href="http://doc.qt.io/qt-4.8/qtreeview.html">QTreeView</a></span><span class="operator">::</span>branch:open:has<span class="operator">-</span>children:has<span class="operator">-</span>siblings {
+        background: magenta;
+}
+
+<span class="type"><a href="http://doc.qt.io/qt-4.8/qtreeview.html">QTreeView</a></span><span class="operator">::</span>branch:open:has<span class="operator">-</span>children:<span class="operator">!</span>has<span class="operator">-</span>siblings {
+        background: green;
+}</pre>
+<p>Colorful, though it is, a more useful example can be made using the following images:</p>
+<div class="table"><table class="generic">
+ <tbody><tr class="odd" valign="top"><td><img src="Qt%20Style%20Sheets%20Examples%20%7C%20Qt%204.8_files/stylesheet-vline.png" alt=""></td><td><img src="Qt%20Style%20Sheets%20Examples%20%7C%20Qt%204.8_files/stylesheet-branch-more.png" alt=""></td><td><img src="Qt%20Style%20Sheets%20Examples%20%7C%20Qt%204.8_files/stylesheet-branch-end.png" alt=""></td><td><img src="Qt%20Style%20Sheets%20Examples%20%7C%20Qt%204.8_files/stylesheet-branch-closed.png" alt=""></td><td><img src="Qt%20Style%20Sheets%20Examples%20%7C%20Qt%204.8_files/stylesheet-branch-open.png" alt=""></td></tr>
+<tr class="even" valign="top"><td>vline.png</td><td>branch-more.png</td><td>branch-end.png</td><td>branch-closed.png</td><td>branch-open.png</td></tr>
+</tbody></table></div>
+<pre class="cpp"><span class="type"><a href="http://doc.qt.io/qt-4.8/qtreeview.html">QTreeView</a></span><span class="operator">::</span>branch:has<span class="operator">-</span>siblings:<span class="operator">!</span>adjoins<span class="operator">-</span>item {
+    border<span class="operator">-</span>image: url(vline<span class="operator">.</span>png) <span class="number">0</span>;
+}
+
+<span class="type"><a href="http://doc.qt.io/qt-4.8/qtreeview.html">QTreeView</a></span><span class="operator">::</span>branch:has<span class="operator">-</span>siblings:adjoins<span class="operator">-</span>item {
+    border<span class="operator">-</span>image: url(branch<span class="operator">-</span>more<span class="operator">.</span>png) <span class="number">0</span>;
+}
+
+<span class="type"><a href="http://doc.qt.io/qt-4.8/qtreeview.html">QTreeView</a></span><span class="operator">::</span>branch:<span class="operator">!</span>has<span class="operator">-</span>children:<span class="operator">!</span>has<span class="operator">-</span>siblings:adjoins<span class="operator">-</span>item {
+    border<span class="operator">-</span>image: url(branch<span class="operator">-</span>end<span class="operator">.</span>png) <span class="number">0</span>;
+}
+
+<span class="type"><a href="http://doc.qt.io/qt-4.8/qtreeview.html">QTreeView</a></span><span class="operator">::</span>branch:has<span class="operator">-</span>children:<span class="operator">!</span>has<span class="operator">-</span>siblings:closed<span class="operator">,</span>
+<span class="type"><a href="http://doc.qt.io/qt-4.8/qtreeview.html">QTreeView</a></span><span class="operator">::</span>branch:closed:has<span class="operator">-</span>children:has<span class="operator">-</span>siblings {
+        border<span class="operator">-</span>image: none;
+        image: url(branch<span class="operator">-</span>closed<span class="operator">.</span>png);
+}
+
+<span class="type"><a href="http://doc.qt.io/qt-4.8/qtreeview.html">QTreeView</a></span><span class="operator">::</span>branch:open:has<span class="operator">-</span>children:<span class="operator">!</span>has<span class="operator">-</span>siblings<span class="operator">,</span>
+<span class="type"><a href="http://doc.qt.io/qt-4.8/qtreeview.html">QTreeView</a></span><span class="operator">::</span>branch:open:has<span class="operator">-</span>children:has<span class="operator">-</span>siblings  {
+        border<span class="operator">-</span>image: none;
+        image: url(branch<span class="operator">-</span>open<span class="operator">.</span>png);
+}</pre>
+<p>The resulting tree view looks like this:</p>
+<p class="centerAlign"><img src="Qt%20Style%20Sheets%20Examples%20%7C%20Qt%204.8_files/stylesheet-treeview.png" alt=""></p><a name="common-mistakes"></a>
+<h2 id="common-mistakes">Common mistakes</h2>
+<p>This section lists some common mistakes when using stylesheets.</p>
+<a name="qpushbutton-and-images"></a>
+<h3>QPushButton and images</h3>
+<p>When styling a <a href="http://doc.qt.io/qt-4.8/porting4.html#qpushbutton">QPushButton</a>, it is often desirable to use an image as the button graphic. It is common to try the <a href="http://doc.qt.io/qt-4.8/stylesheet-reference.html#background-image-prop">background-image</a>
+ property, but this has a number of drawbacks: For instance, the 
+background will often appear hidden behind the button decoration, 
+because it is not considered a background. In addition, if the button is
+ resized, the entire background will be stretched or tiled, which does 
+not always look good.</p>
+<p>It is better to use the <a href="http://doc.qt.io/qt-4.8/stylesheet-reference.html#border-image-prop">border-image</a>
+ property, as it will always display the image, regardless of the 
+background (you can combine it with a background if it has alpha values 
+in it), and it has special settings to deal with button resizing.</p>
+<p>Consider the following snippet:</p>
+<pre class="cpp">        <span class="type"><a href="http://doc.qt.io/qt-4.8/qpushbutton.html">QPushButton</a></span> {
+            color: grey;
+            border<span class="operator">-</span>image: url(<span class="operator">/</span>home<span class="operator">/</span>kamlie<span class="operator">/</span>code<span class="operator">/</span>button<span class="operator">.</span>png) <span class="number">3</span> <span class="number">10</span> <span class="number">3</span> <span class="number">10</span>;
+            border<span class="operator">-</span>top: <span class="number">3px</span> transparent;
+            border<span class="operator">-</span>bottom: <span class="number">3px</span> transparent;
+            border<span class="operator">-</span>right: <span class="number">10px</span> transparent;
+            border<span class="operator">-</span>left: <span class="number">10px</span> transparent;
+        }</pre>
+<p>This will produce a button looking like this:</p>
+<p class="centerAlign"><img src="Qt%20Style%20Sheets%20Examples%20%7C%20Qt%204.8_files/stylesheet-border-image-normal.png" alt=""></p><p>The
+ numbers after the url gives the top, right, bottom and left number of 
+pixels, respectively. These numbers correspond to the border and should 
+not stretch when the size changes. Whenever you resize the button, the 
+middle part of the image will stretch in both directions, while the 
+pixels specified in the stylesheet will not. This makes the borders of 
+the button look more natural, like this:</p>
+<div class="table"><table class="generic">
+ <tbody><tr class="odd" valign="top"><td><img src="Qt%20Style%20Sheets%20Examples%20%7C%20Qt%204.8_files/stylesheet-border-image-stretched.png" alt=""></td></tr>
+<tr class="even" valign="top"><td>With borders</td></tr>
+</tbody></table></div>
+<div class="table"><table class="generic">
+ <tbody><tr class="odd" valign="top"><td><img src="Qt%20Style%20Sheets%20Examples%20%7C%20Qt%204.8_files/stylesheet-border-image-wrong.png" alt=""></td></tr>
+<tr class="even" valign="top"><td>Without borders</td></tr>
+</tbody></table></div>
+</div>
+<p><b>See also </b><a href="http://doc.qt.io/qt-4.8/qt-widgets-stylesheet-example.html">Style Sheet Example</a>, <a href="http://doc.qt.io/qt-4.8/richtext-html-subset.html">Supported HTML Subset</a>, and <a href="http://doc.qt.io/qt-4.8/porting4.html#qstyle">QStyle</a>.</p>
+<!-- @@@stylesheet-examples.html -->
+<p class="naviNextPrevious footerNavi">
+<a class="prevPage" href="http://doc.qt.io/qt-4.8/stylesheet-reference.html">Qt Style Sheets Reference</a>
+</p>
+   </div>
+   <p class="copy-notice">
+   <acronym title="Copyright">©</acronym> 2016 The Qt Company Ltd.
+   Documentation contributions included herein are the copyrights of
+   their respective owners.     The documentation provided herein is licensed under the terms of the    <a href="http://www.gnu.org/licenses/fdl.html">GNU Free Documentation    License version 1.3</a>
+ as published by the Free Software Foundation.     Qt and respective 
+logos are trademarks of The Qt Company Ltd.     in Finland and/or other 
+countries worldwide. All other trademarks are property
+   of their respective owners. </p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="footer"><footer id="footerbar">
+    <div class="footer-main" style="background:#a6a8aa;margin:0;width:100%;max-width:initial">
+    <div class="container" style="padding-top:1px">
+        <a href="https://www.qtworldsummit.com/" target="_blank">
+            <img class="srsqjuozfricojxzrkgm" src="Qt%20Style%20Sheets%20Examples%20%7C%20Qt%204.8_files/QtWS16_Banner_728x90px.gif" style="display:block;max-width:100%;height:auto;margin:0 auto">
+        </a>
+    </div>
+    </div>
+    <div class="footer-main">
+            <div class="container clearfix">
+                <nav class="footer-nav clearfix">
+                    <div class="menu-footer-menu-container"><ul id="menu-footer-menu" class="menu"><li id="menu-item-1403" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1403"><a href="http://qt.io/download/">Download</a>
+<ul class="sub-menu">
+    <li id="menu-item-11677" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-11677"><a href="http://qt.io/download/">Start for Free</a></li>
+    <li id="menu-item-15840" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-15840"><a href="http://qt.io/download-eval-for-applications-step-2/">Qt for Application Development</a></li>
+    <li id="menu-item-15841" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-15841"><a href="http://qt.io/request-eval-for-devices-step-2/">Qt for Device Creation</a></li>
+    <li id="menu-item-15838" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-15838"><a href="http://qt.io/download-open-source/">Qt Open Source</a></li>
+    <li id="menu-item-1415" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1415"><a href="http://qt.io/terms-conditions/">Terms &amp; Conditions</a></li>
+    <li id="menu-item-14184" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-14184"><a href="http://qt.io/FAQ/">Licensing FAQ</a></li>
+</ul>
+</li>
+<li id="menu-item-1355" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1355"><a href="http://qt.io/product/">Product</a>
+<ul class="sub-menu">
+    <li id="menu-item-12576" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-12576"><a href="http://qt.io/product/">Qt in Use</a></li>
+    <li id="menu-item-15848" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-15848"><a href="http://qt.io/application-development/">Qt for Application Development</a></li>
+    <li id="menu-item-1357" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1357"><a href="http://qt.io/qt-for-device-creation/">Qt for Device Creation</a></li>
+    <li id="menu-item-1356" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1356"><a href="http://qt.io/qt-features/">Commercial Features</a></li>
+    <li id="menu-item-15850" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-15850"><a href="http://qt.io/ide/">Qt Creator IDE</a></li>
+    <li id="menu-item-1359" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1359"><a href="http://qt.io/qt-quick/">Qt Quick</a></li>
+</ul>
+</li>
+<li id="menu-item-1347" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-ancestor current-menu-parent current_page_parent current_page_ancestor menu-item-has-children menu-item-1347"><a href="http://qt.io/services/">Services</a>
+<ul class="sub-menu">
+    <li id="menu-item-4028" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4028"><a href="http://qt.io/services-technology-evaluation/">Technology Evaluation</a></li>
+    <li id="menu-item-4027" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4027"><a href="http://qt.io/services-proof-of-concept/">Proof of Concept</a></li>
+    <li id="menu-item-4026" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4026"><a href="http://qt.io/services-design-implementation/">Design &amp; Implementation</a></li>
+    <li id="menu-item-4025" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4025"><a href="http://qt.io/services-productization/">Productization</a></li>
+    <li id="menu-item-15863" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-15863"><a href="http://qt.io/qt-training/">Qt Training</a></li>
+    <li id="menu-item-4779" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4779"><a href="https://qt.io/partners/">Partner Network</a></li>
+</ul>
+</li>
+<li id="menu-item-33" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-33"><a href="http://qt.io/developers/">Developers</a>
+<ul class="sub-menu">
+    <li id="menu-item-1365" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1365"><a href="http://doc.qt.io/">Documentation</a></li>
+    <li id="menu-item-1364" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1364"><a href="http://doc.qt.io/qt-5/qtexamplesandtutorials.html">Examples &amp; Tutorials</a></li>
+    <li id="menu-item-1363" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1363"><a href="http://doc.qt.io/qt-5/topics-app-development.html">Development Tools</a></li>
+    <li id="menu-item-1361" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1361"><a href="http://wiki.qt.io/">Wiki</a></li>
+    <li id="menu-item-1360" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1360"><a href="http://forum.qt.io/">Forums</a></li>
+    <li id="menu-item-15922" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-15922"><a href="http://wiki.qt.io/contribute">Contribute to Qt</a></li>
+</ul>
+</li>
+<li id="menu-item-1350" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1350"><a href="http://qt.io/about-us/">About us</a>
+<ul class="sub-menu">
+    <li id="menu-item-1353" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1353"><a href="http://qt.io/events/">Training &amp; Events</a></li>
+    <li id="menu-item-1354" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1354"><a href="http://qt.io/resource-center/">Resource Center</a></li>
+    <li id="menu-item-12285" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-12285"><a href="http://qt.io/news/">News</a></li>
+    <li id="menu-item-1349" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1349"><a href="http://qt.io/careers/">Careers</a></li>
+    <li id="menu-item-11676" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-11676"><a href="http://qt.io/locations/">Locations</a></li>
+    <li id="menu-item-15911" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-15911"><a href="http://qt.io/contact-us">Contact Us</a></li>
+</ul>
+</li>
+</ul></div></nav>
+<a href="http://qt.io/about-us/" target="_blank" class="theqtcompany"></a>
+    <div class="footer-social clearfix">
+        <div class="facebook">
+            <iframe scrolling="no" allowtransparency="true" src="//www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2Fqt&amp;width&amp;layout=button_count&amp;action=like&amp;show_faces=true&amp;share=false&amp;height=21" style="border:none;overflow:hidden;height:21px;" frameborder="0"></iframe>
+        </div>
+        <div class="twitter">
+            <iframe id="twitter-widget-0" scrolling="no" allowtransparency="true" src="Qt%20Style%20Sheets%20Examples%20%7C%20Qt%204.8_files/follow_button.htm" class="twitter-follow-button twitter-follow-button" title="Twitter Follow Button" data-twttr-rendered="true" style="width: 160px; height: 20px;" frameborder="0"></iframe>
+        </div>
+    </div>
+</div>
+</div>
+<div class="disclaimer">
+<div class="container clearfix no_discs">
+    <ul id="menu-footer-submenu" class="right clearfix">
+      <li id="menu-item-17853" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-17853"><a href="http://www.cafepress.com/theqtcompany">Qt Merchandise</a></li>
+      <li id="menu-item-1795" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1795"><a title="Sign into your account." href="https://account.qt.io/login">Sign In</a></li>
+      <li id="menu-item-10375" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-10375"><a href="mailto:feedback@theqtcompany.com?Subject=Feedback%20about%20doc.qt.io%20site">Feedback</a></li>
+      <li id="menu-item-4472" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4472"><a href="http://qt.io/about-us/">© 2016 The Qt Company</a></li>
+    </ul>
+</div>
+</div>
+</footer>
+</div>
+
+
+<table class="gstl_50 gssb_c" style="width: 588px; display: none; top: 186px; left: 632px; position: absolute;" cellpadding="0" cellspacing="0"><tbody><tr><td class="gssb_f"></td><td style="width: 100%;" class="gssb_e"></td></tr></tbody></table><div class=" fb_reset" id="fb-root"><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div></div></div><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div><iframe src="http://staticxx.facebook.com/connect/xd_arbiter/r/P5DLcu0KGJB.js?version=42#channel=f19a8044520506a&amp;origin=http%3A%2F%2Fdoc.qt.io" style="border: medium none;" tabindex="-1" title="Facebook Cross Domain Communication Frame" aria-hidden="true" id="fb_xdm_frame_http" scrolling="no" allowfullscreen="true" allowtransparency="true" name="fb_xdm_frame_http" frameborder="0"></iframe><iframe src="Qt%20Style%20Sheets%20Examples%20%7C%20Qt%204.8_files/P5DLcu0KGJB_002.htm" style="border: medium none;" tabindex="-1" title="Facebook Cross Domain Communication Frame" aria-hidden="true" id="fb_xdm_frame_https" scrolling="no" allowfullscreen="true" allowtransparency="true" name="fb_xdm_frame_https" frameborder="0"></iframe></div></div></div><iframe style="position: absolute; visibility: hidden; display: none; width: 0px; height: 0px; padding: 0px; border: medium none;" allowfullscreen="true" allowtransparency="true" scrolling="no" id="rufous-sandbox" frameborder="0"></iframe></body></html>
